@@ -434,8 +434,8 @@ export default function InspectorPage() {
       </section>
 
       {/* Section 5 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
+      <section className="mx-auto w-full max-w-[1440px] px-4 py-[100px] sm:px-6 lg:px-8 mb-[50px]">
+        <div className="flex flex-col items-center gap-[50px] pb-[100px]">
           <div className="text-center mb-8">
             <h3
               style={{
@@ -447,10 +447,10 @@ export default function InspectorPage() {
                 lineHeight: "120%",
               }}
             >
-              How Sprk Works
+              How to Get Started with Sprk
             </h3>
             <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-              Three simple steps to get clear solar insights and confident decisions.
+            It’s Fast and Easy to Get Sprk Certified
             </p>
           </div>
 
@@ -709,6 +709,68 @@ export default function InspectorPage() {
                 >
                  Use Sprk’s marketing tools and agent education resources to become the preferred inspector in your market.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Section 6 */}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
+          <div >
+            <h2 className="flex-1 basis-0 text-center text-[#141414] text-[56px] leading-[110%] font-medium font-['Aeonik_Pro'] mb-[20px]">
+              Sprk Reports for Home Inspectors
+            </h2>
+            <p className={`${inter.className} text-center text-[#141414]/70 text-[14px] sm:text-[16px]`}>
+              Simple to Generate. Easy to Read. Trusted by Top Inspectors.
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-2 w-full">
+            {/* Home Energy Report */}
+            <div className="rounded-[10px] bg-white border border-black/10 overflow-hidden">
+              <div className="bg-[var(--Primary-Color,#115056)]">
+                <Image src="/inspector-page/section 6/home-energy.svg" alt="Home Energy Report" width={640} height={300} className="w-full h-auto" />
+              </div>
+              <div className="p-6">
+                <h3 className="min-h-[70px] flex-1 basis-0 text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik Pro'] mb-2">
+                  Home Energy Report
+                </h3>
+                <p className={`${inter.className} h-[66px] min-h-[66px] flex-1 basis-0 text-[18px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)] mb-4`}>
+                  Estimate utility bills, outline an energy savings plan, and calculate solar needs fast.
+                </p>
+                <div className="flex items-center gap-3">
+                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] bg-[#115056] text-white text-[22px] font-normal `}>
+                    View Sample <span aria-hidden>→</span>
+                  </button>
+                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] border border-[#115056] text-[#115056] text-[22px] font-normal ]`}>
+                    Learn More <span aria-hidden>→</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            {/* Solar Inspection Report */}
+            <div className="rounded-[10px] bg-white border border-black/10 overflow-hidden">
+              <div className="bg-[var(--Primary-Color,#115056)]">
+                <Image src="/inspector-page/section 6/solar-inspection.svg" alt="Solar Inspection Report" width={640} height={300} className="w-full h-auto" />
+              </div>
+              <div className="p-6">
+                <h3 className="min-h-[70px] flex-1 basis-0 text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik Pro'] mb-2">
+                  Solar Inspection Report
+                </h3>
+                <p className={`${inter.className} h-[66px] min-h-[66px] flex-1 basis-0 text-[18px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)] mb-4`}>
+                  Evaluate solar production, system condition, and remaining life. Spot issues before they become deal-breakers.
+                </p>
+                <div className="flex items-center gap-3">
+                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] bg-[#115056] text-white text-[22px] font-normal`}>
+                    View Sample <span aria-hidden>→</span>
+                  </button>
+                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] border border-[#115056] text-[#115056] text-[22px] font-normal`}>
+                    Learn More <span aria-hidden>→</span>
+                  </button>
+                </div>
               </div>
             </div>
           </div>

@@ -684,6 +684,82 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section 6 */}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 pb-[100px]">
+        <div className="flex w-[1248px] flex-col items-center gap-[50px] mx-auto">
+          <div className="flex flex-col items-center gap-[30px] self-stretch text-center">
+            <h3
+              className="flex-[1_0_0] text-center text-[#141414] text-[40px] leading-[120%] font-semibold"
+              style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+            >
+              Why Choose Sprk Certified Pros?
+            </h3>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+            {/* Card 1 - Inspectors */}
+            <div className="flex  flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
+              <div className="p-5 flex items-center gap-4">
+                <Image src="/home-page/section 6/inspectors.svg" alt="Certified Inspectors" width={60} height={60} className="w-[60px] h-[60px]" />
+                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
+                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Inspectors</div>
+                </div>
+              </div>
+              <div className="bg-[#F9FAFB] p-5">
+                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                  Trained to understand solar—not just work around it
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 - Agents */}
+            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
+              <div className="p-5 flex items-center gap-4">
+                <Image src="/home-page/section 6/agents.svg" alt="Certified Agents" width={60} height={60} className="w-[60px] h-[60px]" />
+                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
+                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Agents</div>
+                </div>
+              </div>
+              <div className="bg-[#F9FAFB] p-5">
+                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                  Certified in energy, disclosure, and valuation practices
+                </p>
+              </div>
+            </div>
+
+            {/* Card 3 - Solar Pros */}
+            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
+              <div className="p-5 flex items-center gap-4">
+                <Image src="/home-page/section 6/solar-pros.svg" alt="Certified Solar Pros" width={60} height={60} className="w-[60px] h-[60px]" />
+                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
+                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Solar Pros</div>
+                </div>
+              </div>
+              <div className="bg-[#F9FAFB] p-5">
+                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                  Use Sprk Reports to document, explain, and protect solar investments
+                </p>
+              </div>
+            </div>
+
+            {/* Card 4 - Reports */}
+            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
+              <div className="p-5 flex items-center gap-4">
+                <Image src="/home-page/section 6/reports.svg" alt="Certified Reports" width={60} height={60} className="w-[60px] h-[60px]" />
+                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
+                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Reports</div>
+                </div>
+              </div>
+              <div className="bg-[#F9FAFB] p-5">
+                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                  Trusted by agents, buyers, sellers, and lenders
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
     </>
   );
