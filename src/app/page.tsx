@@ -1,103 +1,63 @@
 import Image from "next/image";
 
+function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
+  return (
+    <div
+      className="flex w-[294px] h-[400px] min-w-[294px] p-10 flex-col justify-between items-start rounded-[10px] border bg-white"
+      style={{
+        borderColor: "rgba(17, 80, 86, 0.20)",
+        boxShadow:
+          "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)",
+      }}
+    >
+      <div className="h-16 w-16 mb-4 flex items-center justify-center rounded-lg bg-foreground/5 text-foreground">
+        {icon}
+      </div>
+      <div className="text-xl font-semibold mb-2">{title}</div>
+      {subtitle ? <div className="opacity-70">{subtitle}</div> : null}
+      <div className="mt-6">
+        <button className="inline-flex items-center gap-2 h-10 px-4 rounded-full border border-black/10 dark:border-white/10 hover:bg-black/5 dark:hover:bg-white/10 text-sm">
+          Learn More
+          <span aria-hidden>→</span>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <section className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-16">
+      <div className="text-center">
+        <h1 className="text-5xl sm:text-6xl font-semibold tracking-tight text-foreground">
+          Solar Simplified.
+        </h1>
+        <h2 className="mt-2 text-5xl sm:text-6xl font-semibold tracking-tight">
+          Real Estate Ready.
+        </h2>
+        <p className="mt-6 max-w-2xl mx-auto text-base opacity-80">
+          The trusted platform to connect, understand, value, inspect, and transfer solar homes with confidence and clarity.
+        </p>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      <div className="mt-14 flex flex-wrap items-center justify-center content-center gap-x-6 gap-y-[30px] self-stretch">
+        <RoleCard
+          icon={<Image src="/home-page/section 1/inspector.svg" alt="Inspector" width={40} height={40} />}
+          title={"I’m a Home Inspector"}
+        />
+        <RoleCard
+          icon={<Image src="/home-page/section 1/agent.svg" alt="Real Estate Agent" width={40} height={40} />}
+          title={"I’m a Real Estate Agent"}
+        />
+        <RoleCard
+          icon={<Image src="/home-page/section 1/solar-pro.svg" alt="Solar Pro" width={40} height={40} />}
+          title={"I’m a Solar Pro"}
+        />
+        <RoleCard
+          icon={<Image src="/home-page/section 1/homeowner.svg" alt="Homeowner" width={40} height={40} />}
+          title={"I’m a Homeowner"}
+        />
+      </div>
+    </section>
   );
 }
