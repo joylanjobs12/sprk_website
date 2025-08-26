@@ -53,7 +53,8 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
 
 export default function Home() {
   return (
-    <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
+    <>
+    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
       <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px]">
         <h1
           className="text-center text-[40px] sm:text-[56px] lg:text-[80px]"
@@ -103,9 +104,10 @@ export default function Home() {
           title={"I’m a Homeowner"}
         />
       </div>
+    </section>
 
       {/* Section 2 */}
-      <section className="mt-24 py-[100px]">
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 py-[100px]">
         <div className="text-center mb-8">
           <h3
             style={{
@@ -211,7 +213,7 @@ export default function Home() {
                   fontStyle: "normal",
                   fontWeight: 500,
                   lineHeight: "110%",
-                   marginBottom: '22px'
+                  marginBottom: '22px'
                 }}
               >
                 Smart Connections
@@ -232,8 +234,8 @@ export default function Home() {
           </div>
         </div>
       </section>
-   {/* Section 4 */}
-   <section className="mt-24 flex w-[1440px] flex-col items-center gap-[50px] px-[94px] pt-[50px] pb-[100px]">
+      {/* Section 4 */}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
         <div className="flex flex-col items-center gap-[30px] self-stretch text-center">
           <h3
             style={{
@@ -436,9 +438,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      
+
+
       {/* Section 3 */}
-      <section className="mt-24 pb-[100px]">
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 pb-[100px]">
         <div className="text-center mb-8">
           <h3
             style={{
@@ -651,7 +654,42 @@ export default function Home() {
           </div>
         </div>
       </section>
-   
-    </div>
+
+      {/* Section 5 */}
+      <section className="mx-auto w-full bg-[var(--Primary-Color,#115056)]">
+        <div className="max-w-[1440px] mx-auto max-w-[1440px] sm:p-[50px] lg:p-[100px] mt-24 ">
+          <div className="flex flex-col items-center gap-[20px] self-stretch text-center">
+            <h3
+              className="flex-[1_0_0] text-white text-center text-[56px] leading-[110%] font-medium"
+              style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+            >
+              Solar is Growing!
+            </h3>
+            <p
+              className={`${inter.className} mt-2`}
+              style={{
+                color: "rgba(255, 255, 255, 0.85)",
+                fontSize: 16,
+                lineHeight: "140%",
+              }}
+            >
+              More than 5 million U.S. homeowners have already gone solar, and we’re just getting started.
+              Use the map to explore solar adoption rates and market size across all 50 states.
+            </p>
+          </div>
+          <div className="w-full flex justify-center mt-6">
+            <Image
+              src="/home-page/section 5/solar-home-map.svg"
+              alt="Solar Home Market Size map"
+              width={1280}
+              height={800}
+              className="w-full h-auto max-w-[1280px]"
+            />
+          </div>
+        </div>
+      </section>
+
+
+    </>
   );
 }

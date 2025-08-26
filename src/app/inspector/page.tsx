@@ -375,22 +375,11 @@ export default function InspectorPage() {
         </div>
       </section>
       {/* Section 4 */}
-      <section className="mx-auto w-full " style={{ background: "var(--Primary-Color, #115056)" }}>
-        <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
-          <div className="mt-24 rounded-[12px] overflow-hidden" style={{ display: "flex", width: 1440, padding: "150px 94px", flexDirection: "column", alignItems: "center", gap: 80 }}>
+      <section className="mx-auto w-full bg-[var(--Primary-Color,#115056)]">
+        <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 ">
+          <div className="rounded-[12px] flex w-[1440px] px-[94px] py-[150px] flex-col items-center gap-[80px]">
             <div className="text-center">
-              <h3
-                style={{
-                  flex: "1 0 0",
-                  color: "#FFF",
-                  textAlign: "center",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 56,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
+              <h3 className="flex-1 basis-0 text-white text-center text-[56px] leading-[110%] font-medium">
                 What Sprk Does for Home Inspectors
               </h3>
             </div>
@@ -398,34 +387,44 @@ export default function InspectorPage() {
               <div className="grid gap-6 md:grid-cols-3">
                 <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
                   <Image src="/inspector-page/section 4/add-hunderds.svg" alt="Add hundreds in extra revenue per inspection" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
-                    Add hundreds in extra revenue per inspection
+                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
+                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
+                      Add hundreds in extra revenue per inspection
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
                   <Image src="/inspector-page/section 4/get-certified.svg" alt="Get certified to inspect solar and energy systems" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
-                    Get certified to inspect solar and energy systems
+                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
+                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
+                      Get certified to inspect solar and energy systems
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
                   <Image src="/inspector-page/section 4/complete-solar.svg" alt="Complete solar inspections in as little as 15 minutes" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
-                    Complete solar inspections in as little as 15 minutes
+                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
+                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
+                      Complete solar inspections in as little as 15 minutes
+                    </div>
                   </div>
                 </div>
               </div>
               <div className="grid gap-6 md:grid-cols-2 mt-6 justify-center">
                 <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
                   <Image src="/inspector-page/section 4/generate-clean.svg" alt="Generate clean, easy-to-read solar and energy reports" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
-                    Generate clean, easy-to-read solar and energy reports
+                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
+                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
+                      Generate clean, easy-to-read solar and energy reports
+                    </div>
                   </div>
                 </div>
                 <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
                   <Image src="/inspector-page/section 4/solar-expert.svg" alt="Become the go-to solar expert in your market" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
-                    Become the go-to solar expert in your market
+                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
+                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
+                      Become the go-to solar expert in your market
+                    </div>
                   </div>
                 </div>
               </div>
