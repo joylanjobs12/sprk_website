@@ -103,6 +103,135 @@ export default function Home() {
           title={"I’m a Homeowner"}
         />
       </div>
+
+      {/* Section 2 */}
+      <section className="mt-24 py-[100px]">
+        <div className="text-center mb-8">
+          <h3
+            style={{
+              color: "var(--Text-Title, #141414)",
+              fontFamily: '"Aeonik Pro", sans-serif',
+              fontSize: 40,
+              fontStyle: "normal",
+              fontWeight: 600,
+              lineHeight: "120%",
+            }}
+          >
+            Why Sprk Exists
+          </h3>
+          <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
+            Solar is valuable but misunderstood. Sprk bridges the gap. We bring together the professionals who serve solar homeowners with the reports, referrals, and training needed to simplify complex solar real estate.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <div
+            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
+            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
+          >
+            <Image src="/home-page/section 2/standard-reports.svg" alt="Standardized Reports" width={480} height={300} className="w-full h-auto" />
+            <div className="px-2 py-4 w-full">
+              <div
+                className="flex-[1_0_0]"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                  marginBottom: '22px'
+                }}
+              >
+                Standardized Reports
+              </div>
+              <p
+                className={`${inter.className} flex-[1_0_0]`}
+                style={{
+                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
+                Make solar and energy data visible and valuation-ready.
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
+            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
+          >
+            <Image src="/home-page/section 2/role-specific-training.svg" alt="Role-Specific Training" width={480} height={300} className="w-full h-auto" />
+            <div className="px-2 py-4 w-full">
+              <div
+                className="flex-[1_0_0]"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                  marginBottom: '22px'
+                }}
+              >
+                Role-Specific Training
+              </div>
+              <p
+                className={`${inter.className} flex-[1_0_0]`}
+                style={{
+                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                  marginBottom: '22px'
+                }}
+              >
+                Equip professionals with the tools to lead confident solar transactions.
+              </p>
+            </div>
+          </div>
+
+          <div
+            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
+            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
+          >
+            <Image src="/home-page/section 2/smart-connections.svg" alt="Smart Connections" width={480} height={300} className="w-full h-auto" />
+            <div className="px-2 py-4 w-full">
+              <div
+                className="flex-[1_0_0]"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                   marginBottom: '22px'
+                }}
+              >
+                Smart Connections
+              </div>
+              <p
+                className={`${inter.className} flex-[1_0_0]`}
+                style={{
+                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
+                Sprk connects buyers, sellers, agents, inspectors, and solar pros to support smooth, informed home transfers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </section>
   );
 }

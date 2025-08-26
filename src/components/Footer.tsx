@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Footer() {
   return (
-    <footer className="mt-24 border-t border-black/10 dark:border-white/10">
+    <footer className="mt-24  bg-[#F9FAFB]">
       <div className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-[96px] py-[64px] sm:py-[80px] lg:py-[100px] flex flex-col items-center gap-[48px] sm:gap-[64px] lg:gap-[80px]">
         <div className="flex flex-col gap-10 w-full">
           <div className="flex flex-col gap-6">
