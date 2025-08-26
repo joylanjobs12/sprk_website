@@ -234,7 +234,7 @@ export default function Home() {
       </section>
 
       {/* Section 3 */}
-      <section className="mt-24 py-[100px]">
+      <section className="mt-24 pb-[100px]">
         <div className="text-center mb-8">
           <h3
             style={{
@@ -253,7 +253,13 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="relative flex flex-wrap justify-center gap-6">
+          <div className="flex w-[260px] flex-col items-start absolute left-[330px] top-[236px]" aria-hidden="true">
+            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
+          </div>
+          <div className="flex w-[260px] flex-col items-start absolute right-[330px] top-[168px]" aria-hidden="true">
+            <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
+          </div>
           <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
             <div
               className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
@@ -311,12 +317,12 @@ export default function Home() {
                   lineHeight: "120%",
                 }}
               >
-               Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app.
+                Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app.
               </p>
             </div>
           </div>
 
-          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{  background: "#FFF" }}>
+          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
             <div
               className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
               style={{
@@ -359,7 +365,7 @@ export default function Home() {
                   lineHeight: "110%",
                 }}
               >
-               Generate Sprk Report
+                Generate Sprk Report
               </div>
               <p className={`${inter.className}`}
                 style={{
@@ -409,17 +415,17 @@ export default function Home() {
             </div>
             <div className="w-full text-center">
               <div
-              style={{
-                minHeight: 90,
-                flex: "1 0 0",
-                color: "var(--Text-Title, #141414)",
-                textAlign: "center",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 27,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
+                style={{
+                  minHeight: 90,
+                  flex: "1 0 0",
+                  color: "var(--Text-Title, #141414)",
+                  textAlign: "center",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 27,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
               >
                 Get Solar Clarity
               </div>
@@ -439,7 +445,141 @@ export default function Home() {
               </p>
             </div>
           </div>
-    </div>
+        </div>
+      </section>
+      {/* Section 4 */}
+      <section className="mt-24 flex w-[1440px] flex-col items-center gap-[50px] px-[94px] pt-[50px] pb-[100px]">
+        <div className="flex flex-col items-center gap-[30px] self-stretch text-center">
+          <h3
+            style={{
+              flex: "1 0 0",
+              color: "#141414",
+              textAlign: "center",
+              fontFamily: '"Aeonik Pro", sans-serif',
+              fontSize: 56,
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "110%",
+            }}
+          >
+            Sprk Reports
+          </h3>
+          <p
+            className="mt-3 mx-auto"
+            style={{
+              flex: "1 0 0",
+              color: "#141414",
+              textAlign: "center",
+              fontFamily: '"Aeonik Pro"',
+              fontSize: 35,
+              fontStyle: "normal",
+              fontWeight: 500,
+              lineHeight: "110%",
+            }}
+          >
+            Built for real estate. Backed by data. Trusted by professionals.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
+            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
+              <div className="mb-4">
+                <Image src="/home-page/section 4/home-energy-report.svg" alt="Home Energy Report" width={60} height={60} />
+              </div>
+              <div
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 22,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "120%",
+                  marginBottom: 12,
+                }}
+              >
+                Home Energy
+                <br />
+                Report
+              </div>
+            </div>
+            <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
+              Estimate monthly energy bills, uncover savings opportunities, and calculate solar potential.
+            </p>
+          </div>
+
+          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
+            <div className="mb-4">
+              <Image src="/home-page/section 4/solar-inspection-report.svg" alt="Solar Inspection Report" width={60} height={60} />
+            </div>
+            <div
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 22,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "120%",
+                marginBottom: 12,
+              }}
+            >
+              Solar Inspection
+              <br />
+              Report
+            </div>
+            <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
+              Confirm system performance, remaining life, and identify any solar-related issues.
+            </p>
+          </div>
+
+          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
+            <div className="mb-4">
+              <Image src="/home-page/section 4/solar-listing-report.svg" alt="Solar Listing Report" width={60} height={60} />
+            </div>
+            <div
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 22,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "120%",
+                marginBottom: 12,
+              }}
+            >
+              Solar Listing
+              <br />
+              Report
+            </div>
+            <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
+              Showcase solar benefits, disclose financing details, and simplify the transfer process.
+            </p>
+          </div>
+
+          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
+            <div className="mb-4">
+              <Image src="/home-page/section 4/green-home-appraisal-report.svg" alt="Green Home Appraisal Report" width={60} height={60} />
+            </div>
+            <div
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 22,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "120%",
+                marginBottom: 12,
+              }}
+            >
+              Green Home
+              <br />
+              Appraisal Report
+            </div>
+            <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
+              Provide appraisers and lenders with certified solar and energy data for accurate valuation.
+            </p>
+          </div>
+        </div>
       </section>
     </section>
   );
