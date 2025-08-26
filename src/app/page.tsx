@@ -53,8 +53,8 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
 
 export default function Home() {
   return (
-    <section className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-16">
-      <div className="text-center">
+    <section className="mx-auto max-w-[1440px] ">
+      <div className="text-center pt-[80px]">
         <h1
           className="text-center"
           style={{

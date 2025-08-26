@@ -1,35 +1,93 @@
 import Image from "next/image";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Footer() {
   return (
     <footer className="mt-24 border-t border-black/10 dark:border-white/10">
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 py-12">
-        <div className="flex flex-col gap-10">
+      <div className="mx-auto w-full max-w-[1440px] px-[96px] py-[100px] flex flex-col items-center gap-[80px]">
+        <div className="flex flex-col gap-10 w-full">
           <div className="flex flex-col gap-6">
             <Image src="/logo/logo.svg" alt="Sprk" width={96} height={28} />
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+            <h2
+              className="flex-[1_0_0]"
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 80,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
               Still Have Questions?
             </h2>
-            <div className="flex items-center">
+            <div
+              className="flex flex-wrap items-center content-center self-stretch px-[50px] py-4 rounded-[50px] border"
+              style={{ borderColor: "var(--Body-Text, rgba(0, 0, 0, 0.66))" }}
+            >
               <input
                 type="email"
                 placeholder="Email Us"
-                className="w-full h-12 rounded-full px-5 border border-black/15 dark:border-white/15 bg-transparent outline-none"
+                className="w-full bg-transparent outline-none"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-10">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-3 gap-10 py-[80px]">
             <div>
-              <h3 className="font-semibold mb-4">Resources</h3>
-              <ul className="space-y-2 text-sm opacity-80">
+              <h3
+                className="mb-4"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                Resources
+              </h3>
+              <ul
+                className={`${inter.className} space-y-2 self-stretch`}
+                style={{
+                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
                 <li>Sprk Blog</li>
                 <li>Ebook - My Energy Efficient Home</li>
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Who We Serve</h3>
-              <ul className="space-y-2 text-sm opacity-80">
+              <h3
+                className="mb-4"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                Who We Serve
+              </h3>
+              <ul
+                className={`${inter.className} space-y-2 self-stretch`}
+                style={{
+                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
                 <li>Homeowners</li>
                 <li>Pros</li>
                 <li>About Sprk</li>
@@ -37,7 +95,19 @@ export default function Footer() {
               </ul>
             </div>
             <div>
-              <h3 className="font-semibold mb-4">Download the App</h3>
+              <h3
+                className="mb-4"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 32,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                Download the App
+              </h3>
               <div className="flex gap-3 items-center">
                 <Image src="/footer/download-app.svg" alt="App Store" width={140} height={44} />
                 <Image src="/footer/google-play.svg" alt="Google Play" width={140} height={44} />
@@ -45,8 +115,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 text-xs opacity-70">
-            <div className="flex flex-wrap justify-between gap-3">
+          <div className="flex flex-col gap-4 text-xs opacity-70 w-full">
+            <div className="flex flex-wrap justify-between gap-3 pb-[50px] ">
               <span>SprkHome © 2025. All rights reserved.</span>
               <div className="flex flex-wrap gap-4">
                 <span>Privacy Policy</span>
@@ -58,7 +128,19 @@ export default function Footer() {
                 <span>Cookies</span>
               </div>
             </div>
-            <div className="text-6xl font-semibold opacity-10 select-none">SprkHome</div>
+            <div
+              className="self-stretch text-center select-none"
+              style={{
+                color: "rgba(0, 0, 0, 0.15)",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 80,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              SprkHome
+            </div>
           </div>
         </div>
       </div>
