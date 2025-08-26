@@ -232,6 +232,215 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section 3 */}
+      <section className="mt-24 py-[100px]">
+        <div className="text-center mb-8">
+          <h3
+            style={{
+              color: "var(--Text-Title, #141414)",
+              fontFamily: '"Aeonik Pro", sans-serif',
+              fontSize: 40,
+              fontStyle: "normal",
+              fontWeight: 600,
+              lineHeight: "120%",
+            }}
+          >
+            How Sprk Works
+          </h3>
+          <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
+            Three simple steps to get clear solar insights and confident decisions.
+          </p>
+        </div>
+
+        <div className="flex flex-wrap justify-center gap-6">
+          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
+            <div
+              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
+              style={{
+                borderColor: "#56CD45",
+                background: "rgba(86, 205, 69, 0.05)",
+                color: "#56CD45",
+                textAlign: "center",
+                fontSize: 28,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              Step 1
+            </div>
+            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
+              <div
+                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
+                style={{
+                  borderColor: "#FFFFFF",
+                  background: "var(--Primary-Color, #115056)",
+                  boxShadow:
+                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
+                }}
+              >
+                <Image src="/home-page/section 3/input-home-info.svg" alt="Input Home Info" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+              </div>
+            </div>
+            <div className="w-full text-center">
+              <div
+                style={{
+                  minHeight: 90,
+                  flex: "1 0 0",
+                  color: "var(--Text-Title, #141414)",
+                  textAlign: "center",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 27,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                Input Home Info
+              </div>
+              <p className={`${inter.className}`}
+                style={{
+                  minHeight: 154,
+                  flex: "1 0 0",
+                  color: 'rgba(0, 0, 0, 0.66))',
+                  textAlign: "center",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
+               Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{  background: "#FFF" }}>
+            <div
+              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
+              style={{
+                borderColor: "#56CD45",
+                background: "rgba(86, 205, 69, 0.05)",
+                color: "#56CD45",
+                textAlign: "center",
+                fontSize: 28,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              Step 2
+            </div>
+            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
+              <div
+                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
+                style={{
+                  borderColor: "#FFFFFF",
+                  background: "var(--Primary-Color, #115056)",
+                  boxShadow:
+                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
+                }}
+              >
+                <Image src="/home-page/section 3/generate-sprk-report.svg" alt="Generate Sprk Report" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+              </div>
+            </div>
+            <div className="w-full text-center">
+              <div
+                style={{
+                  minHeight: 90,
+                  flex: "1 0 0",
+                  color: "var(--Text-Title, #141414)",
+                  textAlign: "center",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 27,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+               Generate Sprk Report
+              </div>
+              <p className={`${inter.className}`}
+                style={{
+                  minHeight: 154,
+                  flex: "1 0 0",
+                  color: 'rgba(0, 0, 0, 0.66))',
+                  textAlign: "center",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
+                We compile data into a standardized, easy-to-read report in minutes.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
+            <div
+              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
+              style={{
+                borderColor: "#56CD45",
+                background: "rgba(86, 205, 69, 0.05)",
+                color: "#56CD45",
+                textAlign: "center",
+                fontSize: 28,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              Step 3
+            </div>
+            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
+              <div
+                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
+                style={{
+                  borderColor: "#FFFFFF",
+                  background: "var(--Primary-Color, #115056)",
+                  boxShadow:
+                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
+                }}
+              >
+                <Image src="/home-page/section 3/solar-clarity.svg" alt="Solar Clarity" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+              </div>
+            </div>
+            <div className="w-full text-center">
+              <div
+              style={{
+                minHeight: 90,
+                flex: "1 0 0",
+                color: "var(--Text-Title, #141414)",
+                textAlign: "center",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 27,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+              >
+                Get Solar Clarity
+              </div>
+              <p className={`${inter.className}`}
+                style={{
+                  minHeight: 154,
+                  flex: "1 0 0",
+                  color: 'rgba(0, 0, 0, 0.66))',
+                  textAlign: "center",
+                  fontSize: 18,
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                }}
+              >
+                Share with clients or keep for reference—act with confidence.
+              </p>
+            </div>
+          </div>
+    </div>
+      </section>
     </section>
   );
 }
