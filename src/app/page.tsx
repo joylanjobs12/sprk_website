@@ -53,15 +53,14 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
 
 export default function Home() {
   return (
-    <section className="mx-auto max-w-[1440px] ">
-      <div className="text-center pt-[80px]">
+    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
+      <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px]">
         <h1
-          className="text-center"
+          className="text-center text-[40px] sm:text-[56px] lg:text-[80px]"
           style={{
             color: "var(--Primary-Color, #115056)",
             textAlign: "center",
             fontFamily: '"Aeonik Pro", sans-serif',
-            fontSize: 80,
             fontStyle: "normal",
             fontWeight: 500,
             lineHeight: "110%",
@@ -70,11 +69,10 @@ export default function Home() {
           Solar Simplified.
         </h1>
         <h2
-          className="mt-2 text-center"
+          className="mt-2 text-center text-[36px] sm:text-[48px] lg:text-[80px]"
           style={{
             color: "var(--Text-Title, #141414)",
             fontFamily: '"Aeonik Pro", sans-serif',
-            fontSize: 80,
             fontStyle: "normal",
             fontWeight: 500,
             lineHeight: "110%",
