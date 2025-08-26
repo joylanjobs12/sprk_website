@@ -666,12 +666,7 @@ export default function Home() {
               Solar is Growing!
             </h3>
             <p
-              className={`${inter.className} mt-2`}
-              style={{
-                color: "rgba(255, 255, 255, 0.85)",
-                fontSize: 16,
-                lineHeight: "140%",
-              }}
+              className={`${inter.className} mt-2 flex-[1_0_0] text-center text-[22px] leading-[120%] font-normal text-[rgba(255,255,255,0.80)]`}
             >
               More than 5 million U.S. homeowners have already gone solar, and we’re just getting started.
               Use the map to explore solar adoption rates and market size across all 50 states.
