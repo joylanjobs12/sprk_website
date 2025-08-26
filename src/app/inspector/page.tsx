@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function InspectorPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1440px] px-6 sm:px-10 lg:px-[96px] pt-[40px] sm:pt-[60px] lg:pt-[80px] pb-[40px] sm:pb-[60px] lg:pb-[80px]">
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-[40px] sm:pt-[60px] lg:pt-[80px] pb-[40px] sm:pb-[60px] lg:pb-[80px]">
         <div className="flex flex-col items-center text-center gap-6 sm:gap-7 lg:gap-8">
           <h1
             className="max-w-[1000px]"
@@ -77,8 +77,8 @@ export default function InspectorPage() {
         </div>
       </section>
       {/* Section 2 */}
-      <section className="w-full">
-        <div className="mx-auto" style={{ display: "flex", width: 1440, padding: "50px 94px 100px 94px", flexDirection: "column", alignItems: "center", gap: 50 }}>
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
           <h2
             className="text-center mb-8"
             style={{
@@ -101,7 +101,7 @@ export default function InspectorPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
               <div className="p-4 sm:p-6 flex items-start justify-center" style={{ display: "flex", height: 500, minWidth: 350, alignItems: "flex-start", alignSelf: "stretch", background: "lightgray -22px 57.396px / 107.051% 77.042%" }}>
                 <Image
-                  src="/inspector-page/section1/section 2/next-big-shift.svg"
+                  src="/inspector-page/section 2/next-big-shift.svg"
                   alt="Skrp app devices mockup"
                   width={720}
                   height={420}
@@ -159,8 +159,8 @@ export default function InspectorPage() {
       </section>
 
       {/* Section 3 */}
-      <section className="w-full">
-        <div className="mx-auto" style={{ display: "flex", width: 1440, padding: "50px 94px 100px 94px", flexDirection: "column", alignItems: "center", gap: 50 }}>
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
           <div className="text-center mb-8">
             <h3
               style={{
@@ -212,7 +212,7 @@ export default function InspectorPage() {
                       "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
                   }}
                 >
-                  <Image src="/home-page/section 3/input-home-info.svg" alt="Input Home Info" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+                  <Image src="/inspector-page/section 3/get-trained.svg" alt="Get Trained" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
                 </div>
               </div>
               <div className="w-full text-center">
@@ -229,7 +229,7 @@ export default function InspectorPage() {
                     lineHeight: "110%",
                   }}
                 >
-                  Input Home Info
+                  Get Trained
                 </div>
                 <p className={`${inter.className}`}
                   style={{
@@ -243,7 +243,7 @@ export default function InspectorPage() {
                     lineHeight: "120%",
                   }}
                 >
-                  Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app.
+                  Complete Sprk’s on-demand certification and learn how to inspect solar and energy systems with ease.
                 </p>
               </div>
             </div>
@@ -274,7 +274,7 @@ export default function InspectorPage() {
                       "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
                   }}
                 >
-                  <Image src="/home-page/section 3/generate-sprk-report.svg" alt="Generate Sprk Report" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+                  <Image src="/inspector-page/section 3/get-tools.svg" alt="Get Tools" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
                 </div>
               </div>
               <div className="w-full text-center">
@@ -291,7 +291,7 @@ export default function InspectorPage() {
                     lineHeight: "110%",
                   }}
                 >
-                  Generate Sprk Report
+                  Get Tools
                 </div>
                 <p className={`${inter.className}`}
                   style={{
@@ -305,7 +305,7 @@ export default function InspectorPage() {
                     lineHeight: "120%",
                   }}
                 >
-                  We compile data into a standardized, easy-to-read report in minutes.
+                  Use the Sprk Pro app to collect data and generate polished reports in minutes right from your phone or tablet.
                 </p>
               </div>
             </div>
@@ -336,7 +336,7 @@ export default function InspectorPage() {
                       "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
                   }}
                 >
-                  <Image src="/home-page/section 3/solar-clarity.svg" alt="Solar Clarity" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
+                  <Image src="/inspector-page/section 3/get-paid.svg" alt="Get Paid" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
                 </div>
               </div>
               <div className="w-full text-center">
@@ -353,7 +353,7 @@ export default function InspectorPage() {
                     lineHeight: "110%",
                   }}
                 >
-                  Get Solar Clarity
+                  Get Paid
                 </div>
                 <p className={`${inter.className}`}
                   style={{
@@ -367,8 +367,67 @@ export default function InspectorPage() {
                     lineHeight: "120%",
                   }}
                 >
-                  Share with clients or keep for reference—act with confidence.
+                 Offer more value to your clients, stand out with agents, and increase your profitability per job.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Section 4 */}
+      <section className="mx-auto w-full " style={{ background: "var(--Primary-Color, #115056)" }}>
+        <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8">
+          <div className="mt-24 rounded-[12px] overflow-hidden" style={{ display: "flex", width: 1440, padding: "150px 94px", flexDirection: "column", alignItems: "center", gap: 80 }}>
+            <div className="text-center">
+              <h3
+                style={{
+                  flex: "1 0 0",
+                  color: "#FFF",
+                  textAlign: "center",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 56,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                What Sprk Does for Home Inspectors
+              </h3>
+            </div>
+            <div className="px-4 pb-[40px] sm:pb-[50px] lg:pb-[60px]">
+              <div className="grid gap-6 md:grid-cols-3">
+                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
+                  <Image src="/inspector-page/section 4/add-hunderds.svg" alt="Add hundreds in extra revenue per inspection" width={640} height={360} className="w-full h-auto" />
+                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
+                    Add hundreds in extra revenue per inspection
+                  </div>
+                </div>
+                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
+                  <Image src="/inspector-page/section 4/get-certified.svg" alt="Get certified to inspect solar and energy systems" width={640} height={360} className="w-full h-auto" />
+                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
+                    Get certified to inspect solar and energy systems
+                  </div>
+                </div>
+                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
+                  <Image src="/inspector-page/section 4/complete-solar.svg" alt="Complete solar inspections in as little as 15 minutes" width={640} height={360} className="w-full h-auto" />
+                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
+                    Complete solar inspections in as little as 15 minutes
+                  </div>
+                </div>
+              </div>
+              <div className="grid gap-6 md:grid-cols-2 mt-6 justify-center">
+                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
+                  <Image src="/inspector-page/section 4/generate-clean.svg" alt="Generate clean, easy-to-read solar and energy reports" width={640} height={360} className="w-full h-auto" />
+                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
+                    Generate clean, easy-to-read solar and energy reports
+                  </div>
+                </div>
+                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
+                  <Image src="/inspector-page/section 4/solar-expert.svg" alt="Become the go-to solar expert in your market" width={640} height={360} className="w-full h-auto" />
+                  <div className={`${inter.className} p-4 text-center`} style={{ color: "var(--Text-Title, #141414)", fontSize: 14, lineHeight: "130%" }}>
+                    Become the go-to solar expert in your market
+                  </div>
+                </div>
               </div>
             </div>
           </div>
