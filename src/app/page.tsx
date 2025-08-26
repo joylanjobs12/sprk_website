@@ -53,7 +53,7 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
 
 export default function Home() {
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
+    <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 ">
       <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px]">
         <h1
           className="text-center text-[40px] sm:text-[56px] lg:text-[80px]"
@@ -509,23 +509,25 @@ export default function Home() {
           </div>
 
           <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
-            <div className="mb-4">
-              <Image src="/home-page/section 4/solar-inspection-report.svg" alt="Solar Inspection Report" width={60} height={60} />
-            </div>
-            <div
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 22,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "120%",
-                marginBottom: 12,
-              }}
-            >
-              Solar Inspection
-              <br />
-              Report
+            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
+              <div className="mb-4">
+                <Image src="/home-page/section 4/solar-inspection-report.svg" alt="Solar Inspection Report" width={60} height={60} />
+              </div>
+              <div
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 22,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "120%",
+                  marginBottom: 12,
+                }}
+              >
+                Solar Inspection
+                <br />
+                Report
+              </div>
             </div>
             <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
               Confirm system performance, remaining life, and identify any solar-related issues.
@@ -533,23 +535,25 @@ export default function Home() {
           </div>
 
           <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
-            <div className="mb-4">
-              <Image src="/home-page/section 4/solar-listing-report.svg" alt="Solar Listing Report" width={60} height={60} />
-            </div>
-            <div
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 22,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "120%",
-                marginBottom: 12,
-              }}
-            >
-              Solar Listing
-              <br />
-              Report
+            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
+              <div className="mb-4">
+                <Image src="/home-page/section 4/solar-listing-report.svg" alt="Solar Listing Report" width={60} height={60} />
+              </div>
+              <div
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 22,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "120%",
+                  marginBottom: 12,
+                }}
+              >
+                Solar Listing
+                <br />
+                Report
+              </div>
             </div>
             <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
               Showcase solar benefits, disclose financing details, and simplify the transfer process.
@@ -557,23 +561,25 @@ export default function Home() {
           </div>
 
           <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-[var(--Secondary-Color,#F9FAFB)] p-6" style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "var(--Secondary-Color, #F9FAFB)" }}>
-            <div className="mb-4">
-              <Image src="/home-page/section 4/green-home-appraisal-report.svg" alt="Green Home Appraisal Report" width={60} height={60} />
-            </div>
-            <div
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 22,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "120%",
-                marginBottom: 12,
-              }}
-            >
-              Green Home
-              <br />
-              Appraisal Report
+            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
+              <div className="mb-4">
+                <Image src="/home-page/section 4/green-home-appraisal-report.svg" alt="Green Home Appraisal Report" width={60} height={60} />
+              </div>
+              <div
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontSize: 22,
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "120%",
+                  marginBottom: 12,
+                }}
+              >
+                Green Home
+                <br />
+                Appraisal Report
+              </div>
             </div>
             <p className={`${inter.className}`} style={{ color: "var(--Body-Text, rgba(0, 0, 0, 0.66))", fontSize: 14, lineHeight: "130%" }}>
               Provide appraisers and lenders with certified solar and energy data for accurate valuation.
@@ -581,6 +587,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </section>
+    </div>
   );
 }
