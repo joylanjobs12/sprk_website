@@ -234,35 +234,52 @@ export default function AgentsPage() {
               </div>
 
               {/* Right side - Content */}
-              <div className="flex h-[500px] min-w-[350px] p-[50px] flex-col justify-between items-start flex-[1_0_0]" style={{ background: "#FFF" }}>
-                <div className="flex flex-col gap-4 mt-4">
+              <div className="flex h-[500px] gap-[40px] min-w-[350px] p-[50px] flex-col justify-between items-start flex-[1_0_0]" style={{ background: "#FFF" }}>
+                <div className="flex flex-col  mt-4">
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
-                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
-                      Understand solar system ownership types and their impact on transactions
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-4 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[22px] font-normal `} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                    How solar affects appraisals, contracts, and buyer confidence
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
-                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
-                      Navigate solar contracts, warranties, and transfer processes
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-4 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[22px] font-normal `} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                      The different types of solar ownership (and what to watch for)
                     </p>
                   </div>
 
                   <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
-                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
-                      Provide accurate solar valuations and market solar homes effectively
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-4 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[22px] font-normal `} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                        What to ask, disclose, and document when listing or buying a solar-powered home
                     </p>
                   </div>
                 </div>
 
+                {/* Author Section */}
+                <div className="flex flex-col items-start gap-[5px] self-stretch">
+                  <p className={`${inter.className} flex-[1_0_0] text-[18px] font-normal leading-[120%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
+                    Presented by Sprk Founder
+                  </p>
+                  <h3 className="flex-[1_0_0] text-[32px] font-medium leading-[110%]" style={{ color: "#141414", fontFamily: '"Aeonik Pro", sans-serif' }}>
+                    Cory Vanderpool
+                  </h3>
+                </div>
+
                 <button
-                  className="bg-[#115056] text-white px-8 py-4 rounded-[8px] font-medium text-[16px] hover:bg-[#0d3e42] transition-colors w-fit mt-4"
-                  style={{ fontFamily: '"Inter", sans-serif' }}
+                  className={`${inter.className} flex p-[5px] justify-between items-center self-stretch text-[22px] font-normal text-center hover:opacity-90 transition-opacity py-[5px] px-[15px] relative`}
+                  style={{ 
+                    borderRadius: "5px",
+                    background: "#115056",
+                    color: "#FFF"
+                  }}
                 >
-                  Get Solar Certified
+                  <span className="flex-1 text-center">Download the Free eBook</span>
+                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg" className="flex-shrink-0">
+                    <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white"/>
+                  </svg>
                 </button>
               </div>
             </div>
@@ -273,7 +290,7 @@ export default function AgentsPage() {
 
       {/* Section 3 */}
       <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
+        <div className="flex flex-col items-center gap-[50px] pt-[100px] pb-[100px]">
           <div className="text-center mb-8">
             <h3
               style={{
@@ -285,10 +302,16 @@ export default function AgentsPage() {
                 lineHeight: "120%",
               }}
             >
-              How Sprk Works
+              How It Works
             </h3>
-            <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-              Three simple steps to get clear solar insights and confident decisions.
+            <p 
+              className="mt-3 max-w-2xl mx-auto text-[28px] font-medium leading-[110%] text-center"
+              style={{ 
+                color: "#141414",
+                fontFamily: '"Aeonik Pro", sans-serif'
+              }}
+            >
+              Sprk Helps Agents Simplify Solar
             </p>
           </div>
 
