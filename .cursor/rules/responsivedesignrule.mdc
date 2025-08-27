@@ -1,0 +1,17 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+-IMPORTANT: For Extra Small viewports (Mobile Phones, 0px – 575px): Use a single-column layout, ensure large touch-friendly buttons, maintain readable font sizes (at least 16px), and include minimal images with optimized performance.
+
+-IMPORTANT: For Small viewports (Large Phones / Small Tablets, 576px – 767px): Maintain mostly single-column layouts but introduce split sections where appropriate, use responsive navigation such as hamburger menus or collapsible elements, and prioritize content to show the most important information first.
+
+-IMPORTANT: For Medium viewports (Tablets Portrait, 768px – 991px): Enable two-column layouts where possible, increase spacing and padding for better readability, and allow navigation to expand slightly while keeping it compact.
+
+-IMPORTANT: For Large viewports (Tablets Landscape / Small Laptops, 992px – 1199px): Implement multi-column layouts (2–3 columns), introduce sidebar visibility, and support bigger images and richer media.
+
+-IMPORTANT: For Extra Large viewports (Desktops / Wide Screens, 1200px – 1399px): Use full multi-column layouts (3–4 columns), include sidebar + content + extra widgets, and incorporate more whitespace for improved user experience.
+
+-IMPORTANT: For Extra Extra Large viewports (Large Desktops / TVs, 1400px and above): Design very wide content areas (consider max-width to avoid long lines), enable split-screen designs where possible, and use high-resolution images.

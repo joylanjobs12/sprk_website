@@ -24,7 +24,7 @@ export default function HowItWorksSection({
   const steps = [step1, step2, step3];
 
   return (
-    <section className="box-border content-stretch flex flex-col gap-[50px] items-center justify-start px-24 py-[100px] relative size-full">
+    <section className="box-border content-stretch flex flex-col gap-[50px] items-center justify-start px-24 py-[100px] relative size-full max-w-[1440px] mx-auto">
       <div className="content-stretch flex flex-col gap-5 items-center justify-start relative shrink-0 w-full">
         <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
           <div 
@@ -110,7 +110,7 @@ export default function HowItWorksSection({
         {/* Arrow between Step 1 and Step 2 */}
         <div className="absolute h-[29.5px] left-[300px] top-[236px] w-56">
           <div className="absolute inset-[-18.7%_-0.45%_-1.08%_-0.11%]">
-            <Image src="/home-page/section 4/arrow-up.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
+            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
           </div>
         </div>
         
@@ -119,7 +119,7 @@ export default function HowItWorksSection({
           <div className="flex-none scale-y-[-100%]">
             <div className="h-[29.5px] relative w-56">
               <div className="absolute inset-[-18.7%_-0.45%_-1.08%_-0.11%]">
-                <Image src="/home-page/section 4/arrow-down.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
+                <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
               </div>
             </div>
           </div>
