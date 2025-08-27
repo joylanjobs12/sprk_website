@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import HowToGetStarted from "@/components/HowToGetStarted";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -121,71 +122,81 @@ export default function AgentsPage() {
             {/* Top Row - 3 cards */}
             <div className="flex justify-center gap-6 w-full">
               {/* Card 1 - Learn how solar impacts real estate */}
-              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
-                <div className="mb-4">
-                  <Image src="/agents-page/section 2/learn-how.svg" alt="Learn how solar impacts real estate" width={110} height={111} />
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="flex h-[171px] justify-center items-center self-stretch" style={{ borderBottom: "1px solid rgba(17, 80, 86, 0.50)" }}>
+                  <Image src="/agents-page/section 2/learn-how.svg" alt="Learn how solar impacts real estate" width={110} height={110} />
                 </div>
+                <div className="flex py-[50px] px-[30px] flex-col items-center gap-[20px] self-stretch" style={{ background: "#F9FAFB" }}>
                 <h3
-                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  className="text-[#141414] text-[25px] font-medium leading-[120%] mb-2"
                   style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
                 >
                   Learn how solar impacts real estate
                 </h3>
+                </div>
               </div>
 
               {/* Card 2 - Disclose and market solar with confidence */}
-              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
-                <div className="mb-4">
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="flex h-[171px] justify-center items-center self-stretch" style={{ borderBottom: "1px solid rgba(17, 80, 86, 0.50)" }}>
                   <Image src="/agents-page/section 2/disclose.svg" alt="Disclose and market solar with confidence" width={110} height={115} />
                 </div>
-                <h3
-                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
-                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
-                >
-                  Disclose and market solar with confidence
-                </h3>
+                <div className="flex py-[50px] px-[30px] flex-col items-center gap-[20px] self-stretch" style={{ background: "#F9FAFB" }}>
+                  <h3
+                    className="text-[#141414] text-[25px] font-medium leading-[120%] mb-2"
+                    style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                  >
+                    Disclose and market solar with confidence
+                  </h3>
+                </div>
               </div>
 
               {/* Card 3 - Reduce delays tied to solar contracts */}
-              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
-                <div className="mb-4">
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="flex h-[171px] justify-center items-center self-stretch" style={{ borderBottom: "1px solid rgba(17, 80, 86, 0.50)" }}>
                   <Image src="/agents-page/section 2/reduce.svg" alt="Reduce delays tied to solar contracts" width={110} height={111} />
                 </div>
-                <h3
-                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
-                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
-                >
-                  Reduce delays tied to solar contracts
-                </h3>
+                <div className="flex py-[50px] px-[30px] flex-col items-center gap-[20px] self-stretch" style={{ background: "#F9FAFB" }}>
+                  <h3
+                    className="text-[#141414] text-[25px] font-medium leading-[120%] mb-2"
+                    style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                  >
+                    Reduce delays tied to solar contracts
+                  </h3>
+                </div>
               </div>
             </div>
 
             {/* Bottom Row - 2 cards */}
             <div className="flex justify-center gap-6 w-full">
               {/* Card 4 - Become the go-to solar agent in your market */}
-              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
-                <div className="mb-4">
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="flex h-[171px] justify-center items-center self-stretch" style={{ borderBottom: "1px solid rgba(17, 80, 86, 0.50)" }}>
                   <Image src="/agents-page/section 2/solar-agent.svg" alt="Become the go-to solar agent in your market" width={110} height={111} />
                 </div>
-                <h3
-                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
-                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
-                >
-                  Become the go-to solar agent in your market
-                </h3>
+                <div className="flex py-[50px] px-[30px] flex-col items-center gap-[20px] self-stretch" style={{ background: "#F9FAFB" }}>
+                  <h3
+                    className="text-[#141414] text-[25px] font-medium leading-[120%] mb-2"
+                    style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                  >
+                    Become the go-to solar agent in your market
+                  </h3>
+                </div>
               </div>
 
               {/* Card 5 - Attract solar homeowners looking for certified pros */}
-              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
-                <div className="mb-4">
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="flex h-[171px] justify-center items-center self-stretch" style={{ borderBottom: "1px solid rgba(17, 80, 86, 0.50)" }}>
                   <Image src="/agents-page/section 2/homeowners.svg" alt="Attract solar homeowners looking for certified pros" width={110} height={111} />
                 </div>
-                <h3
-                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
-                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
-                >
-                  Attract solar homeowners looking for certified pros
-                </h3>
+                <div className="flex py-[50px] px-[30px] flex-col items-center gap-[20px] self-stretch" style={{ background: "#F9FAFB" }}>
+                  <h3
+                    className="text-[#141414] text-[25px] font-medium leading-[120%] mb-2"
+                    style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                  >
+                    Attract solar homeowners looking for certified pros
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
@@ -699,67 +710,7 @@ export default function AgentsPage() {
         </div>
       </section>
 
-      {/* Section 6 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-          <div >
-            <h2 className="flex-1 basis-0 text-center text-[#141414] text-[80px] leading-[110%] font-medium font-['Aeonik Pro'] mb-[20px]">
-              Sprk Reports for Home Inspectors
-            </h2>
-            <p className={`${inter.className} flex-1 basis-0 text-center text-[rgba(0,0,0,0.66)] text-[22px] leading-[120%] font-normal`}>
-              Simple to Generate. Easy to Read. Trusted by Top Inspectors.
-            </p>
-          </div>
-
-          <div className="grid gap-6 md:grid-cols-2 w-full">
-            {/* Home Energy Report */}
-            <div className="rounded-[10px] bg-white border border-black/10 overflow-hidden">
-              <div className="bg-[var(--Primary-Color,#115056)]">
-                <Image src="/inspector-page/section 6/home-energy.svg" alt="Home Energy Report" width={640} height={300} className="w-full h-auto" />
-              </div>
-              <div className="p-6">
-                <h3 className="min-h-[70px] flex-1 basis-0 text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik Pro'] mb-2">
-                  Home Energy Report
-                </h3>
-                <p className={`${inter.className} h-[66px] min-h-[66px] flex-1 basis-0 text-[18px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)] mb-4`}>
-                  Estimate utility bills, outline an energy savings plan, and calculate solar needs fast.
-                </p>
-                <div className="flex items-center gap-3">
-                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] bg-[#115056] text-white text-[22px] font-normal `}>
-                    View Sample <span aria-hidden>→</span>
-                  </button>
-                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] border border-[#115056] text-[#115056] text-[22px] font-normal ]`}>
-                    Learn More <span aria-hidden>→</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Solar Inspection Report */}
-            <div className="rounded-[10px] bg-white border border-black/10 overflow-hidden">
-              <div className="bg-[var(--Primary-Color,#115056)]">
-                <Image src="/inspector-page/section 6/solar-inspection.svg" alt="Solar Inspection Report" width={640} height={300} className="w-full h-auto" />
-              </div>
-              <div className="p-6">
-                <h3 className="min-h-[70px] flex-1 basis-0 text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik Pro'] mb-2">
-                  Solar Inspection Report
-                </h3>
-                <p className={`${inter.className} h-[66px] min-h-[66px] flex-1 basis-0 text-[18px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)] mb-4`}>
-                  Evaluate solar production, system condition, and remaining life. Spot issues before they become deal-breakers.
-                </p>
-                <div className="flex items-center gap-3">
-                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] bg-[#115056] text-white text-[22px] font-normal`}>
-                    View Sample <span aria-hidden>→</span>
-                  </button>
-                  <button className={`${inter.className} flex justify-center items-start py-[5px] px-[15px] flex-1 basis-0 rounded-[5px] border border-[#115056] text-[#115056] text-[22px] font-normal`}>
-                    Learn More <span aria-hidden>→</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  
  
       {/* Section 7 - Testimonials */}
       <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">

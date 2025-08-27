@@ -22,10 +22,9 @@ export default function HomeownerPage() {
               textAlign: "center",
             }}
           >
-            <span>Add Solar Inspections</span>{" "}
-            <span style={{ color: "var(--Text-Title, #141414)" }}>to</span>
+            <span>Sprk Stands with Solar</span>
             <br />
-            <span style={{ color: "var(--Text-Title, #141414)" }}>Grow Your Business</span>
+            <span style={{ color: "var(--Text-Title, #141414)" }}>Homeowners</span>
           </h1>
 
           <p
@@ -41,22 +40,28 @@ export default function HomeownerPage() {
               lineHeight: "120%",
             }}
           >
-            Sprk equips home inspectors with the training, tools, and reports to inspect solar and energy
-            systems confidently, deliver more value, and grow revenue on every job.
+            You've invested in the future. Sprk is here to help protect your green investment—whether
+            you're thinking about solar, troubleshooting a system, or preparing to buy or sell a solar-powered home.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex justify-center items-center content-center gap-[15px] self-stretch flex-wrap pt-2">
             <Link
-              href="#join"
+              href="#find-solar-pro"
               className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#115056] text-white text-[14px] font-semibold leading-[110%]"
             >
-              Join Sprk
+              Find a Certified Solar Pro
             </Link>
             <Link
-              href="#demo"
-              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-white border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
+              href="#find-agent"
+              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#F1FAFA] border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
             >
-              Watch a Demo
+              Find a Certified Real Estate Agent
+            </Link>
+            <Link
+              href="#find-inspector"
+              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
+            >
+              Find a Certified Home Inspector
             </Link>
           </div>
 
