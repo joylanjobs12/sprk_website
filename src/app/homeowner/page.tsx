@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
+import AboutSprk from "@/components/AboutSprk";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -191,15 +192,10 @@ export default function HomeownerPage() {
 
           <div className="text-center mt-8">
             <p
-              className="max-w-2xl mx-auto"
+              className="mx-auto text-center text-[32px] font-medium leading-[110%]"
               style={{
                 color: "rgba(0, 0, 0, 0.66)",
-                textAlign: "center",
                 fontFamily: '"Aeonik Pro"',
-                fontSize: 32,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
               }}
             >
               You're doing the right thing. We're here to make sure the solar and real estate industries catch up.
@@ -209,221 +205,35 @@ export default function HomeownerPage() {
       </section>
 
       {/* Section 3 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-          <div className="text-center mb-8">
-            <h3
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 40,
-                fontStyle: "normal",
-                fontWeight: 600,
-                lineHeight: "120%",
-              }}
-            >
-              How Sprk Works
-            </h3>
-            <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-              Three simple steps to get clear solar insights and confident decisions.
-            </p>
-          </div>
-
-          <div className="relative flex flex-wrap justify-center gap-6">
-            <div className="flex w-[260px] flex-col items-start absolute left-[330px] top-[236px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex w-[260px] flex-col items-start absolute right-[330px] top-[168px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 1
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-trained.svg" alt="Get Trained" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Trained
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Complete Sprk's on-demand certification and learn how to inspect solar and energy systems with ease.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 2
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-tools.svg" alt="Get Tools" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Tools
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Use the Sprk Pro app to collect data and generate polished reports in minutes right from your phone or tablet.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 3
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-paid.svg" alt="Get Paid" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Paid
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                 Offer more value to your clients, stand out with agents, and increase your profitability per job.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <AboutSprk
+        title="What Sprk Certified Means"
+        subtitle="Trusted People. Verified Practices. Certified Data."
+        description="Sprk Certified means the professionals you work with—and the reports they rely on—meet the highest standards in solar real estate."
+        card1={[
+          {
+            icon: "/homeowners-page/section 3/inspectors.svg",
+            label: "Sprk Certified Inspectors",
+            text: "Are trained to inspect and evaluate solar system performance, safety, installation quality, and energy features just like they would a roof or HVAC."
+          },
+          {
+            icon: "/homeowners-page/section 3/agents.svg",
+            label: "Sprk Certified Agents",
+            text: "Certified in energy, disclosure, and valuation practices"
+          }
+        ]}
+        card2={[
+          {
+            icon: "/homeowners-page/section 3/solar-pros.svg",
+            label: "Certified Solar Pros",
+            text: "Go beyond selling solar. They help homeowners understand how their whole-home energy system works, document installations for future resale, and size systems based on actual energy needs."
+          },
+          {
+            icon: "/homeowners-page/section 3/reports.svg",
+            label: "Certified Reports",
+            text: "Sprk Certified Reports - like the Solar Inspection Report, Solar Listing Report, and Green Home Appraisal Report are accurate and validated using verified documentation, industry best practices, and real system data. These reports support real estate decisions and can be trusted by buyers, lenders, appraisers, and agents alike."
+          }
+        ]}
+      />
 
 
       {/* Section 5 */}

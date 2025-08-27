@@ -63,78 +63,186 @@ export default function SolarProPage() {
       </section>
       {/* Section 2 */}
       <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-          <h2
-            className="text-center mb-8"
+        <div className="flex flex-col items-center gap-[50px] pt-[100px] pb-[100px]">
+          <div className="text-center w-full">
+            <h2
+              className="mb-4 text-center"
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: "Aeonik Pro",
+                fontSize: "56px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              Why Solar Professionals Choose Sprk
+            </h2>
+            <h3
+              className="mb-6 text-center"
+              style={{
+                color: "var(--Text-Title, #141414)",
+                fontFamily: "Aeonik Pro",
+                fontSize: "35px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              Sprk Helps You Stand Out in a Market That's Changing
+            </h3>
+            <p
+              className={`${inter.className} mb-12 text-center`}
+              style={{
+                color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                fontFamily: "Inter",
+                fontSize: "22px",
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "120%",
+              }}
+            >
+              Most solar companies stop at the install. But the homeowners you serve deserve more.
+              Sprk helps you become the kind of solar partner that stays relevant long after the panels go up.
+            </p>
+          </div>
+
+          <div 
+            className="flex flex-wrap items-start content-start rounded-[10px] border bg-white"
             style={{
-              flex: "1 0 0",
-              color: "#141414",
-              textAlign: "center",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 56,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
+              width: "1248px",
+              height: "500px",
+              borderColor: "rgba(0, 0, 0, 0.15)",
             }}
           >
-            Why Home Inspectors Choose Sprk
-          </h2>
-          <div
-            className="rounded-[12px] border bg-white overflow-hidden"
-            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
-              <div className="p-4 sm:p-6 flex items-start justify-center" style={{ display: "flex", height: 500, minWidth: 350, alignItems: "flex-start", alignSelf: "stretch", background: "lightgray -22px 57.396px / 107.051% 77.042%" }}>
-                <Image
-                  src="/inspector-page/section 2/next-big-shift.svg"
-                  alt="Skrp app devices mockup"
-                  width={720}
-                  height={420}
-                  priority
-                />
-              </div>
-              <div className="p-6 sm:p-8 md:border-l" style={{ borderColor: "rgba(0, 0, 0, 0.10)" }}>
-                <h3
-                  style={{
-                    flex: "1 0 0",
-                    color: "#141414",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 35,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  The Next Big Shift in Inspections Is Here
-                </h3>
-                <div className="mt-4 space-y-4">
+            <div className="flex items-start self-stretch" style={{ height: "500px", minWidth: "350px" }}>
+              <Image
+                src="/solar-pro-page/section 2/solar-professionals.svg"
+                alt="Solar professionals working with Sprk"
+                width={600}
+                height={400}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+            <div className="flex flex-col items-start p-[30px] flex-1" style={{ height: "500px", minWidth: "350px", gap: "35px" }}>
+              <h4
+                className="mb-6"
+                style={{
+                  color: "var(--Text-Title, #141414)",
+                  fontFamily: "Aeonik Pro",
+                  fontSize: "30px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                }}
+              >
+                What Sprk Does for Solar Companies
+              </h4>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
+                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
+                    </svg>
+                  </div>
                   <p
                     className={`${inter.className}`}
                     style={{
-                      flex: "1 0 0",
-                      color: "rgba(0, 0, 0, 0.66)",
-                      fontFamily: '"Inter", sans-serif',
-                      fontSize: 22,
+                      color: "#141414",
+                      fontFamily: "Inter",
+                      fontSize: "18px",
                       fontStyle: "normal",
                       fontWeight: 400,
                       lineHeight: "120%",
                     }}
                   >
-                    Over 5 million homes in the U.S. now have solar, and most still don't get inspected.
+                    Attract new leads with a homeowner-facing Solar Calculator
                   </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
+                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
+                    </svg>
+                  </div>
                   <p
                     className={`${inter.className}`}
                     style={{
-                      flex: "1 0 0",
-                      color: "rgba(0, 0, 0, 0.66)",
-                      fontFamily: '"Inter", sans-serif',
-                      fontSize: 22,
+                      color: "#141414",
+                      fontFamily: "Inter",
+                      fontSize: "18px",
                       fontStyle: "normal",
                       fontWeight: 400,
                       lineHeight: "120%",
                     }}
                   >
-                    But 30% of solar systems have issues that should be flagged before a home changes hands. Smart inspectors are stepping in. Sprk helps them lead.
+                    Create proposals that include energy upgrades, solar, and batteries
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
+                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
+                    </svg>
+                  </div>
+                  <p
+                    className={`${inter.className}`}
+                    style={{
+                      color: "#141414",
+                      fontFamily: "Inter",
+                      fontSize: "18px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "120%",
+                    }}
+                  >
+                    Sell and install using Sprk's real estate-ready reports
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
+                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
+                    </svg>
+                  </div>
+                  <p
+                    className={`${inter.className}`}
+                    style={{
+                      color: "#141414",
+                      fontFamily: "Inter",
+                      fontSize: "18px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "120%",
+                    }}
+                  >
+                    Give clients a mobile app to store solar and resale documents
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
+                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
+                    </svg>
+                  </div>
+                  <p
+                    className={`${inter.className}`}
+                    style={{
+                      color: "#141414",
+                      fontFamily: "Inter",
+                      fontSize: "18px",
+                      fontStyle: "normal",
+                      fontWeight: 400,
+                      lineHeight: "120%",
+                    }}
+                  >
+                    Connect clients with solar-trained real estate agents
                   </p>
                 </div>
               </div>
