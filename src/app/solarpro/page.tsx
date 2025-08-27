@@ -22,10 +22,9 @@ export default function SolarProPage() {
               textAlign: "center",
             }}
           >
-            <span>Add Solar Inspections</span>{" "}
-            <span style={{ color: "var(--Text-Title, #141414)" }}>to</span>
+            <span>Do More Than Get Solar</span>
             <br />
-            <span style={{ color: "var(--Text-Title, #141414)" }}>Grow Your Business</span>
+            <span style={{ color: "var(--Text-Title, #141414)" }}>on Their Roof</span>
           </h1>
 
           <p
@@ -41,40 +40,25 @@ export default function SolarProPage() {
               lineHeight: "120%",
             }}
           >
-            Sprk equips home inspectors with the training, tools, and reports to inspect solar and energy
-            systems confidently, deliver more value, and grow revenue on every job.
+            Sprk equips solar professionals with tools to sell smarter, support longer, and help homeowners
+            understand their system now and years from now.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
             <Link
-              href="#join"
+              href="#certified"
               className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#115056] text-white text-[14px] font-semibold leading-[110%]"
             >
-              Join Sprk
+              Get Sprk Certified
             </Link>
             <Link
-              href="#demo"
+              href="#estimator"
               className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-white border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
             >
-              Watch a Demo
+              Use the Solar Estimator
             </Link>
           </div>
 
-          <div className="w-full pt-8 sm:pt-10 lg:pt-12 flex flex-col items-center gap-[25px] self-stretch">
-            <p className="text-center text-xs tracking-wide opacity-70">Trusted by:</p>
-            <div className="flex justify-center items-center gap-[25px]">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Image
-                  key={index}
-                  src="/inspector-page/section1/trusted-by.svg"
-                  alt="Trusted by logo"
-                  width={150}
-                  height={82}
-                  priority={index === 0}
-                />
-              ))}
-            </div>
-          </div>
         </div>
       </section>
       {/* Section 2 */}

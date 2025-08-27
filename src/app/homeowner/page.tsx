@@ -65,101 +65,145 @@ export default function HomeownerPage() {
             </Link>
           </div>
 
-          <div className="w-full pt-8 sm:pt-10 lg:pt-12 flex flex-col items-center gap-[25px] self-stretch">
-            <p className="text-center text-xs tracking-wide opacity-70">Trusted by:</p>
-            <div className="flex justify-center items-center gap-[25px]">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <Image
-                  key={index}
-                  src="/inspector-page/section1/trusted-by.svg"
-                  alt="Trusted by logo"
-                  width={150}
-                  height={82}
-                  priority={index === 0}
-                />
-              ))}
-            </div>
-          </div>
         </div>
       </section>
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-          <h2
-            className="text-center mb-8"
-            style={{
-              flex: "1 0 0",
-              color: "#141414",
-              textAlign: "center",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 56,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
-            }}
-          >
-            Why Home Inspectors Choose Sprk
-          </h2>
-          <div
-            className="rounded-[12px] border bg-white overflow-hidden"
-            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 items-stretch">
-              <div className="p-4 sm:p-6 flex items-start justify-center" style={{ display: "flex", height: 500, minWidth: 350, alignItems: "flex-start", alignSelf: "stretch", background: "lightgray -22px 57.396px / 107.051% 77.042%" }}>
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-[80px]">
+        <div className="flex flex-col items-center gap-[50px]">
+          <div className="flex flex-col items-center gap-[30px] self-stretch">
+            <h2
+              className="mb-4"
+              style={{
+                color: "#141414",
+                textAlign: "center",
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontSize: 56,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              You're Leading the Way
+            </h2>
+            <p
+              className={`${inter.className} mx-auto`}
+              style={{
+                color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
+                textAlign: "center",
+                fontFamily: "Inter",
+                fontSize: 22,
+                fontStyle: "normal",
+                fontWeight: 400,
+                lineHeight: "120%",
+              }}
+            >
+              Solar homeowners are making one of the smartest investments—for their home and for the planet.
+              Whether you installed solar years ago, are just getting started, or are trying to understand what your
+              system is worth, Sprk exists to bring clarity to the process.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full">
+            {/* Card 1 */}
+            <div className="rounded-[12px] border border-gray-200 bg-white overflow-hidden shadow-sm aspect-[3/4] flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
                 <Image
-                  src="/inspector-page/section 2/next-big-shift.svg"
-                  alt="Skrp app devices mockup"
-                  width={720}
-                  height={420}
-                  priority
+                  src="/homeowners-page/section 2/investment.svg"
+                  alt="Your solar investment is documented and valued properly"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
                 />
               </div>
-              <div className="p-6 sm:p-8 md:border-l" style={{ borderColor: "rgba(0, 0, 0, 0.10)" }}>
+              <div className="flex px-[30px] py-[50px] flex-col justify-center items-center gap-[20px] self-stretch bg-[#F9FAFB] flex-1">
                 <h3
+                  className="text-center"
                   style={{
-                    flex: "1 0 0",
                     color: "#141414",
                     fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 35,
+                    fontSize: 20,
                     fontStyle: "normal",
                     fontWeight: 500,
-                    lineHeight: "110%",
+                    lineHeight: "130%",
                   }}
                 >
-                  The Next Big Shift in Inspections Is Here
+                  Your solar investment is documented and valued properly
                 </h3>
-                <div className="mt-4 space-y-4">
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      flex: "1 0 0",
-                      color: "rgba(0, 0, 0, 0.66)",
-                      fontFamily: '"Inter", sans-serif',
-                      fontSize: 22,
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Over 5 million homes in the U.S. now have solar, and most still don't get inspected.
-                  </p>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      flex: "1 0 0",
-                      color: "rgba(0, 0, 0, 0.66)",
-                      fontFamily: '"Inter", sans-serif',
-                      fontSize: 22,
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    But 30% of solar systems have issues that should be flagged before a home changes hands. Smart inspectors are stepping in. Sprk helps them lead.
-                  </p>
-                </div>
               </div>
             </div>
+
+            {/* Card 2 */}
+            <div className="rounded-[12px] border border-gray-200 bg-white overflow-hidden shadow-sm aspect-[3/4] flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/homeowners-page/section 2/avoid-confusion.svg"
+                  alt="You avoid confusion during appraisals, refinancing, or home sales"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex px-[30px] py-[50px] flex-col justify-center items-center gap-[20px] self-stretch bg-[#F9FAFB] flex-1">
+                <h3
+                  className="text-center"
+                  style={{
+                    color: "#141414",
+                    fontFamily: '"Aeonik Pro", sans-serif',
+                    fontSize: 20,
+                    fontStyle: "normal",
+                    fontWeight: 500,
+                    lineHeight: "130%",
+                  }}
+                >
+                  You avoid confusion during appraisals, refinancing, or home sales
+                </h3>
+              </div>
+            </div>
+
+            {/* Card 3 */}
+            <div className="rounded-[12px] border border-gray-200 bg-white overflow-hidden shadow-sm aspect-[3/4] flex flex-col">
+              <div className="aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/homeowners-page/section 2/with-professionals.svg"
+                  alt="You work with professionals who understand how to represent your solar home"
+                  width={400}
+                  height={300}
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="flex px-[30px] py-[50px] flex-col justify-center items-center gap-[20px] self-stretch bg-[#F9FAFB] flex-1">
+                <h3
+                  className="text-center"
+                  style={{
+                    color: "#141414",
+                    fontFamily: '"Aeonik Pro", sans-serif',
+                    fontSize: 20,
+                    fontStyle: "normal",
+                    fontWeight: 500,
+                    lineHeight: "130%",
+                  }}
+                >
+                  You work with professionals who understand how to represent your solar home
+                </h3>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-8">
+            <p
+              className="max-w-2xl mx-auto"
+              style={{
+                color: "rgba(0, 0, 0, 0.66)",
+                textAlign: "center",
+                fontFamily: '"Aeonik Pro"',
+                fontSize: 32,
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              You're doing the right thing. We're here to make sure the solar and real estate industries catch up.
+            </p>
           </div>
         </div>
       </section>
@@ -380,64 +424,7 @@ export default function HomeownerPage() {
           </div>
         </div>
       </section>
-      {/* Section 4 */}
-      <section className="mx-auto w-full bg-[var(--Primary-Color,#115056)]">
-        <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 ">
-          <div className="rounded-[12px] flex w-[1440px] px-[94px] py-[150px] flex-col items-center gap-[80px]">
-            <div className="text-center">
-              <h3 className="flex-1 basis-0 text-white text-center text-[56px] leading-[110%] font-medium">
-                What Sprk Does for Home Inspectors
-              </h3>
-            </div>
-            <div className="px-4 pb-[40px] sm:pb-[50px] lg:pb-[60px]">
-              <div className="grid gap-6 md:grid-cols-3">
-                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
-                  <Image src="/inspector-page/section 4/add-hunderds.svg" alt="Add hundreds in extra revenue per inspection" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
-                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
-                      Add hundreds in extra revenue per inspection
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
-                  <Image src="/inspector-page/section 4/get-certified.svg" alt="Get certified to inspect solar and energy systems" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
-                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
-                      Get certified to inspect solar and energy systems
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
-                  <Image src="/inspector-page/section 4/complete-solar.svg" alt="Complete solar inspections in as little as 15 minutes" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
-                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
-                      Complete solar inspections in as little as 15 minutes
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid gap-6 md:grid-cols-2 mt-6 justify-center">
-                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
-                  <Image src="/inspector-page/section 4/generate-clean.svg" alt="Generate clean, easy-to-read solar and energy reports" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
-                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
-                      Generate clean, easy-to-read solar and energy reports
-                    </div>
-                  </div>
-                </div>
-                <div className="rounded-[10px] bg-white shadow-md overflow-hidden">
-                  <Image src="/inspector-page/section 4/solar-expert.svg" alt="Become the go-to solar expert in your market" width={640} height={360} className="w-full h-auto" />
-                  <div className={`${inter.className} flex flex-col justify-end items-center gap-[20px] self-stretch bg-[#F9FAFB] py-[50px] px-0`}>
-                    <div className={`${inter.className} flex-1 basis-0 text-center text-[#141414] text-[25px] font-medium leading-[120%]`}>
-                      Become the go-to solar expert in your market
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* Section 5 */}
       <section className="mx-auto w-full max-w-[1440px] px-4 py-[100px] sm:px-6 lg:px-8 mb-[50px]">
