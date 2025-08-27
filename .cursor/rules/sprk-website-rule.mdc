@@ -1,0 +1,12 @@
+---
+description:
+globs:
+alwaysApply: true
+---
+
+
+- The Figma Dev Mode MCP Server provides an assets endpoint which can serve image and SVG assets
+- IMPORTANT: If the Figma Dev Mode MCP Server returns a localhost source for an image or an SVG, use that image or SVG source directly
+- IMPORTANT: DO NOT import/add new icon packages, all the assets should be in the Figma payload
+- IMPORTANT: do NOT use or create placeholders if a localhost source is provided
+- IMPORTANT: Each page contains different sections. To organize and save assets for each page, divide them by section. For example, for a dynamic page like "professionalsolartraining", when using the "Copy link to selection" feature in Figma, save the images/assets in a public folder named "professional-solar-training-page". This folder should contain child folders for each section, such as: professional-solar-training-page -> section 1 -> all files and assets stored here; professional-solar-training-page -> section 2 -> all files and assets stored here.

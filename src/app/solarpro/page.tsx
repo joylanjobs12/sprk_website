@@ -9,52 +9,68 @@ const inter = Inter({ subsets: ["latin"] });
 export default function SolarProPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-[40px] sm:pt-[60px] lg:pt-[80px] pb-[40px] sm:pb-[60px] lg:pb-[80px]">
-        <div className="flex flex-col items-center text-center gap-6 sm:gap-7 lg:gap-8">
-          <h1
-            className="max-w-[1000px]"
-            style={{
-              color: "var(--Primary-Color, #115056)",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 80,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
-              textAlign: "center",
-            }}
-          >
-            <span>Do More Than Get Solar</span>
-            <br />
-            <span style={{ color: "var(--Text-Title, #141414)" }}>on Their Roof</span>
-          </h1>
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-[150px] pb-[100px]">
+        <div className="flex flex-col items-center text-center gap-[50px]">
+          <div className="flex flex-col gap-[30px] items-center w-full">
+            <h1
+              className="w-full text-center"
+              style={{
+                fontFamily: "Aeonik Pro",
+                fontSize: "80px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
+            >
+              <span style={{ color: "#115056" }}>Do More Than Get Solar</span>
+              <br />
+              <span style={{ color: "#141414" }}>on Their Roof</span>
+            </h1>
 
-          <p
-            className={`${inter.className}`}
-            style={{
-              flex: "1 0 0",
-              color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-              textAlign: "center",
-              fontFamily: '"Inter", sans-serif',
-              fontSize: 22,
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "120%",
-            }}
-          >
-            Sprk equips solar professionals with tools to sell smarter, support longer, and help homeowners
-            understand their system now and years from now.
-          </p>
+            <div className="flex items-center justify-center w-full px-2.5">
+              <p
+                className={`${inter.className} text-center`}
+                style={{
+                  fontFamily: "Inter",
+                  fontSize: "22px",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  lineHeight: "120%",
+                  color: "rgba(0, 0, 0, 0.66)",
+                }}
+              >
+                Sprk equips solar professionals with tools to sell smarter, support longer, and help homeowners
+                <br />
+                understand their system now and years from now.
+              </p>
+            </div>
+          </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
+          <div className="flex flex-wrap items-center justify-center gap-[15px] w-full">
             <Link
               href="#certified"
-              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#115056] text-white text-[14px] font-semibold leading-[110%]"
+              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#115056] text-white"
+              style={{
+                fontFamily: "Aeonik Pro",
+                fontSize: "25px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+              }}
             >
               Get Sprk Certified
             </Link>
             <Link
               href="#estimator"
-              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-white border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
+              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-white border border-[#115056]"
+              style={{
+                fontFamily: "Aeonik Pro",
+                fontSize: "25px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+                color: "#115056",
+              }}
             >
               Use the Solar Estimator
             </Link>
@@ -63,188 +79,210 @@ export default function SolarProPage() {
         </div>
       </section>
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[100px] pb-[100px]">
-          <div className="text-center w-full">
-            <h2
-              className="mb-4 text-center"
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: "Aeonik Pro",
-                fontSize: "56px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
-            >
-              Why Solar Professionals Choose Sprk
-            </h2>
-            <h3
-              className="mb-6 text-center"
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: "Aeonik Pro",
-                fontSize: "35px",
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
-            >
-              Sprk Helps You Stand Out in a Market That's Changing
-            </h3>
-            <p
-              className={`${inter.className} mb-12 text-center`}
-              style={{
-                color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-                fontFamily: "Inter",
-                fontSize: "22px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "120%",
-              }}
-            >
-              Most solar companies stop at the install. But the homeowners you serve deserve more.
-              Sprk helps you become the kind of solar partner that stays relevant long after the panels go up.
-            </p>
-          </div>
-
-          <div 
-            className="flex flex-wrap items-start content-start rounded-[10px] border bg-white"
-            style={{
-              width: "1248px",
-              height: "500px",
-              borderColor: "rgba(0, 0, 0, 0.15)",
-            }}
-          >
-            <div className="flex items-start self-stretch" style={{ height: "500px", minWidth: "350px" }}>
-              <Image
-                src="/solar-pro-page/section 2/solar-professionals.svg"
-                alt="Solar professionals working with Sprk"
-                width={600}
-                height={400}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
-            <div className="flex flex-col items-start p-[30px] flex-1" style={{ height: "500px", minWidth: "350px", gap: "35px" }}>
-              <h4
-                className="mb-6"
+      <section className="mx-auto w-full max-w-[1440px] px-24 py-[100px]">
+        <div className="flex flex-col items-center gap-[50px]">
+          <div className="flex flex-col gap-[30px] items-center w-full">
+            <div className="flex items-start justify-center w-full">
+              <h2
+                className="text-center"
                 style={{
-                  color: "var(--Text-Title, #141414)",
                   fontFamily: "Aeonik Pro",
-                  fontSize: "30px",
+                  fontSize: "56px",
                   fontStyle: "normal",
                   fontWeight: 500,
                   lineHeight: "110%",
+                  color: "#141414",
                 }}
               >
-                What Sprk Does for Solar Companies
-              </h4>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
-                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
-                    </svg>
+                Why Solar Professionals Choose Sprk
+              </h2>
+            </div>
+            <div className="flex items-start justify-center w-full">
+              <h3
+                className="text-center"
+                style={{
+                  fontFamily: "Aeonik Pro",
+                  fontSize: "35px",
+                  fontStyle: "normal",
+                  fontWeight: 500,
+                  lineHeight: "110%",
+                  color: "#141414",
+                }}
+              >
+                Sprk Helps You Stand Out in a Market That's Changing
+              </h3>
+            </div>
+            <div className="flex flex-col gap-2.5 items-start w-full">
+              <div className="flex items-start justify-center w-full">
+                <p
+                  className={`${inter.className} text-center`}
+                  style={{
+                    fontFamily: "Inter",
+                    fontSize: "22px",
+                    fontStyle: "normal",
+                    fontWeight: 400,
+                    lineHeight: "120%",
+                    color: "rgba(0, 0, 0, 0.66)",
+                  }}
+                >
+                  Most solar companies stop at the install. But the homeowners you serve deserve more.
+                  <br />
+                  Sprk helps you become the kind of solar partner that stays relevant long after the panels go up.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-[50px] items-center w-[1248px]">
+            <div className="flex flex-wrap gap-6 items-center justify-start w-full">
+              <div className="bg-white h-[500px] rounded-[10px] w-[1248px] border border-[rgba(0,0,0,0.15)] overflow-hidden">
+                <div className="flex flex-wrap gap-0 h-[500px] items-start justify-start w-[1248px]">
+                  <div className="bg-gray-50 flex flex-col items-start justify-start w-[624px]">
+                    <div 
+                      className="h-[500px] min-w-[350px] w-full bg-center bg-cover bg-no-repeat"
+                      style={{ 
+                        backgroundImage: `url('http://localhost:3845/assets/0b9a49852eeeaf136ff0305af0e24b04c005390f.png')`,
+                      }}
+                    />
                   </div>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      color: "#141414",
-                      fontFamily: "Inter",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Attract new leads with a homeowner-facing Solar Calculator
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
-                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
-                    </svg>
+                  <div className="bg-white flex flex-col gap-[35px] h-[500px] items-start justify-start min-w-[350px] p-[30px] flex-1">
+                    <div className="flex items-start justify-start w-full">
+                      <h4
+                        style={{
+                          fontFamily: "Aeonik Pro",
+                          fontSize: "30px",
+                          fontStyle: "normal",
+                          fontWeight: 500,
+                          lineHeight: "110%",
+                          color: "#141414",
+                        }}
+                      >
+                        What Sprk Does for Solar Companies
+                      </h4>
+                    </div>
+                    <div className="flex flex-col gap-[5px] items-start w-full">
+                      <div className="flex gap-[5px] items-center justify-center w-full">
+                        <div className="relative w-6 h-6 flex-shrink-0">
+                          <div className="absolute inset-[14.63%_11.46%_14.63%_14.68%]">
+                            <img 
+                              alt="" 
+                              className="block max-w-none w-full h-full" 
+                              src="http://localhost:3845/assets/0d9e84751729bc59e1fbfcbbd943386fa0d4cd90.svg" 
+                            />
+                          </div>
+                        </div>
+                        <p
+                          className={`${inter.className} flex-1`}
+                          style={{
+                            fontFamily: "Inter",
+                            fontSize: "18px",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            lineHeight: "120%",
+                            color: "#141414",
+                          }}
+                        >
+                          Attract new leads with a homeowner-facing Solar Calculator
+                        </p>
+                      </div>
+                      <div className="flex gap-[5px] items-start w-full">
+                        <div className="relative w-6 h-6 flex-shrink-0">
+                          <div className="absolute inset-[14.63%_11.46%_14.63%_14.68%]">
+                            <img 
+                              alt="" 
+                              className="block max-w-none w-full h-full" 
+                              src="http://localhost:3845/assets/0d9e84751729bc59e1fbfcbbd943386fa0d4cd90.svg" 
+                            />
+                          </div>
+                        </div>
+                        <p
+                          className={`${inter.className} flex-1`}
+                          style={{
+                            fontFamily: "Inter",
+                            fontSize: "18px",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            lineHeight: "120%",
+                            color: "#141414",
+                          }}
+                        >
+                          Create proposals that include energy upgrades, solar, and batteries
+                        </p>
+                      </div>
+                      <div className="flex gap-[5px] items-start w-full">
+                        <div className="relative w-6 h-6 flex-shrink-0">
+                          <div className="absolute inset-[14.63%_11.46%_14.63%_14.68%]">
+                            <img 
+                              alt="" 
+                              className="block max-w-none w-full h-full" 
+                              src="http://localhost:3845/assets/0d9e84751729bc59e1fbfcbbd943386fa0d4cd90.svg" 
+                            />
+                          </div>
+                        </div>
+                        <p
+                          className={`${inter.className} flex-1`}
+                          style={{
+                            fontFamily: "Inter",
+                            fontSize: "18px",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            lineHeight: "120%",
+                            color: "#141414",
+                          }}
+                        >
+                          Sell and install using Sprk's real estate-ready reports
+                        </p>
+                      </div>
+                      <div className="flex gap-[5px] items-start w-full">
+                        <div className="relative w-6 h-6 flex-shrink-0">
+                          <div className="absolute inset-[14.63%_11.46%_14.63%_14.68%]">
+                            <img 
+                              alt="" 
+                              className="block max-w-none w-full h-full" 
+                              src="http://localhost:3845/assets/0d9e84751729bc59e1fbfcbbd943386fa0d4cd90.svg" 
+                            />
+                          </div>
+                        </div>
+                        <p
+                          className={`${inter.className} flex-1`}
+                          style={{
+                            fontFamily: "Inter",
+                            fontSize: "18px",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            lineHeight: "120%",
+                            color: "#141414",
+                          }}
+                        >
+                          Give clients a mobile app to store solar and resale documents
+                        </p>
+                      </div>
+                      <div className="flex gap-[5px] items-center justify-center w-full">
+                        <div className="relative w-6 h-6 flex-shrink-0">
+                          <div className="absolute inset-[14.63%_11.46%_14.63%_14.68%]">
+                            <img 
+                              alt="" 
+                              className="block max-w-none w-full h-full" 
+                              src="http://localhost:3845/assets/0d9e84751729bc59e1fbfcbbd943386fa0d4cd90.svg" 
+                            />
+                          </div>
+                        </div>
+                        <p
+                          className={`${inter.className} flex-1`}
+                          style={{
+                            fontFamily: "Inter",
+                            fontSize: "18px",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            lineHeight: "120%",
+                            color: "#141414",
+                          }}
+                        >
+                          Connect clients with solar-trained real estate agents
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      color: "#141414",
-                      fontFamily: "Inter",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Create proposals that include energy upgrades, solar, and batteries
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
-                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
-                    </svg>
-                  </div>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      color: "#141414",
-                      fontFamily: "Inter",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Sell and install using Sprk's real estate-ready reports
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
-                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
-                    </svg>
-                  </div>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      color: "#141414",
-                      fontFamily: "Inter",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Give clients a mobile app to store solar and resale documents
-                  </p>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="flex-shrink-0 w-6 h-6 flex items-center justify-center mt-0.5">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.4831 5.25948C6.33867 5.38738 5.42262 6.29063 5.29021 7.42274C4.93451 10.4639 4.93451 13.5361 5.29021 16.5773C5.42262 17.7094 6.33867 18.6126 7.4831 18.7405C10.4599 19.0732 13.5396 19.0732 16.5164 18.7405C17.6608 18.6126 18.5769 17.7094 18.7093 16.5773C18.9648 14.3921 19.0368 12.1909 18.9251 9.99674C18.9222 9.94008 18.9434 9.88481 18.9835 9.84469L20.0223 8.80591C20.1425 8.68568 20.3479 8.76086 20.3607 8.93042C20.5567 11.5353 20.5029 14.1544 20.1991 16.7515C19.9843 18.5885 18.5094 20.0271 16.683 20.2313C13.5954 20.5763 10.404 20.5763 7.31649 20.2313C5.49011 20.0271 4.01521 18.5885 3.80036 16.7515C3.43113 13.5946 3.43113 10.4054 3.80036 7.24849C4.01521 5.41153 5.49011 3.97288 7.31649 3.76876C10.404 3.42368 13.5954 3.42368 16.683 3.76876C17.3262 3.84065 17.9259 4.06568 18.4423 4.40732C18.5439 4.47454 18.5539 4.61738 18.4678 4.70353L17.6649 5.50641C17.5992 5.57208 17.4974 5.58313 17.4155 5.53926C17.1421 5.39277 16.8383 5.29545 16.5164 5.25948C13.5396 4.92677 10.4599 4.92677 7.4831 5.25948Z" fill="#115056"/>
-                      <path d="M21.0301 6.03034C21.3229 5.73744 21.3229 5.26257 21.0301 4.96968C20.7372 4.67678 20.2623 4.67678 19.9694 4.96968L11.4997 13.4393L9.03006 10.9697C8.73716 10.6768 8.26229 10.6768 7.9694 10.9697C7.6765 11.2626 7.6765 11.7374 7.9694 12.0303L10.9694 15.0303C11.2623 15.3232 11.7372 15.3232 12.0301 15.0303L21.0301 6.03034Z" fill="#115056"/>
-                    </svg>
-                  </div>
-                  <p
-                    className={`${inter.className}`}
-                    style={{
-                      color: "#141414",
-                      fontFamily: "Inter",
-                      fontSize: "18px",
-                      fontStyle: "normal",
-                      fontWeight: 400,
-                      lineHeight: "120%",
-                    }}
-                  >
-                    Connect clients with solar-trained real estate agents
-                  </p>
                 </div>
               </div>
             </div>

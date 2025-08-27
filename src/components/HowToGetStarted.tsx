@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -28,112 +27,152 @@ const HowToGetStarted: React.FC<HowToGetStartedProps> = ({
   step4,
 }) => {
   const steps = [step1, step2, step3, step4];
+  
+  // Figma asset URLs for icons
+  const figmaIcons = [
+    "http://localhost:3845/assets/32639ba300274214a1268eb370474e6800361a89.svg", // Step 1 - Calculator
+    "http://localhost:3845/assets/2656637937085e89c31fcd4491b07101c2bf23ba.svg", // Step 2 - Home Energy Report (main icon)
+    "http://localhost:3845/assets/2df9503ab896a642d4cb298a6e00a497a5fb2a3e.svg", // Step 3 - Inspection Report (main icon)
+    "http://localhost:3845/assets/8919c443a095577e6d209ad891fadc03578e34f2.svg", // Step 4 - Listing Report (main icon)
+  ];
 
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4 py-[100px] sm:px-6 lg:px-8 mb-[50px]">
-      <div className="flex flex-col items-center gap-[50px] pb-[100px]">
-        <div className="text-center mb-8">
-          <h3
-            style={{
-              color: "var(--Text-Title, #141414)",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 40,
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "120%",
-            }}
-          >
-            {title}
-          </h3>
-          <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-            {subtitle}
-          </p>
+    <section className="mx-auto w-full max-w-[1440px] px-24 py-[100px]">
+      <div className="flex flex-col items-center gap-[50px]">
+        <div className="flex flex-col gap-5 items-center w-full">
+          <div className="flex items-start justify-center w-full">
+            <h2
+              className="text-center"
+              style={{
+                fontFamily: "Aeonik Pro",
+                fontSize: "56px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "110%",
+                color: "#141414",
+              }}
+            >
+              {title}
+            </h2>
+          </div>
+          <div className="flex items-start justify-center w-full">
+            <p
+              className={`${inter.className} text-center`}
+              style={{
+                fontFamily: "Inter",
+                fontSize: "28px",
+                fontStyle: "normal",
+                fontWeight: 500,
+                lineHeight: "120%",
+                color: "#141414",
+              }}
+            >
+              {subtitle}
+            </p>
+          </div>
         </div>
 
-        <div className="relative flex flex-wrap justify-center gap-6">
+        <div className="relative flex flex-wrap gap-5 items-start justify-start w-[1248px]">
           {/* Arrow decorations */}
-          <div className="flex w-[170px] flex-col items-start absolute left-[250px] top-[250px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
+          <div className="absolute flex h-[22px] items-center justify-center left-[563px] top-[185px] w-[119px]">
+            <div className="flex-none scale-y-[-100%]">
+              <div className="h-[22px] relative w-[119px]">
+                <div className="absolute inset-[-22.2%_-0.84%_-2.56%_-0.29%]">
+                  <img 
+                    alt="" 
+                    className="block max-w-none w-full h-full" 
+                    src="http://localhost:3845/assets/054f20bfb7bd77ae27b4ebd1ca0e85a911d88156.svg" 
+                  />
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="flex w-[170px] flex-col items-start absolute left-[600px] top-[180px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
+          <div className="absolute h-[21.5px] left-[247px] top-[238px] w-[119px]">
+            <div className="absolute inset-[-22.71%_-0.84%_-4.95%_-0.29%]">
+              <img 
+                alt="" 
+                className="block max-w-none w-full h-full" 
+                src="http://localhost:3845/assets/8919c443a095577e6d209ad891fadc03578e34f2.svg" 
+              />
+            </div>
           </div>
-          <div className="flex w-[170px] flex-col items-start absolute right-[250px] top-[250px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
+          <div className="absolute h-[21.5px] left-[882px] top-[238px] w-[119px]">
+            <div className="absolute inset-[-22.71%_-0.84%_-4.95%_-0.29%]">
+              <img 
+                alt="" 
+                className="block max-w-none w-full h-full" 
+                src="http://localhost:3845/assets/8919c443a095577e6d209ad891fadc03578e34f2.svg" 
+              />
+            </div>
           </div>
 
           {/* Dynamic Steps */}
           {steps.map((step, index) => (
             <div
               key={index}
-              className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px] bg-white px-0 py-[50px]"
-              style={{ background: "#FFF" }}
+              className="basis-0 bg-white flex flex-col grow items-center justify-start min-h-px min-w-[295px] overflow-clip relative rounded-[10px] shrink-0"
             >
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step {index + 1}
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image
-                    src={step.icon}
-                    alt={step.label}
-                    width={90}
-                    height={90}
-                    className="w-[90px] h-[90px] aspect-square"
-                  />
+              <div className="bg-white flex flex-col items-center justify-start min-w-[295px] px-0 py-[50px] w-full">
+                <div className="bg-[rgba(86,205,69,0.05)] flex items-start justify-center px-10 py-2.5 relative rounded-[50px] border border-[#56cd45]">
+                  <div
+                    className={`${inter.className} text-center text-nowrap`}
+                    style={{
+                      fontFamily: "Inter",
+                      fontSize: "28px",
+                      fontStyle: "normal",
+                      fontWeight: 500,
+                      lineHeight: "110%",
+                      color: "#56cd45",
+                    }}
+                  >
+                    Step {index + 1}
+                  </div>
                 </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  {step.label}
+                <div className="flex items-center justify-center px-[30px] py-10 w-full">
+                  <div className="bg-[#115056] flex items-center justify-center min-h-[90px] min-w-[90px] relative rounded-[100px] w-[150px] h-[150px] border-[10px] border-[rgba(144,228,193,0.1)] shadow-[0px_10px_15px_0px_rgba(15,143,150,0.08),0px_20px_40px_0px_rgba(15,143,150,0.15)]">
+                    <div className="flex items-center justify-center relative rounded-[50px]">
+                      <div className="overflow-clip relative w-[90px] h-[90px]">
+                        <img 
+                          alt={step.label} 
+                          className="block max-w-none w-full h-full" 
+                          src={figmaIcons[index]} 
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <p
-                  className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: "rgba(0, 0, 0, 0.66)",
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  {step.description}
-                </p>
+                <div className="flex flex-col gap-2.5 items-start w-full">
+                  <div className="flex items-start justify-start min-h-[60px] px-[30px] py-0 w-full">
+                    <div
+                      className="text-center min-h-[90px] flex-1"
+                      style={{
+                        fontFamily: "Aeonik Pro",
+                        fontSize: "27px",
+                        fontStyle: "normal",
+                        fontWeight: 500,
+                        lineHeight: "110%",
+                        color: "#141414",
+                      }}
+                    >
+                      {step.label}
+                    </div>
+                  </div>
+                  <div className="flex items-center justify-start min-h-[110px] px-[30px] py-0 w-full">
+                    <p
+                      className={`${inter.className} text-center min-h-[154px] flex-1`}
+                      style={{
+                        fontFamily: "Inter",
+                        fontSize: "18px",
+                        fontStyle: "normal",
+                        fontWeight: 400,
+                        lineHeight: "120%",
+                        color: "rgba(0, 0, 0, 0.66)",
+                      }}
+                    >
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           ))}
