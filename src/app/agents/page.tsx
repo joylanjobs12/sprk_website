@@ -86,78 +86,188 @@ export default function AgentsPage() {
         </div>
       </section>
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 pb-[100px]">
-        <div className="flex w-[1248px] flex-col items-center gap-[50px] mx-auto">
-          <div className="flex flex-col items-center gap-[30px] self-stretch text-center">
-            <h3
-              className="flex-[1_0_0] text-center text-[#141414] text-[40px] leading-[120%] font-semibold"
-              style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 py-[100px]">
+        <div className="flex flex-col items-center gap-[50px]">
+          <div className="text-center">
+            <h2
+              className="flex-[1_0_0] text-center text-[56px] leading-[110%] font-medium mb-4"
+              style={{ 
+                color: "#141414",
+                fontFamily: '"Aeonik Pro", sans-serif'
+              }}
             >
-              Why Choose Sprk Certified Pros?
-            </h3>
+              Why Real Estate Agents Choose Sprk
+            </h2>
+            <p
+              className="flex-[1_0_0] text-center text-[35px] font-medium  mx-auto"
+              style={{ 
+                color: "#141414",
+                fontFamily: '"Aeonik Pro", sans-serif'
+              }}
+            >
+              Solar Is Changing the Market, and Most Agents Aren't Prepared
+            </p>
+            <p
+              className={`${inter.className} flex-[1_0_0] text-center text-[22px] font-normal mx-auto mt-2`}
+              style={{ color: "rgba(0, 0, 0, 0.66)" }}
+            >
+              Over 5 million U.S. homes now have solar, and that number is growing fast. But most agents aren't trained to explain system value, navigate ownership types, or handle disclosures. That's where Sprk steps in.
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-            {/* Card 1 - Inspectors */}
-            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
-              <div className="p-5 flex items-center gap-[30px] w-full border-b border-b-[#A5DCDF]">
-                <Image src="/home-page/section 6/inspectors.svg" alt="Certified Inspectors" width={60} height={60} className="w-[60px] h-[60px]" />
-                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
-                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Inspectors</div>
+          <div className="flex flex-col justify-center items-center gap-6 self-stretch w-full">
+            {/* Top Row - 3 cards */}
+            <div className="flex justify-center gap-6 w-full">
+              {/* Card 1 - Learn how solar impacts real estate */}
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="mb-4">
+                  <Image src="/agents-page/section 2/learn-how.svg" alt="Learn how solar impacts real estate" width={110} height={111} />
                 </div>
+                <h3
+                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                >
+                  Learn how solar impacts real estate
+                </h3>
               </div>
-              <div className="bg-[#F9FAFB] p-5 w-full">
-                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
-                  Trained to understand solar—not just work around it
-                </p>
+
+              {/* Card 2 - Disclose and market solar with confidence */}
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="mb-4">
+                  <Image src="/agents-page/section 2/disclose.svg" alt="Disclose and market solar with confidence" width={110} height={115} />
+                </div>
+                <h3
+                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                >
+                  Disclose and market solar with confidence
+                </h3>
+              </div>
+
+              {/* Card 3 - Reduce delays tied to solar contracts */}
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="mb-4">
+                  <Image src="/agents-page/section 2/reduce.svg" alt="Reduce delays tied to solar contracts" width={110} height={111} />
+                </div>
+                <h3
+                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                >
+                  Reduce delays tied to solar contracts
+                </h3>
               </div>
             </div>
 
-            {/* Card 2 - Agents */}
-            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
-              <div className="p-5 flex items-center gap-[30px] w-full border-b border-b-[#A5DCDF]">
-                <Image src="/home-page/section 6/agents.svg" alt="Certified Agents" width={60} height={60} className="w-[60px] h-[60px]" />
-                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
-                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Agents</div>
+            {/* Bottom Row - 2 cards */}
+            <div className="flex justify-center gap-6 w-full">
+              {/* Card 4 - Become the go-to solar agent in your market */}
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="mb-4">
+                  <Image src="/agents-page/section 2/solar-agent.svg" alt="Become the go-to solar agent in your market" width={110} height={111} />
                 </div>
+                <h3
+                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                >
+                  Become the go-to solar agent in your market
+                </h3>
               </div>
-              <div className="bg-[#F9FAFB] p-5 w-full">
-                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
-                  Certified in energy, disclosure, and valuation practices
-                </p>
-              </div>
-            </div>
 
-            {/* Card 3 - Solar Pros */}
-            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
-              <div className="p-5 flex items-center gap-[30px] w-full border-b border-b-[#A5DCDF]">
-                <Image src="/home-page/section 6/solar-pros.svg" alt="Certified Solar Pros" width={60} height={60} className="w-[60px] h-[60px]" />
-                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
-                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Solar Pros</div>
+              {/* Card 5 - Attract solar homeowners looking for certified pros */}
+              <div className="flex min-w-[400px] flex-col items-center flex-[1_0_0] p-6 text-center" style={{ borderRadius: "10px", border: "1px solid rgba(17, 80, 86, 0.50)", background: "#FFF" }}>
+                <div className="mb-4">
+                  <Image src="/agents-page/section 2/homeowners.svg" alt="Attract solar homeowners looking for certified pros" width={110} height={111} />
                 </div>
-              </div>
-              <div className="bg-[#F9FAFB] p-5 w-full">
-                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
-                  Use Sprk Reports to document, explain, and protect solar investments
-                </p>
-              </div>
-            </div>
-
-            {/* Card 4 - Reports */}
-            <div className="flex flex-col items-center flex-[1_0_0] rounded-[10px] border border-[rgba(17,80,86,0.50)] bg-white overflow-hidden shadow-[0_63px_25px_0_rgba(38,142,151,0.02),_0_36px_21px_0_rgba(38,142,151,0.08),_0_16px_16px_0_rgba(38,142,151,0.13),_0_4px_9px_0_rgba(38,142,151,0.10)]">
-              <div className="p-5 flex items-center gap-[30px] w-full border-b border-b-[#A5DCDF]">
-                <Image src="/home-page/section 6/reports.svg" alt="Certified Reports" width={60} height={60} className="w-[60px] h-[60px]" />
-                <div className="text-left" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
-                  <div className="text-[#141414] text-[22px] font-medium leading-[120%]">Certified<br />Reports</div>
-                </div>
-              </div>
-              <div className="bg-[#F9FAFB] p-5 w-full">
-                <p className={`${inter.className} text-[16px] leading-[130%]`} style={{ color: "rgba(0, 0, 0, 0.66)" }}>
-                  Trusted by agents, buyers, sellers, and lenders
-                </p>
+                <h3
+                  className="text-[#141414] text-[20px] font-medium leading-[120%] mb-2"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                >
+                  Attract solar homeowners looking for certified pros
+                </h3>
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* New Section - Solar in Deal */}
+      <section className="mx-auto w-full  bg-[#115056]">
+        <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 ">
+          <div className="rounded-[12px] flex w-[1440px] px-[94px] py-[150px] flex-col items-center gap-[80px]">
+            <div className="text-center">
+              <h2
+                className="flex-[1_0_0] text-center text-[56px] leading-[110%] font-medium mb-4"
+                style={{
+                  color: "#FFF",
+                  fontFamily: '"Aeonik Pro", sans-serif'
+                }}
+              >
+                Free Guide – Solar in the Deal
+              </h2>
+              <p
+                className="flex-[1_0_0] text-center text-[28px] font-medium leading-[110%] mx-auto"
+                style={{
+                  color: "#FFF",
+                  fontFamily: '"Aeonik Pro", sans-serif'
+                }}
+              >
+               Curious about solar? This quick read will get you started.
+              </p>
+              <p
+                className={`${inter.className} flex-[1_0_0] text-center text-[22px] font-normal leading-[120%] mx-auto mt-2`}
+                style={{ color: "rgba(255, 255, 255, 0.80)" }}
+              >
+                Understand how solar affects equity, what to disclose, and how to avoid delays. Whether you're listing or
+                representing a buyer, this free guide will help you protect your clients and close with confidence.
+              </p>
+            </div>
+            <div className="flex flex-col lg:flex-row items-center">
+              {/* Left side - Image */}
+              <div className="flex flex-col items-start flex-shrink-0">
+                <Image
+                  src="/agents-page/section 3/solar-in-deal.svg"
+                  alt="Solar in Deal"
+                  width={624}
+                  height={500}
+                  className="w-full h-auto"
+                />
+              </div>
+
+              {/* Right side - Content */}
+              <div className="flex h-[500px] min-w-[350px] p-[50px] flex-col justify-between items-start flex-[1_0_0]" style={{ background: "#FFF" }}>
+                <div className="flex flex-col gap-4 mt-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
+                      Understand solar system ownership types and their impact on transactions
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
+                      Navigate solar contracts, warranties, and transfer processes
+                    </p>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 rounded-full bg-[#115056] mt-2 flex-shrink-0"></div>
+                    <p className={`${inter.className} text-[18px] font-normal leading-[140%]`} style={{ color: "rgba(0, 0, 0, 0.8)" }}>
+                      Provide accurate solar valuations and market solar homes effectively
+                    </p>
+                  </div>
+                </div>
+
+                <button
+                  className="bg-[#115056] text-white px-8 py-4 rounded-[8px] font-medium text-[16px] hover:bg-[#0d3e42] transition-colors w-fit mt-4"
+                  style={{ fontFamily: '"Inter", sans-serif' }}
+                >
+                  Get Solar Certified
+                </button>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
