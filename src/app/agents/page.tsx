@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -937,6 +938,9 @@ export default function AgentsPage() {
           </div>
         </div>
       </section>
+
+      {/* Scroll to Top Button */}
+      <ScrollToTop />
 
       </>
      );
