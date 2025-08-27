@@ -719,10 +719,10 @@ export default function InspectorPage() {
       <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
           <div >
-            <h2 className="flex-1 basis-0 text-center text-[#141414] text-[56px] leading-[110%] font-medium font-['Aeonik_Pro'] mb-[20px]">
+            <h2 className="flex-1 basis-0 text-center text-[#141414] text-[80px] leading-[110%] font-medium font-['Aeonik Pro'] mb-[20px]">
               Sprk Reports for Home Inspectors
             </h2>
-            <p className={`${inter.className} text-center text-[#141414]/70 text-[14px] sm:text-[16px]`}>
+            <p className={`${inter.className} flex-1 basis-0 text-center text-[rgba(0,0,0,0.66)] text-[22px] leading-[120%] font-normal`}>
               Simple to Generate. Easy to Read. Trusted by Top Inspectors.
             </p>
           </div>
@@ -776,8 +776,187 @@ export default function InspectorPage() {
           </div>
         </div>
       </section>
-    </>
-  );
+ 
+      {/* Section 7 - Testimonials */}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col gap-[30px] pt-[50px] pb-[100px]">
+          <div className="flex items-center justify-between">
+            <div>
+              <h3 className="flex-1 basis-0 text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik_Pro']">
+                What Inspectors Are Saying
+                <br className="hidden sm:block" /> About Sprk
+              </h3>
+            </div>
+            <button className={`${inter.className} hidden sm:flex items-center gap-2 text-[#141414]/70 text-[14px]`}>
+              Discover their Stories <span aria-hidden>▾</span>
+            </button>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {[0, 1, 2].map((i) => (
+              <div key={i} className="rounded-[10px] border border-black/10 bg-white overflow-hidden">
+                <div>
+                  <Image src="/inspector-page/section 7/profile.svg" alt="Inspector profile" width={400} height={500} className="w-full h-auto" />
+                </div>
+                <div className="flex min-w-[350px] p-[50px] flex-col items-start gap-[30px] flex-1 basis-0">
+                  <p className={`${inter.className} flex-1 basis-0 text-[16px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)]`}>
+                    “The training was straightforward, and the Sprk Pro app makes it easy to generate solar and energy
+                    reports for our clients.”
+                  </p>
+                  <div>
+                    <div className="flex-1 basis-0 text-[#141414] text-[32px] leading-[110%] font-medium font-['Aeonik_Pro']">Trey S.</div>
+                    <div className={`${inter.className} flex-1 basis-0 text-[18px] leading-[120%] font-normal text-[rgba(0,0,0,0.66)]`}>Fusion Power</div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 8 - Pricing Plans */}
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col items-center gap-[30px] pt-[50px] ">
+          <h2 className="flex-1 basis-0 text-center text-[#141414] text-[80px] leading-[110%] font-medium font-['Aeonik Pro']">
+            Choose Your Sprk Plan
+          </h2>
+          <p className="flex-1 basis-0 text-center text-[#141414] text-[35px] leading-[110%] font-medium font-['Aeonik Pro']">
+            Start free. Scale as you grow. 30 Days Free.
+          </p>
+
+          <div className="mt-[80px] w-full grid gap-6 md:grid-cols-3 mt-4">
+            {/* Left: Homeowners + Free */}
+            <div className="flex-1 flex flex-col ">
+              <div className="text-[#141414] text-center text-[45px] leading-[110%] font-medium font-['Aeonik Pro']  p-4">Homeowners</div>
+              <div className="rounded-[12px] border border-black/10 bg-white overflow-hidden shadow-sm h-full flex flex-col">
+                <div className="bg-[#115056] text-white flex flex-col items-start gap-[25px] self-stretch px-[40px] pt-[40px] pb-[30px] rounded-t-[10px]">
+                  <div className="flex w-full items-center justify-center rounded-[30px] border border-[#115056] bg-white py-[10px] px-[40px] self-stretch">
+                    <div className="text-center text-[#115056] text-[38px] leading-[110%] font-bold font-['Aeonik Pro']">Free</div>
+                  </div>
+                  <p className={`${inter.className} mt-3 min-h-[57px] flex-1 basis-0 text-white text-[16px] leading-[120%] font-normal`}>
+                    Best for inspectors new to solar. Get trained, get started, and add energy reports to every inspection.
+                  </p>
+                </div>
+                <div className="p-6 flex flex-col h-full">
+                  <div className="text-[#141414] font-semibold mb-2">Sprk Reports</div>
+                  <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                    <li>✓ Energy Reports: Unlimited</li>
+                    <li>✓ Solar Reports: $30 each</li>
+                  </ul>
+                  <div className="text-[#141414] font-semibold mb-2">Training</div>
+                  <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                    <li>✓ Sprk Certification Training</li>
+                    <li>✓ Inspection Company Startup Guide</li>
+                  </ul>
+                  <div className="text-[#141414] font-semibold mb-2">Marketing Resources</div>
+                  <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                    <li>✓ Solar Agent CE Course</li>
+                    <li>✓ Marketing Toolkit</li>
+                    <li>✓ AI Marketing Assistant</li>
+                  </ul>
+                  <div className="text-[#141414] font-semibold mb-2">Sprk Apps</div>
+                  <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-6`}>
+                    <li>✓ Sprk Pro App</li>
+                    <li>✓ Client Portal</li>
+                  </ul>
+                  <button className={`${inter.className} w-full flex justify-center items-center py-[10px] rounded-[8px] bg-[#115056] text-white text-[16px] mt-auto`}>Get Started</button>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: Highlighted container with Home Inspectors + two plans in a row */}
+            <div className="md:col-span-2 rounded-[10px] border border-[#17E817] bg-[rgba(0,255,106,0.15)] p-4">
+              <div className="text-[#141414] text-center text-[45px] leading-[110%] font-medium font-['Aeonik Pro'] mb-4">Home Inspectors</div>
+              <div className="grid gap-6 md:grid-cols-2">
+                {/* Launch Plan */}
+                <div className="rounded-[12px] border border-black/10 bg-white overflow-hidden shadow-sm h-full flex flex-col">
+                  <div className="bg-[#115056] text-white flex flex-col items-start gap-[25px] self-stretch px-[40px] pt-[40px] pb-[30px] rounded-t-[10px]">
+                    <div className="flex w-full items-center justify-center rounded-[30px] border border-[#115056] bg-white py-[10px] px-[40px] self-stretch">
+                      <div className="text-center text-[#115056] text-[38px] leading-[110%] font-bold font-['Aeonik Pro']">Launch Plan</div>
+                    </div>
+                    <div className="mt-3 flex justify-center items-center gap-[10px] flex-1 basis-0">
+                      <span className="text-white text-[30px] leading-[110%] font-medium font-['Aeonik Pro']">$20</span>
+                      <span className={`${inter.className} flex-1 basis-0 text-white text-[22px] leading-[110%] font-medium`}>/mo per inspector</span>
+                    </div>
+                    <p className={`${inter.className} mt-3 min-h-[57px] flex-1 basis-0 text-white text-[16px] leading-[120%] font-normal`}>
+                      Best for inspectors new to solar. Get trained, get started, and add energy reports to every inspection.
+                    </p>
+                  </div>
+                  <div className="p-6 flex flex-col h-full">
+                   
+                    <div className="text-[#141414] font-semibold mb-2">Sprk Reports</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Energy Reports: Unlimited</li>
+                      <li>✓ Solar Reports: $30 each</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Training</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Sprk Certification Training</li>
+                      <li>✓ Inspection Company Startup Guide</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Marketing Resources</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Solar Agent CE Course</li>
+                      <li>✓ Marketing Toolkit</li>
+                      <li>✓ AI Marketing Assistant</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Sprk Apps</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-6`}>
+                      <li>✓ Sprk Pro App</li>
+                      <li>✓ Client Portal</li>
+                    </ul>
+                    <button className={`${inter.className} w-full flex justify-center items-center py-[10px] rounded-[8px] bg-[#115056] text-white text-[16px] mt-auto`}>Get Started</button>
+                  </div>
+                </div>
+
+                {/* Growth Plan */}
+                <div className="rounded-[12px] border border-black/10 bg-white overflow-hidden shadow-sm h-full flex flex-col">
+                  <div className="bg-[#115056] text-white flex flex-col items-start gap-[25px] self-stretch px-[40px] pt-[40px] pb-[30px] rounded-t-[10px]">
+                    <div className="flex w-full items-center justify-center rounded-[30px] border border-[#115056] bg-white py-[10px] px-[40px] self-stretch">
+                      <div className="text-center text-[#115056] text-[38px] leading-[110%] font-bold font-['Aeonik Pro']">Growth Plan</div>
+                    </div>
+                    <div className="mt-3 flex justify-center items-center gap-[10px] flex-1 basis-0">
+                      <span className="text-white text-[30px] leading-[110%] font-medium font-['Aeonik Pro']">$99</span>
+                      <span className={`${inter.className} flex-1 basis-0 text-white text-[22px] leading-[110%] font-medium`}>/mo per inspector</span>
+                    </div>
+                    <p className={`${inter.className} mt-3 min-h-[57px] flex-1 basis-0 text-white text-[16px] leading-[120%] font-normal`}>
+                      Best for inspectors growing with solar. Includes free solar reports, advanced marketing tools, and full support.
+                    </p>
+                  </div>
+                  <div className="p-6 flex flex-col h-full">
+                
+                    <div className="text-[#141414] font-semibold mb-2">Sprk Reports</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Energy Reports: Unlimited</li>
+                      <li>✓ Solar Reports: 8 included/month, then $30 each</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Training</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Sprk Certification Training</li>
+                      <li>✓ Inspection Company Startup Guide</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Marketing Resources</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-4`}>
+                      <li>✓ Solar Agent CE Course</li>
+                      <li>✓ Marketing Toolkit</li>
+                      <li>✓ AI Marketing Assistant</li>
+                    </ul>
+                    <div className="text-[#141414] font-semibold mb-2">Sprk Apps</div>
+                    <ul className={`${inter.className} space-y-2 text-[14px] text-[#141414]/70 mb-6`}>
+                      <li>✓ Sprk Pro App</li>
+                      <li>✓ Client Portal</li>
+                    </ul>
+                    <button className={`${inter.className} w-full flex justify-center items-center py-[10px] rounded-[8px] bg-[#115056] text-white text-[16px] mt-auto`}>Get Started</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      </>
+     );
 }
 
 
