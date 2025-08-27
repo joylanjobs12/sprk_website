@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
 import CTA from "@/components/CTA";
 import AboutSprk from "@/components/AboutSprk";
+import HowItWorksSection from "@/components/HowItWorksSection";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -110,587 +111,437 @@ export default function Home() {
     </section>
 
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 py-[100px]">
-        <div className="text-center mb-8">
-          <h3
-            style={{
-              color: "var(--Text-Title, #141414)",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 40,
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "120%",
-            }}
-          >
-            Why Sprk Exists
-          </h3>
-          <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-            Solar is valuable but misunderstood. Sprk bridges the gap. We bring together the professionals who serve solar homeowners with the reports, referrals, and training needed to simplify complex solar real estate.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          <div
-            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
-            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
-          >
-            <Image src="/home-page/section 2/standard-reports.svg" alt="Standardized Reports" width={480} height={300} className="w-full h-auto" />
-            <div className="px-2 py-4 w-full">
-              <div
-                className="flex-[1_0_0]"
+      <section className="box-border content-stretch flex flex-col gap-20 items-center justify-start px-24 py-[100px] relative size-full">
+        <div className="content-stretch flex flex-col gap-[50px] items-center justify-start relative shrink-0 w-[1248px]">
+          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+              <div 
+                className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[56px] text-center"
                 style={{
-                  color: "var(--Text-Title, #141414)",
                   fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 32,
-                  fontStyle: "normal",
                   fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: '22px'
                 }}
               >
-                Standardized Reports
+                Why Sprk Exists
               </div>
-              <p
-                className={`${inter.className} flex-[1_0_0]`}
-                style={{
-                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Make solar and energy data visible and valuation-ready.
-              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
+              <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] text-center"
+                  style={{
+                    fontFamily: '"Aeonik Pro", sans-serif',
+                    fontWeight: 500,
+                  }}
+                >
+                  Solar is valuable but misunderstood. Sprk bridges the gap.
+                </div>
+              </div>
+              <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  <p className="mb-0">We bring together the professionals who serve solar homeowners with the reports,</p>
+                  <p className="">referrals, and training needed to simplify complex solar real estate.</p>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div
-            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
-            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
-          >
-            <Image src="/home-page/section 2/role-specific-training.svg" alt="Role-Specific Training" width={480} height={300} className="w-full h-auto" />
-            <div className="px-2 py-4 w-full">
-              <div
-                className="flex-[1_0_0]"
-                style={{
-                  color: "var(--Text-Title, #141414)",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 32,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: '22px'
-                }}
-              >
-                Role-Specific Training
+          <div className="content-center flex flex-wrap gap-6 items-center justify-start relative shrink-0 w-full">
+            {/* Standardized Reports Card */}
+            <div className="basis-0 bg-white grow h-[511px] min-h-px min-w-[400px] relative rounded-[10px] shrink-0">
+              <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative size-full">
+                <div className="bg-gray-50 box-border content-stretch flex h-[318px] items-end justify-end overflow-clip pb-0 pl-10 pr-0 pt-10 relative shrink-0 w-full">
+                  <div 
+                    className="bg-center bg-cover bg-no-repeat h-[273px] rounded-tl-[10px] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] shrink-0 w-[368px]"
+                    style={{ backgroundImage: `url('/home-page/section 2/standardized-reports-new.png')` }}
+                  />
+                  <div className="absolute bg-[#f1fafa] box-border content-stretch flex items-center justify-center left-[19px] px-2.5 py-[5px] rounded-[5px] top-4">
+                    <div className="absolute border border-[#a5dcdf] border-solid inset-0 pointer-events-none rounded-[5px] shadow-[0px_2px_20px_0px_rgba(65,188,195,0.25)]" />
+                    <div 
+                      className="leading-[1.2] not-italic relative shrink-0 text-[#41bcc3] text-[16px] text-center text-nowrap"
+                      style={{
+                        fontFamily: 'Inter',
+                        fontWeight: 400,
+                      }}
+                    >
+                      Reports
+                    </div>
+                  </div>
+                </div>
+                <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                      style={{
+                        fontFamily: '"Aeonik Pro", sans-serif',
+                        fontWeight: 500,
+                      }}
+                    >
+                      Standardized Reports
+                    </div>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+                      style={{
+                        fontFamily: 'Inter',
+                        fontWeight: 400,
+                        color: "rgba(0,0,0,0.66)",
+                      }}
+                    >
+                      Make solar and energy data visible and valuation-ready.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p
-                className={`${inter.className} flex-[1_0_0]`}
-                style={{
-                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                  marginBottom: '22px'
-                }}
-              >
-                Equip professionals with the tools to lead confident solar transactions.
-              </p>
+              <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
             </div>
-          </div>
 
-          <div
-            className="flex h-[511px] min-w-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border bg-white p-4"
-            style={{ borderColor: "rgba(0, 0, 0, 0.15)" }}
-          >
-            <Image src="/home-page/section 2/smart-connections.svg" alt="Smart Connections" width={480} height={300} className="w-full h-auto" />
-            <div className="px-2 py-4 w-full">
-              <div
-                className="flex-[1_0_0]"
-                style={{
-                  color: "var(--Text-Title, #141414)",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 32,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: '22px'
-                }}
-              >
-                Smart Connections
+            {/* Role-Specific Training Card */}
+            <div className="basis-0 bg-white grow h-[511px] min-h-px min-w-[400px] relative rounded-[10px] shrink-0">
+              <div className="content-stretch flex flex-col h-[511px] items-center justify-start min-w-inherit overflow-clip relative w-full">
+                <div className="bg-white content-stretch flex h-[318px] items-start justify-center overflow-clip relative shrink-0 w-full">
+                  <div className="basis-0 content-stretch flex flex-col grow items-start justify-start min-h-px min-w-px relative shrink-0">
+                    <div 
+                      className="bg-center bg-cover bg-no-repeat h-[318px] shrink-0 w-full"
+                      style={{ backgroundImage: `url('/home-page/section 2/role-specific-training-new.png')` }}
+                    />
+                  </div>
+                </div>
+                <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                      style={{
+                        fontFamily: '"Aeonik Pro", sans-serif',
+                        fontWeight: 500,
+                      }}
+                    >
+                      Role-Specific Training
+                    </div>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+                      style={{
+                        fontFamily: 'Inter',
+                        fontWeight: 400,
+                        color: "rgba(0,0,0,0.66)",
+                      }}
+                    >
+                      Equip professionals with the tools to lead confident solar transactions.
+                    </div>
+                  </div>
+                </div>
               </div>
-              <p
-                className={`${inter.className} flex-[1_0_0]`}
-                style={{
-                  color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Sprk connects buyers, sellers, agents, inspectors, and solar pros to support smooth, informed home transfers.
-              </p>
+              <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+            </div>
+
+            {/* Smart Connections Card */}
+            <div className="basis-0 bg-white grow h-[511px] min-h-px min-w-[400px] relative rounded-[10px] shrink-0">
+              <div className="content-stretch flex flex-col h-[511px] items-center justify-start min-w-inherit overflow-clip relative w-full">
+                <div className="bg-white content-stretch flex h-[318px] items-start justify-center overflow-clip relative shrink-0 w-full">
+                  <div
+                    className="bg-center bg-contain bg-no-repeat h-[318px] shrink-0 w-full"
+                    style={{ backgroundImage: `url('/home-page/section 2/smart-connections-new.png')` }}
+                  />
+                </div>
+                <div
+                  className="basis-0 bg-center bg-cover bg-no-repeat content-stretch flex flex-col grow items-start justify-start min-h-px min-w-px opacity-50 relative shrink-0"
+                  style={{ backgroundImage: `url('/home-page/section 2/smart-connections-bg.png')` }}
+                >
+                </div>
+                <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                      style={{
+                        fontFamily: '"Aeonik Pro", sans-serif',
+                        fontWeight: 500,
+                      }}
+                    >
+                      Smart Connections
+                    </div>
+                  </div>
+                  <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+                    <div 
+                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+                      style={{
+                        fontFamily: 'Inter',
+                        fontWeight: 400,
+                        color: "rgba(0,0,0,0.66)",
+                      }}
+                    >
+                      Sprk connects buyers, sellers, agents, inspectors, and solar pros to support smooth, informed home transfers.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
             </div>
           </div>
         </div>
       </section>
+
+      {/* Section 3*/}
+      <section className="box-border content-stretch flex flex-col gap-[50px] items-center justify-start pb-[100px] pt-[50px] px-[94px] relative size-full">
+        <div className="content-stretch flex flex-col items-center justify-start relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+              <div 
+                className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[56px] text-center"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
+                Sprk Reports
+              </div>
+            </div>
+            <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+              <div 
+                className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] text-center"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
+                Built for real estate. Backed by data. Trusted by professionals.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="content-start flex flex-wrap gap-6 items-start justify-start relative shrink-0 w-full">
+          {/* Home Energy Report Card */}
+          <div className="basis-0 bg-gray-50 grow min-h-[400px] min-w-[294px] relative rounded-[10px] shrink-0">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-center justify-start relative shrink-0">
+                  <div className="bg-white box-border content-stretch flex items-center justify-start p-[15px] relative rounded-[10px] shrink-0">
+                    <div className="absolute border border-[rgba(17,80,86,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    <div className="h-[62px] overflow-clip relative shrink-0 w-[60px]">
+                      <Image src="/home-page/section 3/home-energy-report.svg" alt="Home Energy Report" width={60} height={62} className="block max-w-none size-full" />
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.1] min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[30px]"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Home Energy Report
+                  </div>
+                </div>
+              </div>
+              <div className="box-border content-stretch flex items-start justify-center p-[30px] relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.2] min-h-[110px] min-w-px not-italic relative shrink-0 text-[18px]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  Estimate monthly energy bills, uncover savings opportunities, and calculate solar potential.
+                </div>
+              </div>
+            </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+          </div>
+
+          {/* Solar Inspection Report Card */}
+          <div className="basis-0 bg-gray-50 grow min-h-[400px] min-w-[294px] relative rounded-[10px] shrink-0">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-center justify-start relative shrink-0">
+                  <div className="bg-white box-border content-stretch flex items-center justify-start p-[15px] relative rounded-[10px] shrink-0">
+                    <div className="absolute border border-[rgba(17,80,86,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    <div className="h-[62px] overflow-clip relative shrink-0 w-[60px]">
+                      <Image src="/home-page/section 3/solar-inspection-report.svg" alt="Solar Inspection Report" width={60} height={62} className="block max-w-none size-full" />
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.1] min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[30px]"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Solar Inspection Report
+                  </div>
+                </div>
+              </div>
+              <div className="box-border content-stretch flex items-start justify-center p-[30px] relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.2] min-h-[110px] min-w-px not-italic relative shrink-0 text-[18px]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  Confirm system performance, remaining life, and identify any solar-related issues.
+                </div>
+              </div>
+            </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+          </div>
+
+          {/* Solar Listing Report Card */}
+          <div className="basis-0 bg-gray-50 grow min-h-[400px] min-w-[294px] relative rounded-[10px] shrink-0">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-center justify-start relative shrink-0">
+                  <div className="bg-white box-border content-stretch flex items-center justify-start p-[15px] relative rounded-[10px] shrink-0">
+                    <div className="absolute border border-[rgba(17,80,86,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    <div className="h-[62px] overflow-clip relative shrink-0 w-[60px]">
+                      <Image src="/home-page/section 3/solar-listing-report.svg" alt="Solar Listing Report" width={60} height={62} className="block max-w-none size-full" />
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.1] min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[30px]"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Solar Listing Report
+                  </div>
+                </div>
+              </div>
+              <div className="box-border content-stretch flex items-start justify-center p-[30px] relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.2] min-h-[110px] min-w-px not-italic relative shrink-0 text-[18px]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  Showcase solar benefits, disclose financing details, and simplify the transfer process.
+                </div>
+              </div>
+            </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+          </div>
+
+          {/* Green Home Appraisal Report Card */}
+          <div className="basis-0 bg-gray-50 grow min-h-[400px] min-w-[294px] relative rounded-[10px] shrink-0">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-center justify-start relative shrink-0">
+                  <div className="bg-white box-border content-stretch flex items-center justify-start p-[15px] relative rounded-[10px] shrink-0">
+                    <div className="absolute border border-[rgba(17,80,86,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+                    <div className="h-[62px] overflow-clip relative shrink-0 w-[60px]">
+                      <Image src="/home-page/section 3/green-home-appraisal-report.svg" alt="Green Home Appraisal Report" width={60} height={62} className="block max-w-none size-full" />
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.1] min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[30px]"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
+                    Green Home Appraisal Report
+                  </div>
+                </div>
+              </div>
+              <div className="box-border content-stretch flex items-start justify-center p-[30px] relative shrink-0 w-full">
+                <div 
+                  className="basis-0 grow leading-[1.2] min-h-[110px] min-w-px not-italic relative shrink-0 text-[18px]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  Provide appraisers and lenders with the certified solar and energy data needed to assign accurate value.
+                </div>
+              </div>
+            </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
+          </div>
+        </div>
+      </section>
+
+
       {/* Section 4 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-        <div className="flex flex-col items-center gap-[30px] self-stretch text-center">
-          <h3
-            style={{
-              flex: "1 0 0",
-              color: "#141414",
-              textAlign: "center",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 56,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
-            }}
-          >
-            Sprk Reports
-          </h3>
-          <p
-            className="mt-3 mx-auto"
-            style={{
-              flex: "1 0 0",
-              color: "#141414",
-              textAlign: "center",
-              fontFamily: '"Aeonik Pro"',
-              fontSize: 35,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
-            }}
-          >
-            Built for real estate. Backed by data. Trusted by professionals.
-          </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-6">
-          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border " style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "#F9FAFB" }}>
-            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
-              <div className="flex items-center p-[15px] rounded-[10px] border mb-4" style={{ borderColor: "rgba(17, 80, 86, 0.15)", background: "#FFF" }}>
-                <Image src="/home-page/section 4/home-energy-report.svg" alt="Home Energy Report" width={60} height={62} className="w-[60px] h-[62px] aspect-[30/31]" />
-              </div>
-              <div
-                style={{
-                  minHeight: 66,
-                  flex: "1 0 0",
-                  color: "#141414",
-                  fontFamily: '"Aeonik Pro"',
-                  fontSize: 30,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: 12,
-                }}
-              >
-                Home Energy
-                <br />
-                Report
-              </div>
-            </div>
-            <div className="flex p-[30px] justify-center items-start self-stretch">
-              <p
-                className={`${inter.className}`}
-                style={{
-                  minHeight: 110,
-                  flex: "1 0 0",
-                  color: "rgba(0, 0, 0, 0.66)",
-                  fontFamily: 'Inter',
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Estimate monthly energy bills, uncover savings opportunities, and calculate solar potential.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border " style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "#F9FAFB" }}>
-            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
-              <div className="flex items-center p-[15px] rounded-[10px] border mb-4" style={{ borderColor: "rgba(17, 80, 86, 0.15)", background: "#FFF" }}>
-                <Image src="/home-page/section 4/solar-inspection-report.svg" alt="Solar Inspection Report" width={60} height={62} className="w-[60px] h-[62px] aspect-[30/31]" />
-              </div>
-              <div
-                style={{
-                  minHeight: 66,
-                  flex: "1 0 0",
-                  color: "#141414",
-                  fontFamily: '"Aeonik Pro"',
-                  fontSize: 30,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: 12,
-                }}
-              >
-                Solar Inspection
-                <br />
-                Report
-              </div>
-            </div>
-            <div className="flex p-[30px] justify-center items-start self-stretch">
-              <p
-                className={`${inter.className}`}
-                style={{
-                  minHeight: 110,
-                  flex: "1 0 0",
-                  color: "rgba(0, 0, 0, 0.66)",
-                  fontFamily: 'Inter',
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Confirm system performance, remaining life, and identify any solar-related issues.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border " style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "#F9FAFB" }}>
-            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
-              <div className="flex items-center p-[15px] rounded-[10px] border mb-4" style={{ borderColor: "rgba(17, 80, 86, 0.15)", background: "#FFF" }}>
-                <Image src="/home-page/section 4/solar-listing-report.svg" alt="Solar Listing Report" width={60} height={62} className="w-[60px] h-[62px] aspect-[30/31]" />
-              </div>
-              <div
-                style={{
-                  minHeight: 66,
-                  flex: "1 0 0",
-                  color: "#141414",
-                  fontFamily: '"Aeonik Pro"',
-                  fontSize: 30,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: 12,
-                }}
-              >
-                Solar Listing
-                <br />
-                Report
-              </div>
-            </div>
-            <div className="flex p-[30px] justify-center items-start self-stretch">
-              <p
-                className={`${inter.className}`}
-                style={{
-                  minHeight: 110,
-                  flex: "1 0 0",
-                  color: "rgba(0, 0, 0, 0.66)",
-                  fontFamily: 'Inter',
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Showcase solar benefits, disclose financing details, and simplify the transfer process.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex min-w-[294px] min-h-[400px] flex-col items-center flex-[1_0_0] rounded-[10px] border " style={{ borderColor: "rgba(0, 0, 0, 0.15)", background: "#F9FAFB" }}>
-            <div className="flex flex-col items-start gap-[20px] self-stretch p-[30px]" style={{ background: "#FFF" }}>
-              <div className="flex items-center p-[15px] rounded-[10px] border mb-4" style={{ borderColor: "rgba(17, 80, 86, 0.15)", background: "#FFF" }}>
-                <Image src="/home-page/section 4/green-home-appraisal-report.svg" alt="Green Home Appraisal Report" width={60} height={62} className="w-[60px] h-[62px] aspect-[30/31]" />
-              </div>
-              <div
-                style={{
-                  minHeight: 66,
-                  flex: "1 0 0",
-                  color: "#141414",
-                  fontFamily: '"Aeonik Pro"',
-                  fontSize: 30,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                  marginBottom: 12,
-                }}
-              >
-                Green Home
-                <br />
-                Appraisal Report
-              </div>
-            </div>
-            <div className="flex p-[30px] justify-center items-start self-stretch">
-              <p
-                className={`${inter.className}`}
-                style={{
-                  minHeight: 110,
-                  flex: "1 0 0",
-                  color: "rgba(0, 0, 0, 0.66)",
-                  fontFamily: 'Inter',
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Provide appraisers and lenders with certified solar and energy data for accurate valuation.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-
-      {/* Section 3 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 pb-[100px]">
-        <div className="text-center mb-8">
-          <h3
-            style={{
-              color: "var(--Text-Title, #141414)",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 40,
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "120%",
-            }}
-          >
-            How Sprk Works
-          </h3>
-          <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-            Three simple steps to get clear solar insights and confident decisions.
-          </p>
-        </div>
-
-        <div className="relative flex flex-wrap justify-center gap-6">
-          <div className="flex w-[260px] flex-col items-start absolute left-[330px] top-[236px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
-          </div>
-          <div className="flex w-[260px] flex-col items-start absolute right-[330px] top-[168px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
-          </div>
-          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-            <div
-              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-              style={{
-                borderColor: "#56CD45",
-                background: "rgba(86, 205, 69, 0.05)",
-                color: "#56CD45",
-                textAlign: "center",
-                fontSize: 28,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
-            >
-              Step 1
-            </div>
-            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-              <div
-                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                style={{
-                  borderColor: "#FFFFFF",
-                  background: "var(--Primary-Color, #115056)",
-                  boxShadow:
-                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                }}
-              >
-                <Image src="/home-page/section 3/input-home-info.svg" alt="Input Home Info" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-              </div>
-            </div>
-            <div className="w-full text-center">
-              <div
-                style={{
-                  minHeight: 90,
-                  flex: "1 0 0",
-                  color: "var(--Text-Title, #141414)",
-                  textAlign: "center",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 27,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Input Home Info
-              </div>
-              <p className={`${inter.className}`}
-                style={{
-                  minHeight: 154,
-                  flex: "1 0 0",
-                  color: 'rgba(0, 0, 0, 0.66))',
-                  textAlign: "center",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-            <div
-              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-              style={{
-                borderColor: "#56CD45",
-                background: "rgba(86, 205, 69, 0.05)",
-                color: "#56CD45",
-                textAlign: "center",
-                fontSize: 28,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
-            >
-              Step 2
-            </div>
-            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-              <div
-                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                style={{
-                  borderColor: "#FFFFFF",
-                  background: "var(--Primary-Color, #115056)",
-                  boxShadow:
-                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                }}
-              >
-                <Image src="/home-page/section 3/generate-sprk-report.svg" alt="Generate Sprk Report" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-              </div>
-            </div>
-            <div className="w-full text-center">
-              <div
-                style={{
-                  minHeight: 90,
-                  flex: "1 0 0",
-                  color: "var(--Text-Title, #141414)",
-                  textAlign: "center",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 27,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Generate Sprk Report
-              </div>
-              <p className={`${inter.className}`}
-                style={{
-                  minHeight: 154,
-                  flex: "1 0 0",
-                  color: 'rgba(0, 0, 0, 0.66))',
-                  textAlign: "center",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                We compile data into a standardized, easy-to-read report in minutes.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-            <div
-              className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-              style={{
-                borderColor: "#56CD45",
-                background: "rgba(86, 205, 69, 0.05)",
-                color: "#56CD45",
-                textAlign: "center",
-                fontSize: 28,
-                fontStyle: "normal",
-                fontWeight: 500,
-                lineHeight: "110%",
-              }}
-            >
-              Step 3
-            </div>
-            <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-              <div
-                className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                style={{
-                  borderColor: "#FFFFFF",
-                  background: "var(--Primary-Color, #115056)",
-                  boxShadow:
-                    "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                }}
-              >
-                <Image src="/home-page/section 3/solar-clarity.svg" alt="Solar Clarity" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-              </div>
-            </div>
-            <div className="w-full text-center">
-              <div
-                style={{
-                  minHeight: 90,
-                  flex: "1 0 0",
-                  color: "var(--Text-Title, #141414)",
-                  textAlign: "center",
-                  fontFamily: '"Aeonik Pro", sans-serif',
-                  fontSize: 27,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Get Solar Clarity
-              </div>
-              <p className={`${inter.className}`}
-                style={{
-                  minHeight: 154,
-                  flex: "1 0 0",
-                  color: 'rgba(0, 0, 0, 0.66))',
-                  textAlign: "center",
-                  fontSize: 18,
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "120%",
-                }}
-              >
-                Share with clients or keep for reference—act with confidence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowItWorksSection
+        title="How Sprk Works"
+        subtitle="Three simple steps to get clear solar insights and confident decisions."
+        step1={{
+          icon: "/home-page/section 4/input-home-info.svg",
+          label: "Input Home Info",
+          description: "Use a Sprk Certified Pro or become one to evaluate solar and home energy upgrades using the Sprk Pro app."
+        }}
+        step2={{
+          icon: "/home-page/section 4/generate-sprk-report.svg",
+          label: "Generate Sprk Report",
+          description: "We compile data into a standardized, easy-to-read report in minutes."
+        }}
+        step3={{
+          icon: "/home-page/section 4/solar-clarity.svg",
+          label: "Get Solar Clarity",
+          description: "Share with clients or keep for reference—act with confidence."
+        }}
+      />
 
       {/* Section 5 */}
-      <section className="mx-auto w-full bg-[var(--Primary-Color,#115056)]">
-        <div className="max-w-[1440px] mx-auto max-w-[1440px] sm:p-[50px] lg:p-[100px] mt-24 ">
-          <div className="flex flex-col items-center gap-[20px] self-stretch text-center">
-            <h3
-              className="flex-[1_0_0] text-white text-center text-[56px] leading-[110%] font-medium"
-              style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+      <section className="bg-[#115056] box-border content-stretch flex flex-col items-center justify-start px-0 py-[100px] relative size-full">
+        <div className="box-border content-stretch flex flex-col gap-5 items-center justify-start px-0 py-[50px] relative shrink-0 w-full">
+          <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+            <div 
+              className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[56px] text-center text-white"
+              style={{
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontWeight: 500,
+              }}
             >
               Solar is Growing!
-            </h3>
-            <p
-              className={`${inter.className} mt-2 flex-[1_0_0] text-center text-[22px] leading-[120%] font-normal text-[rgba(255,255,255,0.80)]`}
+            </div>
+          </div>
+          <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+            <div 
+              className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center"
+              style={{
+                fontFamily: 'Inter',
+                fontWeight: 400,
+                color: "rgba(255,255,255,0.8)",
+              }}
             >
-              More than 5 million U.S. homeowners have already gone solar, and we’re just getting started.
-              Use the map to explore solar adoption rates and market size across all 50 states.
-            </p>
+              <p className="mb-0">More than 5 million U.S. homeowners have already gone solar, and we&apos;re just getting started.</p>
+              <p className="">Use the map to explore solar adoption rates and market size across all 50 states.</p>
+            </div>
           </div>
-          <div className="w-full flex justify-center mt-6">
-            <Image
-              src="/home-page/section 5/solar-home-map.svg"
-              alt="Solar Home Market Size map"
-              width={1280}
-              height={500}
-              className="w-full max-w-[1280px]"
-            />
-          </div>
+        </div>
+        <div className="bg-[#115056] content-stretch flex flex-col items-center justify-start relative shrink-0 w-full">
+          <div 
+            className="bg-center bg-contain bg-no-repeat h-[1031px] shrink-0 w-full"
+            style={{ backgroundImage: `url('/home-page/section 5/solar-home-map.svg')` }}
+          />
         </div>
       </section>
 
       {/* Section 6 */}
       <AboutSprk
         title="Why Choose Sprk Certified Pros?"
-        card1={[
+        cards={[
           {
             icon: "/home-page/section 6/inspectors.svg",
             label: "Certified Inspectors",
@@ -700,9 +551,7 @@ export default function Home() {
             icon: "/home-page/section 6/agents.svg",
             label: "Certified Agents",
             text: "Certified in energy, disclosure, and valuation practices"
-          }
-        ]}
-        card2={[
+          },
           {
             icon: "/home-page/section 6/solar-pros.svg",
             label: "Certified Solar Pros",
@@ -714,6 +563,7 @@ export default function Home() {
             text: "Trusted by agents, buyers, sellers, and lenders"
           }
         ]}
+      
       />
 
       {/* Section 7 */}

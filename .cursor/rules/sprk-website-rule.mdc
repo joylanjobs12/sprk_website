@@ -1,14 +1,16 @@
 ---
-description:
-globs:
+description: Figma Dev Mode MCP rules
+globs: 
 alwaysApply: true
 ---
 
-
-- The Figma Dev Mode MCP Server provides an assets endpoint which can serve image and SVG assets
-- IMPORTANT: If the Figma Dev Mode MCP Server returns a localhost source for an image or an SVG, use that image or SVG source directly
-- IMPORTANT: DO NOT import/add new icon packages, all the assets should be in the Figma payload
-- IMPORTANT: do NOT use or create placeholders if a localhost source is provided
-- IMPORTANT: Each page contains different sections. To organize and save assets for each page, divide them by section. For example, for a dynamic page like "professionalsolartraining", when using the "Copy link to selection" feature in Figma, save the images/assets in a public folder named "professional-solar-training-page". This folder should contain child folders for each section, such as: professional-solar-training-page -> section 1 -> all files and assets stored here; professional-solar-training-page -> section 2 -> all files and assets stored here.
-
--IMPORTANT: All assets should be copied/saved in SVG format.
+  -IMPORTANT: These rules apply exclusively to the specific working project named "sprk_website" (as defined in package.json). They must not be applied to other projects or global contexts.
+  - The Figma Dev Mode MCP Server provides an assets endpoint which can serve image and SVG assets
+  - IMPORTANT: If the Figma Dev Mode MCP Server returns a localhost source for an image or an SVG, use that image or SVG source directly
+  - IMPORTANT: DO NOT import/add new icon packages, all the assets should be in the Figma payload
+  - IMPORTANT: do NOT use or create placeholders if a localhost source is provided
+  - IMPORTANT: Each page contains different sections. To organize and save assets for each page, divide them by section. For example, for a dynamic page like "professionalsolartraining", when using the "Copy link to selection" feature in Figma, save the images/assets in a public folder named "professional-solar-training-page". This folder should contain child folders for each section, such as: professional-solar-training-page -> section 1 -> all files and assets stored here; professional-solar-training-page -> section 2 -> all files and assets stored here.
+  - IMPORTANT: All assets from Figma should be saved in SVG format within the specific folder structure for their respective page and section.
+  - IMPORTANT: All commands to download and save assets (e.g., using `curl`) must be executed in the Git Bash terminal to ensure compatibility with the shell environment.
+  - IMPORTANT: Do not download assets from the Figma Dev Mode MCP Server (e.g., using curl). Instead, use the existing SVG files already present in the project’s public/page-folder-name/section N/ directory structure. Verify that the SVG file exists in the specified directory before referencing it.
+  -IMPORTANT: Sub folders must follow the naming format "section N" (e.g., "section 1", "section 2"), with a space between "section" and the number.

@@ -1,7 +1,4 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 interface Step {
   icon: string;
@@ -27,103 +24,105 @@ export default function HowItWorksSection({
   const steps = [step1, step2, step3];
 
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-      <div className="flex flex-col items-center gap-[50px] pt-[100px] pb-[100px]">
-        <div className="text-center mb-8">
-          <h3
+    <section className="box-border content-stretch flex flex-col gap-[50px] items-center justify-start px-24 py-[100px] relative size-full">
+      <div className="content-stretch flex flex-col gap-5 items-center justify-start relative shrink-0 w-full">
+        <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+          <div 
+            className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[56px] text-black text-center"
             style={{
-              color: "var(--Text-Title, #141414)",
               fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 40,
-              fontStyle: "normal",
-              fontWeight: 600,
-              lineHeight: "120%",
+              fontWeight: 500,
             }}
           >
             {title}
-          </h3>
-          <p 
-            className="mt-3 max-w-2xl mx-auto text-[28px] font-medium leading-[110%] text-center"
-            style={{ 
-              color: "#141414",
-              fontFamily: '"Aeonik Pro", sans-serif'
-            }}
-          >
-            {subtitle}
-          </p>
+          </div>
         </div>
-
-        <div className="relative flex flex-wrap justify-center gap-6">
-          <div className="flex w-[260px] flex-col items-start absolute left-[330px] top-[236px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
+        {subtitle && (
+          <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+            <div 
+              className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[35px] text-center"
+              style={{
+                fontFamily: '"Aeonik Pro", sans-serif',
+                fontWeight: 500,
+                color: "#141414",
+              }}
+            >
+              {subtitle}
+            </div>
           </div>
-          <div className="flex w-[260px] flex-col items-start absolute right-[330px] top-[168px]" aria-hidden="true">
-            <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
-          </div>
-          
-          {steps.map((step, index) => (
-            <div key={index} className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px] bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step {index + 1}
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
+        )}
+      </div>
+      <div className="content-start flex flex-wrap gap-5 items-start justify-start relative shrink-0 w-[1248px]">
+        {steps.map((step, index) => (
+          <div key={index} className="basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[400px] overflow-clip relative rounded-[10px] shrink-0">
+            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-[295px] px-0 py-[50px] relative shrink-0 w-full">
+              <div className="bg-[rgba(86,205,69,0.05)] box-border content-stretch flex items-start justify-center px-10 py-2.5 relative rounded-[50px] shrink-0">
+                <div className="absolute border border-[#56cd45] border-solid inset-0 pointer-events-none rounded-[50px]" />
+                <div 
+                  className="leading-[1.1] not-italic relative shrink-0 text-[#56cd45] text-[28px] text-center text-nowrap"
                   style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src={step.icon} alt={step.label} width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
+                    fontFamily: 'Inter',
                     fontWeight: 500,
-                    lineHeight: "110%",
                   }}
                 >
-                  {step.label}
+                  Step {index + 1}
                 </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66)',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  {step.description}
-                </p>
+              </div>
+              <div className="box-border content-stretch flex items-center justify-center px-[30px] py-10 relative shrink-0 w-full">
+                <div className="bg-[#115056] content-stretch flex items-center justify-center min-h-[90px] min-w-[90px] relative rounded-[100px] shrink-0 size-[150px]">
+                  <div className="absolute border-[10px] border-[rgba(144,228,193,0.1)] border-solid inset-[-10px] pointer-events-none rounded-[110px] shadow-[0px_10px_15px_0px_rgba(15,143,150,0.08),0px_20px_40px_0px_rgba(15,143,150,0.15)]" />
+                  <div className="content-stretch flex items-center justify-center relative rounded-[50px] shrink-0">
+                    <div className="overflow-clip relative shrink-0 size-[90px]">
+                      <Image src={step.icon} alt={step.label} width={90} height={90} className="block max-w-none size-full" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
+                <div className="box-border content-stretch flex items-start justify-start min-h-[60px] px-[30px] py-0 relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.1] min-h-[90px] min-w-px not-italic relative shrink-0 text-[#141414] text-[27px] text-center"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
+                    {step.label}
+                  </div>
+                </div>
+                <div className="box-border content-stretch flex items-center justify-start min-h-[110px] px-[30px] py-0 relative shrink-0 w-full">
+                  <div 
+                    className="basis-0 grow leading-[1.2] min-h-[154px] min-w-px not-italic relative shrink-0 text-[18px] text-center"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                      color: "rgba(0,0,0,0.66)",
+                    }}
+                  >
+                    {step.description}
+                  </div>
+                </div>
               </div>
             </div>
-          ))}
+          </div>
+        ))}
+        
+        {/* Arrow between Step 1 and Step 2 */}
+        <div className="absolute h-[29.5px] left-[300px] top-[236px] w-56">
+          <div className="absolute inset-[-18.7%_-0.45%_-1.08%_-0.11%]">
+            <Image src="/home-page/section 4/arrow-up.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
+          </div>
+        </div>
+        
+        {/* Arrow between Step 2 and Step 3 */}
+        <div className="absolute flex h-[29.5px] items-center justify-center left-[733px] top-[168px] w-56">
+          <div className="flex-none scale-y-[-100%]">
+            <div className="h-[29.5px] relative w-56">
+              <div className="absolute inset-[-18.7%_-0.45%_-1.08%_-0.11%]">
+                <Image src="/home-page/section 4/arrow-down.svg" alt="Arrow" width={224} height={35} className="block max-w-none size-full" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
