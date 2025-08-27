@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
+import HowToGetStarted from "@/components/HowToGetStarted";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -252,221 +253,30 @@ export default function SolarProPage() {
       </section>
 
       {/* Section 3 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col items-center gap-[50px] pt-[50px] pb-[100px]">
-          <div className="text-center mb-8">
-            <h3
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 40,
-                fontStyle: "normal",
-                fontWeight: 600,
-                lineHeight: "120%",
-              }}
-            >
-              How Sprk Works
-            </h3>
-            <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-              Three simple steps to get clear solar insights and confident decisions.
-            </p>
-          </div>
-
-          <div className="relative flex flex-wrap justify-center gap-6">
-            <div className="flex w-[260px] flex-col items-start absolute left-[330px] top-[236px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex w-[260px] flex-col items-start absolute right-[330px] top-[168px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 1
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-trained.svg" alt="Get Trained" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Trained
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Complete Sprk's on-demand certification and learn how to inspect solar and energy systems with ease.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 2
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-tools.svg" alt="Get Tools" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Tools
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Use the Sprk Pro app to collect data and generate polished reports in minutes right from your phone or tablet.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 3
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 3/get-paid.svg" alt="Get Paid" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Paid
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                 Offer more value to your clients, stand out with agents, and increase your profitability per job.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HowToGetStarted
+        title="How It Works"
+        subtitle="Professional Tools That Power the Better Solar Companies"
+        step1={{
+          icon: "/solar-pro-page/section 3/find-wtih.svg",
+          label: "Find with the Solar Calculator",
+          description: "Use the Sprk Solar Calculator to give homeowners a free tool to explore how much solar they might need—giving you direct access to usage data and interest level."
+        }}
+        step2={{
+          icon: "/solar-pro-page/section 3/sell-with.svg",
+          label: "Sell with the Home Energy Report",
+          description: "Diagnose the home's efficiency issues when quoting solar. Help homeowners understand what could be improved along with adding solar and batteries."
+        }}
+        step3={{
+          icon: "/solar-pro-page/section 3/install-wtih.svg",
+          label: "Install with the Solar Inspection Report",
+          description: "Show your clients you install to the highest standards. Leave every homeowner with documentation and confidence that their system was done right."
+        }}
+        step4={{
+          icon: "/solar-pro-page/section 3/support-with.svg",
+          label: "Support with the Solar Listing Report",
+          description: "Make sure your customers are ready when it's time to sell. Provide warranty docs, and transfer-ready info to protect the value of your install."
+        }}
+      />
       {/* Section 4 */}
       <section className="mx-auto w-full bg-[var(--Primary-Color,#115056)]">
         <div className="max-w-[1440px] mx-auto max-w-[1440px] px-4 sm:px-6 lg:px-8 mt-24 ">
