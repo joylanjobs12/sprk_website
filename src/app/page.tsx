@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
   return (
     <div
-      className="flex w-full h-auto min-h-[320px] sm:min-h-[360px] md:min-h-[380px] lg:min-h-[400px] xl:min-h-[420px] p-6 sm:p-7 md:p-8 lg:p-9 xl:p-10 flex-col justify-start items-center text-center rounded-[10px] border bg-white hover:shadow-lg transition-all duration-300"
+      className="flex w-full h-auto sm:min-h-[unset] md:min-h-[360px] lg:min-h-[400px] xl:min-h-[380px] 2xl:min-h-[420px] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-8 2xl:p-10 flex-col justify-between xl:justify-start 2xl:justify-between items-center text-center rounded-[10px] border bg-white"
       style={{
         borderColor: "rgba(17, 80, 86, 0.20)",
         boxShadow:
@@ -19,19 +19,21 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
       }}
     >
       {/* Icon Section */}
-      <div className="flex items-center justify-center mb-4 sm:mb-5 md:mb-6 mt-2 sm:mt-3 md:mt-4">
-        <div className="w-[70px] h-[70px] sm:w-[80px] sm:h-[80px] md:w-[90px] md:h-[90px] lg:w-[100px] lg:h-[100px] xl:w-[110px] xl:h-[110px] flex items-center justify-center">
+      <div className="flex items-center justify-center mb-3 sm:mb-4 md:mb-6 xl:mb-4 2xl:mb-6">
+        <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px] lg:w-[90px] lg:h-[90px] xl:w-[85px] xl:h-[85px] 2xl:w-[110px] 2xl:h-[110px] flex items-center justify-center">
           {icon}
         </div>
       </div>
       
       {/* Title Section */}
-      <div className="flex-1 flex items-center justify-center px-2 sm:px-3 md:px-4 mb-4 sm:mb-5 md:mb-6">
+      <div className="block m-3 sm:m-[30px] xl:m-4 2xl:m-[0px] flex-none">
         <h3
-          className="text-center font-medium text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] leading-[1.3] sm:leading-[1.4] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.1]"
+          className="text-center font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] leading-[1.4] block flex-none"
           style={{
-            color: "#141414",
+            color: "var(--Text-Title, #141414)",
             fontFamily: '"Aeonik Pro", sans-serif',
+            fontStyle: "normal",
+            fontWeight: 600,
           }}
         >
           {title}
@@ -40,24 +42,29 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
       
       {/* Subtitle Section */}
       {subtitle ? (
-        <div className="text-center mb-4 sm:mb-5 md:mb-6 px-2">
-          <p className="text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] opacity-70">
-            {subtitle}
-          </p>
-        </div>
+        <p 
+          className="opacity-70 text-center mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+          style={{
+            fontWeight: 400,
+          }}
+        >
+          {subtitle}
+        </p>
       ) : null}
       
       {/* Button Section */}
-      <div className="w-full mt-auto">
+      <div className="w-full">
         <button
-          className={`${inter.className} flex justify-center items-center gap-2 sm:gap-2 md:gap-3 px-4 sm:px-5 md:px-6 py-3 sm:py-3 md:py-4 lg:py-[10px] xl:py-[5px] self-stretch w-full rounded-[5px] border bg-[#F1FAFA] text-center min-h-[48px] sm:min-h-[50px] md:min-h-[52px] lg:min-h-[48px] touch-manipulation hover:bg-opacity-80 transition-all duration-200 font-normal`}
+          className={`${inter.className} flex justify-center items-center gap-2 px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 self-stretch w-full rounded-[5px] border bg-[var(--Card-Blue,#F1FAFA)] text-center min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[48px] 2xl:min-h-[52px] touch-manipulation hover:bg-opacity-80 transition-all duration-200 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] font-medium`}
           style={{
-            borderColor: "#115056",
-            color: "#141414",
+            borderColor: "var(--Primary-Color, #115056)",
+            color: "var(--Text-Title, #141414)",
+            fontStyle: "normal",
+            fontWeight: 500,
           }}
         >
-          <span className="text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] leading-[1.2]">Learn More</span>
-          <span aria-hidden className="text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px]">→</span>
+          <span>Learn More</span>
+          <span aria-hidden className="text-sm sm:text-base md:text-lg">→</span>
         </button>
       </div>
     </div>
@@ -68,31 +75,41 @@ export default function Home() {
   return (
     <>
     <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
-      <div className="text-center pt-[40px] sm:pt-[60px] md:pt-[70px] lg:pt-[80px] xl:pt-[100px]">
+      <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px] xl:pt-[100px]">
         <h1
-          className="text-center text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[48px] font-bold leading-[1.3] mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-6"
+          className="text-center font-bold mb-4 text-[38px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[48px] leading-[1.3]"
           style={{
-            color: "#115056",
+            color: "var(--Primary-Color, #115056)",
+            textAlign: "center",
             fontFamily: '"Aeonik Pro", sans-serif',
+            fontStyle: "normal",
+            fontWeight: 700,
           }}
         >
           Solar Simplified.
         </h1>
         <h2
-          className="text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] font-semibold leading-[1.4] mb-4 sm:mb-3 md:mb-4 lg:mb-5 xl:mb-5"
+          className="text-center font-semibold mb-3 text-[26px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] leading-[1.4]"
           style={{
-            color: "#141414",
+            color: "var(--Text-Title, #141414)",
             fontFamily: '"Aeonik Pro", sans-serif',
+            fontStyle: "normal",
+            fontWeight: 600,
           }}
         >
           Real Estate Ready.
         </h2>
-        <p className="mt-4 sm:mt-6 max-w-xl sm:max-w-2xl mx-auto text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4">
+        <p 
+          className="max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+          style={{
+            fontWeight: 400,
+          }}
+        >
           The trusted platform to connect, understand, value, inspect, and transfer solar homes with confidence and clarity.
         </p>
       </div>
 
-      <div className="mt-8 sm:mt-10 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 px-4 sm:px-2 md:px-0">
+      <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 xl:gap-8 px-2 sm:px-4 md:px-2 lg:px-0">
         <RoleCard
           icon={<Image src="/home-page/section 1/inspector.svg" alt="Inspector" width={110} height={110} />}
           title={"I’m a Home Inspector"}
@@ -594,7 +611,7 @@ export default function Home() {
           >
             Refer and connect with professionals who have the knowledge and tools to deliver.
             </div>
-          </div>
+              </div>
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <div 
               className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center"
@@ -652,7 +669,7 @@ export default function Home() {
                     }}
                   >
                     Fusion Power
-                  </div>
+          </div>
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
