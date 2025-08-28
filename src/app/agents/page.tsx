@@ -11,79 +11,60 @@ const inter = Inter({ subsets: ["latin"] });
 export default function AgentsPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 pt-[40px] sm:pt-[60px] lg:pt-[80px] pb-[40px] sm:pb-[60px] lg:pb-[80px]">
-        <div className="flex flex-col items-center text-center gap-6 sm:gap-7 lg:gap-8">
-          <h1
-            className="max-w-[1000px]"
-            style={{
-              color: "var(--Primary-Color, #115056)",
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontSize: 80,
-              fontStyle: "normal",
-              fontWeight: 500,
-              lineHeight: "110%",
-              textAlign: "center",
-            }}
-          >
-            <span>Clarity</span>{" "}
-            <span style={{ color: "var(--Text-Title, #141414)" }}>for Solar Home</span>
-            <br />
-            <span style={{ color: "var(--Text-Title, #141414)" }}>Transactions</span>
-          </h1>
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pt-[80px] sm:pt-[100px] lg:pt-[120px] xl:pt-[150px] pb-[40px] sm:pb-[50px] lg:pb-[60px]">
+        <div className="flex flex-col items-center text-center gap-[50px] sm:gap-[60px] lg:gap-[80px]">
+          {/* Header Container */}
+          <header className="flex flex-col gap-[50px] items-center justify-start w-full">
+            <div className="flex flex-col gap-[30px] items-center justify-start px-2.5 py-0 w-full">
+              <h1 className="font-['Aeonik_Pro'] font-medium text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[80px] leading-[1.1] text-center w-full">
+                <span className="text-[#115056]">Clarity </span>
+                <span className="text-[#141414]">for Solar Home Transactions</span>
+              </h1>
+              
+              <div className="flex items-center justify-center px-2.5 py-0 w-full">
+                <p className={`${inter.className} font-normal text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] max-w-[800px]`}>
+                  Sprk gives real estate agents the training, tools, and reports to market, disclose, and transfer
+                  solar homes the right way without having to become a solar expert.
+                </p>
+              </div>
+            </div>
+            
+            <div className="flex flex-wrap gap-[15px] items-center justify-center w-full">
+              <Link
+                href="#join"
+                className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0"
+              >
+                <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-white whitespace-nowrap">
+                  Get Solar Certified
+                </span>
+              </Link>
+              <Link
+                href="#demo"
+                className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 border border-[#115056] bg-white"
+              >
+                <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-[#115056] whitespace-nowrap">
+                  Generate a Sprk Listing Report
+                </span>
+              </Link>
+            </div>
+          </header>
 
-          <p
-            className={`${inter.className}`}
-            style={{
-              flex: "1 0 0",
-              color: "var(--Body-Text, rgba(0, 0, 0, 0.66))",
-              textAlign: "center",
-              fontFamily: '"Inter", sans-serif',
-              fontSize: 22,
-              fontStyle: "normal",
-              fontWeight: 400,
-              lineHeight: "120%",
-            }}
-          >
-           Sprk gives real estate agents the training, tools, and reports to market, disclose, and transfer
-           solar homes the right way without having to become a solar expert.
-          </p>
-
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
-            <Link
-              href="#join"
-              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-[#115056] text-white text-[14px] font-semibold leading-[110%]"
-            >
-              Get Solar Certified
-            </Link>
-            <Link
-              href="#demo"
-              className="flex h-[52px] px-[30px] py-[12px] justify-center items-center gap-2 rounded-[30px] bg-white border border-[#115056] text-[#115056] text-[14px] font-semibold leading-[110%]"
-            >
-              Generate a Sprk Listing Report
-            </Link>
-          </div>
-
-          <div className="w-full pt-8 sm:pt-10 lg:pt-12 flex flex-col items-center gap-[25px] self-stretch">
-            <p className="text-center text-xs tracking-wide opacity-70">Trusted by:</p>
-            <p
-              className={`${inter.className} text-center text-[18px] font-normal leading-[120%]`}
-              style={{
-                color: "rgba(0, 0, 0, 0.66)",
-              }}
-            >
-              Thousands of agents across the U.S. use Sprk to simplify solar transactions,
-              protect their clients, and stand out in a growing market.
-            </p>
-            <div className="flex justify-center items-center gap-[25px]">
+          {/* Trusted By Section */}
+          <div className="flex flex-col gap-[25px] items-center justify-start w-full">
+            <div className={`${inter.className} font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] w-full`}>
+              <p className="font-semibold mb-2">Trusted by:</p>
+              <p className="mb-0">Thousands of agents across the U.S. use Sprk to simplify solar transactions,</p>
+              <p className="mb-0">protect their clients, and stand out in a growing market.</p>
+            </div>
+            
+            <div className="flex gap-[25px] items-center justify-center overflow-clip">
               {Array.from({ length: 5 }).map((_, index) => (
-                <Image
+                <div
                   key={index}
-                  src="/inspector-page/section1/trusted-by.svg"
-                  alt="Trusted by logo"
-                  width={150}
-                  height={82}
-                  priority={index === 0}
-                />
+                  className="h-[82px] w-[150px] opacity-50 shrink-0 bg-gray-200 rounded-lg flex items-center justify-center"
+                >
+                  <span className="text-gray-400 text-sm font-medium">Logo {index + 1}</span>
+                </div>
               ))}
             </div>
           </div>
