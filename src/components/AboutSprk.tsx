@@ -20,13 +20,27 @@ interface AboutSprkProps {
 }
 
 export default function AboutSprk({ title, subtitle, description, cards }: AboutSprkProps) {
-  const renderCard = (card: Card, index: number) => {
+  const renderCard = (card: Card, index: number, rowIndex?: number) => {
     const isLarge = card.width === "large";
+    // Define width classes based on row and position
+    const getWidthClass = (index: number, rowIndex?: number) => {
+      const isFirstInRow = index % 2 === 0; // Even indices (0, 2) are first in row
+      
+      // First row: first card 60%, second card 40%
+      // Second row: first card 40%, second card 60%
+      if (rowIndex === 0) {
+        // First row
+        return isFirstInRow ? 'w-full md:w-[60%]' : 'w-full md:w-[40%]';
+      } else {
+        // Second row - flip the widths
+        return isFirstInRow ? 'w-full md:w-[40%]' : 'w-full md:w-[60%]';
+      }
+    };
     
     return (
-      <div key={index} className={`bg-white w-full ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
+      <div key={index} className={`bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
         <div className="flex flex-col items-center justify-start w-full overflow-clip">
-          <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px]">
+          <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center lg:items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px] xl:justify-center">
             <div className="bg-white flex items-center justify-center rounded-[10px] w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] lg:w-[130px] lg:h-[130px] border border-[#115056] shrink-0">
               <Image 
                 src={card.icon} 
@@ -39,11 +53,10 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
             <div className="flex flex-row items-center sm:items-end justify-center sm:justify-start flex-1 text-center sm:text-left">
               <div className="bg-white flex items-center justify-center sm:justify-start rounded-[10px] shrink-0">
                 <h3
-                  className="text-[24px] sm:text-[32px] md:text-[38px] lg:text-[45px] font-medium leading-[110%] text-black whitespace-pre-line"
+                  className="text-[24px] sm:text-[32px] md:text-[38px] lg:text-[45px] font-medium leading-[110%] text-black"
                   style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
-                >
-                  {card.label}
-                </h3>
+                  dangerouslySetInnerHTML={{ __html: card.label }}
+                />
               </div>
             </div>
           </div>
@@ -97,8 +110,15 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
             </div>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-4 sm:gap-6 items-start justify-center w-full">
-            {cards.map((card, index) => renderCard(card, index))}
+          <div className="flex flex-col gap-4 sm:gap-6 w-full">
+            {/* First Row */}
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start justify-start w-full">
+              {cards.slice(0, 2).map((card, index) => renderCard(card, index, 0))}
+            </div>
+            {/* Second Row */}
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start justify-start w-full">
+              {cards.slice(2, 4).map((card, index) => renderCard(card, index + 2, 1))}
+            </div>
           </div>
         </div>
       </div>

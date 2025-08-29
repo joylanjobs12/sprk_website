@@ -20,32 +20,32 @@ export default function InspectorPage() {
                 <h1 className="font-['Aeonik_Pro'] font-medium text-[80px] leading-[1.1] text-center text-[#141414] w-full">
                   <span className="text-[#115056]">Add Solar Inspections</span>
                   <span> to</span>
-            <br />
+                  <br />
                   <span>Grow Your Business</span>
-          </h1>
+                </h1>
 
                 <div className="flex items-center justify-center px-2.5 w-full">
                   <p className={`${inter.className} font-normal text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] flex-1`}>
-            Sprk equips home inspectors with the training, tools, and reports to inspect solar and energy
+                    Sprk equips home inspectors with the training, tools, and reports to inspect solar and energy
                     <br />
-            systems confidently, deliver more value, and grow revenue on every job.
-          </p>
+                    systems confidently, deliver more value, and grow revenue on every job.
+                  </p>
                 </div>
               </div>
 
               <div className="flex flex-wrap gap-[15px] items-center justify-center w-full">
-            <Link
-              href="#join"
+                <Link
+                  href="#join"
                   className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] text-white font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1]"
-            >
-              Join Sprk
-            </Link>
-            <Link
-              href="#demo"
+                >
+                  Join Sprk
+                </Link>
+                <Link
+                  href="#demo"
                   className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] border border-[#115056] text-[#115056] font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1]"
-            >
-              Watch a Demo
-            </Link>
+                >
+                  Watch a Demo
+                </Link>
               </div>
             </header>
           </div>
@@ -58,9 +58,9 @@ export default function InspectorPage() {
             <div className="flex gap-[25px] items-center justify-center overflow-clip">
               {Array.from({ length: 5 }).map((_, index) => (
                 <div key={index} className="h-[82px] w-[150px] opacity-50 relative">
-                  <div 
+                  <div
                     className="absolute inset-0 bg-center bg-contain bg-no-repeat"
-                    style={{ backgroundImage: `url('http://localhost:3845/assets/5dee599dbb8775b7d05f13cd1fc14bcd273e68d6.png')` }}
+                    style={{ backgroundImage: `url('/inspector-page/section1/trusted-by.svg')` }}
                   />
                 </div>
               ))}

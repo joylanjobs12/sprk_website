@@ -1,17 +1,14 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
 import CTA from "@/components/CTA";
 import AboutSprk from "@/components/AboutSprk";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import Testimonials from "@/components/Testimonials";
 
-const inter = Inter({ subsets: ["latin"] });
-
 function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
   return (
     <div
-      className="flex w-full h-auto sm:min-h-[unset] md:min-h-[360px] lg:min-h-[400px] xl:min-h-[380px] 2xl:min-h-[420px] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-8 2xl:p-10 flex-col justify-between xl:justify-start 2xl:justify-between items-center text-center rounded-[10px] border bg-white"
+      className="flex w-full min-h-auto md:min-h-[360px] lg:min-h-[400px] xl:min-h-[380px] 2xl:min-h-[420px] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-8 2xl:p-10 flex-col justify-between items-center text-center rounded-[10px] border bg-white hover:shadow-lg transition-all duration-200 cursor-pointer"
       style={{
         borderColor: "rgba(17, 80, 86, 0.20)",
         boxShadow:
@@ -20,20 +17,28 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
     >
       {/* Icon Section */}
       <div className="flex items-center justify-center mb-3 sm:mb-4 md:mb-6 xl:mb-4 2xl:mb-6">
-        <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px] lg:w-[90px] lg:h-[90px] xl:w-[85px] xl:h-[85px] 2xl:w-[110px] 2xl:h-[110px] flex items-center justify-center">
-          {icon}
+        <div 
+          className="flex p-[20px] items-center rounded-[10px] border"
+          style={{
+            border: "1px solid var(--Primary-Color, #115056)",
+            background: "var(--Card-Blue, #F1FAFA)"
+          }}
+        >
+          <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px] lg:w-[90px] lg:h-[90px] xl:w-[85px] xl:h-[85px] 2xl:w-[110px] 2xl:h-[110px] flex items-center justify-center">
+            {icon}
+          </div>
         </div>
       </div>
       
       {/* Title Section */}
-      <div className="block m-3 sm:m-[30px] xl:m-4 2xl:m-[0px] flex-none">
+      <div className="flex-1 flex flex-col justify-center mb-4">
         <h3
-          className="text-center font-semibold text-[18px] sm:text-[20px] md:text-[24px] lg:text-[28px] xl:text-[32px] 2xl:text-[36px] leading-[1.4] block flex-none"
+          className="text-center text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
           style={{
             color: "var(--Text-Title, #141414)",
-            fontFamily: '"Aeonik Pro", sans-serif',
+            fontFamily: 'Inter, "Aeonik Pro", sans-serif',
             fontStyle: "normal",
-            fontWeight: 600,
+            fontWeight: 500,
           }}
         >
           {title}
@@ -42,25 +47,29 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
       
       {/* Subtitle Section */}
       {subtitle ? (
-        <p 
-          className="opacity-70 text-center mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
-          style={{
-            fontWeight: 400,
-          }}
-        >
-          {subtitle}
-        </p>
+        <div className="mb-4">
+          <p 
+            className="opacity-70 text-center text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+            style={{
+              fontFamily: 'Inter',
+              fontWeight: 400,
+            }}
+          >
+            {subtitle}
+          </p>
+        </div>
       ) : null}
       
       {/* Button Section */}
       <div className="w-full">
         <button
-          className={`${inter.className} flex justify-center items-center gap-2 px-3 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 self-stretch w-full rounded-[5px] border bg-[var(--Card-Blue,#F1FAFA)] text-center min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[48px] 2xl:min-h-[52px] touch-manipulation hover:bg-opacity-80 transition-all duration-200 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] font-medium`}
+          className="flex justify-center items-center gap-2 px-4 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 w-full rounded-[5px] border bg-[var(--Card-Blue,#F1FAFA)] text-center min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[48px] 2xl:min-h-[52px] touch-manipulation hover:bg-[#115056] hover:text-white transition-all duration-200 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[1.125rem] xl:text-[1.125rem] 2xl:text-[1.25rem] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] font-normal md:font-medium lg:font-medium xl:font-medium 2xl:font-medium"
           style={{
             borderColor: "var(--Primary-Color, #115056)",
             color: "var(--Text-Title, #141414)",
+            fontFamily: 'Inter',
             fontStyle: "normal",
-            fontWeight: 500,
+            fontWeight: 400,
           }}
         >
           <span>Learn More</span>
@@ -77,54 +86,45 @@ export default function Home() {
     <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
       <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px] xl:pt-[100px]">
         <h1
-          className="text-center font-bold mb-4 text-[38px] sm:text-[28px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[48px] leading-[1.3]"
+          className="text-center mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-6 2xl:mb-6 text-[35px] sm:text-[35px] md:text-[2rem] lg:text-[3rem] xl:text-[5rem] 2xl:text-[5rem] leading-[110%] sm:leading-[110%] md:leading-[1.3] lg:leading-[1.3] xl:leading-[1.1] 2xl:leading-[1.1] font-medium"
           style={{
-            color: "var(--Primary-Color, #115056)",
             textAlign: "center",
             fontFamily: '"Aeonik Pro", sans-serif',
             fontStyle: "normal",
-            fontWeight: 700,
+            fontWeight: 500,
           }}
         >
-          Solar Simplified.
+          <span style={{ color: "var(--Primary-Color, #115056)" }}>Solar Simplified.</span>{" "}<br  />
+          <span style={{ color: "var(--Text-Title, #141414)" }}>Real Estate Ready.</span>
         </h1>
-        <h2
-          className="text-center font-semibold mb-3 text-[26px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px] leading-[1.4]"
-          style={{
-            color: "var(--Text-Title, #141414)",
-            fontFamily: '"Aeonik Pro", sans-serif',
-            fontStyle: "normal",
-            fontWeight: 600,
-          }}
-        >
-          Real Estate Ready.
-        </h2>
         <p 
-          className="max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 text-[16px] sm:text-[16px] md:text-[18px] lg:text-[18px] xl:text-[20px] 2xl:text-[20px] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+          className="max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
           style={{
+            fontFamily: 'Inter',
             fontWeight: 400,
+            color: "rgba(0,0,0,0.66)",
           }}
         >
           The trusted platform to connect, understand, value, inspect, and transfer solar homes with confidence and clarity.
         </p>
       </div>
 
-      <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 xl:gap-8 px-2 sm:px-4 md:px-2 lg:px-0">
+      <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 px-0 sm:px-0 md:px-0 lg:px-0">
         <RoleCard
-          icon={<Image src="/home-page/section 1/inspector.svg" alt="Inspector" width={110} height={110} />}
-          title={"I’m a Home Inspector"}
+          icon={<Image src="/home-page/section 1/inspector-new.svg" alt="Inspector" width={110} height={110} />}
+          title={"I'm a Home Inspector"}
         />
         <RoleCard
-          icon={<Image src="/home-page/section 1/real-state-agent.svg" alt="Real Estate Agent" width={110} height={110} />}
-          title={"I’m a Real Estate Agent"}
+          icon={<Image src="/home-page/section 1/real-estate-agent-new.svg" alt="Real Estate Agent" width={110} height={110} />}
+          title={"I'm a Real Estate Agent"}
         />
         <RoleCard
-          icon={<Image src="/home-page/section 1/solar-pro.svg" alt="Solar Pro" width={110} height={110} />}
-          title={"I’m a Solar Pro"}
+          icon={<Image src="/home-page/section 1/solar-pro-new.svg" alt="Solar Pro" width={110} height={110} />}
+          title={"I'm a Solar Pro"}
         />
         <RoleCard
-          icon={<Image src="/home-page/section 1/homeowner.svg" alt="Homeowner" width={110} height={110} />}
-          title={"I’m a Homeowner"}
+          icon={<Image src="/home-page/section 1/homeowner-new.svg" alt="Homeowner" width={110} height={110} />}
+          title={"I'm a Homeowner"}
         />
       </div>
     </section>
@@ -134,31 +134,31 @@ export default function Home() {
         <div className="content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start relative shrink-0 w-full max-w-[1248px]">
           <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
             <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
-              <div 
-                className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] text-center px-4 sm:px-0"
+              <h2 
+                className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[18px] sm:text-[18px] md:text-[1.75rem] lg:text-[2.5rem] xl:text-[3.5rem] 2xl:text-[3.5rem] leading-[120%] sm:leading-[120%] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.1] 2xl:leading-[1.1] text-center px-4 sm:px-0 font-medium md:font-semibold lg:font-medium xl:font-medium 2xl:font-medium"
                 style={{
-                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontFamily: 'Inter, "Aeonik Pro", sans-serif',
                   fontWeight: 500,
                 }}
               >
                 Why Sprk Exists
-              </div>
+              </h2>
             </div>
             <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
-                <div 
-                  className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[35px] text-center px-4 sm:px-0"
+                <h4 
+                  className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[1rem] sm:text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2.1875rem] 2xl:text-[2.1875rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.1] 2xl:leading-[1.1] text-center px-4 sm:px-0 font-semibold lg:font-medium xl:font-medium 2xl:font-medium"
                 style={{
                   fontFamily: '"Aeonik Pro", sans-serif',
-                  fontWeight: 500,
+                  fontWeight: 600,
                 }}
               >
                   Solar is valuable but misunderstood. Sprk bridges the gap.
-                </div>
+                </h4>
               </div>
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
-                <div 
-                  className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] text-center px-4 sm:px-0"
+                <p 
+                  className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center px-4 sm:px-0"
                 style={{
                     fontFamily: 'Inter',
                   fontWeight: 400,
@@ -167,11 +167,11 @@ export default function Home() {
                 >
                   <p className="mb-0">We bring together the professionals who serve solar homeowners with the reports,</p>
                   <p className="">referrals, and training needed to simplify complex solar real estate.</p>
-                </div>
+                </p>
               </div>
             </div>
           </div>
-          <div className="content-center grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 items-center justify-start relative shrink-0 w-full">
+          <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-center justify-start relative shrink-0 w-full">
             {/* Standardized Reports Card */}
             <div className="bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[511px] min-h-[400px] w-full relative rounded-[10px] shrink-0">
               <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative size-full">
@@ -195,19 +195,19 @@ export default function Home() {
         </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <div 
-                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                    <h3 
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
             style={{
-              fontFamily: '"Aeonik Pro", sans-serif',
+              fontFamily: 'Inter, "Aeonik Pro", sans-serif',
               fontWeight: 500,
                       }}
                     >
                       Standardized Reports
-        </div>
+        </h3>
               </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-              <div
-                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+              <p
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
                 style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -215,7 +215,7 @@ export default function Home() {
                       }}
                     >
                       Make solar and energy data visible and valuation-ready.
-                    </div>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -235,19 +235,19 @@ export default function Home() {
           </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <div 
-                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                    <h3 
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
                 style={{
-                        fontFamily: '"Aeonik Pro", sans-serif',
+                        fontFamily: 'Inter, "Aeonik Pro", sans-serif',
                   fontWeight: 500,
                 }}
               >
                       Role-Specific Training
-              </div>
+              </h3>
             </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <div 
-                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+                    <p 
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
                 style={{
                   fontFamily: 'Inter',
                   fontWeight: 400,
@@ -255,7 +255,7 @@ export default function Home() {
                 }}
               >
                       Equip professionals with the tools to lead confident solar transactions.
-                    </div>
+                    </p>
             </div>
           </div>
               </div>
@@ -278,19 +278,19 @@ export default function Home() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <div 
-                      className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
+                    <h3 
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
                 style={{
-                        fontFamily: '"Aeonik Pro", sans-serif',
+                        fontFamily: 'Inter, "Aeonik Pro", sans-serif',
                   fontWeight: 500,
                 }}
               >
                       Smart Connections
-              </div>
+              </h3>
             </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <div 
-                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[18px]"
+                    <p 
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
                 style={{
                   fontFamily: 'Inter',
                   fontWeight: 400,
@@ -298,7 +298,7 @@ export default function Home() {
                 }}
               >
                       Sprk connects buyers, sellers, agents, inspectors, and solar pros to support smooth, informed home transfers.
-            </div>
+            </p>
           </div>
               </div>
               </div>

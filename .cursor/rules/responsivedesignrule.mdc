@@ -4,73 +4,149 @@ globs:
 alwaysApply: true
 ---
 
+-IMPORTANT: For Extra Small viewports (Mobile Phones, 0px–575px): Use a single-column layout, ensure large touch-friendly buttons (min-width: 44px, min-height: 44px), maintain readable font sizes (at least 16px), and include minimal images with optimized performance from public/professional-solar-training-page/section 1/. Boxes must use w-full, min-h-auto, and reduced padding (e.g., p-4) to prevent overflow.
+
+-IMPORTANT: For Small viewports (Large Phones / Small Tablets, 576px–767px): Maintain mostly single-column layouts but introduce split sections where appropriate, use responsive navigation (e.g., hamburger menus, collapsible elements), and prioritize content to show the most important information first.
+
+-IMPORTANT: For Medium viewports (Tablets Portrait, 768px–991px): Enable two-column layouts where possible, increase spacing and padding for better readability, and allow navigation to expand slightly while keeping it compact.
+
+-IMPORTANT: For Large viewports (Tablets Landscape / Small Laptops, 992px–1199px): Implement multi-column layouts (2–3 columns), introduce sidebar visibility, and support bigger images and richer media.
+
+-IMPORTANT: For Extra Large viewports (Desktops / Wide Screens, 1200px–1399px): Use full multi-column layouts (3–4 columns), include sidebar + content + extra widgets, and incorporate more whitespace for improved user experience.
+
+-IMPORTANT: For Extra Extra Large viewports (Large Desktops / TVs, 1400px and above): Design very wide content areas (use max-width to avoid long lines), enable split-screen designs where possible, and use high-resolution images.
+
+-IMPORTANT: For text tags across all viewports, apply the following font sizes, line heights, font families, and styling considerations to ensure readability and accessibility:
+       - Extra Small (0px–575px):
+        h1: 40px, line-height: 110% (44px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h2: 35px, line-height: 110% (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        h3: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h4: 18px, line-height: 120% (21.6px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h5: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        h6: 30px, line-height: 110% (33px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        p: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        strong: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        em: 1rem (16px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Title: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Card Title 2: 0.9375rem (15px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Body: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Body 2: 0.875rem (14px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle 2: 0.875rem (14px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Label: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Big: 20px, line-height: 120% (24px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Small: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Navigation: 0.75rem (12px), line-height: 1.5, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Nav Description: 0.625rem (10px), line-height: 1.5, font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
+
+    - Small (576px–767px):
+        h1: 40px, line-height: 110% (44px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h2: 35px, line-height: 110% (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        h3: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h4: 18px, line-height: 120% (21.6px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h5: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        h6: 30px, line-height: 110% (33px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        p: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        strong: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        em: 1rem (16px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Title: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Card Title 2: 0.9375rem (15px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Body: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Body 2: 0.875rem (14px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle 2: 0.9375rem (15px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Label: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Big: 20px, line-height: 120% (24px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Small: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+    
 
 
--IMPORTANT: For Extra Small viewports (Mobile Phones, 0px – 575px): Use a single-column layout, ensure large touch-friendly buttons, maintain readable font sizes (at least 16px), and include minimal images with optimized performance.
-
--IMPORTANT: For Small viewports (Large Phones / Small Tablets, 576px – 767px): Maintain mostly single-column layouts but introduce split sections where appropriate, use responsive navigation such as hamburger menus or collapsible elements, and prioritize content to show the most important information first.
-
--IMPORTANT: For Medium viewports (Tablets Portrait, 768px – 991px): Enable two-column layouts where possible, increase spacing and padding for better readability, and allow navigation to expand slightly while keeping it compact.
-
--IMPORTANT: For Large viewports (Tablets Landscape / Small Laptops, 992px – 1199px): Implement multi-column layouts (2–3 columns), introduce sidebar visibility, and support bigger images and richer media.
-
--IMPORTANT: For Extra Large viewports (Desktops / Wide Screens, 1200px – 1399px): Use full multi-column layouts (3–4 columns), include sidebar + content + extra widgets, and incorporate more whitespace for improved user experience.
-
--IMPORTANT: For Extra Extra Large viewports (Large Desktops / TVs, 1400px and above): Design very wide content areas (consider max-width to avoid long lines), enable split-screen designs where possible, and use high-resolution images.
-
--IMPORTANT: For text tags across all viewports, apply the following font sizes, line heights, and styling considerations to ensure readability and accessibility:
-    -Extra Small (0px – 575px):
-        -h1: 1.5rem (38px), line-height: 1.3, font-weight: 700, margin-bottom: 1rem
-        -h2: 1.25rem (26px), line-height: 1.4, font-weight: 600, margin-bottom: 0.75rem
-        -h3: 1.125rem (18px), line-height: 1.4, font-weight: 600, margin-bottom: 0.5rem
-        -h4: 1rem (16px), line-height: 1.5, font-weight: 600, margin-bottom: 0.5rem
-        -p: 1rem (16px), line-height: 1.5, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1rem (16px), line-height: 1.5, font-weight: inherit (use 700 for strong, 400 for em)
-
-
-    -Small (576px – 767px):
-        -h1: 1.75rem (28px), line-height: 1.3, font-weight: 700, margin-bottom: 1rem
-        -h2: 1.5rem (24px), line-height: 1.4, font-weight: 600, margin-bottom: 0.75rem
-        -h3: 1.25rem (20px), line-height: 1.4, font-weight: 600, margin-bottom: 0.5rem
-        -h4: 1.125rem (18px), line-height: 1.5, font-weight: 600, margin-bottom: 0.5rem
-        -p: 1rem (16px), line-height: 1.5, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1rem (16px), line-height: 1.5, font-weight: inherit (use 700 for strong, 400 for em)
+    - Medium (768px–991px):
+        h1: 40px, line-height: 110% (44px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h2: 35px, line-height: 110% (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        h3: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h4: 18px, line-height: 120% (21.6px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        h5: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        h6: 30px, line-height: 110% (33px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        p: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        strong: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        em: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Title: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Card Title 2: 0.9375rem (15px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Body: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Body 2: 0.875rem (14px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle 2: 0.9375rem (15px), line-height: 1.5, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Label: 25px, line-height: 120% (30px), font-weight: 500, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Big: 20px, line-height: 120% (24px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Button Small: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: var(--Paragraph-1, #000), margin-bottom: 0.5rem
+        Navigation: 0.875rem (14px), line-height: 1.6, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Nav Description: 0.6875rem (11px), line-height: 1.6, font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
 
 
-    -Medium (768px – 991px):
-        -h1: 2rem (32px), line-height: 1.3, font-weight: 700, margin-bottom: 1.25rem
-        -h2: 1.75rem (28px), line-height: 1.4, font-weight: 600, margin-bottom: 1rem
-        -h3: 1.5rem (24px), line-height: 1.4, font-weight: 600, margin-bottom: 0.75rem
-        -h4: 1.25rem (20px), line-height: 1.5, font-weight: 600, margin-bottom: 0.5rem
-        -p: 1.125rem (18px), line-height: 1.6, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1.125rem (18px), line-height: 1.6, font-weight: inherit (use 700 for strong, 400 for em)
+    - Large (992px–1199px):
+        h1: 80px, line-height: 110% (88px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.5rem
+        h2: 56px, line-height: 110% (61.6px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.25rem
+        h3: 45px, line-height: 110% (49.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h4: 35px, line-height: 110% (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        h5: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        h6: 30px, line-height: 110% (33px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        p: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        strong: 22px, line-height: 120% (26.4px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        em: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        q: 11px, line-height: 120% (13.2px), font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
+        small: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        label: 20px, line-height: 110% (22px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Title: 1.5rem (24px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Title 2: 1.25rem (20px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Body: 20px, line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Body 2: 0.9375rem (15px), line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle: 1.125rem (18px), line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle 2: 20px, line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Label: 20px, line-height: 1.6, font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Button Big: 1.125rem (18px), line-height: 1.6, font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Button Small: 0.875rem (14px), line-height: 1.6, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Navigation: 0.875rem (14px), line-height: 1.6, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Nav Description: 0.6875rem (11px), line-height: 1.6, font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
 
+    - Extra Large (1200px–1399px):
+        h1: 80px, line-height: 110% (88px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.5rem
+        h2: 56px, line-height: 110% (61.6px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.25rem
+        h3: 45px, line-height: 110% (49.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h4: 35px, line-height: 110% (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        h5: 32px, line-height: 110% (35.2px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        h6: 30px, line-height: 110% (33px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        p: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        strong: 22px, line-height: 120% (26.4px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        em: 16px, line-height: 120% (19.2px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        q: 11px, line-height: 120% (13.2px), font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
+        small: 18px, line-height: 120% (21.6px), font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        label: 20px, line-height: 110% (22px), font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Title: 1.5rem (24px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Title 2: 1.25rem (20px), line-height: 1.5, font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.5rem
+        Card Body: 20px, line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Body 2: 0.9375rem (15px), line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle: 1.125rem (18px), line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Subtitle 2: 20px, line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Card Label: 20px, line-height: 1.6, font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Button Big: 1.125rem (18px), line-height: 1.6, font-weight: 500, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Button Small: 0.875rem (14px), line-height: 1.6, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Navigation: 0.875rem (14px), line-height: 1.6, font-weight: 600, font-family: Inter, color: #000, margin-bottom: 0.5rem
+        Nav Description: 0.6875rem (11px), line-height: 1.6, font-weight: 400, font-family: Inter, color: rgba(0, 0, 0, 0.45), margin-bottom: 0.5rem
 
-    -Large (992px – 1199px):
-        -h1: 2.25rem (36px), line-height: 1.3, font-weight: 700, margin-bottom: 1.5rem
-        -h2: 2rem (32px), line-height: 1.4, font-weight: 600, margin-bottom: 1.25rem
-        -h3: 1.75rem (28px), line-height: 1.4, font-weight: 600, margin-bottom: 1rem
-        -h4: 1.5rem (24px), line-height: 1.5, font-weight: 600, margin-bottom: 0.75rem
-        -p: 1.125rem (18px), line-height: 1.6, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1.125rem (18px), line-height: 1.6, font-weight: inherit (use 700 for strong, 400 for em)
+    - Extra Extra Large (1400px and above):
+        h1: 5rem (80px), line-height: 1.1 (88px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.5rem
+        h2: 3.5rem (56px), line-height: 1.1 (61.6px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1.25rem
+        h3: 2.8125rem (45px), line-height: 1.1 (49.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 1rem
+        h4: 2.1875rem (35px), line-height: 1.1 (38.5px), font-weight: 500, font-family: "Aeonik Pro", color: #000, margin-bottom: 0.75rem
+        p: 1.25rem (20px), line-height: 1.6, font-weight: 400, font-family: Inter, color: #000, margin-bottom: 1rem
+        span, strong, em: 1.25rem (20px), line-height: 1.6, font-weight: inherit (700 for strong, 400 for em), font-family: Inter, color: #000
 
-
-    -Extra Large (1200px – 1399px):
-        -h1: 2.5rem (40px), line-height: 1.3, font-weight: 700, margin-bottom: 1.5rem
-        -h2: 2.25rem (36px), line-height: 1.4, font-weight: 600, margin-bottom: 1.25rem
-        -h3: 2rem (32px), line-height: 1.4, font-weight: 600, margin-bottom: 1rem
-        -h4: 1.75rem (28px), line-height: 1.5, font-weight: 600, margin-bottom: 0.75rem
-        -p: 1.25rem (20px), line-height: 1.6, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1.25rem (20px), line-height: 1.6, font-weight: inherit (use 700 for strong, 400 for em)
-
-
-    -Extra Extra Large (1400px and above):
-        -h1: 3rem (48px), line-height: 1.3, font-weight: 700, margin-bottom: 1.5rem
-        -h2: 2.5rem (40px), line-height: 1.4, font-weight: 600, margin-bottom: 1.25rem
-        -h3: 2.25rem (36px), line-height: 1.4, font-weight: 600, margin-bottom: 1rem
-        -h4: 2rem (32px), line-height: 1.5, font-weight: 600, margin-bottom: 0.75rem
-        -p: 1.25rem (20px), line-height: 1.6, font-weight: 400, margin-bottom: 1rem
-        -span, strong, em: 1.25rem (20px), line-height: 1.6, font-weight: inherit (use 700 for strong, 400 for em)
 
 
 

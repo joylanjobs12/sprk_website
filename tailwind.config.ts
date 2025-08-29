@@ -8,16 +8,18 @@ const config: Config = {
   ],
   theme: {
     screens: {
-      // Custom breakpoints to match Responsive Design Rules exactly
-      'xs': '0px',      // Extra Small (Mobile Phones, 0px – 575px)
-      'sm': '576px',    // Small (Large Phones / Small Tablets, 576px – 767px)
-      'md': '768px',    // Medium (Tablets Portrait, 768px – 991px)
-      'lg': '992px',    // Large (Tablets Landscape / Small Laptops, 992px – 1199px)
-      'xl': '1200px',   // Extra Large (Desktops / Wide Screens, 1200px – 1399px)
-      '2xl': '1400px',  // Extra Extra Large (Large Desktops / TVs, 1400px and above)
+      '2xl': { 'min': '1400px' },
+      'xl': { 'max': '1399px' },
+      'lg': { 'max': '1199px' },
+      'md': { 'max': '991px' },
+      'sm': { 'max': '767px' },
+      'xs': { 'max': '575px' },
     },
     extend: {
-      // Add any other custom theme extensions here
+      fontFamily: {
+        aeonik: ['"Aeonik Pro"', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+      },
     },
   },
   plugins: [],
