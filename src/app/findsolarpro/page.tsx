@@ -2,39 +2,54 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
 import AboutSprk from "@/components/AboutSprk";
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function FindSolarProPage() {
   return (
     <>
+      <ScrollAnimations />
       {/* Hero Section */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pt-[80px] sm:pt-[100px] lg:pt-[120px] xl:pt-[150px] pb-[40px] sm:pb-[50px] lg:pb-[60px]">
+      <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pt-[80px] sm:pt-[100px] lg:pt-[120px] xl:pt-[150px] pb-[40px] sm:pb-[50px] lg:pb-[60px]">
         <div className="flex flex-col items-center text-center gap-[30px] sm:gap-[40px] lg:gap-[50px]">
           {/* Header Container */}
-          <div className="flex flex-col gap-[30px] items-center justify-start w-full">
+          <div className="fade-up flex flex-col gap-[30px] items-center justify-start w-full">
             <div className="flex flex-col gap-[30px] items-center justify-start px-2.5 py-0 w-full">
-              <h1 className="font-['Aeonik_Pro'] font-medium text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] xl:text-[40px] 2xl:text-[48px] leading-[1.1] text-center w-full">
+              <h1 
+                className="fade-up font-medium text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center w-full"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                 <span className="text-[#141414]">Find a </span>
                 <span className="text-[#115056]">Sprk Certified Professional </span>
                 <span className="text-[#141414]">Near You</span>
               </h1>
               
-              <div className="flex items-center justify-center px-2.5 py-0 w-full">
-                <p className={`${inter.className} font-normal text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] max-w-[600px]`}>
+              <div className="text-reveal flex items-center justify-center px-2.5 py-0 w-full">
+                <strong 
+                  className="max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
                   Search for home inspectors, real estate agents, or solar professionals who are trained and certified to work with solar-powered homes.
-                </p>
+                </strong>
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-[10px] sm:gap-[15px] items-center justify-center w-full">
-              <button className="bg-[#115056] flex gap-2 h-[40px] sm:h-[44px] md:h-[48px] lg:h-[52px] items-center justify-center px-[20px] sm:px-[25px] md:px-[30px] py-2.5 rounded-[30px] shrink-0 hover:opacity-90 transition-opacity">
-                <span className="font-['Aeonik_Pro'] font-medium text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[25px] leading-[1.1] text-white whitespace-nowrap">
+            <div className="slide-up-cards flex flex-wrap gap-[10px] sm:gap-[15px] items-center justify-center w-full">
+              <button className="group bg-[#115056] flex gap-2 h-[44px] sm:h-[48px] md:h-[52px] lg:h-[56px] items-center justify-center px-[20px] sm:px-[25px] md:px-[30px] py-2.5 rounded-[30px] shrink-0 hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out border border-[#115056]">
+                <span className="font-medium text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] leading-[1.1] text-white group-hover:text-[#115056] whitespace-nowrap transition-colors duration-300" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
                   Join Sprk
                 </span>
               </button>
-              <button className="flex gap-2 h-[40px] sm:h-[44px] md:h-[48px] lg:h-[52px] items-center justify-center px-[20px] sm:px-[25px] md:px-[30px] py-2.5 rounded-[30px] shrink-0 border border-[#115056] bg-white hover:bg-[#115056] hover:text-white transition-all duration-200">
-                <span className="font-['Aeonik_Pro'] font-medium text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[25px] leading-[1.1] text-[#115056] hover:text-white whitespace-nowrap">
+              <button className="group flex gap-2 h-[44px] sm:h-[48px] md:h-[52px] lg:h-[56px] items-center justify-center px-[20px] sm:px-[25px] md:px-[30px] py-2.5 rounded-[30px] shrink-0 border border-[#115056] bg-white hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out">
+                <span className="font-medium text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[24px] leading-[1.1] text-[#115056] group-hover:text-white whitespace-nowrap transition-colors duration-300" style={{ fontFamily: '"Aeonik Pro", sans-serif' }}>
                   Watch a Demo
                 </span>
               </button>
@@ -42,9 +57,12 @@ export default function FindSolarProPage() {
           </div>
 
           {/* Trusted By Section */}
-          <div className="flex flex-col gap-[10px] sm:gap-[15px] lg:gap-[20px] items-center justify-start w-full">
+          <div className="bounce-in flex flex-col gap-[10px] sm:gap-[15px] lg:gap-[20px] items-center justify-start w-full">
             <div className="flex gap-2.5 items-center justify-center">
-              <p className={`${inter.className} font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-center text-black`}>
+              <p 
+                className="font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-center text-black"
+                style={{ fontFamily: 'Inter' }}
+              >
                 Trusted by:
               </p>
             </div>
@@ -53,7 +71,7 @@ export default function FindSolarProPage() {
               {Array.from({ length: 5 }).map((_, index) => (
                 <div
                   key={index}
-                  className="h-[25px] sm:h-[30px] lg:h-[33px] opacity-50 w-[45px] sm:w-[55px] lg:w-[60px] bg-gray-300 rounded flex items-center justify-center text-xs text-gray-600"
+                  className="card-flip h-[25px] sm:h-[30px] lg:h-[33px] opacity-50 w-[45px] sm:w-[55px] lg:w-[60px] bg-gray-300 rounded flex items-center justify-center text-xs text-gray-600 hover:opacity-70 hover:scale-105 transition-all duration-300 ease-in-out"
                 >
                   Logo
                 </div>
@@ -64,41 +82,60 @@ export default function FindSolarProPage() {
       </section>
 
       {/* Professional Directory Section */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[50px] sm:py-[75px] lg:py-[100px]">
+      <section className="section-2 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[50px] sm:py-[75px] lg:py-[100px]">
         <div className="flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[50px] items-center justify-start w-full">
           {/* Header with Filter/Sort */}
-          <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[50px] items-start lg:items-center justify-between w-full">
-            <div className="flex flex-col gap-[10px] sm:gap-[15px] items-start justify-start flex-1">
+          <div className="text-reveal flex flex-col lg:flex-row gap-[20px] lg:gap-[50px] items-start lg:items-center justify-between w-full">
+            <div className="bounce-in flex flex-col gap-[10px] sm:gap-[15px] items-start justify-start flex-1">
               <div className="flex items-start justify-center w-full lg:justify-start">
-                <h2 className="font-['Aeonik_Pro'] font-medium text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[45px] leading-[1.1] text-[#141414] text-center lg:text-left">
+                <h2 
+                  className="font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-[#141414] text-center lg:text-left"
+                  style={{
+                    fontFamily: '"Aeonik Pro", sans-serif',
+                    fontWeight: 500,
+                  }}
+                >
                   Available Professional Near you
                 </h2>
               </div>
               <div className="flex items-start justify-center w-full lg:justify-start">
-                <p className={`${inter.className} font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-[rgba(0,0,0,0.66)] text-center lg:text-left`}>
+                <p 
+                  className="font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center lg:text-left"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
                   Showing 100+ Available Professionals
                 </p>
               </div>
             </div>
             
-            <div className="flex gap-[10px] sm:gap-[15px] items-center justify-center lg:justify-start w-full lg:w-auto">
-              <button className="bg-gray-50 border border-[rgba(0,0,0,0.2)] flex gap-2 items-center justify-center px-[20px] sm:px-[25px] py-[8px] sm:py-[10px] rounded-[50px] shrink-0 hover:bg-gray-100 transition-colors">
-                <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[#141414] whitespace-nowrap`}>
+            <div className="slide-up-cards flex gap-[10px] sm:gap-[15px] items-center justify-center lg:justify-start w-full lg:w-auto">
+              <button className="group bg-gray-50 border border-[rgba(0,0,0,0.2)] flex gap-2 items-center justify-center px-[20px] sm:px-[25px] py-[8px] sm:py-[10px] rounded-[50px] shrink-0 hover:bg-[#115056] hover:text-white hover:border-[#115056] hover:scale-105 transition-all duration-300 ease-in-out">
+                <span 
+                  className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[#141414] group-hover:text-white whitespace-nowrap transition-colors duration-300"
+                  style={{ fontFamily: 'Inter' }}
+                >
                   Filter
                 </span>
                 <div className="w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </button>
-              <button className="bg-gray-50 border border-[rgba(0,0,0,0.2)] flex gap-2 items-center justify-center px-[20px] sm:px-[25px] py-[8px] sm:py-[10px] rounded-[50px] shrink-0 hover:bg-gray-100 transition-colors">
-                <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[#141414] whitespace-nowrap`}>
+              <button className="group bg-gray-50 border border-[rgba(0,0,0,0.2)] flex gap-2 items-center justify-center px-[20px] sm:px-[25px] py-[8px] sm:py-[10px] rounded-[50px] shrink-0 hover:bg-[#115056] hover:text-white hover:border-[#115056] hover:scale-105 transition-all duration-300 ease-in-out">
+                <span 
+                  className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[#141414] group-hover:text-white whitespace-nowrap transition-colors duration-300"
+                  style={{ fontFamily: 'Inter' }}
+                >
                   Sort By
                 </span>
                 <div className="w-[20px] h-[20px] sm:w-[25px] sm:h-[25px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
                   <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 1.5L6 6.5L11 1.5" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 </div>
               </button>
@@ -106,11 +143,11 @@ export default function FindSolarProPage() {
           </div>
 
           {/* Main Content Container */}
-          <div className="flex items-start gap-[24px] self-stretch w-full">
+          <div className="card-flip flex items-start gap-[24px] self-stretch w-full">
             {/* Professional List */}
             <div className="flex flex-col gap-[15px] sm:gap-[20px] lg:gap-[25px] items-start justify-start w-full">
               {/* Featured Professional - Currently Viewing */}
-              <div className="bg-[#f6ffff] border border-[#80c0c0] rounded-[5px] w-full overflow-hidden">
+              <div className="card-slide-left bg-[#f6ffff] border border-[#80c0c0] rounded-[5px] w-full overflow-hidden hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-in-out">
                 <div className="flex flex-col items-start justify-center w-full">
                   {/* Top Row */}
                   <div className="flex items-start justify-start w-full">
@@ -125,17 +162,33 @@ export default function FindSolarProPage() {
                         />
                       </div>
                       <div className="flex flex-col gap-[5px] items-start justify-center">
-                        <h3 className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[1.1] text-[#141414] whitespace-nowrap">
+                        <h3 
+                          className="font-medium text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-[#141414] whitespace-nowrap"
+                          style={{
+                            fontFamily: '"Aeonik Pro", sans-serif',
+                            fontWeight: 500,
+                          }}
+                        >
                           Cory Vanderpool
                         </h3>
-                        <p className={`${inter.className} font-normal text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.2] text-[rgba(0,0,0,0.66)] whitespace-nowrap`}>
+                        <p 
+                          className="font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] whitespace-nowrap"
+                          style={{
+                            fontFamily: 'Inter',
+                            fontWeight: 400,
+                            color: "rgba(0,0,0,0.66)",
+                          }}
+                        >
                           Profession type
                         </p>
                       </div>
                     </div>
                     <div className="flex gap-[15px] items-center justify-center px-5 py-[15px]">
-                      <button className="bg-[#115056] flex items-center justify-center px-5 py-2.5 rounded-[5px] hover:opacity-90 transition-opacity">
-                        <span className={`${inter.className} font-medium text-[14px] sm:text-[15px] lg:text-[16px] leading-[1.2] text-center text-white whitespace-nowrap`}>
+                      <button className="group bg-[#115056] flex items-center justify-center px-5 py-2.5 rounded-[5px] hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out border border-[#115056]">
+                        <span 
+                          className="font-medium text-[16px] sm:text-[18px] lg:text-[20px] leading-[1.2] text-center text-white group-hover:text-[#115056] whitespace-nowrap transition-colors duration-300"
+                          style={{ fontFamily: 'Inter' }}
+                        >
                           Currently Viewing
                         </span>
                       </button>
@@ -180,7 +233,12 @@ export default function FindSolarProPage() {
 
               {/* Regular Professional Cards */}
               {Array.from({ length: 3 }).map((_, index) => (
-                <div key={index} className="bg-white border border-[#d2d2d2] rounded-[5px] w-full overflow-hidden hover:border-[#115056] transition-colors cursor-pointer">
+                <div key={index} className="card-slide-right bg-white border border-[#d2d2d2] rounded-[5px] w-full overflow-hidden hover:border-[#115056] hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-in-out cursor-pointer"
+                  style={{
+                    borderColor: "rgba(17, 80, 86, 0.20)",
+                    boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)",
+                  }}
+                >
                   <div className="flex flex-col items-start justify-center w-full">
                     {/* Top Row */}
                     <div className="flex items-start justify-start w-full">
@@ -251,8 +309,14 @@ export default function FindSolarProPage() {
             </div>
 
             {/* Professional Profile Detail */}
-            <div className="flex items-center justify-center w-full">
-              <div className="bg-white border border-[rgba(0,0,0,0.2)] rounded-[10px] p-[20px] sm:p-[25px] lg:p-[30px] w-full max-w-[715px] h-full flex flex-col justify-between">
+            <div className="card-zoom-in flex items-center justify-center w-full">
+              <div 
+                className="bg-white border rounded-[10px] p-[20px] sm:p-[25px] lg:p-[30px] w-full max-w-[715px] h-full flex flex-col justify-between hover:shadow-lg hover:scale-[1.02] transition-all duration-300 ease-in-out"
+                style={{
+                  borderColor: "rgba(17, 80, 86, 0.20)",
+                  boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)",
+                }}
+              >
                 {/* Profile Header */}
                 <div className="flex flex-col sm:flex-row gap-[20px] sm:gap-[30px] items-start justify-start w-full">
                   <div className="bg-[#138978] rounded-[10px] w-[150px] h-[150px] sm:w-[180px] sm:h-[180px] lg:w-[200px] lg:h-[200px] flex items-center justify-center overflow-hidden flex-shrink-0">
@@ -351,37 +415,60 @@ export default function FindSolarProPage() {
         </div>
       </section>
 
-      <section className="bg-gray-50 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[50px] sm:py-[70px] lg:py-[100px]">
+      <section className="section-3 bg-gray-50 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[50px] sm:py-[70px] lg:py-[100px]">
         <div className="flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[50px] items-center justify-start w-full">
           {/* Header Content */}
-          <div className="flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+          <div className="bounce-in flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
             <div className="flex items-start justify-start w-full">
-              <h2 className="font-['Aeonik_Pro'] font-medium text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[45px] 2xl:text-[56px] leading-[1.1] text-[#141414] text-center">
+              <h2 
+                className="font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-[#141414] text-center w-full"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                 No Results or Still Looking?
               </h2>
             </div>
-            <div className="flex items-start justify-start w-full">
-              <div className="text-center">
-                <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[25px] leading-[1.1] text-[rgba(0,0,0,0.66)] mb-0`}>
-                  If no results show up in your area—or you're looking for a specific type of support—we're happy to help.
-                </p>
-                <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] xl:text-[24px] 2xl:text-[25px] leading-[1.1] text-[rgba(0,0,0,0.66)]`}>
-                  Let us know what you need, and we'll do our best to connect you with a Sprk Certified Pro in your area.
-                </p>
+            <div className="text-reveal flex items-start justify-start w-full">
+              <div className="text-center w-full">
+                <strong 
+                  className="font-normal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] mb-0 block"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  If no results show up in your area—or you&apos;re looking for a specific type of support—we&apos;re happy to help.
+                </strong>
+                <strong 
+                  className="font-normal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] block"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(0,0,0,0.66)",
+                  }}
+                >
+                  Let us know what you need, and we&apos;ll do our best to connect you with a Sprk Certified Pro in your area.
+                </strong>
               </div>
             </div>
           </div>
 
           {/* CTA Button */}
-          <div className="flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
-            <div className="flex items-center justify-start w-full">
-              <button className="bg-[#115056] flex items-center justify-center gap-2 px-[20px] sm:px-[25px] py-[10px] sm:py-[12px] lg:py-[15px] rounded-[5px] w-full max-w-[500px] hover:opacity-90 transition-opacity">
-                <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white flex-1`}>
+          <div className="slide-up-cards flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+            <div className="flex items-center justify-center w-full">
+              <button className="group bg-[#115056] flex items-center justify-center gap-2 px-[20px] sm:px-[25px] py-[10px] sm:py-[12px] lg:py-[15px] rounded-[5px] w-full max-w-[500px] hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out border border-[#115056]">
+                <span 
+                  className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white group-hover:text-[#115056] flex-1 transition-colors duration-300"
+                  style={{ fontFamily: 'Inter' }}
+                >
                   Request Help Finding a Certified Pro
                 </span>
                 <div className="w-[25px] h-[25px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
                   <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white"/>
+                    <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="currentColor"/>
                   </svg>
                 </div>
               </button>
@@ -390,25 +477,45 @@ export default function FindSolarProPage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-[1440px] flex items-center justify-center">
+      <section className="section-4 mx-auto w-full max-w-[1440px] flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-stretch w-full">
           {/* Left Sidebar - Teal Background */}
-          <div className="bg-[#115056] flex flex-col gap-6 items-start justify-start px-4 sm:px-6 lg:px-24 py-[50px] sm:py-[70px] lg:py-[100px] w-full lg:w-[550px] lg:flex-shrink-0">
-            <div className="flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+          <div className="image-slide-left bg-[#115056] flex flex-col gap-6 items-start justify-start px-4 sm:px-6 lg:px-24 py-[50px] sm:py-[70px] lg:py-[100px] w-full lg:w-[550px] lg:flex-shrink-0">
+            <div className="fade-up flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
               <div className="flex items-start justify-start w-full">
-                <h2 className="font-['Aeonik_Pro'] font-medium text-[28px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[45px] 2xl:text-[56px] leading-[1.1] text-white">
+                <h2 
+                  className="font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-white"
+                  style={{
+                    fontFamily: '"Aeonik Pro", sans-serif',
+                    fontWeight: 500,
+                  }}
+                >
                   Need Help Finding a Sprk Certified Pro?
                 </h2>
               </div>
               <div className="flex items-start justify-start w-full">
-                <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[rgba(255,255,255,0.8)]`}>
-                  Let us know what you're looking for and we'll try to connect you.
-                </p>
+                <strong 
+                  className="font-normal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(255,255,255,0.8)",
+                  }}
+                >
+                  Let us know what you&apos;re looking for and we&apos;ll try to connect you.
+                </strong>
               </div>
             </div>
-            <div className="flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+            <div className="text-reveal flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
               <div className="flex items-start justify-start w-full">
-                <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-[rgba(255,255,255,0.8)]`}>
+                <p 
+                  className="font-normal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
+                  style={{
+                    fontFamily: 'Inter',
+                    fontWeight: 400,
+                    color: "rgba(255,255,255,0.8)",
+                  }}
+                >
                   Powered by Sprk
                 </p>
               </div>
@@ -416,28 +523,36 @@ export default function FindSolarProPage() {
           </div>
 
           {/* Right Form Section */}
-          <div className="flex flex-col gap-6 items-start justify-start px-4 sm:px-6 lg:px-[50px] lg:pr-24 py-[50px] sm:py-[70px] lg:py-[100px] w-full flex-grow">
+          <div className="testimonial-content flex flex-col gap-6 items-start justify-start px-4 sm:px-6 lg:px-[50px] lg:pr-24 py-[50px] sm:py-[70px] lg:py-[100px] w-full flex-grow">
             {/* Form Header */}
-            <div className="flex items-center justify-center w-full lg:justify-start">
-              <h3 className="font-['Aeonik_Pro'] font-medium text-[24px] sm:text-[28px] lg:text-[35px] leading-[1.1] text-black">
+            <div className="bounce-in flex items-center justify-center w-full lg:justify-start">
+              <h3 
+                className="font-medium text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-black"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                 Input Details
               </h3>
             </div>
 
             {/* Form Fields Row 1 */}
-            <div className="flex flex-col sm:flex-row gap-6 items-center justify-start w-full">
-              <div className="bg-gray-50 border border-[rgba(0,0,0,0.25)] rounded-[10px] px-[15px] py-5 w-full flex-1">
+            <div className="slide-up-cards flex flex-col sm:flex-row gap-6 items-center justify-start w-full">
+              <div className="bg-gray-50 border border-[rgba(0,0,0,0.25)] rounded-[10px] px-[15px] py-5 w-full flex-1 hover:border-[#115056] hover:shadow-md transition-all duration-300 ease-in-out">
                 <input
                   type="text"
                   placeholder="Full Name"
-                  className="w-full bg-transparent font-['Aeonik_Pro'] text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.1] text-[rgba(0,0,0,0.35)] placeholder-[rgba(0,0,0,0.35)] border-none outline-none"
+                  className="w-full bg-transparent text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.1] text-[rgba(0,0,0,0.35)] placeholder-[rgba(0,0,0,0.35)] border-none outline-none focus:text-[#115056] transition-colors duration-300"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
                 />
               </div>
-              <div className="bg-gray-50 border border-[rgba(0,0,0,0.25)] rounded-[10px] px-[15px] py-5 w-full flex-1">
+              <div className="bg-gray-50 border border-[rgba(0,0,0,0.25)] rounded-[10px] px-[15px] py-5 w-full flex-1 hover:border-[#115056] hover:shadow-md transition-all duration-300 ease-in-out">
                 <input
                   type="email"
                   placeholder="Email Address"
-                  className="w-full bg-transparent font-['Aeonik_Pro'] text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.1] text-[rgba(0,0,0,0.35)] placeholder-[rgba(0,0,0,0.35)] border-none outline-none"
+                  className="w-full bg-transparent text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.1] text-[rgba(0,0,0,0.35)] placeholder-[rgba(0,0,0,0.35)] border-none outline-none focus:text-[#115056] transition-colors duration-300"
+                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
                 />
               </div>
             </div>
@@ -647,33 +762,34 @@ export default function FindSolarProPage() {
         </div>
       </section>
 
-     
-      <AboutSprk
-        title="Why Choose Sprk Certified Pros?"
-        cards={[
-          {
-            icon: "/find-solar-pro/section 5/inspectors.svg",
-            label: "Certified <br/> Inspectors",
-            text: "Trained to understand solar—not just work around it"
-          },
-          {
-            icon: "/find-solar-pro/section 5/agents.svg",
-            label: "Certified <br/> Agents",
-            text: "Certified in energy, disclosure, and valuation practices"
-          },
-          {
-            icon: "/find-solar-pro/section 5/solar-pros.svg",
-            label: "Certified <br/> Solar Pros",
-            text: "Use Sprk Reports to document, explain, and protect solar investments"
-          },
-          {
-            icon: "/find-solar-pro/section 5/reports.svg",
-            label: "Certified <br/> Reports",
-            text: "Trusted by agents, buyers, sellers, and lenders"
-          }
-        ]}
-      
-      />
+      {/* Section 5 - AboutSprk */}
+      <section className="section-5">
+        <AboutSprk
+          title="Why Choose Sprk Certified Pros?"
+          cards={[
+            {
+              icon: "/find-solar-pro/section 5/inspectors.svg",
+              label: "Certified <br/> Inspectors",
+              text: "Trained to understand solar—not just work around it"
+            },
+            {
+              icon: "/find-solar-pro/section 5/agents.svg",
+              label: "Certified <br/> Agents",
+              text: "Certified in energy, disclosure, and valuation practices"
+            },
+            {
+              icon: "/find-solar-pro/section 5/solar-pros.svg",
+              label: "Certified <br/> Solar Pros",
+              text: "Use Sprk Reports to document, explain, and protect solar investments"
+            },
+            {
+              icon: "/find-solar-pro/section 5/reports.svg",
+              label: "Certified <br/> Reports",
+              text: "Trusted by agents, buyers, sellers, and lenders"
+            }
+          ]}
+        />
+      </section>
 
       {/* Scroll to Top Button */}
       <ScrollToTop />

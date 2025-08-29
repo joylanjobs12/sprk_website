@@ -58,7 +58,7 @@ export default function HowItWorksSection({
           </div>
         )}
       </div>
-      <div className="content-start flex flex-wrap gap-5 items-start justify-start relative shrink-0 w-full">
+      <div className="content-start flex flex-wrap gap-3 sm:gap-4 md:gap-5 items-start justify-start relative shrink-0 w-full">
         {steps.map((step, index) => {
           // Safety check to ensure step has all required properties
           if (!step || !step.icon || !step.label || !step.description) {
@@ -66,8 +66,8 @@ export default function HowItWorksSection({
           }
           
           return (
-          <div key={index} className="card-bounce-in basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[400px] overflow-clip relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-[295px] px-0 py-[50px] relative shrink-0 w-full">
+          <div key={index} className="card-bounce-in basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[280px] sm:min-w-[320px] md:min-w-[400px] overflow-clip relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-[250px] sm:min-w-[280px] md:min-w-[295px] px-0 py-[30px] sm:py-[40px] md:py-[50px] relative shrink-0 w-full">
               <div className="bg-[rgba(86,205,69,0.05)] box-border content-stretch flex items-start justify-center px-10 py-2.5 relative rounded-[50px] shrink-0">
                 <div className="absolute border border-[#56cd45] border-solid inset-0 pointer-events-none rounded-[50px]" />
                 <div 
@@ -80,7 +80,7 @@ export default function HowItWorksSection({
                   Step {index + 1}
                 </div>
               </div>
-              <div className="box-border content-stretch flex items-center justify-center px-[30px] py-10 relative shrink-0 w-full">
+              <div className="box-border content-stretch flex items-center justify-center px-[20px] sm:px-[25px] md:px-[30px] py-6 sm:py-8 md:py-10 relative shrink-0 w-full">
                 <div className="bg-[#115056] content-stretch flex items-center justify-center min-h-[90px] min-w-[90px] relative rounded-[100px] shrink-0 size-[150px]">
                   <div className="absolute border-[10px] border-[rgba(144,228,193,0.1)] border-solid inset-[-10px] pointer-events-none rounded-[110px] shadow-[0px_10px_15px_0px_rgba(15,143,150,0.08),0px_20px_40px_0px_rgba(15,143,150,0.15)]" />
                   <div className="content-stretch flex items-center justify-center relative rounded-[50px] shrink-0">
@@ -91,7 +91,7 @@ export default function HowItWorksSection({
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
-                <div className="box-border content-stretch flex items-start justify-start min-h-[60px] px-[30px] py-0 relative shrink-0 w-full">
+                <div className="box-border content-stretch flex items-start justify-start min-h-[60px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
                   <h5 
                     className="basis-0 grow min-h-[90px] min-w-px not-italic relative shrink-0 text-[#141414] text-[20px] sm:text-[22px] md:text-[24px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center transition-all duration-300 ease-in-out"
                     style={{
@@ -102,7 +102,7 @@ export default function HowItWorksSection({
                     {step.label}
                   </h5>
                 </div>
-                <div className="box-border content-stretch flex items-center justify-start min-h-[110px] px-[30px] py-0 relative shrink-0 w-full">
+                <div className="box-border content-stretch flex items-center justify-start min-h-[110px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
                   <p 
                     className="basis-0 grow min-h-[154px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%] text-center transition-all duration-300 ease-in-out"
                     style={{
