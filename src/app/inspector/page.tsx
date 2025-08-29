@@ -552,8 +552,8 @@ export default function InspectorPage() {
       />
 
       {/* Section 8 - Pricing Plans */}
-      <section className="section-8 mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 py-[100px]">
-        <div className="flex flex-col gap-20 items-center">
+      <section className="section-8 mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
+        <div className="flex flex-col gap-[50px] sm:gap-[60px] md:gap-[80px] lg:gap-20 items-center">
           {/* Title Section */}
           <div className="flex flex-col gap-[30px] items-center w-full">
             <div className="flex items-start justify-center w-full">
@@ -569,16 +569,16 @@ export default function InspectorPage() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="flex gap-6 items-center justify-start">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-6 items-center justify-center w-full">
             {/* Homeowners Plan */}
-            <div className="card-slide-left flex flex-col gap-6 items-center px-0 py-[30px] rounded-[10px]">
+            <div className="card-slide-left flex flex-col gap-4 sm:gap-5 md:gap-6 items-center px-0 py-[20px] sm:py-[25px] md:py-[30px] rounded-[10px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[400px]">
               <div className="flex items-center justify-center px-[15px] py-2.5 w-full">
                 <h2 className="bounce-in font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5 transition-all duration-300 ease-in-out hover:text-[#115056] hover:transform hover:scale-105">
                   Homeowners
                 </h2>
               </div>
               
-              <div className="bg-white flex flex-col h-[1032px] items-start min-h-[1032px] min-w-[400px] rounded-[10px] w-[416px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
+              <div className="bg-white flex flex-col h-auto lg:h-[1032px] items-start min-h-auto lg:min-h-[1032px] w-full rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 {/* Header */}
                 <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                   <div className="flex flex-col gap-[25px] items-start w-full">
@@ -730,16 +730,16 @@ export default function InspectorPage() {
             </div>
 
             {/* Home Inspectors Container */}
-            <div className="bg-[rgba(0,255,106,0.15)] flex flex-col gap-6 items-center p-[30px] rounded-[10px] border border-[#17e817]">
+            <div className="bg-[rgba(0,255,106,0.15)] flex flex-col gap-4 sm:gap-5 md:gap-6 items-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px] border border-[#17e817] w-full max-w-[900px] sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-none">
               <div className="flex items-center justify-center px-[15px] py-2.5 w-full">
                 <h2 className="font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5">
                   Home Inspectors
                 </h2>
               </div>
               
-              <div className="flex gap-6 items-center justify-start">
+              <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 items-center justify-center w-full">
                 {/* Launch Plan */}
-                <div className="bg-white flex flex-col h-[1032px] items-start min-h-[1032px] min-w-[400px] rounded-[10px] w-[416px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
+                <div className="bg-white flex flex-col h-auto lg:h-[1032px] items-start min-h-auto lg:min-h-[1032px] w-full lg:w-[416px] rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
                   {/* Header */}
                   <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                     <div className="flex flex-col gap-[25px] items-start w-full">
@@ -897,7 +897,7 @@ export default function InspectorPage() {
                 </div>
 
                 {/* Growth Plan */}
-                <div className="bg-white flex flex-col items-start min-h-[1032px] min-w-[400px] rounded-[10px] w-[416px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
+                <div className="bg-white flex flex-col items-start h-auto lg:h-[1032px] min-h-auto lg:min-h-[1032px] w-full lg:w-[416px] rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
                   {/* Header */}
                   <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                     <div className="flex flex-col gap-[25px] items-start w-full">
