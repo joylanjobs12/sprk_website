@@ -5,34 +5,37 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import Testimonials from "@/components/Testimonials";
 import CTA from "@/components/CTA";
 import ScrollToTop from "@/components/ScrollToTop";
+import ScrollAnimations from "@/components/ScrollAnimations";
+import HowToGetStarted from "@/components/HowToGetStarted";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function AgentsPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pt-[80px] sm:pt-[100px] lg:pt-[120px] xl:pt-[150px] pb-[40px] sm:pb-[50px] lg:pb-[60px]">
+      <ScrollAnimations />
+      <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 pt-[80px] sm:pt-[100px] lg:pt-[120px] xl:pt-[150px] pb-[40px] sm:pb-[50px] lg:pb-[60px]">
         <div className="flex flex-col items-center text-center gap-[50px] sm:gap-[60px] lg:gap-[80px]">
           {/* Header Container */}
           <header className="flex flex-col gap-[50px] items-center justify-start w-full">
             <div className="flex flex-col gap-[30px] items-center justify-start px-2.5 py-0 w-full">
-              <h1 className="font-['Aeonik_Pro'] font-medium text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[80px] leading-[1.1] text-center w-full">
+              <h1 className="fade-up font-['Aeonik_Pro'] font-medium text-[40px] sm:text-[50px] md:text-[60px] lg:text-[70px] xl:text-[80px] leading-[1.1] text-center w-full transition-all duration-300 ease-in-out">
                 <span className="text-[#115056]">Clarity </span>
                 <span className="text-[#141414]">for Solar Home Transactions</span>
               </h1>
               
               <div className="flex items-center justify-center px-2.5 py-0 w-full">
-                <p className={`${inter.className} font-normal text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] max-w-[800px]`}>
+                <p className={`${inter.className} text-reveal font-normal text-[16px] sm:text-[18px] md:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] max-w-[800px] transition-all duration-300 ease-in-out`}>
                   Sprk gives real estate agents the training, tools, and reports to market, disclose, and transfer
                   solar homes the right way without having to become a solar expert.
                 </p>
               </div>
             </div>
             
-            <div className="flex flex-wrap gap-[15px] items-center justify-center w-full">
+            <div className="slide-up-cards flex flex-wrap gap-[15px] items-center justify-center w-full">
               <Link
                 href="#join"
-                className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0"
+                className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out border border-[#115056]"
               >
                 <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-white whitespace-nowrap">
                   Get Solar Certified
@@ -40,7 +43,7 @@ export default function AgentsPage() {
               </Link>
               <Link
                 href="#demo"
-                className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 border border-[#115056] bg-white"
+                className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 border border-[#115056] bg-white hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out"
               >
                 <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-[#115056] whitespace-nowrap">
                   Generate a Sprk Listing Report
@@ -50,14 +53,14 @@ export default function AgentsPage() {
           </header>
 
           {/* Trusted By Section */}
-          <div className="flex flex-col gap-[25px] items-center justify-start w-full">
-            <div className={`${inter.className} font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] w-full`}>
+          <div className="bounce-in flex flex-col gap-[25px] items-center justify-start w-full">
+            <div className={`${inter.className} text-reveal font-normal text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] w-full`}>
               <p className="font-semibold mb-2">Trusted by:</p>
               <p className="mb-0">Thousands of agents across the U.S. use Sprk to simplify solar transactions,</p>
               <p className="mb-0">protect their clients, and stand out in a growing market.</p>
             </div>
             
-            <div className="flex gap-[25px] items-center justify-center overflow-clip">
+            <div className="card-slide-left flex gap-[25px] items-center justify-center overflow-clip">
               {Array.from({ length: 5 }).map((_, index) => (
                 <Image
                   key={index}
@@ -65,7 +68,7 @@ export default function AgentsPage() {
                   alt={`Trusted partner logo ${index + 1}`}
                   width={150}
                   height={82}
-                  className="opacity-50 shrink-0"
+                  className="opacity-50 shrink-0 hover:opacity-80 transition-opacity duration-300 ease-in-out"
                 />
               ))}
             </div>
@@ -73,25 +76,25 @@ export default function AgentsPage() {
         </div>
       </section>
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[100px]">
+      <section className="section-2 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[100px]">
         <div className="flex flex-col gap-[50px] items-center justify-start w-full max-w-[1248px] mx-auto">
           {/* Header */}
           <div className="flex flex-col gap-[30px] items-center justify-start w-full">
             <div className="flex items-start justify-center w-full">
-              <h2 className="font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-[#141414] flex-1">
+              <h2 className="text-reveal font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-[#141414] flex-1 transition-all duration-300 ease-in-out">
                 Why Real Estate Agents Choose Sprk
               </h2>
             </div>
             
             <div className="flex flex-col gap-2.5 items-start justify-start w-full">
               <div className="flex items-start justify-center w-full">
-                <h3 className="font-['Aeonik_Pro'] font-medium text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] leading-[1.1] text-center text-[#141414] flex-1">
-                  Solar Is Changing the Market, and Most Agents Aren't Prepared
+                <h3 className="bounce-in font-['Aeonik_Pro'] font-medium text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] leading-[1.1] text-center text-[#141414] flex-1 transition-all duration-300 ease-in-out">
+                  Solar Is Changing the Market, and Most Agents Aren&apos;t Prepared
                 </h3>
               </div>
               <div className="flex items-start justify-center w-full">
-                <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] flex-1`}>
-                  Over 5 million U.S. homes now have solar, and that number is growing fast. But most agents aren't trained to explain system value, navigate ownership types, or handle disclosures. That's where Sprk steps in.
+                <p className={`${inter.className} text-reveal font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] flex-1 transition-all duration-300 ease-in-out`}>
+                  Over 5 million U.S. homes now have solar, and that number is growing fast. But most agents aren&apos;t trained to explain system value, navigate ownership types, or handle disclosures. That&apos;s where Sprk steps in.
                 </p>
               </div>
             </div>
@@ -100,17 +103,17 @@ export default function AgentsPage() {
           {/* Cards Grid */}
           <div className="flex flex-wrap gap-6 items-center justify-center w-full">
             {/* Card 1 - Learn how solar impacts real estate */}
-            <div className="bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative">
+            <div className="card-flip bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start overflow-hidden w-full">
                 <div className="flex h-[171px] items-center justify-center w-full border-b border-[rgba(17,80,86,0.5)]">
                   <div className="flex items-center justify-start">
-                    <div className="bg-white border border-[#115056] rounded-[10px] p-[20px] flex items-center justify-start">
+                    <div className="bg-white border border-[#115056] rounded-[10px] p-[20px] flex items-center justify-start transition-all duration-300 ease-in-out hover:bg-[#F1FAFA]">
                       <Image 
                         src="/agents-page/section 2/learn-how.svg" 
                         alt="Learn how solar impacts real estate" 
                         width={70} 
                         height={70}
-                        className="w-[70px] h-[70px]"
+                        className="w-[70px] h-[70px] transition-transform duration-300 ease-in-out hover:scale-110"
                       />
                     </div>
                   </div>
@@ -126,7 +129,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 2 - Disclose and market solar with confidence */}
-            <div className="bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative">
+            <div className="card-flip bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start overflow-hidden w-full">
                 <div className="flex h-[171px] items-center justify-center w-full border-b border-[rgba(17,80,86,0.5)]">
                   <div className="flex items-center justify-start">
@@ -152,7 +155,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 3 - Reduce delays tied to solar contracts */}
-            <div className="bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative">
+            <div className="card-flip bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start overflow-hidden w-full">
                 <div className="flex h-[171px] items-center justify-center w-full border-b border-[rgba(17,80,86,0.5)]">
                   <div className="flex items-center justify-start">
@@ -178,7 +181,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 4 - Become the go-to solar agent in your market */}
-            <div className="bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative">
+            <div className="card-flip bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start overflow-hidden w-full">
                 <div className="flex h-[171px] items-center justify-center w-full border-b border-[rgba(17,80,86,0.5)]">
                   <div className="flex items-center justify-start">
@@ -204,7 +207,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 5 - Attract solar homeowners looking for certified pros */}
-            <div className="bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative">
+            <div className="card-flip bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start overflow-hidden w-full">
                 <div className="flex h-[171px] items-center justify-center w-full border-b border-[rgba(17,80,86,0.5)]">
                   <div className="flex items-center justify-start">
@@ -233,26 +236,26 @@ export default function AgentsPage() {
       </section>
 
           {/* Section 3 - Solar in Deal */}
-      <section className="w-full bg-[#115056]">
+      <section className="section-3 w-full bg-[#115056]">
         <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[150px]">
           <div className="flex flex-col gap-[50px] items-center justify-start w-full">
             {/* Header */}
             <div className="flex flex-col gap-[30px] items-center justify-start w-full">
               <div className="flex items-start justify-center w-full">
-                <h2 className="font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-white flex-1">
+                <h2 className="bounce-in font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-white flex-1 transition-all duration-300 ease-in-out">
                   Free Guide – Solar in the Deal
                 </h2>
               </div>
               
               <div className="flex flex-col gap-2.5 items-center justify-start w-full">
                 <div className="flex items-start justify-center w-full">
-                  <h3 className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[1.1] text-center text-white flex-1">
+                  <h3 className="text-reveal font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[1.1] text-center text-white flex-1 transition-all duration-300 ease-in-out">
                     Curious about solar? This quick read will get you started.
                   </h3>
                 </div>
                 <div className="flex items-start justify-center w-full">
-                  <p className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(255,255,255,0.8)] flex-1`}>
-                    Understand how solar affects equity, what to disclose, and how to avoid delays. Whether you're listing or
+                  <p className={`${inter.className} fade-up font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-[rgba(255,255,255,0.8)] flex-1 transition-all duration-300 ease-in-out`}>
+                    Understand how solar affects equity, what to disclose, and how to avoid delays. Whether you&apos;re listing or
                     representing a buyer, this free guide will help you protect your clients and close with confidence.
                   </p>
                 </div>
@@ -260,10 +263,10 @@ export default function AgentsPage() {
             </div>
 
             {/* Card */}
-            <div className="bg-[#115056] rounded-[10px] border border-[rgba(0,0,0,0.15)] w-full max-w-[1248px] relative">
+            <div className="testimonial-card bg-[#115056] rounded-[10px] border border-[rgba(0,0,0,0.15)] w-full max-w-[1248px] relative hover:shadow-xl transition-all duration-300 ease-in-out">
               <div className="flex flex-wrap gap-0 items-start justify-start overflow-hidden w-full">
                 {/* Left side - Image */}
-                <div className="flex flex-col items-start justify-start w-full lg:w-[624px] shrink-0">
+                <div className="image-slide-left flex flex-col items-start justify-start w-full lg:w-[624px] shrink-0">
                   <div className="w-full h-[500px] min-w-[350px] shrink-0 bg-cover bg-center bg-no-repeat">
                     <Image
                       src="/agents-page/section 3/solar-in-deal.svg"
@@ -276,10 +279,10 @@ export default function AgentsPage() {
                 </div>
 
                 {/* Right side - Content */}
-                <div className="bg-white flex flex-col h-[500px] items-start justify-between min-w-[350px] overflow-hidden p-[50px] flex-1 basis-0">
+                <div className="testimonial-content bg-white flex flex-col h-[500px] items-start justify-between min-w-[350px] overflow-hidden p-[50px] flex-1 basis-0">
                   {/* Bullet Points */}
                   <div className="flex items-center justify-center w-full">
-                    <div className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] text-[rgba(0,0,0,0.66)] flex-1 min-h-[156px]`}>
+                    <div className={`${inter.className} quote-fade font-normal text-[18px] sm:text-[20px] lg:text-[22px] text-[rgba(0,0,0,0.66)] flex-1 min-h-[156px] transition-all duration-300 ease-in-out`}>
                       <ul className="list-disc space-y-2">
                         <li className="ml-[33px] leading-[1.2]">
                           How solar affects appraisals, contracts, and buyer confidence
@@ -309,8 +312,8 @@ export default function AgentsPage() {
                   </div>
 
                   {/* Button */}
-                  <div className="flex flex-col gap-[5px] items-start justify-start w-full">
-                    <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 transition-opacity">
+                  <div className="cta-button flex flex-col gap-[5px] items-start justify-start w-full">
+                    <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out">
                       <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
                         <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white flex-1`}>
                           Download the Free eBook
@@ -330,42 +333,24 @@ export default function AgentsPage() {
         </div>
       </section>
 
-      {/* Section 3 */}
       <HowItWorksSection
         title="How It Works"
         subtitle="Sprk Helps Agents Simplify Solar"
-        step1={{
-          icon: "/inspector-page/section 3/get-trained.svg",
-          label: "Get Trained",
-          description: "Complete Sprk's on-demand certification and learn how to inspect solar and energy systems with ease."
-        }}
-        step2={{
-          icon: "/inspector-page/section 3/get-tools.svg",
-          label: "Get Tools", 
-          description: "Use the Sprk Pro app to collect data and generate polished reports in minutes right from your phone or tablet."
-        }}
-        step3={{
-          icon: "/inspector-page/section 3/get-paid.svg",
-          label: "Get Paid",
-          description: "Offer more value to your clients, stand out with agents, and increase your profitability per job."
-        }}
       />
-      
-      {/* Section 4 */}
-         {/* Section 5 - Sprk Reports */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[100px]">
+      {/* Section 5 - Sprk Reports */}
+      <section className="section-5 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[100px]">
         <div className="flex flex-col gap-[50px] items-center justify-start w-full max-w-[1248px] mx-auto">
           {/* Header */}
           <div className="flex flex-col gap-[30px] items-center justify-start w-full">
             <div className="flex items-start justify-center w-full">
-              <h2 className="font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-[#141414] flex-1">
+              <h2 className="bounce-in font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-[1.1] text-center text-[#141414] flex-1 transition-all duration-300 ease-in-out">
                 Sprk Reports for Agents
               </h2>
             </div>
             
             <div className="flex flex-col gap-2.5 items-start justify-start w-full">
               <div className="flex items-start justify-center w-full">
-                <h3 className={`${inter.className} font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[1.2] text-center text-[#141414] flex-1`}>
+                <h3 className={`${inter.className} text-reveal font-medium text-[20px] sm:text-[24px] lg:text-[28px] leading-[1.2] text-center text-[#141414] flex-1 transition-all duration-300 ease-in-out`}>
                   Professional. Verified. Built for Real Estate.
                 </h3>
               </div>
@@ -375,7 +360,7 @@ export default function AgentsPage() {
           {/* Cards Grid */}
           <div className="flex flex-wrap gap-6 items-center justify-start w-full">
             {/* Card 1 - Sprk Listing Report */}
-            <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden">
+            <div className="report-card bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start w-full">
                 {/* Image Section */}
                 <div className="bg-[#115056] flex items-start justify-end overflow-hidden w-full">
@@ -408,7 +393,7 @@ export default function AgentsPage() {
                 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-[30px] pb-10 px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 transition-opacity flex-1 basis-0">
+                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
                     <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
                       <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white flex-1`}>
                         View Sample
@@ -425,7 +410,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 2 - Solar Inspection Report */}
-            <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden">
+            <div className="report-card bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start w-full">
                 {/* Image Section */}
                 <div className="bg-[#115056] flex items-start justify-end overflow-hidden w-full">
@@ -458,7 +443,7 @@ export default function AgentsPage() {
                 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-[30px] pb-10 px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 transition-opacity flex-1 basis-0">
+                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
                     <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
                       <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white flex-1`}>
                         Find an Inspector
@@ -475,7 +460,7 @@ export default function AgentsPage() {
             </div>
 
             {/* Card 3 - Green Home Energy Report */}
-            <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden">
+            <div className="report-card bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] flex-1 basis-0 min-w-[300px] sm:min-w-[400px] relative overflow-hidden hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
               <div className="flex flex-col items-center justify-start w-full">
                 {/* Image Section */}
                 <div className="bg-[#115056] flex items-start justify-end overflow-hidden w-full">
@@ -508,7 +493,7 @@ export default function AgentsPage() {
                 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-[30px] pb-10 px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 transition-opacity flex-1 basis-0">
+                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
                     <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
                       <span className={`${inter.className} font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white flex-1`}>
                         View Sample
@@ -527,292 +512,17 @@ export default function AgentsPage() {
         </div>
       </section>
 
-      {/* Section 5 */}
-      <section className="mx-auto w-full max-w-[1440px] px-4 py-[100px] sm:px-6 lg:px-8 mb-[50px]">
-        <div className="flex flex-col items-center gap-[50px] pb-[100px]">
-          <div className="text-center mb-8">
-            <h3
-              style={{
-                color: "var(--Text-Title, #141414)",
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontSize: 40,
-                fontStyle: "normal",
-                fontWeight: 600,
-                lineHeight: "120%",
-              }}
-            >
-              How to Get Started with Sprk
-            </h3>
-            <p className="mt-3 max-w-2xl mx-auto text-[16px] sm:text-[18px] opacity-80">
-            It’s Fast and Easy to Get Sprk Certified
-            </p>
-          </div>
+     
 
-          <div className="relative flex flex-wrap justify-center gap-6">
-            <div className="flex w-[170px] flex-col items-start absolute left-[250px] top-[250px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex w-[170px] flex-col items-start absolute left-[600px] top-[180px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-down.svg" alt="Arrow Down" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex w-[170px] flex-col items-start absolute right-[250px] top-[250px]" aria-hidden="true">
-              <Image src="/home-page/section 3/arrow-up.svg" alt="Arrow Up" width={224} height={60} className="w-full h-auto" />
-            </div>
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 1
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 5/sign-up.svg" alt="Sign Up" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Sign Up for Free
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Create your Sprk Pro account, no upfront cost, no obligation.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 2
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 5/get-sprk-certified.svg" alt="Get Sprk Certified" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Get Sprk Certified
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                 Complete our on-demand training and start offering 15-minute solar and 5-minute energy inspections.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 3
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 5/add-sprk.svg" alt="Add Sprk to Your Services" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                  Add Sprk to Your Services
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                  Include Energy Reports with every inspection and Solar Reports on homes with solar, boost value and your bottom line.
-                </p>
-              </div>
-            </div>
-
-            <div className="flex h-[420px] min-w-[295px] flex-col items-center self-stretch flex-[1_0_0] rounded-[10px]  bg-white px-0 py-[50px]" style={{ background: "#FFF" }}>
-              <div
-                className={`${inter.className} flex px-[40px] py-[10px] justify-center items-start rounded-[50px] border mb-4`}
-                style={{
-                  borderColor: "#56CD45",
-                  background: "rgba(86, 205, 69, 0.05)",
-                  color: "#56CD45",
-                  textAlign: "center",
-                  fontSize: 28,
-                  fontStyle: "normal",
-                  fontWeight: 500,
-                  lineHeight: "110%",
-                }}
-              >
-                Step 4
-              </div>
-              <div className="flex justify-center items-center py-[40px] px-[30px] self-stretch">
-                <div
-                  className="flex items-center justify-center w-[150px] h-[150px] min-w-[90px] min-h-[90px] aspect-square rounded-[100px] border-[10px]"
-                  style={{
-                    borderColor: "#FFFFFF",
-                    background: "var(--Primary-Color, #115056)",
-                    boxShadow:
-                      "0 10px 15px 0 rgba(15, 143, 150, 0.08), 0 20px 40px 0 rgba(15, 143, 150, 0.15)",
-                  }}
-                >
-                  <Image src="/inspector-page/section 5/your-business.svg" alt="Grow Your Business" width={90} height={90} className="w-[90px] h-[90px] aspect-square" />
-                </div>
-              </div>
-              <div className="w-full text-center">
-                <div
-                  style={{
-                    minHeight: 90,
-                    flex: "1 0 0",
-                    color: "var(--Text-Title, #141414)",
-                    textAlign: "center",
-                    fontFamily: '"Aeonik Pro", sans-serif',
-                    fontSize: 27,
-                    fontStyle: "normal",
-                    fontWeight: 500,
-                    lineHeight: "110%",
-                  }}
-                >
-                 Grow Your Business
-                </div>
-                <p className={`${inter.className}`}
-                  style={{
-                    minHeight: 154,
-                    flex: "1 0 0",
-                    color: 'rgba(0, 0, 0, 0.66))',
-                    textAlign: "center",
-                    fontSize: 18,
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "120%",
-                  }}
-                >
-                 Use Sprk’s marketing tools and agent education resources to become the preferred inspector in your market.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-  
+      {/* Section 3 */}
+      <HowToGetStarted
+        title="How to Get Started with Sprk"
+        subtitle="In Just Minutes, You Can Start Selling Solar Homes Smarter"
+      />
  
         {/* Section 7 - Testimonials */}
-      <Testimonials
+      <div className="section-7">
+        <Testimonials
         data={[
           {
             image: "/inspector-page/section 7/profile.svg",
@@ -834,9 +544,11 @@ export default function AgentsPage() {
           }
         ]}
       />
+      </div>
 
-      {/* CTA Section */}
-      <CTA
+      {/* Section 8 - CTA */}
+      <div className="section-8">
+        <CTA
         title="Choose Your Next Step"
         subtitle="Start Using Sprk on Your Next Deal"
         description="Whether you're listing a home with solar, supporting a buyer, or just want to stay ahead of the market—Sprk has the tools you need to lead with confidence."
@@ -846,6 +558,7 @@ export default function AgentsPage() {
           { label: "Find a Certified Inspector", link: "/find-inspector" }
         ]}
       />
+      </div>
 
       {/* Scroll to Top Button */}
       <ScrollToTop />

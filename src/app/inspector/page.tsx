@@ -124,7 +124,26 @@ export default function InspectorPage() {
         </div>
       </section>
 
-     
+      {/* Section 3 */}
+      <HowItWorksSection
+        title="How Sprk Works"
+        subtitle=""
+        step1={{
+          icon: "/inspector-page/section 3/get-trained.svg",
+          label: "Get Trained",
+          description: "Complete Sprk's on-demand certification and learn how to inspect solar and energy systems with ease."
+        }}
+        step2={{
+          icon: "/inspector-page/section 3/get-tools.svg",
+          label: "Get Tools",
+          description: "Use the Sprk Pro app to collect data and generate polished reports in minutes right from your phone or tablet."
+        }}
+        step3={{
+          icon: "/inspector-page/section 3/get-paid.svg",
+          label: "Get Paid",
+          description: "Offer more value to your clients, stand out with agents, and increase your profitability per job."
+        }}
+      />
       {/* Section 4 */}
       <section className="section-4 mx-auto w-full bg-[#115056]">
         <div className="max-w-[1440px] mx-auto px-[94px] py-[150px]">
