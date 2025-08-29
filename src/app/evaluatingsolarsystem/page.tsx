@@ -330,112 +330,220 @@ export default function EvaluatingSolarSystem() {
                   </div>
               </div>
           </section>
+          <section className="w-full flex flex-col items-center justify-start relative px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-24 lg:py-32 xl:py-36 2xl:py-40">
+              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-12 sm:gap-14 md:gap-16 lg:gap-20">
+                  {/* Section Header */}
+                  <div className="w-full flex flex-col items-center justify-start gap-5">
+                      <div className="w-full flex items-center justify-center">
+                          <h2 className="text-center text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0
+                             text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]">
+                              From Energy Savings to Real Estate Value –<br />How Solar is Measured
+                          </h2>
+                      </div>
+                  </div>
+
+                  {/* Cards Container - Will add content here */}
+                  <div className="w-full relative rounded-[10px]">
+                      <div className="w-full flex flex-wrap items-start justify-start gap-0 overflow-hidden">
+                          {/* Step 1 - Measure Utility Savings */}
+                          <div className="flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden">
+                              <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
+                                  <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
+                                      <h3 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 1</h3>
+                                  </div>
+                                  <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
+                                      <img src="/evaluating-solar-system/section 6/step1.svg" alt="Piggy bank with energy savings icon" className="w-[120px] h-[120px] object-contain" />
+                                  </div>
+                                  <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
+                                      <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
+                                          <h4 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Measure Utility Savings</h4>
+                                      </div>
+                                      <div className="w-full flex items-start justify-start px-[30px] py-0">
+                                          <p className="text-[rgba(0,0,0,0.66)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">The foundation of solar value is the money saved from reduced utility bills. These savings, measured over time, form the basis for calculating a system's worth.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          {/* Step 2 - Calculate Solar Value */}
+                          <div className="flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden">
+                              <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
+                                  <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
+                                      <h3 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 2</h3>
+                                  </div>
+                                  <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
+                                      <img src="/evaluating-solar-system/section 6/step2.svg" alt="Calculator with energy assessment icon" className="w-[100px] h-[100px] object-contain" />
+                                  </div>
+                                  <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
+                                      <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
+                                          <h4 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Calculate Solar Value</h4>
+                                      </div>
+                                      <div className="w-full flex items-start justify-start px-[30px] py-0">
+                                          <div className="text-[rgba(255,255,255,0.8)] font-normal font-['Inter'] leading-[120%] text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">
+                                              <p className="mb-4">Appraisers use three methods to determine a solar system's contributory value:</p>
+                                              <ul className="list-disc ml-6 space-y-1">
+                                                  <li><span className="font-semibold text-white">Income</span> – Present worth of future energy savings</li>
+                                                  <li><span className="font-semibold text-white">Cost</span> – Replacement minus depreciation</li>
+                                                  <li><span className="font-semibold text-white">Sales Comparison</span> – Market comps<br />When reliable sales data isn't available, industry guidance recommends Income and Cost as the best options.</li>
+                                              </ul>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          {/* Step 3 - Document Solar Value */}
+                          <div className="flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden">
+                              <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
+                                  <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
+                                      <h3 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 3</h3>
+                                  </div>
+                                  <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
+                                      <img src="/evaluating-solar-system/section 6/step3.svg" alt="Green Home Appraisal Certificate document" className="w-[120px] h-[120px] object-contain" />
+                                  </div>
+                                  <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
+                                      <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
+                                          <h4 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Document Solar Value with Sprk Appraisal Report</h4>
+                                      </div>
+                                      <div className="w-full flex items-start justify-start px-[30px] py-0">
+                                          <p className="text-[rgba(0,0,0,0.66)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">Sprk provides verified Income and Cost approach data in one clear report, helping appraisers apply recognized methods quickly and accurately.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+
+                          {/* Step 4 - Appraiser Accurately Appraises */}
+                          <div className="flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden">
+                              <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
+                                  <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
+                                      <h3 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 4</h3>
+                                  </div>
+                                  <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
+                                      <img src="/evaluating-solar-system/section 6/step4.svg" alt="Solar inspection and appraisal icon" className="w-[120px] h-[120px] object-contain" />
+                                  </div>
+                                  <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
+                                      <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
+                                          <h4 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Appraiser Accurately Appraises Solar Home</h4>
+                                      </div>
+                                      <div className="w-full flex items-start justify-start px-[30px] py-0">
+                                          <p className="text-[rgba(255,255,255,0.8)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">Clear, interactive reports give appraisers the documentation they need to assign accurate value — turning solar into a reason to buy, not a mystery to avoid.</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div className="absolute inset-0 border border-[rgba(0,0,0,0.2)] rounded-[10px] pointer-events-none"></div>
+                  </div>
+              </div>
+          </section>
                      <section className="w-full flex flex-col items-center justify-start relative px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-24 lg:py-32 xl:py-36 2xl:py-40">
                <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-12 sm:gap-14 md:gap-16 lg:gap-20">
                    {/* Section Header */}
-                   <div className="w-full flex flex-col items-center justify-start gap-5">
-                       <div className="w-full flex items-center justify-center">
-                           <h2 className="text-center text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0
-                             text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]">
-                               From Energy Savings to Real Estate Value –<br />How Solar is Measured
-                           </h2>
+                   <div className="w-full flex flex-col lg:flex-row items-start justify-start gap-6 sm:gap-7 md:gap-8 lg:gap-8">
+                       <div className="w-full lg:flex-1 flex items-start justify-center">
+                           <h2 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]">How to Showcase the Value of Solar to Home Buyers</h2>
+                       </div>
+                       <div className="w-full lg:flex-1 flex items-start justify-center pt-0 lg:pt-[15px]">
+                           <div className="text-[rgba(0,0,0,0.66)] font-normal font-['Aeonik_Pro'] leading-[110%] text-[18px] sm:text-[18px] md:text-[18px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px]">
+                               <p className="mb-4">Even if a solar system is objectively valuable, <span className="font-medium text-black">a buyer won't pay more for it if they can't see the benefit</span>.</p>
+                               <p className="mb-4">Think of it like professional photography, staging, or highlighting a remodeled kitchen — you wouldn't leave those features unmentioned and hope a buyer notices.</p>
+                               <p className="mb-0">Solar works the same way.</p>
+                           </div>
                        </div>
                    </div>
 
-                   {/* Cards Container - Will add content here */}
-                   <div className="w-full relative rounded-[10px]">
-                       <div className="w-full flex flex-wrap items-start justify-start gap-0 overflow-hidden">
-                           {/* Step 1 - Measure Utility Savings */}
-                           <div className="flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden">
-                               <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
-                                   <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                       <h3 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 1</h3>
-                                   </div>
-                                   <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                       <img src="/evaluating-solar-system/section 6/step1.svg" alt="Piggy bank with energy savings icon" className="w-[120px] h-[120px] object-contain" />
-                                   </div>
-                                   <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                       <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                           <h4 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Measure Utility Savings</h4>
-                                       </div>
-                                       <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                           <p className="text-[rgba(0,0,0,0.66)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">The foundation of solar value is the money saved from reduced utility bills. These savings, measured over time, form the basis for calculating a system's worth.</p>
-                                       </div>
-                                   </div>
+                   {/* Main Content Card */}
+                   <div className="w-full max-w-[1248px] flex flex-col items-center justify-start">
+                       <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden">
+                           <div className="w-full h-auto lg:h-[500px] flex flex-col lg:flex-row items-start justify-start">
+                               {/* Left Side - Image */}
+                               <div className="w-full lg:w-[624px] bg-gray-50 flex items-center justify-center min-h-[300px] lg:h-[500px]">
+                                   <img src="/evaluating-solar-system/section 7/image1.svg" alt="Sprk Solar Listing Report sample" className="w-full h-full object-contain" />
                                </div>
-                           </div>
-
-                           {/* Step 2 - Calculate Solar Value */}
-                           <div className="flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden">
-                               <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
-                                   <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                       <h3 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 2</h3>
+                               
+                               {/* Right Side - Content */}
+                               <div className="w-full lg:flex-1 bg-white flex flex-col items-start justify-start gap-8 lg:gap-[35px] p-6 lg:p-[30px] min-h-[300px] lg:h-[500px]">
+                                   <div className="w-full">
+                                       <h3 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] lg:text-[30px]">The Sprk Solar Listing Report is an interactive, easy-to-read report that helps a home buyer see firsthand how the solar on a home will benefit them:</h3>
                                    </div>
-                                   <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                       <img src="/evaluating-solar-system/section 6/step2.svg" alt="Calculator with energy assessment icon" className="w-[100px] h-[100px] object-contain" />
-                                   </div>
-                                   <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                       <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                           <h4 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Calculate Solar Value</h4>
-                                       </div>
-                                       <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                           <div className="text-[rgba(255,255,255,0.8)] font-normal font-['Inter'] leading-[120%] text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">
-                                               <p className="mb-4">Appraisers use three methods to determine a solar system's contributory value:</p>
-                                               <ul className="list-disc ml-6 space-y-1">
-                                                   <li><span className="font-semibold text-white">Income</span> – Present worth of future energy savings</li>
-                                                   <li><span className="font-semibold text-white">Cost</span> – Replacement minus depreciation</li>
-                                                   <li><span className="font-semibold text-white">Sales Comparison</span> – Market comps<br />When reliable sales data isn't available, industry guidance recommends Income and Cost as the best options.</li>
-                                               </ul>
+                                   
+                                   <div className="w-full flex flex-col gap-1">
+                                       <div className="w-full flex items-center gap-[5px]">
+                                           <div className="w-6 h-6 flex-shrink-0">
+                                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                   <rect x="3" y="3" width="18" height="18" rx="2" stroke="#115056" strokeWidth="2" fill="none"/>
+                                                   <path d="M9 12l2 2 4-4" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                               </svg>
                                            </div>
+                                           <p className="text-black font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] lg:text-[18px]">How much it has already saved the homeowner</p>
+                                       </div>
+                                       <div className="w-full flex items-center gap-[5px]">
+                                           <div className="w-6 h-6 flex-shrink-0">
+                                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                   <rect x="3" y="3" width="18" height="18" rx="2" stroke="#115056" strokeWidth="2" fill="none"/>
+                                                   <path d="M9 12l2 2 4-4" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                               </svg>
+                                           </div>
+                                           <p className="text-black font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] lg:text-[18px]">How much it's projected to save the new owner</p>
+                                       </div>
+                                       <div className="w-full flex items-start gap-[5px]">
+                                           <div className="w-6 h-6 flex-shrink-0 mt-0.5">
+                                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                   <rect x="3" y="3" width="18" height="18" rx="2" stroke="#115056" strokeWidth="2" fill="none"/>
+                                                   <path d="M9 12l2 2 4-4" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                               </svg>
+                                           </div>
+                                           <p className="text-black font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] lg:text-[18px]">How it will impact their future energy bills</p>
+                                       </div>
+                                       <div className="w-full flex items-start gap-[5px]">
+                                           <div className="w-6 h-6 flex-shrink-0 mt-0.5">
+                                               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                   <rect x="3" y="3" width="18" height="18" rx="2" stroke="#115056" strokeWidth="2" fill="none"/>
+                                                   <path d="M9 12l2 2 4-4" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                               </svg>
+                                           </div>
+                                           <p className="text-black font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] lg:text-[18px]">Transfer details, warranty information, and system specifications</p>
                                        </div>
                                    </div>
-                               </div>
-                           </div>
-
-                           {/* Step 3 - Document Solar Value */}
-                           <div className="flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden">
-                               <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
-                                   <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                       <h3 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 3</h3>
-                                   </div>
-                                   <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                       <img src="/evaluating-solar-system/section 6/step3.svg" alt="Green Home Appraisal Certificate document" className="w-[120px] h-[120px] object-contain" />
-                                   </div>
-                                   <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                       <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                           <h4 className="text-black font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Document Solar Value with Sprk Appraisal Report</h4>
-                                       </div>
-                                       <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                           <p className="text-[rgba(0,0,0,0.66)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">Sprk provides verified Income and Cost approach data in one clear report, helping appraisers apply recognized methods quickly and accurately.</p>
-                                       </div>
-                                   </div>
-                               </div>
-                           </div>
-
-                           {/* Step 4 - Appraiser Accurately Appraises */}
-                           <div className="flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden">
-                               <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
-                                   <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                       <h3 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]">Step 4</h3>
-                                   </div>
-                                   <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                       <img src="/evaluating-solar-system/section 6/step4.svg" alt="Solar inspection and appraisal icon" className="w-[120px] h-[120px] object-contain" />
-                                   </div>
-                                   <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                       <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                           <h4 className="text-white font-medium font-['Aeonik_Pro'] leading-[110%] mb-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px]">Appraiser Accurately Appraises Solar Home</h4>
-                                       </div>
-                                       <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                           <p className="text-[rgba(255,255,255,0.8)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]">Clear, interactive reports give appraisers the documentation they need to assign accurate value — turning solar into a reason to buy, not a mystery to avoid.</p>
-                                       </div>
+                                   
+                                   <div className="w-full">
+                                       <p className="text-[rgba(0,0,0,0.66)] font-normal font-['Inter'] leading-[120%] mb-0 text-[16px] lg:text-[18px]">When buyers can clearly see the benefit and impact of the solar, they're far more likely to view it as a reason to buy — not a mystery to avoid.</p>
                                    </div>
                                </div>
                            </div>
                        </div>
-                       <div className="absolute inset-0 border border-[rgba(0,0,0,0.2)] rounded-[10px] pointer-events-none"></div>
+                   </div>
+
+                   {/* CTA Buttons */}
+                   <div className="w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
+                       {/* Primary Button */}
+                       <div className="w-full sm:w-auto bg-[#115056] rounded-[5px] p-[5px]">
+                           <div className="w-full sm:w-[418px] flex items-center justify-center px-[15px] py-[5px]">
+                               <p className="flex-1 text-white font-normal font-['Inter'] leading-[120%] text-center mb-0 text-[18px] lg:text-[22px]">Get a Solar Listing Report</p>
+                               <div className="w-[30px] h-[30px] flex items-center justify-center ml-2">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                       <path d="M13.75 21.25L20 15L13.75 8.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                   </svg>
+                               </div>
+                           </div>
+                       </div>
+                       
+                       {/* Secondary Button */}
+                       <div className="w-full sm:w-auto bg-white border border-[#115056] rounded-[5px] p-[5px]">
+                           <div className="w-full sm:w-[418px] flex items-center justify-center px-[15px] py-[5px]">
+                               <p className="flex-1 text-black font-normal font-['Inter'] leading-[120%] text-center mb-0 text-[18px] lg:text-[22px]">See a Sample Listing Report</p>
+                               <div className="w-[30px] h-[30px] flex items-center justify-center ml-2">
+                                   <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                       <path d="M13.75 21.25L20 15L13.75 8.75" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                                   </svg>
+                               </div>
+                           </div>
+                       </div>
                    </div>
                </div>
            </section>
+
+        
          <ScrollToTop />
 
     </>
