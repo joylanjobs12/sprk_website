@@ -126,14 +126,11 @@ export default function WhyThisReportMatters({
                   <div 
                     className={`w-full text-[${bulletTextSize.base}] sm:text-[${bulletTextSize.sm}] md:text-[${bulletTextSize.md}] lg:text-[${bulletTextSize.lg}] xl:text-[${bulletTextSize.xl}] 2xl:text-[${bulletTextSize.xxl}] leading-[110%] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)]`}
                   >
-                    <ul className={spacing.bullets}>
+                    <ul className="space-y-4 lg:space-y-6 list-disc ml-[30px]">
                       {bulletPoints.map((point, index) => (
-                        <li key={index} className="flex items-start">
-                          <span className="inline-block w-2 h-2 bg-[rgba(0,0,0,0.66)] rounded-full mt-2 mr-4 flex-shrink-0"></span>
-                          <span>
-                            <span className="font-semibold">{point.title}</span>
-                            <span> {point.description}</span>
-                          </span>
+                        <li key={index} className="leading-[110%]">
+                          <span className="font-semibold">{point.title}</span>
+                          <span> {point.description}</span>
                         </li>
                       ))}
                     </ul>

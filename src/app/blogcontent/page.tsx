@@ -134,6 +134,67 @@ export default function BlogContentPage() {
           </div>
         </div>
       </section>
+      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+        <div className="mx-auto w-full max-w-screen-2xl">
+          {/* Top bar with back and share */}
+          <div className="bg-[#f4f4f4] rounded-[10px] px-4 py-3 sm:px-6 md:px-8 lg:px-[30px] flex items-center justify-between">
+            <div className="flex items-center gap-2 text-black/66">
+              <button aria-label="Back to all posts" className="inline-flex items-center gap-2">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M15 19l-7-7 7-7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                <span className="text-[14px] md:text-[24px] font-['Aeonik Pro']">All post</span>
+              </button>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="hidden sm:inline text-black/66 text-[14px] md:text-[24px] font-['Aeonik Pro']">Share this post:</span>
+              <div className="flex items-center gap-3">
+                <Image src="/blog-content-page/section 3/facebook.svg" alt="Share on Facebook" width={24} height={24} />
+                <Image src="/blog-content-page/section 3/linkedin.svg" alt="Share on LinkedIn" width={24} height={24} />
+                <Image src="/blog-content-page/section 3/x.svg" alt="Share on X" width={24} height={24} />
+                <Image src="/blog-content-page/section 3/link.svg" alt="Copy link" width={30} height={15} />
+              </div>
+            </div>
+          </div>
+
+          {/* Accent underline */}
+          <div className="mt-6">
+            <div className="h-0.5 bg-[#115056] rounded-[10px] w-[180px] sm:w-[240px] lg:w-[400px]"></div>
+          </div>
+
+          {/* Heading */}
+          <div className="mt-6 md:mt-8">
+            <h2 className="text-[#141414] font-['Aeonik Pro'] font-medium leading-[1.1] text-[35px] sm:text-[35px] md:text-[40px] lg:text-[56px]">Still Curious?</h2>
+          </div>
+
+          {/* Cards */}
+          <div className="mt-6 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {Array.from({ length: 3 }).map((_, idx) => (
+              <article key={idx} className="relative rounded-[10px] overflow-hidden border border-black/20 bg-white shadow-[0px_63px_25px_rgba(38,142,151,0.02),0px_36px_21px_rgba(38,142,151,0.08),0px_16px_16px_rgba(38,142,151,0.13),0px_4px_9px_rgba(38,142,151,0.10)]">
+                <div className="relative h-[220px] sm:h-[260px] md:h-[280px]">
+                  <Image src="/blog-content-page/section 3/image1.svg" alt="Article cover" fill className="object-cover" />
+                  <div className="absolute top-4 left-4">
+                    <div className="backdrop-blur-[2.5px] bg-white/5 rounded-[5px] p-[3px]">
+                      <div className="bg-white rounded-[3px] px-[6px] py-[5px]">
+                        <span className="text-[10px] font-semibold text-[#138978]">Partnership Journey</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="p-5">
+                  <h3 className="text-[#141414] text-[18px] md:text-[20px] font-medium leading-[1.1] mb-3">
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </h3>
+                  <p className="text-[16px] text-black/66 leading-[1.2] mb-5">
+                    {`Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.`}
+                  </p>
+                  <div className="text-[#141414] text-[16px] md:text-[20px]">By Cory Vanderpool</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
       <ScrollToTop />
     </>
   );
