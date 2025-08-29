@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import HowItWorksSection from "@/components/HowItWorksSection";
@@ -11,21 +11,21 @@ const inter = Inter({ subsets: ["latin"] });
 export default function InspectorPage() {
   return (
     <>
-      <section className="mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 pt-[150px] pb-[50px]">
-        <div className="flex flex-col items-center gap-20">
+      <section className="mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 pt-[150px] pb-[50px] animate-slideIn">
+        <div className="flex flex-col items-center gap-20 transition-all duration-300 ease-in-out">
           {/* Main Content */}
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full transition-all duration-300 ease-in-out">
             <header className="flex flex-col gap-[50px] items-center w-full">
               <div className="flex flex-col gap-[30px] items-center px-2.5 w-full">
-                <h1 className="font-['Aeonik_Pro'] font-medium text-[80px] leading-[1.1] text-center text-[#141414] w-full">
-                  <span className="text-[#115056]">Add Solar Inspections</span>
-                  <span> to</span>
+                <h1 className="font-['Aeonik_Pro'] font-medium text-[80px] leading-[1.1] text-center text-[#141414] w-full animate-fadeIn transition-all duration-300 ease-in-out hover:transform hover:scale-105">
+                  <span className="text-[#115056] transition-all duration-300 ease-in-out">Add Solar Inspections</span>
+                  <span className="transition-all duration-300 ease-in-out"> to</span>
                   <br />
-                  <span>Grow Your Business</span>
+                  <span className="transition-all duration-300 ease-in-out">Grow Your Business</span>
                 </h1>
 
                 <div className="flex items-center justify-center px-2.5 w-full">
-                  <p className={`${inter.className} font-normal text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] flex-1`}>
+                  <p className={`${inter.className} font-normal text-[22px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] flex-1 animate-fadeIn transition-all duration-300 ease-in-out`}>
                     Sprk equips home inspectors with the training, tools, and reports to inspect solar and energy
                     <br />
                     systems confidently, deliver more value, and grow revenue on every job.
@@ -33,16 +33,16 @@ export default function InspectorPage() {
                 </div>
               </div>
 
-              <div className="flex flex-wrap gap-[15px] items-center justify-center w-full">
+              <div className="flex flex-wrap gap-[15px] items-center justify-center w-full animate-fadeIn">
                 <Link
                   href="#join"
-                  className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] text-white font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1]"
+                  className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] text-white font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1] transition-all duration-200 ease-in-out hover:bg-white hover:text-[#115056] hover:border hover:border-[#115056] hover:transform hover:scale-105 hover:shadow-lg"
                 >
                   Join Sprk
                 </Link>
                 <Link
                   href="#demo"
-                  className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] border border-[#115056] text-[#115056] font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1]"
+                  className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] border border-[#115056] text-[#115056] font-['Aeonik_Pro'] font-medium text-[25px] leading-[1.1] transition-all duration-200 ease-in-out hover:bg-[#115056] hover:text-white hover:transform hover:scale-105 hover:shadow-lg"
                 >
                   Watch a Demo
                 </Link>
@@ -51,15 +51,15 @@ export default function InspectorPage() {
           </div>
 
           {/* Trusted By Section */}
-          <div className="flex flex-col gap-[25px] items-center w-full">
-            <p className={`${inter.className} font-semibold italic text-[18px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)]`}>
+          <div className="flex flex-col gap-[25px] items-center w-full animate-slideIn transition-all duration-300 ease-in-out">
+            <p className={`${inter.className} font-semibold italic text-[18px] leading-[1.2] text-center text-[rgba(0,0,0,0.66)] animate-fadeIn transition-all duration-300 ease-in-out`}>
               Trusted by:
             </p>
             <div className="flex gap-[25px] items-center justify-center overflow-clip">
               {Array.from({ length: 5 }).map((_, index) => (
-                <div key={index} className="h-[82px] w-[150px] opacity-50 relative">
+                <div key={index} className="h-[82px] w-[150px] opacity-50 relative transition-all duration-300 ease-in-out hover:opacity-75 hover:transform hover:scale-105">
                   <div
-                    className="absolute inset-0 bg-center bg-contain bg-no-repeat"
+                    className="absolute inset-0 bg-center bg-contain bg-no-repeat transition-all duration-300 ease-in-out"
                     style={{ backgroundImage: `url('/inspector-page/section1/trusted-by.svg')` }}
                   />
                 </div>
@@ -69,13 +69,13 @@ export default function InspectorPage() {
         </div>
       </section>
       {/* Section 2 */}
-      <section className="mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 py-[100px]">
-        <div className="flex flex-col items-center gap-20">
+      <section className="mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 py-[100px] animate-slideIn transition-all duration-300 ease-in-out">
+        <div className="flex flex-col items-center gap-20 transition-all duration-300 ease-in-out">
           {/* Title */}
           <div className="flex flex-col gap-[50px] items-center w-[1248px] max-w-full">
             <div className="flex flex-col gap-[30px] items-center w-full">
               <div className="flex items-start justify-center w-full">
-                <h2 className="font-['Aeonik_Pro'] font-medium text-[56px] leading-[1.1] text-center text-[#141414] flex-1">
+                <h2 className="font-['Aeonik_Pro'] font-medium text-[56px] leading-[1.1] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:transform hover:scale-105">
             Why Home Inspectors Choose Sprk
           </h2>
               </div>
@@ -83,13 +83,13 @@ export default function InspectorPage() {
           </div>
 
           {/* Content Card */}
-          <div className="flex flex-col items-start w-full">
-            <div className="bg-[#115056] h-[500px] rounded-[10px] w-[1248px] max-w-full relative  ">
+          <div className="flex flex-col items-start w-full animate-slideIn">
+            <div className="bg-[#115056] h-[500px] rounded-[10px] w-[1248px] max-w-full relative transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-[1.02]">
               <div className="flex flex-wrap h-[500px] items-start overflow-clip relative w-full">
                 {/* Image Section */}
-                <div className="bg-gray-50 flex flex-col items-start w-[624px] max-w-[50%]">
+                <div className="bg-gray-50 flex flex-col items-start w-[624px] max-w-[50%] transition-all duration-300 ease-in-out">
                   <div 
-                    className="h-[500px] min-w-[350px] w-full bg-center bg-no-repeat"
+                    className="h-[500px] min-w-[350px] w-full bg-center bg-no-repeat transition-all duration-300 ease-in-out hover:transform hover:scale-105"
                   style={{
                       backgroundImage: `url('/inspector-page/section 2/next-big-shift.svg')`,
                       backgroundSize: '107.05% 77.04%'
@@ -98,20 +98,20 @@ export default function InspectorPage() {
                 </div>
                 
                 {/* Content Section */}
-                <div className="bg-white flex-1 flex flex-col gap-[35px] h-[500px] items-start min-w-[350px] overflow-clip p-[30px]">
+                <div className="bg-white flex-1 flex flex-col gap-[35px] h-[500px] items-start min-w-[350px] overflow-clip p-[30px] transition-all duration-300 ease-in-out">
                   <div className="flex items-start w-full">
-                    <h3 className="font-['Aeonik_Pro'] font-medium text-[35px] leading-[1.1] text-[#141414] flex-1">
+                    <h3 className="font-['Aeonik_Pro'] font-medium text-[35px] leading-[1.1] text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]">
                       The Next Big Shift in Inspections Is Here
                     </h3>
                   </div>
                   
                   <div className="flex flex-col gap-[5px] items-center w-full">
                     <div className="flex gap-[5px] items-center w-full">
-                      <div className={`${inter.className} font-normal text-[22px] leading-[1.2] text-[rgba(0,0,0,0.66)] flex-1`}>
-                        <p className="mb-0">Over 5 million homes in the U.S. now have solar, and most still don't get inspected.</p>
+                      <div className={`${inter.className} font-normal text-[22px] leading-[1.2] text-[rgba(0,0,0,0.66)] flex-1 animate-fadeIn transition-all duration-300 ease-in-out`}>
+                        <p className="mb-0 transition-all duration-300 ease-in-out hover:text-[rgba(0,0,0,0.8)]">Over 5 million homes in the U.S. now have solar, and most still don&apos;t get inspected.</p>
                         <p className="mb-0">&nbsp;</p>
-                        <p className="mb-0">But 30% of solar systems have issues that should be flagged before a home changes hands.</p>
-                        <p className="mb-0">Smart inspectors are stepping in. Sprk helps them lead.</p>
+                        <p className="mb-0 transition-all duration-300 ease-in-out hover:text-[rgba(0,0,0,0.8)]">But 30% of solar systems have issues that should be flagged before a home changes hands.</p>
+                        <p className="mb-0 transition-all duration-300 ease-in-out hover:text-[rgba(0,0,0,0.8)]">Smart inspectors are stepping in. Sprk helps them lead.</p>
                       </div>
                     </div>
                   </div>
@@ -143,14 +143,14 @@ export default function InspectorPage() {
         }}
       />
       {/* Section 4 */}
-      <section className="mx-auto w-full bg-[#115056]">
+      <section className="mx-auto w-full bg-[#115056] animate-slideIn transition-all duration-300 ease-in-out">
         <div className="max-w-[1440px] mx-auto px-[94px] py-[150px]">
-          <div className="flex flex-col gap-20 items-center">
+          <div className="flex flex-col gap-20 items-center transition-all duration-300 ease-in-out">
             {/* Title */}
             <div className="flex flex-col items-center w-full">
               <div className="flex flex-col items-center w-full">
                 <div className="flex items-start w-full">
-                  <h2 className="font-['Aeonik_Pro'] font-medium text-[56px] leading-[1.1] text-center text-white flex-1">
+                  <h2 className="font-['Aeonik_Pro'] font-medium text-[56px] leading-[1.1] text-center text-white flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:transform hover:scale-105">
                     What Sprk Does for Home Inspectors
                   </h2>
                 </div>
@@ -158,38 +158,38 @@ export default function InspectorPage() {
             </div>
 
             {/* Cards Grid */}
-            <div className="flex flex-wrap gap-6 items-center justify-center w-full">
+            <div className="flex flex-wrap gap-6 items-center justify-center w-full animate-slideIn">
               {/* Top Row - 3 Cards */}
-              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)]">
+              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col h-[500px] items-center overflow-clip w-full">
                   <div className="flex items-center justify-center flex-1 w-full">
                     <div 
-                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1"
+                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                       style={{ backgroundImage: `url('/inspector-page/section 4/add-hunderds.svg')` }}
                     />
                   </div>
-                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full">
+                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full transition-all duration-300 ease-in-out">
                     <div className="flex items-center px-[30px] py-2.5 w-full">
-                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1`}>
-                        <p className="mb-0">Add hundreds in extra</p>
-                        <p className="mb-0">revenue per inspection</p>
+                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]`}>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">Add hundreds in extra</p>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">revenue per inspection</p>
               </div>
                 </div>
               </div>
               </div>
             </div>
 
-              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)]">
+              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col h-[500px] items-center overflow-clip w-full">
                   <div className="flex items-center justify-center flex-1 w-full">
                     <div 
-                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1"
+                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                       style={{ backgroundImage: `url('/inspector-page/section 4/get-certified.svg')` }}
                     />
                   </div>
-                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full">
+                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full transition-all duration-300 ease-in-out">
                     <div className="flex items-center px-[30px] py-2.5 w-full">
-                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1`}>
+                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]`}>
                         Get certified to inspect solar and energy systems
               </div>
                 </div>
@@ -197,17 +197,17 @@ export default function InspectorPage() {
                 </div>
               </div>
 
-              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)]">
+              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col h-[500px] items-center overflow-clip w-full">
                   <div className="flex items-center justify-center flex-1 w-full">
                     <div 
-                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1"
+                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                       style={{ backgroundImage: `url('/inspector-page/section 4/complete-solar.svg')` }}
                     />
             </div>
-                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full">
+                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full transition-all duration-300 ease-in-out">
                     <div className="flex items-center px-[30px] py-2.5 w-full">
-                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1`}>
+                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]`}>
                         Complete solar inspections in as little as 15 minutes
             </div>
                     </div>
@@ -216,38 +216,38 @@ export default function InspectorPage() {
                     </div>
 
               {/* Bottom Row - 2 Cards */}
-              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)]">
+              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col h-[500px] items-center overflow-clip w-full">
                   <div className="flex items-center justify-center flex-1 w-full">
                     <div 
-                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1"
+                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                       style={{ backgroundImage: `url('/inspector-page/section 4/generate-clean.svg')` }}
                     />
                   </div>
-                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full">
+                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full transition-all duration-300 ease-in-out">
                     <div className="flex items-center px-[30px] py-2.5 w-full">
-                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1`}>
-                        <p className="mb-0">Generate clean, easy-to-read solar</p>
-                        <p className="mb-0">and energy reports</p>
+                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]`}>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">Generate clean, easy-to-read solar</p>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">and energy reports</p>
                 </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)]">
+              <div className="bg-white h-[500px] max-h-[500px] min-w-[400px] rounded-[10px] flex-1 basis-0 border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col h-[500px] items-center overflow-clip w-full">
                   <div className="flex items-center justify-center flex-1 w-full">
                     <div 
-                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1"
+                      className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                       style={{ backgroundImage: `url('/inspector-page/section 4/solar-expert.svg')` }}
                     />
                   </div>
-                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full">
+                  <div className="bg-gray-50 flex flex-col gap-5 items-center justify-end px-0 py-[50px] w-full transition-all duration-300 ease-in-out">
                     <div className="flex items-center px-[30px] py-2.5 w-full">
-                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1`}>
-                        <p className="mb-0">Become the go-to solar expert</p>
-                        <p className="mb-0">in your market</p>
+                      <div className={`${inter.className} font-medium text-[25px] leading-[1.2] text-center text-[#141414] flex-1 animate-fadeIn transition-all duration-300 ease-in-out hover:text-[#115056]`}>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">Become the go-to solar expert</p>
+                        <p className="mb-0 transition-all duration-300 ease-in-out">in your market</p>
                 </div>
                     </div>
                   </div>

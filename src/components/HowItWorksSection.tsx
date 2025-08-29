@@ -24,11 +24,11 @@ export default function HowItWorksSection({
   const steps = [step1, step2, step3];
 
   return (
-    <section className="box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
+    <section className="section-4 box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
       <div className="content-stretch flex flex-col gap-5 items-center justify-start relative shrink-0 w-full">
         <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
           <div 
-            className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] text-black text-center px-4 sm:px-0"
+            className="text-reveal basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] text-black text-center px-4 sm:px-0"
             style={{
               fontFamily: '"Aeonik Pro", sans-serif',
               fontWeight: 500,
@@ -40,7 +40,7 @@ export default function HowItWorksSection({
         {subtitle && (
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <div 
-              className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[35px] text-center px-4 sm:px-0"
+              className="text-reveal basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[35px] text-center px-4 sm:px-0"
               style={{
                 fontFamily: '"Aeonik Pro", sans-serif',
                 fontWeight: 500,
@@ -55,7 +55,7 @@ export default function HowItWorksSection({
       <div className="content-start grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 sm:gap-8 lg:gap-5 items-start justify-center relative shrink-0 w-full max-w-[1248px]">
         {steps.map((step, index) => (
           <div key={index} className="relative">
-            <div className="bg-white content-stretch flex flex-col items-center justify-start min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] w-full overflow-clip relative rounded-[10px] shrink-0">
+            <div className="slide-up-cards bg-white content-stretch flex flex-col items-center justify-start min-h-[400px] sm:min-h-[450px] lg:min-h-[500px] w-full overflow-clip relative rounded-[10px] shrink-0">
               <div className="bg-white box-border content-stretch flex flex-col items-center justify-start px-4 sm:px-6 lg:px-0 py-8 sm:py-10 lg:py-[50px] relative shrink-0 w-full">
                 <div className="bg-[rgba(86,205,69,0.05)] box-border content-stretch flex items-start justify-center px-6 sm:px-8 lg:px-10 py-2 sm:py-2.5 relative rounded-[50px] shrink-0">
                   <div className="absolute border border-[#56cd45] border-solid inset-0 pointer-events-none rounded-[50px]" />

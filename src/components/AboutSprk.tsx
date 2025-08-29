@@ -38,7 +38,7 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
     };
     
     return (
-      <div key={index} className={`bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
+      <div key={index} className={`slide-up-cards bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
         <div className="flex flex-col items-center justify-start w-full overflow-clip">
           <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center lg:items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px] xl:justify-center">
             <div className="bg-white flex items-center justify-center rounded-[10px] w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] lg:w-[130px] lg:h-[130px] border border-[#115056] shrink-0">
@@ -75,13 +75,13 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
   };
 
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px]">
+    <section className="section-6 mx-auto w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px]">
       <div className="flex flex-col gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start w-full">
         <div className="flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start w-full max-w-[1248px]">
           <div className="flex flex-col gap-4 sm:gap-6 lg:gap-8 xl:gap-[30px] items-center justify-start w-full">
             <div className="flex items-start justify-center w-full">
               <h2
-                className="text-center text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] font-medium leading-[110%] text-[#141414] flex-grow min-w-0 px-4 sm:px-0"
+                className="text-reveal text-center text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] font-medium leading-[110%] text-[#141414] flex-grow min-w-0 px-4 sm:px-0"
                 style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
               >
                 {title}
@@ -91,7 +91,7 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
               {subtitle && (
                 <div className="flex items-start justify-center w-full">
                   <h3
-                    className="text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-medium leading-[110%] text-[#141414] flex-grow min-w-0 px-4 sm:px-0"
+                    className="text-reveal text-center text-[20px] sm:text-[24px] md:text-[28px] lg:text-[32px] xl:text-[35px] font-medium leading-[110%] text-[#141414] flex-grow min-w-0 px-4 sm:px-0"
                     style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
                   >
                     {subtitle}
@@ -101,7 +101,7 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
               {description && (
                 <div className="flex items-start justify-center w-full">
                   <p 
-                    className={`${inter.className} text-center text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] font-normal leading-[120%] text-black/66 flex-grow min-w-0 px-4 sm:px-0`}
+                    className={`${inter.className} text-reveal text-center text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] font-normal leading-[120%] text-black/66 flex-grow min-w-0 px-4 sm:px-0`}
                   >
                     {description}
                   </p>

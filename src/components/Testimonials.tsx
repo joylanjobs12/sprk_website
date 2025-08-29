@@ -17,16 +17,16 @@ interface TestimonialsProps {
 
 const Testimonials: React.FC<TestimonialsProps> = ({ data }) => {
   return (
-    <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+    <section className="section-8 mx-auto w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
       <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[30px] pt-8 sm:pt-10 lg:pt-[50px] pb-12 sm:pb-16 lg:pb-20 xl:pb-[100px]">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 sm:gap-0">
           <div>
-            <h3 className="text-[#141414] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] px-4 sm:px-0">
+            <h3 className="text-reveal text-[#141414] text-[24px] sm:text-[28px] md:text-[32px] lg:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] px-4 sm:px-0">
               Trusted by Certified Professionals
               <br className="hidden sm:block" /> Across the Country
             </h3>
           </div>
-          <button className={`${inter.className} hidden sm:flex items-center gap-2 text-[#141414]/70 text-[14px] sm:text-[16px] lg:text-[18px]`}>
+          <button className={`${inter.className} text-reveal hidden sm:flex items-center gap-2 text-[#141414]/70 text-[14px] sm:text-[16px] lg:text-[18px]`}>
             Discover their Stories 
             <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1 1L7 7L13 1" stroke="rgba(0,0,0,0.66)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -36,7 +36,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ data }) => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-6">
           {data.map((testimonial, index) => (
-            <div key={index} className="rounded-[10px] border border-black/10 bg-white overflow-hidden">
+            <div key={index} className="testimonial-slide rounded-[10px] border border-black/10 bg-white overflow-hidden">
               <div>
                 <Image 
                   src={testimonial.image} 

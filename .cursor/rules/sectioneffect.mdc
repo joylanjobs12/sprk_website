@@ -1,0 +1,115 @@
+---
+description: Professional effect rules for website transitions, animations, and button hover effects, including section-based animations triggered on page load and scroll, to enhance visual appeal and user experience.
+globs:
+alwaysApply: true
+---
+
+- IMPORTANT: Apply these effects across all viewports (Extra Small: 0px–575px, Small: 576px–767px, Medium: 768px–991px, Large: 992px–1199px, Extra Large: 1200px–1399px, Extra Extra Large: 1400px and above) to maintain a consistent and professional appearance.
+
+- IMPORTANT: Transition effects should be smooth, subtle, and avoid jarring movements to ensure accessibility and usability. Use ease-in-out timing for natural transitions.
+
+- IMPORTANT: Animation effects should be minimal to avoid distraction, prioritizing subtle fades, scales, or slides. Avoid excessive animations that could impact performance on low-end devices (e.g., Extra Small viewports).
+
+- IMPORTANT: Button hover effects should follow the specified color scheme: light background buttons transition to `background: #115056; color: #fff`, dark background buttons transition to `background: #fff; color: #115056`. Ensure sufficient contrast for accessibility (WCAG 2.1 compliance).
+
+- IMPORTANT: Section-based animations should trigger as follows: the first section animates on page load/reload, while subsequent sections (e.g., second and third) animate when scrolled into the viewport. This ensures a dynamic and engaging user experience without overwhelming the initial page load.
+
+- Transition Effects:
+    text:
+        properties: color, opacity, transform, font-size
+        duration: 0.3s
+        timing-function: ease-in-out
+        applies-to: h1, h2, h3, h4, h5, h6, p, span, strong, em, q, small, label, .card-title, .card-title-2, .card-body, .card-body-2, .subtitle, .subtitle-2, .card-label
+        description: Smooth transitions for text color changes, opacity fades, slight scaling (e.g., hover effects), or font-size adjustments. Example: Hovering a heading may slightly increase its size or change its color.
+    boxes:
+        properties: background-color, border-color, box-shadow, transform, opacity
+        duration: 0.3s
+        timing-function: ease-in-out
+        applies-to: div, .card, .container, section, article, aside, nav
+        description: Smooth transitions for box-like elements (e.g., cards, containers) when changing background, borders, shadows, or scaling on hover/interaction. Example: A card scales up slightly on hover.
+    buttons:
+        properties: background-color, color, border-color, transform, box-shadow
+        duration: 0.2s
+        timing-function: ease-in-out
+        applies-to: button, .button-big, .button-small
+        description: Quick transitions for buttons to ensure responsive feedback. Example: Background and text color change on hover with a slight scale effect.
+
+- Animation Effects:
+    fade-in:
+        name: fadeIn
+        keyframes: 
+            from: opacity: 0
+            to: opacity: 1
+        duration: 0.5s
+        timing-function: ease-in
+        applies-to: h1, h2, h3, h4, h5, h6, p, .card-title, .card-body, .subtitle, .card-label
+        trigger: on-load
+        description: Text elements (headings, paragraphs, card titles) fade in when the page loads to create a smooth entrance.
+    slide-in:
+        name: slideIn
+        keyframes:
+            from: transform: translateY(20px); opacity: 0
+            to: transform: translateY(0); opacity: 1
+        duration: 0.6s
+        timing-function: ease-out
+        applies-to: div.card, section, article
+        trigger: on-scroll (except for section:first-of-type, which uses on-load)
+        description: Cards, sections, and articles slide up into view when scrolled into the viewport, enhancing visual flow. The first section uses this animation on page load.
+    scale-up:
+        name: scaleUp
+        keyframes:
+            from: transform: scale(0.95); opacity: 0.8
+            to: transform: scale(1); opacity: 1
+        duration: 0.4s
+        timing-function: ease-in-out
+        applies-to: button, .button-big, .button-small
+        trigger: on-hover
+        description: Buttons scale up slightly on hover to provide interactive feedback.
+    section-load:
+        name: slideIn
+        keyframes:
+            from: transform: translateY(20px); opacity: 0
+            to: transform: translateY(0); opacity: 1
+        duration: 0.6s
+        timing-function: ease-out
+        applies-to: section:first-of-type
+        trigger: on-load
+        description: The first section on the page animates with a slide-in effect when the page loads or is reloaded, creating a professional entrance.
+    section-scroll:
+        name: slideIn
+        keyframes:
+            from: transform: translateY(20px); opacity: 0
+            to: transform: translateY(0); opacity: 1
+        duration: 0.6s
+        timing-function: ease-out
+        applies-to: section:not(:first-of-type)
+        trigger: on-scroll
+        description: Subsequent sections (e.g., second and third) animate with a slide-in effect when scrolled into the viewport, ensuring dynamic engagement during scrolling.
+
+- Button Hover Effects:
+    light-background:
+        default:
+            background: #fff
+            color: #000
+            border: 1px solid #115056
+        hover:
+            background: #115056
+            color: #fff
+            border: 1px solid #115056
+            transform: scale(1.05)
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+        applies-to: button:not(.dark), .button-big:not(.dark), .button-small:not(.dark)
+        description: Buttons with a light background transition to a dark teal background (#115056) with white text on hover, including a slight scale and shadow for depth.
+    dark-background:
+        default:
+            background: #115056
+            color: #fff
+            border: 1px solid #fff
+        hover:
+            background: #fff
+            color: #115056
+            border: 1px solid #115056
+            transform: scale(1.05)
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2)
+        applies-to: button.dark, .button-big.dark, .button-small.dark
+        description: Buttons with a dark background transition to a white background with teal text (#115056) on hover, including a slight scale and shadow for depth.
