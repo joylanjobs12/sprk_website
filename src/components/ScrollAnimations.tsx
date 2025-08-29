@@ -36,7 +36,7 @@ export default function ScrollAnimations() {
             element.classList.add('animate-in');
             
             // Animate child elements with staggered timing
-            const children = element.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom');
+            const children = element.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom, .card-slide-left, .card-bounce-in, .card-slide-right, .card-zoom-in, .testimonial-card, .image-slide-left, .testimonial-content, .quote-fade, .author-info, .cta-button');
             children.forEach((child, index) => {
               setTimeout(() => {
                 child.classList.add('animate-in');
@@ -48,7 +48,7 @@ export default function ScrollAnimations() {
         } else {
           // Reset animations smoothly
           element.classList.remove('animate-in');
-          const children = element.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom');
+          const children = element.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom, .card-slide-left, .card-bounce-in, .card-slide-right, .card-zoom-in, .testimonial-card, .image-slide-left, .testimonial-content, .quote-fade, .author-info, .cta-button');
           children.forEach((child) => {
             child.classList.remove('animate-in');
           });
@@ -87,7 +87,7 @@ export default function ScrollAnimations() {
                 section.classList.add('animate-in');
                 
                 // Animate children
-                const children = section.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom');
+                const children = section.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom, .card-slide-left, .card-bounce-in, .card-slide-right, .card-zoom-in, .testimonial-card, .image-slide-left, .testimonial-content, .quote-fade, .author-info, .cta-button');
                 children.forEach((child, index) => {
                   setTimeout(() => {
                     child.classList.add('animate-in');
@@ -97,7 +97,7 @@ export default function ScrollAnimations() {
               
             } else if (!isInView && section.classList.contains('animate-in')) {
               section.classList.remove('animate-in');
-              const children = section.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom');
+              const children = section.querySelectorAll('.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, .testimonial-slide, .slide-up-cards, .map-zoom, .card-slide-left, .card-bounce-in, .card-slide-right, .card-zoom-in, .testimonial-card, .image-slide-left, .testimonial-content, .quote-fade, .author-info, .cta-button');
               children.forEach((child) => {
                 child.classList.remove('animate-in');
               });

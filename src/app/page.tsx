@@ -33,7 +33,7 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
       
       {/* Title Section */}
       <div className="flex-1 flex flex-col justify-center mb-4">
-        <h3
+        <h5
           className="text-center text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
           style={{
             color: "var(--Text-Title, #141414)",
@@ -43,7 +43,7 @@ function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: str
           }}
         >
           {title}
-        </h3>
+        </h5>
       </div>
       
       {/* Subtitle Section */}
@@ -88,7 +88,7 @@ export default function Home() {
       <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px] xl:pt-[100px]">
           <h1
-            className="fade-up text-center mb-4 sm:mb-4 md:mb-5 lg:mb-6 xl:mb-6 2xl:mb-6 text-[35px] sm:text-[35px] md:text-[2rem] lg:text-[3rem] xl:text-[5rem] 2xl:text-[5rem] leading-[110%] sm:leading-[110%] md:leading-[1.3] lg:leading-[1.3] xl:leading-[1.1] 2xl:leading-[1.1] font-medium"
+            className="fade-up text-center mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6 text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
             style={{
               textAlign: "center",
               fontFamily: '"Aeonik Pro", sans-serif',
@@ -99,8 +99,8 @@ export default function Home() {
             <span style={{ color: "var(--Primary-Color, #115056)" }}>Solar Simplified.</span>{" "}<br />
             <span style={{ color: "var(--Text-Title, #141414)" }}>Real Estate Ready.</span>
           </h1>
-          <p
-            className="fade-up max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+          <strong
+            className="fade-up max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
             style={{
               fontFamily: 'Inter',
               fontWeight: 400,
@@ -108,7 +108,7 @@ export default function Home() {
             }}
           >
             The trusted platform to connect, understand, value, inspect, and transfer solar homes with confidence and clarity.
-          </p>
+          </strong>
         </div>
 
         <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 px-0 sm:px-0 md:px-0 lg:px-0">
@@ -145,9 +145,9 @@ export default function Home() {
           <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
             <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
               <h2
-                className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[18px] sm:text-[18px] md:text-[1.75rem] lg:text-[2.5rem] xl:text-[3.5rem] 2xl:text-[3.5rem] leading-[120%] sm:leading-[120%] md:leading-[1.4] lg:leading-[1.4] xl:leading-[1.1] 2xl:leading-[1.1] text-center px-4 sm:px-0 font-medium md:font-semibold lg:font-medium xl:font-medium 2xl:font-medium"
+                className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium"
                 style={{
-                  fontFamily: 'Inter, "Aeonik Pro", sans-serif',
+                  fontFamily: '"Aeonik Pro", sans-serif',
                   fontWeight: 500,
                 }}
               >
@@ -157,10 +157,10 @@ export default function Home() {
             <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
                 <h4
-                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[1rem] sm:text-[1.125rem] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2.1875rem] 2xl:text-[2.1875rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.1] 2xl:leading-[1.1] text-center px-4 sm:px-0 font-semibold lg:font-medium xl:font-medium 2xl:font-medium"
+                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium"
                   style={{
                     fontFamily: '"Aeonik Pro", sans-serif',
-                    fontWeight: 600,
+                    fontWeight: 500,
                   }}
                 >
                   Solar is valuable but misunderstood. Sprk bridges the gap.
@@ -168,15 +168,21 @@ export default function Home() {
               </div>
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
                 <p
-                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center px-4 sm:px-0"
+                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center px-4 sm:px-0"
                   style={{
                     fontFamily: 'Inter',
                     fontWeight: 400,
                     color: "rgba(0,0,0,0.66)",
                   }}
                 >
-                  <p className="mb-0">We bring together the professionals who serve solar homeowners with the reports,</p>
-                  <p className="">referrals, and training needed to simplify complex solar real estate.</p>
+                  <strong 
+                    className="fade-up max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] animate-in font-normal"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                      color: "rgba(0,0,0,0.66)",
+                    }}
+                  >We bring together the professionals who serve solar homeowners with the reports,referrals, and training needed to simplify complex solar real estate.</strong>
                 </p>
               </div>
             </div>
@@ -205,19 +211,19 @@ export default function Home() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <h3
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
+                    <h5
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
                       style={{
-                        fontFamily: 'Inter, "Aeonik Pro", sans-serif',
+                        fontFamily: '"Aeonik Pro", sans-serif',
                         fontWeight: 500,
                       }}
                     >
                       Standardized Reports
-                    </h3>
+                    </h5>
                   </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                     <p
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -245,19 +251,19 @@ export default function Home() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <h3
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
+                    <h5
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
                       style={{
-                        fontFamily: 'Inter, "Aeonik Pro", sans-serif',
+                        fontFamily: '"Aeonik Pro", sans-serif',
                         fontWeight: 500,
                       }}
                     >
                       Role-Specific Training
-                    </h3>
+                    </h5>
                   </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                     <p
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -288,19 +294,19 @@ export default function Home() {
                 </div>
                 <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] relative shrink-0 w-full">
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                    <h3
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
+                    <h5
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
                       style={{
-                        fontFamily: 'Inter, "Aeonik Pro", sans-serif',
+                        fontFamily: '"Aeonik Pro", sans-serif',
                         fontWeight: 500,
                       }}
                     >
                       Smart Connections
-                    </h3>
+                    </h5>
                   </div>
                   <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                     <p
-                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
+                      className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -598,11 +604,11 @@ export default function Home() {
       />
 
       {/* Section 7 */}
-      <section className="box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
+      <section className="section-7 box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
         <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <div
-              className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[80px] text-center px-4 sm:px-0"
+              className="fade-up basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[80px] text-center px-4 sm:px-0"
               style={{
                 fontFamily: '"Aeonik Pro", sans-serif',
                 fontWeight: 500,
@@ -613,7 +619,7 @@ export default function Home() {
           </div>
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <div
-              className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[18px] sm:text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-center px-4 sm:px-0"
+              className="text-reveal basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[18px] sm:text-[20px] md:text-[24px] lg:text-[26px] xl:text-[28px] text-center px-4 sm:px-0"
               style={{
                 fontFamily: '"Aeonik Pro", sans-serif',
                 fontWeight: 500,
@@ -624,7 +630,7 @@ export default function Home() {
           </div>
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <div
-              className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center"
+              className="text-reveal basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center"
               style={{
                 fontFamily: 'Inter',
                 fontWeight: 400,
@@ -636,18 +642,18 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="bg-white relative rounded-[10px] shrink-0 w-full max-w-[1248px]">
+        <div className="testimonial-card bg-white relative rounded-[10px] shrink-0 w-full max-w-[1248px]">
           <div className="content-start flex flex-col lg:flex-row gap-0 items-start justify-start overflow-clip relative w-full">
-            <div className="content-stretch flex flex-col items-start justify-start relative shrink-0 w-full lg:w-1/2">
+            <div className="image-slide-left content-stretch flex flex-col items-start justify-start relative shrink-0 w-full lg:w-1/2">
               <div
                 className="bg-center bg-cover bg-no-repeat h-[500px] min-w-[350px] shrink-0 w-full"
                 style={{ backgroundImage: `url('/home-page/section 7/profile.svg')` }}
               />
             </div>
-            <div className="basis-0 box-border content-stretch flex flex-col grow h-auto lg:h-[500px] items-start justify-between min-h-[400px] min-w-full overflow-clip p-6 sm:p-8 lg:p-[50px] relative shrink-0">
+            <div className="testimonial-content basis-0 box-border content-stretch flex flex-col grow h-auto lg:h-[500px] items-start justify-between min-h-[400px] min-w-full overflow-clip p-6 sm:p-8 lg:p-[50px] relative shrink-0">
               <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                 <div
-                  className="basis-0 grow leading-[1.2] min-h-[156px] min-w-px not-italic relative shrink-0 text-[22px]"
+                  className="quote-fade basis-0 grow leading-[1.2] min-h-[156px] min-w-px not-italic relative shrink-0 text-[22px]"
                   style={{
                     fontFamily: 'Inter',
                     fontWeight: 400,
@@ -657,7 +663,7 @@ export default function Home() {
                   &quot;Sprk helped us connect our installed customers with the Ramsey team. They&apos;re all Solar Certified and backed by Sprk. Andrea and the team have helped several of our customers maximize their home&apos;s resale value.&quot;
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
+              <div className="author-info content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
                 <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                   <div
                     className="basis-0 grow leading-[1.1] min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[32px]"
@@ -682,7 +688,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
+              <div className="cta-button content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
                 <div className="bg-[#115056] box-border content-stretch flex items-start justify-center p-[5px] relative rounded-[5px] shrink-0 w-full">
                   <div className="basis-0 box-border content-stretch flex grow items-center justify-center min-h-px min-w-px px-[15px] py-[5px] relative shrink-0">
                     <div

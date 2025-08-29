@@ -231,6 +231,51 @@ button, .button-big, .button-small {
   transform: translateX(0);
 }
 
+/* Individual Card Animations for Section 6 */
+.card-slide-left {
+  opacity: 0;
+  transform: translateX(-60px) rotateY(-15deg);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card-bounce-in {
+  opacity: 0;
+  transform: translateY(40px) scale(0.8);
+  transition: all 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.card-bounce-in.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.card-slide-right {
+  opacity: 0;
+  transform: translateX(60px) rotateY(15deg);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-slide-right.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.card-zoom-in {
+  opacity: 0;
+  transform: scale(0.7) rotateZ(-5deg);
+  transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-zoom-in.animate-in {
+  opacity: 1;
+  transform: scale(1) rotateZ(0deg);
+}
+
 /* Section 7: Elegant Rise */
 .section-7 {
   opacity: 0;
@@ -243,15 +288,71 @@ button, .button-big, .button-small {
   transform: translateY(0) scale(1);
 }
 
-.section-7 .testimonial-slide {
+/* Section 7 Individual Element Animations */
+.testimonial-card {
   opacity: 0;
-  transform: translateX(-30px);
+  transform: translateY(50px) scale(0.95);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-card.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.image-slide-left {
+  opacity: 0;
+  transform: translateX(-60px) rotateY(-10deg);
   transition: all 0.9s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.section-7 .testimonial-slide.animate-in {
+.image-slide-left.animate-in {
+  opacity: 1;
+  transform: translateX(0) rotateY(0deg);
+}
+
+.testimonial-content {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.testimonial-content.animate-in {
   opacity: 1;
   transform: translateX(0);
+}
+
+.quote-fade {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.quote-fade.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.author-info {
+  opacity: 0;
+  transform: translateY(15px) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.author-info.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.cta-button {
+  opacity: 0;
+  transform: translateY(25px) scale(0.9);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.cta-button.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
 }
 
 /* Section 8: Smooth Fade */

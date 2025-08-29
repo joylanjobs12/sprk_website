@@ -22,6 +22,18 @@ interface AboutSprkProps {
 export default function AboutSprk({ title, subtitle, description, cards }: AboutSprkProps) {
   const renderCard = (card: Card, index: number, rowIndex?: number) => {
     const isLarge = card.width === "large";
+    
+    // Define unique animation classes for each card
+    const getAnimationClass = (index: number) => {
+      const animations = [
+        'card-slide-left',    // Card 1: Slide from left
+        'card-bounce-in',     // Card 2: Bounce in
+        'card-slide-right',   // Card 3: Slide from right  
+        'card-zoom-in'        // Card 4: Zoom in
+      ];
+      return animations[index] || 'slide-up-cards';
+    };
+    
     // Define width classes based on row and position
     const getWidthClass = (index: number, rowIndex?: number) => {
       const isFirstInRow = index % 2 === 0; // Even indices (0, 2) are first in row
@@ -38,7 +50,7 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
     };
     
     return (
-      <div key={index} className={`slide-up-cards bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
+      <div key={index} className={`${getAnimationClass(index)} bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
         <div className="flex flex-col items-center justify-start w-full overflow-clip">
           <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center lg:items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px] xl:justify-center">
             <div className="bg-white flex items-center justify-center rounded-[10px] w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] lg:w-[130px] lg:h-[130px] border border-[#115056] shrink-0">
