@@ -14,17 +14,17 @@ interface AnalyzeThisReportProps {
     cards: CardData[];
 }
 
-export default function AnalyzeThisReport({ 
-    title, 
-    description, 
-    highlightedWord, 
-    cards 
+export default function AnalyzeThisReport({
+    title,
+    description,
+    highlightedWord,
+    cards
 }: AnalyzeThisReportProps) {
     const renderDescription = () => {
         if (!highlightedWord) {
             return description;
         }
-        
+
         const parts = description.split(highlightedWord);
         return parts.map((part, index) => (
             <span key={index}>
@@ -52,26 +52,25 @@ export default function AnalyzeThisReport({
                         </p>
                     </div>
                 </div>
-
                 {/* Cards */}
-                <div className="w-full flex flex-col lg:flex-row gap-6 items-center justify-center">
+                <div className="w-full flex flex-col lg:flex-row gap-6 items-center justify-center lg:items-stretch">
                     {cards.map((card, index) => (
-                        <div 
+                        <div
                             key={index}
-                            className={`${index % 2 === 0 ? 'card-slide-left' : 'card-slide-right'} bg-white w-full lg:w-[612px] min-w-[400px] rounded-[10px] border border-[rgba(0,0,0,0.15)] border-solid overflow-hidden`}
+                            className={`${index % 2 === 0 ? 'card-slide-left' : 'card-slide-right'} bg-white w-full lg:w-[612px] min-w-[400px] rounded-[10px] border border-[rgba(0,0,0,0.15)] border-solid overflow-hidden flex flex-col`}
                         >
-                            <div className="flex flex-col items-center justify-start w-full">
+                            <div className="flex flex-col items-center justify-start w-full h-full">
                                 {/* Icon Section */}
                                 <div className="bg-white w-full h-[200px] lg:h-[300px] flex items-center justify-center p-[30px]">
-                                        <img 
-                                            src={card.iconSrc}
-                                            alt={card.iconAlt}
-                                            className="bounce-in w-full h-full object-contain"
-                                        />
+                                    <img
+                                        src={card.iconSrc}
+                                        alt={card.iconAlt}
+                                        className="bounce-in w-full h-full object-contain"
+                                    />
                                 </div>
-                                
+
                                 {/* Content Section */}
-                                <div className="bg-white w-full flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px]">
+                                <div className="bg-white w-full flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px] flex-1">
                                     <div className="w-full flex items-center justify-center">
                                         <h3 className="text-reveal text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center">
                                             {card.title}

@@ -227,9 +227,9 @@ export default function WhatThisReport({
           </div>
           
           {/* Right Column - Image Card */}
-          <div className="w-full lg:flex-1 flex flex-col items-start justify-end order-1 lg:order-2">
+          <div className="w-full lg:flex-1 flex flex-col items-start justify-start order-1 lg:order-2">
             <div 
-              className={`report-card w-full h-[${imageHeight.base}] sm:h-[${imageHeight.sm}] md:h-[${imageHeight.md}] lg:h-[${imageHeight.lg}] rounded-[10px]  overflow-hidden bg-center bg-contain bg-no-repeat flex items-center justify-center transition-all duration-500 hover:scale-105 hover:shadow-lg hover:border-[#115056] transform-gpu`}
+              className={`report-card w-full h-[${imageHeight.base}] sm:h-[${imageHeight.sm}] md:h-[${imageHeight.md}] lg:h-[${imageHeight.lg}] rounded-[10px]  overflow-hidden bg-center bg-contain bg-no-repeat flex items-center justify-start transition-all duration-500 hover:scale-105 hover:shadow-lg hover:border-[#115056] transform-gpu`}
             >
               <img 
                 src={imageSrc}

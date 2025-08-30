@@ -104,7 +104,7 @@ export default function AboutReport({
                                         <div className="w-full md:w-1/2">
                                             {slide.leftSide}
                                         </div>
-                                        <div className="w-full md:w-1/2">
+                                        <div className="w-full md:w-1/2 px-[30px]">
                                             {slide.rightSide}
                                         </div>
                                     </div>
@@ -130,7 +130,7 @@ export default function AboutReport({
                             ref={prevRef}
                             onClick={() => { swiperRef.current?.slidePrev(); if (onPrevious) onPrevious(); }}
                             aria-label="Previous slide"
-                            className="absolute left-14 top-1/2 transform -translate-y-1/2 z-20 bg-white rounded-[50px] border border-[rgba(0,0,0,0.2)] border-solid shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] w-20 h-20 flex items-center justify-center hover:bg-gray-50 transition-colors"
+                            className="absolute left-[-40] top-1/2 transform -translate-y-1/2 z-20 bg-white rounded-[50px] border border-[rgba(0,0,0,0.2)] border-solid shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] w-20 h-20 flex items-center justify-center hover:bg-gray-50 transition-colors"
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15 18L9 12L15 6" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
@@ -142,7 +142,7 @@ export default function AboutReport({
                             ref={nextRef}
                             onClick={() => { swiperRef.current?.slideNext(); if (onNext) onNext(); }}
                             aria-label="Next slide"
-                            className="absolute right-14 top-1/2 transform -translate-y-1/2 z-20 bg-white rounded-[50px] border border-[rgba(0,0,0,0.2)] border-solid shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] w-20 h-20 flex items-center justify-center hover:bg-gray-50 transition-colors"
+                            className="absolute right-[-40] top-1/2 transform -translate-y-1/2 z-20 bg-white rounded-[50px] border border-[rgba(0,0,0,0.2)] border-solid shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] w-20 h-20 flex items-center justify-center hover:bg-gray-50 transition-colors"
                         >
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M9 18L15 12L9 6" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />

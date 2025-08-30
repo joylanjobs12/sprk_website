@@ -12,7 +12,7 @@ import FindReport from '@/components/reports/FindReport';
 
 export default function SolarListingReport() {
     return (
-        <>
+        <div className='overflow-hidden'>
             <ScrollAnimations />
             <section className="section-1 w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
                 <div className="fade-up w-full flex flex-col items-start justify-start">
@@ -205,7 +205,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full ">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                             A. Green Home Rating <br></br> (Page 1)
@@ -235,7 +235,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                             B. Real Estate Summary <br></br>
@@ -265,7 +265,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                             C. Home Energy Profile <br></br>
@@ -295,7 +295,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                             D. Save with Green Features <br></br>
@@ -323,7 +323,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                             E. Installed Solar System <br></br>
@@ -352,7 +352,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                         F. Installed Solar Details <br></br>
@@ -382,7 +382,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                         G. Green Feature Details<br></br>
@@ -410,7 +410,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                         H. Projected Green Feature Savings<br></br>
@@ -438,7 +438,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                         I. Seller’s Checklist<br></br>
@@ -466,7 +466,7 @@ export default function SolarListingReport() {
                                 </div>
                             ),
                             rightSide: (
-                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                <div key="slide-a" className="w-full h-full lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center  overflow-hidden">
                                     <div className="w-full">
                                         <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
                                         J. Buyer’s Checklist<br></br>
@@ -527,6 +527,6 @@ export default function SolarListingReport() {
                 />
             </section>
             <ScrollToTop />
-        </>
+        </div>
     );
 }

@@ -114,9 +114,9 @@ export default function WhyThisReportMatters({
                 className={`w-full lg:flex-1 bg-white flex flex-col ${spacing.content} items-start justify-start p-6 lg:p-[30px] lg:pb-10 min-h-[${contentMinHeight.base}] lg:h-[${cardMinHeight.lg}]`}
               >
                 {/* Title */}
-                <div className="w-full flex items-center justify-center">
+                <div className="w-full flex items-center justify-start">
                   <h2 
-                    className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
+                    className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-start`}
                     dangerouslySetInnerHTML={{ __html: title }}
                   />
                 </div>
