@@ -42,12 +42,12 @@ export default function AnalyzeThisReport({
                 {/* Header */}
                 <div className="w-full flex flex-col gap-[15px] lg:gap-[30px] items-center justify-start">
                     <div className="w-full flex items-start justify-center">
-                        <h2 className="text-center text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414]">
+                        <h2 className="text-reveal text-center text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414]">
                             {title}
                         </h2>
                     </div>
                     <div className="w-full flex items-start justify-center">
-                        <p className="text-center text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)] max-w-4xl">
+                        <p className="fade-up text-center text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)] max-w-4xl">
                             {renderDescription()}
                         </p>
                     </div>
@@ -58,7 +58,7 @@ export default function AnalyzeThisReport({
                     {cards.map((card, index) => (
                         <div 
                             key={index}
-                            className="bg-white w-full lg:w-[612px] min-w-[400px] rounded-[10px] border border-[rgba(0,0,0,0.15)] border-solid overflow-hidden"
+                            className={`${index % 2 === 0 ? 'card-slide-left' : 'card-slide-right'} bg-white w-full lg:w-[612px] min-w-[400px] rounded-[10px] border border-[rgba(0,0,0,0.15)] border-solid overflow-hidden`}
                         >
                             <div className="flex flex-col items-center justify-start w-full">
                                 {/* Icon Section */}
@@ -67,7 +67,7 @@ export default function AnalyzeThisReport({
                                         <img 
                                             src={card.iconSrc}
                                             alt={card.iconAlt}
-                                            className="w-full h-full object-contain"
+                                            className="bounce-in w-full h-full object-contain"
                                         />
                                     </div>
                                 </div>
@@ -75,14 +75,14 @@ export default function AnalyzeThisReport({
                                 {/* Content Section */}
                                 <div className="bg-white w-full flex flex-col gap-[22px] items-start justify-start pb-10 pt-[30px] px-[30px]">
                                     <div className="w-full flex items-center justify-center">
-                                        <h3 className="text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center">
+                                        <h3 className="text-reveal text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center">
                                             {card.title}
                                         </h3>
                                     </div>
                                     <div className="w-full flex items-center justify-center">
                                         <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-medium font-['Inter'] text-[rgba(0,0,0,0.66)] space-y-2">
                                             {card.items.map((item, itemIndex) => (
-                                                <li key={itemIndex} className="ml-[27px]">
+                                                <li key={itemIndex} className="slide-up-cards ml-[27px]">
                                                     {item}
                                                 </li>
                                             ))}

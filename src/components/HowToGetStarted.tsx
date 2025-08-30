@@ -1,38 +1,27 @@
 import React from "react";
 import Image from "next/image";
 
+interface Step {
+  icon: string;
+  label: string;
+  description: string;
+}
+
 interface HowToGetStartedProps {
   title: string;
   subtitle: string;
+  steps: Step[];
 }
 
 const HowToGetStarted: React.FC<HowToGetStartedProps> = ({
   title,
   subtitle,
+  steps,
 }) => {
-  // Hardcoded steps based on Figma design
-  const steps = [
-    {
-      icon: "/agents-page/section 6/get-solar.svg",
-      label: "Get Solar Certified",
-      description: "Take the Sprk CE course to understand how to represent solar homes with confidence."
-    },
-    {
-      icon: "/agents-page/section 6/generate.svg", 
-      label: "Generate a Sprk Listing Report",
-      description: "Make solar features visible and easy to explain—before you go live on the MLS."
-    },
-    {
-      icon: "/agents-page/section 6/inspector.svg",
-      label: "Use a Sprk Certified Inspector", 
-      description: "Partner with inspectors who understand solar systems and deliver fast, credible reports."
-    },
-    {
-      icon: "/agents-page/section 6/your-clients.svg",
-      label: "Guide Your Clients the Right Way",
-      description: "Use Sprk's seller checklists and buyer handouts to help avoid contract confusion and delayed closings."
-    }
-  ];
+  // Ensure we always have exactly 4 steps
+  if (steps.length !== 4) {
+    console.warn('HowToGetStarted component expects exactly 4 steps');
+  }
 
   // Define unique animation classes for each step card
   const getAnimationClass = (index: number) => {

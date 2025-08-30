@@ -90,7 +90,7 @@ export default function WhyThisReportMatters({
       <div className={`w-full max-w-[1248px] flex flex-col ${spacing.card} items-center justify-start`}>
         <div className="w-full flex items-center justify-center">
           <div 
-            className={`w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden min-h-[${cardMinHeight.base}] lg:min-h-[${cardMinHeight.lg}]`}
+            className={`card-slide-left w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden min-h-[${cardMinHeight.base}] lg:min-h-[${cardMinHeight.lg}]`}
           >
             <div className="w-full flex flex-col lg:flex-row items-stretch justify-center">
               {/* Left Side - Report Preview */}
@@ -102,7 +102,7 @@ export default function WhyThisReportMatters({
                     <img 
                       src={imageSrc}
                       alt={imageAlt}
-                      className="w-full h-full object-contain max-w-full max-h-full"
+                      className="bounce-in w-full h-full object-contain max-w-full max-h-full"
                     />
                   </div>
                 </div>
@@ -116,7 +116,7 @@ export default function WhyThisReportMatters({
                 {/* Title */}
                 <div className="w-full flex items-center justify-center">
                   <h2 
-                    className={`text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
+                    className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
                     dangerouslySetInnerHTML={{ __html: title }}
                   />
                 </div>
@@ -128,7 +128,7 @@ export default function WhyThisReportMatters({
                   >
                     <ul className="space-y-4 lg:space-y-6 list-disc ml-[30px]">
                       {bulletPoints.map((point, index) => (
-                        <li key={index} className="leading-[110%]">
+                        <li key={index} className="slide-up-cards leading-[110%]">
                           <span className="font-semibold">{point.title}</span>
                           <span> {point.description}</span>
                         </li>

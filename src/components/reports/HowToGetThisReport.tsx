@@ -146,7 +146,7 @@ export default function HowToGetThisReport({
         <div className={`w-full flex flex-col ${spacing.title} items-center justify-start`}>
           <div className="w-full flex items-start justify-center">
             <h2 
-              className={`text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
+              className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
             >
               {title}
             </h2>
@@ -159,7 +159,7 @@ export default function HowToGetThisReport({
         {cards.map((card, index) => (
           <div 
             key={index}
-            className={`flex-1 min-w-[280px] lg:min-w-[294px] bg-gray-50 rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden min-h-[${cardMinHeight.base}] lg:min-h-[${cardMinHeight.lg}]`}
+            className={`map-zoom flex-1 min-w-[280px] lg:min-w-[294px] bg-gray-50 rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden min-h-[${cardMinHeight.base}] lg:min-h-[${cardMinHeight.lg}]`}
           >
             <div className="w-full flex flex-col items-center justify-start h-full">
               {/* Header */}
@@ -170,14 +170,14 @@ export default function HowToGetThisReport({
                       <img 
                         src={card.iconSrc}
                         alt={card.iconAlt}
-                        className="w-full h-full object-contain"
+                        className="bounce-in w-full h-full object-contain"
                       />
                     </div>
                   </div>
                 </div>
                 <div className="w-full flex items-start justify-start">
                   <h3 
-                    className={`text-[${cardTitleSize.base}] sm:text-[${cardTitleSize.sm}] md:text-[${cardTitleSize.md}] lg:text-[${cardTitleSize.lg}] xl:text-[${cardTitleSize.xl}] 2xl:text-[${cardTitleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414]`}
+                    className={`text-reveal text-[${cardTitleSize.base}] sm:text-[${cardTitleSize.sm}] md:text-[${cardTitleSize.md}] lg:text-[${cardTitleSize.lg}] xl:text-[${cardTitleSize.xl}] 2xl:text-[${cardTitleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414]`}
                   >
                     {card.title}
                   </h3>
@@ -187,7 +187,7 @@ export default function HowToGetThisReport({
               {/* Content */}
               <div className={`flex-1 w-full flex items-start justify-center ${padding.cardContent}`}>
                 <p 
-                  className={`text-[${cardDescriptionSize.base}] sm:text-[${cardDescriptionSize.sm}] md:text-[${cardDescriptionSize.md}] lg:text-[${cardDescriptionSize.lg}] xl:text-[${cardDescriptionSize.xl}] 2xl:text-[${cardDescriptionSize.xxl}] leading-[120%] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)]`}
+                  className={`fade-up text-[${cardDescriptionSize.base}] sm:text-[${cardDescriptionSize.sm}] md:text-[${cardDescriptionSize.md}] lg:text-[${cardDescriptionSize.lg}] xl:text-[${cardDescriptionSize.xl}] 2xl:text-[${cardDescriptionSize.xxl}] leading-[120%] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)]`}
                 >
                   {card.description}
                 </p>
@@ -201,7 +201,7 @@ export default function HowToGetThisReport({
       <div className="w-full flex flex-col items-center justify-start">
         <button 
           onClick={onCtaClick}
-          className="w-full max-w-md bg-[#115056] rounded-[5px] p-[5px] flex items-center justify-center min-h-[44px] group transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
+          className="cta-button w-full max-w-md bg-[#115056] rounded-[5px] p-[5px] flex items-center justify-center min-h-[44px] group transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
         >
           <div className="flex-1 flex items-center justify-center px-[15px] py-[5px] gap-2">
             <span 

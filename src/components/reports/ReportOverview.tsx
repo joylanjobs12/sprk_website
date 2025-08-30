@@ -80,17 +80,17 @@ export default function ReportOverview({
   return (
     <div className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start px-4 lg:px-24 py-[50px] lg:py-[100px]">
       <div className="w-full max-w-[1248px] flex flex-col gap-[25px] lg:gap-[50px] items-start justify-start">
-        <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden">
+        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden">
           {/* Video/Image Section */}
           <div 
-            className={`w-full flex flex-col items-center justify-center h-[${imageHeight.base}] sm:h-[${imageHeight.sm}] md:h-[${imageHeight.md}] lg:h-[${imageHeight.lg}] relative`}
+            className={`text-reveal w-full flex flex-col items-center justify-center h-[${imageHeight.base}] sm:h-[${imageHeight.sm}] md:h-[${imageHeight.md}] lg:h-[${imageHeight.lg}] relative`}
             style={{ backgroundColor }}
           >
             <div className="w-full h-full flex items-center justify-center">
               <img 
                 src={imageSrc}
                 alt={imageAlt}
-                className={`w-full h-full object-contain max-w-[${maxImageWidth.base}] sm:max-w-[${maxImageWidth.sm}] md:max-w-[${maxImageWidth.md}] lg:max-w-[${maxImageWidth.lg}]`}
+            className={`bounce-in w-full h-full object-contain max-w-[${maxImageWidth.base}] sm:max-w-[${maxImageWidth.sm}] md:max-w-[${maxImageWidth.md}] lg:max-w-[${maxImageWidth.lg}]`}
               />
             </div>
           </div>
@@ -100,7 +100,7 @@ export default function ReportOverview({
             {/* Title */}
             <div className="w-full flex items-center justify-center pb-6 lg:pb-[50px]">
               <h2 
-                className={`text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
+                className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
               >
                 {title}
               </h2>
@@ -110,7 +110,7 @@ export default function ReportOverview({
             <div className="w-full flex flex-col sm:flex-row gap-2.5 items-stretch">
               <button 
                 onClick={onPrimaryClick}
-                className="flex-1 bg-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#0d3d42] transition-colors"
+                className="slide-up-cards flex-1 bg-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#0d3d42] hover:scale-105 transition-all duration-300"
               >
                 <div className="flex-1 flex items-center justify-center px-[15px] py-[5px]">
                   <span 
@@ -128,7 +128,7 @@ export default function ReportOverview({
               
               <button 
                 onClick={onSecondaryClick}
-                className="flex-1 bg-white border border-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#115056] transition-colors"
+                className="slide-up-cards flex-1 bg-white border border-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#115056] hover:scale-105 transition-all duration-300"
               >
                 <div className="flex-1 flex items-center justify-center px-[15px] py-[5px]">
                   <span 

@@ -8,27 +8,30 @@ import HowToGetThisReport from '@/components/reports/HowToGetThisReport';
 import AnalyzeThisReport from '@/components/reports/AnalyzeThisReport';
 import AboutReport from '@/components/reports/AboutReport';
 import FindReport from '@/components/reports/FindReport';
+import ScrollAnimations from '@/components/ScrollAnimations';
 
 export default function SolarInspectionReport() {
   return (
       <>
-          <section className="w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
-              <div className="w-full flex flex-col items-start justify-start">
+            <ScrollAnimations />
+
+          <section className="w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24 animate-slideIn">
+              <div className="w-full flex flex-col items-start justify-start transition-all duration-300 ease-in-out">
                   <header className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start">
                       <div className="w-full flex flex-col gap-[15px] lg:gap-[30px] items-center justify-start px-2.5 py-0">
                           {/* Title */}
-                          <h1 className="w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium font-['Aeonik_Pro'] mb-4 lg:mb-0">
-                              <span className="text-[#115056]">Sprk Solar Inspection </span>
-                              <span className="text-[#141414]">Report</span>
+                          <h1 className="w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium font-['Aeonik_Pro'] mb-4 lg:mb-0 animate-fadeIn transition-all duration-300 ease-in-out hover:transform hover:scale-105">
+                              <span className="text-[#115056] transition-colors duration-300 ease-in-out">Sprk Solar Inspection </span>
+                              <span className="text-[#141414] transition-colors duration-300 ease-in-out">Report</span>
                           </h1>
 
                           {/* Subtitle and Description */}
-                          <div className="w-full flex items-center justify-center px-2.5 py-0">
-                              <div className="w-full text-center font-['Inter'] text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] text-[rgba(0,0,0,0.66)]">
-                                  <p className="font-semibold mb-4">
+                          <div className="w-full flex items-center justify-center px-2.5 py-0 transition-all duration-300 ease-in-out">
+                              <div className="w-full text-center font-['Inter'] text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] text-[rgba(0,0,0,0.66)] animate-fadeIn">
+                                  <p className="font-semibold mb-4 transition-all duration-300 ease-in-out hover:text-[#115056]">
                                       The #1 unbiased, independently generated solar health report.
                                   </p>
-                                  <p className="font-normal">
+                                  <p className="font-normal transition-all duration-300 ease-in-out hover:text-[rgba(0,0,0,0.8)]">
                                       This report is both easy to read and packed with critical details about a solar system's production health, remaining life, and equipment condition. It also includes real estate transaction guidance and solar installer information for home buyers.
                                   </p>
                               </div>
@@ -36,15 +39,15 @@ export default function SolarInspectionReport() {
                       </div>
 
                       {/* Buttons */}
-                      <div className="w-full flex flex-col sm:flex-row gap-[15px] items-center justify-center">
-                          <button className="w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap">
+                      <div className="w-full flex flex-col sm:flex-row gap-[15px] items-center justify-center animate-fadeIn">
+                          <button className="w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] transition-all duration-200 ease-in-out hover:bg-white hover:text-[#115056] hover:border hover:border-[#115056] hover:transform hover:scale-105 hover:shadow-lg">
+                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap transition-colors duration-200 ease-in-out hover:text-[#115056]">
                                   See a Sample Report
                               </span>
                           </button>
 
-                          <button className="w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] whitespace-nowrap">
+                          <button className="w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] bg-white transition-all duration-200 ease-in-out hover:bg-[#115056] hover:text-white hover:transform hover:scale-105 hover:shadow-lg">
+                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] whitespace-nowrap transition-colors duration-200 ease-in-out hover:text-white">
                                   Find a Certified Home Inspector
                               </span>
                           </button>

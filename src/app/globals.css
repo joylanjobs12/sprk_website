@@ -21,6 +21,31 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Smooth scrolling and performance optimizations */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Performance optimizations for animations */
+.section-1, .section-2, .section-3, .section-4, .section-5, 
+.section-6, .section-7, .section-8, .section-9 {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.fade-up, .text-reveal, .bounce-in, .card-flip, .report-card, 
+.testimonial-slide, .slide-up-cards, .map-zoom, .card-slide-left, 
+.card-bounce-in, .card-slide-right, .card-zoom-in, .testimonial-card, 
+.image-slide-left, .testimonial-content, .quote-fade, .author-info, .cta-button {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+}
+
 /* Animation Keyframes */
 @keyframes fadeIn {
   from {
@@ -393,11 +418,82 @@ button, .button-big, .button-small {
 /* Enhanced Card Hover Effects */
 .card {
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 40px rgba(17, 80, 86, 0.15);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.8s ease-in-out;
+  z-index: 1;
+}
+
+.card:hover::before {
+  left: 100%;
+}
+
+/* Advanced Image Animations */
+.image-slide-left img {
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.image-slide-left.animate-in img {
+  transform: scale(1.05);
+}
+
+/* Text Stagger Animation */
+.text-stagger {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: textStagger 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes textStagger {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Smooth Parallax Effect */
+.parallax-element {
+  transform: translateY(0);
+  transition: transform 0.1s linear;
+}
+
+/* Enhanced Button Ripple Effect */
+.button-ripple {
+  position: relative;
+  overflow: hidden;
+}
+
+.button-ripple::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+.button-ripple:hover::before {
+  width: 300px;
+  height: 300px;
 }
 
 

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import ScrollToTop from "@/components/ScrollToTop";
 import CTA from "@/components/CTA";
@@ -5,81 +7,9 @@ import AboutSprk from "@/components/AboutSprk";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import Testimonials from "@/components/Testimonials";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import SelectRole from "@/components/SelectRole";
 
-function RoleCard({ icon, title, subtitle }: { icon: React.ReactNode; title: string; subtitle?: string }) {
-  return (
-    <div
-      className="card flex w-full min-h-auto md:min-h-[360px] lg:min-h-[400px] xl:min-h-[380px] 2xl:min-h-[420px] p-4 sm:p-6 md:p-8 lg:p-10 xl:p-8 2xl:p-10 flex-col justify-between items-center text-center rounded-[10px] border bg-white hover:shadow-lg hover:scale-105 cursor-pointer"
-      style={{
-        borderColor: "rgba(17, 80, 86, 0.20)",
-        boxShadow:
-          "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)",
-      }}
-    >
-      {/* Icon Section */}
-      <div className="flex items-center justify-center mb-3 sm:mb-4 md:mb-6 xl:mb-4 2xl:mb-6">
-        <div 
-          className="flex p-[20px] items-center rounded-[10px] border"
-          style={{
-            border: "1px solid var(--Primary-Color, #115056)",
-            background: "var(--Card-Blue, #F1FAFA)"
-          }}
-        >
-          <div className="w-[60px] h-[60px] sm:w-[70px] sm:h-[70px] md:w-[80px] md:h-[80px] lg:w-[90px] lg:h-[90px] xl:w-[85px] xl:h-[85px] 2xl:w-[110px] 2xl:h-[110px] flex items-center justify-center">
-            {icon}
-          </div>
-        </div>
-      </div>
-      
-      {/* Title Section */}
-      <div className="flex-1 flex flex-col justify-center mb-4">
-        <h5
-          className="text-center text-[32px] sm:text-[32px] md:text-[1.25rem] lg:text-[1.5rem] xl:text-[2rem] 2xl:text-[2.25rem] leading-[110%] sm:leading-[110%] md:leading-[1.5] lg:leading-[1.5] xl:leading-[1.4] 2xl:leading-[1.4] font-medium"
-          style={{
-            color: "var(--Text-Title, #141414)",
-            fontFamily: 'Inter, "Aeonik Pro", sans-serif',
-            fontStyle: "normal",
-            fontWeight: 500,
-          }}
-        >
-          {title}
-        </h5>
-      </div>
-      
-      {/* Subtitle Section */}
-      {subtitle ? (
-        <div className="mb-4">
-          <p 
-            className="opacity-70 text-center text-[1rem] sm:text-[1rem] md:text-[1.125rem] lg:text-[1.125rem] xl:text-[1.25rem] 2xl:text-[1.25rem] leading-[1.5] sm:leading-[1.5] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6]"
-            style={{
-              fontFamily: 'Inter',
-              fontWeight: 400,
-            }}
-          >
-            {subtitle}
-          </p>
-        </div>
-      ) : null}
-      
-      {/* Button Section */}
-      <div className="w-full">
-        <button
-          className="group flex justify-center items-center gap-2 px-4 py-3 sm:px-4 sm:py-3 md:px-6 md:py-4 xl:px-5 xl:py-3 2xl:px-6 2xl:py-4 w-full rounded-[5px] border bg-[var(--Card-Blue,#F1FAFA)] text-center min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[48px] 2xl:min-h-[52px] touch-manipulation hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-md transition-all duration-200 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[1.125rem] xl:text-[1.125rem] 2xl:text-[1.25rem] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] font-normal md:font-medium lg:font-medium xl:font-medium 2xl:font-medium"
-          style={{
-            borderColor: "var(--Primary-Color, #115056)",
-            color: "var(--Text-Title, #141414)",
-            fontFamily: 'Inter',
-            fontStyle: "normal",
-            fontWeight: 400,
-          }}
-        >
-          <span className="group-hover:text-white transition-colors duration-200">Learn More</span>
-          <span aria-hidden className="text-sm sm:text-base md:text-lg group-hover:text-white transition-colors duration-200">→</span>
-        </button>
-      </div>
-    </div>
-  );
-}
+
 
 export default function Home() {
   return (
@@ -111,32 +41,12 @@ export default function Home() {
           </strong>
         </div>
 
-        <div className="mt-6 sm:mt-8 md:mt-12 lg:mt-14 xl:mt-16 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 px-0 sm:px-0 md:px-0 lg:px-0">
-          <div className="slide-up-cards">
-            <RoleCard
-              icon={<Image src="/home-page/section 1/inspector-new.svg" alt="Inspector" width={110} height={110} />}
-              title={"I'm a Home Inspector"}
-            />
-          </div>
-          <div className="slide-up-cards">
-            <RoleCard
-              icon={<Image src="/home-page/section 1/real-estate-agent-new.svg" alt="Real Estate Agent" width={110} height={110} />}
-              title={"I'm a Real Estate Agent"}
-            />
-          </div>
-          <div className="slide-up-cards">
-            <RoleCard
-              icon={<Image src="/home-page/section 1/solar-pro-new.svg" alt="Solar Pro" width={110} height={110} />}
-              title={"I'm a Solar Pro"}
-            />
-          </div>
-          <div className="slide-up-cards">
-            <RoleCard
-              icon={<Image src="/home-page/section 1/homeowner-new.svg" alt="Homeowner" width={110} height={110} />}
-              title={"I'm a Homeowner"}
-            />
-          </div>
-        </div>
+        <SelectRole 
+          onRoleSelect={(roleId) => {
+            // Handle role selection - you can add navigation logic here
+            console.log('Selected role:', roleId);
+          }}
+        />
       </section>
 
       {/* Section 2 */}

@@ -3,6 +3,7 @@ import Image from "next/image";
 interface Step {
   icon: string;
   label: string;
+  subtitle?: string;
   description: string;
 }
 
@@ -21,22 +22,25 @@ export default function HowItWorksSection({
   step2,
   step3
 }: HowItWorksSectionProps) {
-  // Define default steps based on Figma design
+  // Define default steps based on Solar Calculator Lead Gen design
   const defaultSteps = [
     {
-      icon: '/agents-page/section 4/learn-how.svg',
-      label: 'Learn How to Represent Solar Homes',
-      description: 'Take the on-demand Sprk Solar Certification course—designed specifically for real estate agents.'
+      icon: '/solar-pro-page/section 7/homeowner-fills.svg',
+      label: 'Homeowner fills out',
+      subtitle: '1 min energy form',
+      description: 'Using social media or other marketing method solar company provides solar calculator form to homeowner.'
     },
     {
-      icon: '/agents-page/section 4/help-clients.svg',
-      label: 'Help Clients Collect Solar Info',
-      description: 'Use the Sprk app to gather key solar system details and generate trusted reports that keep deals on track.'
+      icon: '/solar-pro-page/section 7/homeowner-views.svg',
+      label: 'Homeowner views',
+      subtitle: 'Interactive energy report',
+      description: 'Homeowner views solar size estimation and other possible energy upgrades to reduce home energy expenses.'
     },
     {
-      icon: '/agents-page/section 4/sprk-reports.svg',
-      label: 'Win with Sprk Reports',
-      description: 'Use the Sprk Listing Report and Appraisal Report to maximize home value—and protect buyers with a Solar Inspection Report from a Sprk Certified Inspector.'
+      icon: '/solar-pro-page/section 7/solar-company.svg',
+      label: 'Solar company receives',
+      subtitle: 'Homeowner info',
+      description: 'Solar company receives homeowner contact info to connect with and nurture potential solar costumers.'
     }
   ];
 
@@ -93,23 +97,32 @@ export default function HowItWorksSection({
                 <div className="bg-[#115056] content-stretch flex items-center justify-center min-h-[90px] min-w-[90px] relative rounded-[100px] shrink-0 size-[150px]">
                   <div className="absolute border-[10px] border-[rgba(144,228,193,0.1)] border-solid inset-[-10px] pointer-events-none rounded-[110px] shadow-[0px_10px_15px_0px_rgba(15,143,150,0.08),0px_20px_40px_0px_rgba(15,143,150,0.15)]" />
                   <div className="content-stretch flex items-center justify-center relative rounded-[50px] shrink-0">
-                    <div className="overflow-clip relative shrink-0 size-[90px]">
-                      <Image src={step.icon} alt={step.label} width={90} height={90} className="block max-w-none size-full transition-transform duration-300 ease-in-out hover:scale-110" />
+                    <div className="overflow-clip relative shrink-0 size-[100px]">
+                      <Image src={step.icon} alt={step.label} width={100} height={100} className="block max-w-none size-full transition-transform duration-300 ease-in-out hover:scale-110" />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
                 <div className="box-border content-stretch flex items-start justify-start min-h-[60px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
-                  <h5 
-                    className="basis-0 grow min-h-[90px] min-w-px not-italic relative shrink-0 font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] text-center transition-all duration-300 ease-in-out text-[#141414] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2"
-                  >
-                    {step.label}
-                  </h5>
+                                      <h5 
+                      className="basis-0 grow min-h-[90px] min-w-px not-italic relative shrink-0 font-['Aeonik_Pro'] font-medium text-[27px] sm:text-[27px] md:text-[27px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px] leading-[110%] text-center transition-all duration-300 ease-in-out text-[#141414] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2"
+                    >
+                      {step.label}
+                    </h5>
                 </div>
+                {step.subtitle && (
+                  <div className="box-border content-stretch flex items-start justify-start min-h-[40px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
+                    <h6 
+                      className="basis-0 grow min-w-px not-italic relative shrink-0 font-['Inter'] font-medium text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] text-center transition-all duration-300 ease-in-out text-[#666666] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2"
+                    >
+                      {step.subtitle}
+                    </h6>
+                  </div>
+                )}
                 <div className="box-border content-stretch flex items-center justify-start min-h-[110px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
                   <p 
-                    className="basis-0 grow min-h-[154px] min-w-px not-italic relative shrink-0 font-['Inter'] font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] text-center transition-all duration-300 ease-in-out text-[rgba(0,0,0,0.66)] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4"
+                    className="basis-0 grow min-w-px not-italic relative shrink-0 font-['Inter'] font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] text-center transition-all duration-300 ease-in-out text-[rgba(0,0,0,0.66)] mb-4 sm:mb-4 md:text-[16px] lg:min-h-[154px] xl:min-h-[154px] 2xl:min-h-[154px]"
                   >
                     {step.description}
                   </p>
