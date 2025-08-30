@@ -10,57 +10,57 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function HomeownerPage() {
   return (
-    <>
+    <div className="overflow-hidden">
       <ScrollAnimations />
       <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12 pt-[100px] sm:pt-[120px] lg:pt-[150px] pb-[80px] sm:pb-[100px]">
         <div className="flex flex-col items-start justify-start w-full">
           <header className="flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start w-full">
             <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[30px] items-center justify-start px-2.5 w-full">
               <h1
-                className="fade-up w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium"
+                className="fade-up w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium mb-4 sm:mb-3 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6"
                 style={{ 
                   fontFamily: '"Aeonik Pro", sans-serif',
-                  color: "var(--Text-Title, #141414)"
+                  color: "#000"
                 }}
               >
                 <span style={{ color: "var(--Primary-Color, #115056)" }}>Sprk Stands</span>
-                <span style={{ color: "var(--Text-Title, #141414)" }}> with Solar Homeowners</span>
+                <span style={{ color: "#000" }}> with Solar Homeowners</span>
               </h1>
               
               <div className="fade-up flex items-center justify-center px-2.5 w-full max-w-4xl">
-                <strong
-                  className={`${inter.className} text-center text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal`}
+                <p
+                  className={`${inter.className} text-center text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4`}
                   style={{
-                    color: "rgba(0,0,0,0.66)"
+                    color: "#000"
                   }}
                 >
                   You&apos;ve invested in the future. Sprk is here to help protect your green investment—whether<br />
                   you&apos;re thinking about solar, troubleshooting a system, or preparing to buy or sell a solar-powered home.
-                </strong>
+                </p>
               </div>
             </div>
 
             <div className="slide-up-cards flex flex-wrap gap-4 sm:gap-6 items-center justify-center w-full">
               <Link
                 href="#find-solar-pro"
-                className="group bg-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-white text-[16px] sm:text-[18px] md:text-[20px] lg:text-[25px] font-medium leading-[110%] whitespace-nowrap hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out border border-[#115056]"
-                style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                className="group bg-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-white text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out border border-[#115056] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
+                style={{ fontFamily: 'Inter, sans-serif', color: 'var(--Paragraph-1, #000)' }}
               >
                 Find a Certified Solar Pro
               </Link>
               
               <Link
                 href="#find-agent"
-                className="group bg-[#F1FAFA] border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[25px] font-medium leading-[110%] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-                style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                className="group bg-[#F1FAFA] border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
+                style={{ fontFamily: 'Inter, sans-serif', color: 'var(--Paragraph-1, #000)' }}
               >
                 Find a Certified Real Estate Agent
               </Link>
               
               <Link
                 href="#find-inspector"
-                className="group border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[16px] sm:text-[18px] md:text-[20px] lg:text-[25px] font-medium leading-[110%] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out"
-                style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                className="group border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
+                style={{ fontFamily: 'Inter, sans-serif', color: 'var(--Paragraph-1, #000)' }}
               >
                 Find a Certified Home Inspector
               </Link>
@@ -75,10 +75,11 @@ export default function HomeownerPage() {
             <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
                 <h2
-                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium"
+                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5"
                   style={{
                     fontFamily: '"Aeonik Pro", sans-serif',
                     fontWeight: 500,
+                    color: "#000"
                   }}
                 >
                   You&apos;re Leading the Way
@@ -86,11 +87,11 @@ export default function HomeownerPage() {
               </div>
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
                 <strong
-                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center px-4 sm:px-0 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal"
+                  className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center px-4 sm:px-0 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
                   style={{
                     fontFamily: 'Inter',
                     fontWeight: 400,
-                    color: "rgba(0,0,0,0.66)",
+                    color: "#000",
                   }}
                 >
                   Solar homeowners are making one of the smartest investments—for their home and for the planet.<br />
@@ -116,11 +117,11 @@ export default function HomeownerPage() {
                   <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-center pb-10 pt-[30px] px-[30px] relative shrink-0 w-full flex-1">
                     <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                       <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center font-medium`}
+                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
                         style={{
                           fontFamily: 'Inter',
                           fontWeight: 500,
-                          color: "var(--Text-Title, #141414)"
+                          color: "var(--Paragraph-1, #000)"
                         }}
                       >
                         Your solar investment is documented and valued properly
@@ -148,11 +149,11 @@ export default function HomeownerPage() {
                   <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-center pb-10 pt-[30px] px-[30px] relative shrink-0 w-full flex-1">
                     <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                       <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center font-medium`}
+                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
                         style={{
                           fontFamily: 'Inter',
                           fontWeight: 500,
-                          color: "var(--Text-Title, #141414)"
+                          color: "var(--Paragraph-1, #000)"
                         }}
                       >
                         You avoid confusion during appraisals, refinancing, or home sales
@@ -180,11 +181,11 @@ export default function HomeownerPage() {
                   <div className="bg-white box-border content-stretch flex flex-col gap-[22px] items-start justify-center pb-10 pt-[30px] px-[30px] relative shrink-0 w-full flex-1">
                     <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                       <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center font-medium`}
+                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
                         style={{
                           fontFamily: 'Inter',
                           fontWeight: 500,
-                          color: "var(--Text-Title, #141414)"
+                          color: "var(--Paragraph-1, #000)"
                         }}
                       >
                         You work with professionals who understand how to represent your<br />
@@ -202,10 +203,10 @@ export default function HomeownerPage() {
 
           <div className="bounce-in content-stretch flex items-start justify-center pb-0 pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full">
             <h4
-              className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
+              className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-3 xl:mb-3 2xl:mb-3"
               style={{ 
                 fontFamily: '"Aeonik Pro", sans-serif',
-                color: "rgba(0,0,0,0.66)"
+                color: "#000"
               }}
             >
               You&apos;re doing the right thing. We&apos;re here to make sure the solar<br />
@@ -268,14 +269,14 @@ export default function HomeownerPage() {
                 </h2>
               </div>
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
-                <strong
-                  className={`${inter.className} text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-4 sm:px-0`}
+                <p
+                  className={`${inter.className} text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4`}
                   style={{
-                    color: "rgba(255,255,255,0.8)"
+                    color: "#fff"
                   }}
                 >
                   Sprk Reports help you at every stage of the solar homeowner journey:
-                </strong>
+                </p>
               </div>
             </div>
 
@@ -585,20 +586,21 @@ export default function HomeownerPage() {
       </section>
 
       {/* Section 6 */}
-      <section className="section-6 box-border content-stretch flex flex-col gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
-        <div className="content-stretch flex flex-col items-center gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] w-full">
+      <section className="section-6 box-border content-stretch flex flex-col gap-6 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-8 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
+        <div className="content-stretch flex flex-col items-center gap-6 sm:gap-10 lg:gap-12 xl:gap-[50px] w-full">
           {/* Header Content */}
-          <div className="content-stretch flex flex-col items-center gap-5 w-full">
+          <div className="content-stretch flex flex-col items-center gap-4 sm:gap-5 w-full">
             <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
-              <h1
-                className="fade-up basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[#141414] text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium px-4 sm:px-0"
+              <h2
+                className="fade-up basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium px-4 sm:px-0 mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5"
                 style={{ 
                   fontFamily: '"Aeonik Pro", sans-serif',
-                  fontWeight: 500
+                  fontWeight: 500,
+                  color: "#000"
                 }}
               >
                 Learn More. Feel Confident. Move Forward.
-              </h1>
+              </h2>
             </div>
             <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
               <div
@@ -606,17 +608,16 @@ export default function HomeownerPage() {
                 style={{
                   fontFamily: 'Inter',
                   fontWeight: 400,
-                  color: "rgba(0,0,0,0.66)"
+                  color: "#000"
                 }}
               >
-                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-0 block">
+                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2 block">
                   We know solar can feel confusing especially when it comes to ownership types, warranties, system value, and resale.
                 </strong>
-                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-0 block">
+                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2 block">
                   That&apos;s why we built the <span className="font-medium">[Sprk Blog]</span> to answer your biggest questions with clear, credible guidance written by professionals who understand both energy and real estate.
                 </strong>
-                <br />
-                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-0 block">
+                <strong className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2 block">
                   Whether you&apos;re reviewing a report, planning to sell, or just curious what your system&apos;s worth Sprk is here for you.
                 </strong>
               </div>
@@ -654,6 +655,6 @@ export default function HomeownerPage() {
       {/* Scroll to Top Button */}
       <ScrollToTop />
 
-      </>
+      </div>
      );
 }

@@ -78,7 +78,7 @@ export default function ReportOverview({
   }
 }: ReportOverviewProps) {
   return (
-    <section className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start px-4 lg:px-24 py-[50px] lg:py-[100px]">
+    <div className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start px-4 lg:px-24 py-[50px] lg:py-[100px]">
       <div className="w-full max-w-[1248px] flex flex-col gap-[25px] lg:gap-[50px] items-start justify-start">
         <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden">
           {/* Video/Image Section */}
@@ -147,6 +147,6 @@ export default function ReportOverview({
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

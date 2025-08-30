@@ -1,6 +1,7 @@
 'use client';
 
 import ScrollToTop from '@/components/ScrollToTop';
+import ScrollAnimations from '@/components/ScrollAnimations';
 import ReportOverview from '@/components/reports/ReportOverview';
 import WhatThisReport from '@/components/reports/WhatThisReport';
 import WhyThisReportMatters from '@/components/reports/WhyThisReportMatters';
@@ -12,12 +13,13 @@ import FindReport from '@/components/reports/FindReport';
 export default function SolarListingReport() {
   return (
       <>
-          <section className="w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
+          <ScrollAnimations />
+          <section className="section-1 w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
               <div className="w-full flex flex-col items-start justify-start">
                   <header className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start">
                       <div className="w-full flex flex-col gap-[15px] lg:gap-[30px] items-center justify-start px-2.5 py-0">
                           {/* Title */}
-                          <h1 className="w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] mb-4 lg:mb-0">
+                          <h1 className="fade-up w-full text-center text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] mb-4 lg:mb-0">
                               <span className="text-[#115056]">Sprk Solar Listing</span>
                               <span className="text-[#141414]"> Report</span>
                           </h1>
@@ -25,10 +27,10 @@ export default function SolarListingReport() {
                           {/* Subtitle and Description */}
                           <div className="w-full flex items-center justify-center px-2.5 py-0">
                               <div className="w-full max-w-4xl text-center">
-                                  <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] font-semibold font-['Inter'] text-[rgba(0,0,0,0.66)] mb-4">
+                                  <p className="text-reveal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] font-semibold font-['Inter'] text-[rgba(0,0,0,0.66)] mb-4">
                                       The Key to Selling a Solar Home.
                                   </p>
-                                  <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] lg:leading-[1.6] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)]">
+                                  <p className="text-reveal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] lg:leading-[1.6] font-normal font-['Inter'] text-[rgba(0,0,0,0.66)]">
                                       This interactive report is built to help agents and homeowners showcase the benefits of a solar home by clearly presenting solar ownership, savings, system details, and transfer guidance.
                                   </p>
                               </div>
@@ -37,14 +39,14 @@ export default function SolarListingReport() {
 
                       {/* Buttons */}
                       <div className="w-full flex flex-col sm:flex-row gap-[15px] items-center justify-center">
-                          <button className="w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
+                          <button className="slide-up-cards w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] hover:bg-[#0d3e42] transition-colors duration-200">
                               <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap">
                                   Get This Report
                               </span>
                           </button>
 
-                          <button className="w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] whitespace-nowrap">
+                          <button className="slide-up-cards w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] hover:bg-[#115056] hover:text-white transition-all duration-200">
+                              <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] hover:text-white whitespace-nowrap transition-colors duration-200">
                                   See a Sample Report
                               </span>
                           </button>
@@ -52,6 +54,8 @@ export default function SolarListingReport() {
                   </header>
               </div>
           </section>
+          <section className="section-2">
+          
           <ReportOverview
               title="Sample Report"
               imageSrc="/solar-listing-report-page/section 2/samplereport.svg"
@@ -67,6 +71,8 @@ export default function SolarListingReport() {
                   console.log('Find a Sprk Certified Pro clicked');
               }}
           />
+          </section>
+          <section className="section-3">
           <WhatThisReport
               title="What This Report Is"
               content={{
@@ -91,6 +97,8 @@ export default function SolarListingReport() {
               imageSrc="/solar-listing-report-page/section 3/image1.svg"
               imageAlt="Solar Listing Report Preview"
           />
+          </section>
+          <section className="section-4">
           <WhyThisReportMatters
               title="Why This Report Matters in<br />Real Estate"
               imageSrc="/solar-listing-report-page/section 4/image1.svg"
@@ -114,6 +122,8 @@ export default function SolarListingReport() {
                   }
               ]}
           />
+          </section>
+          <section className="section-5">
           <HowToGetThisReport
               title="How to Get This Report"
               ctaButtonText="Find a Sprk Certified Pro"
@@ -148,6 +158,8 @@ export default function SolarListingReport() {
                   }
               ]}
           />
+          </section>
+          <section className="section-6">
           <AnalyzeThisReport
               title="What's Analyzed in This Report"
               description="The Sprk Solar Listing Report compiles verified data to clearly communicate the financial and efficiency benefits of a solar-powered home."
@@ -176,6 +188,8 @@ export default function SolarListingReport() {
                   }
               ]}
           />
+          </section>
+          <section className="section-7">
           <AboutReport
               title="What's in the Report"
               backgroundColor="#115056"
@@ -210,6 +224,8 @@ export default function SolarListingReport() {
               }}
               showNavigation={true}
           />
+          </section>
+        
           <FindReport
               title="Sample Report & Next Steps"
               imageSrc="/solar-listing-report-page/section 8/image1.svg"

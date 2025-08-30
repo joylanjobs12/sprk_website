@@ -50,9 +50,9 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
     };
     
     return (
-      <div key={index} className={`${getAnimationClass(index)} bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0`}>
-        <div className="flex flex-col items-center justify-start w-full overflow-clip">
-          <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center lg:items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px] xl:justify-center">
+      <div key={index} className={`${getAnimationClass(index)} bg-white ${getWidthClass(index, rowIndex)} ${isLarge ? 'lg:col-span-2 xl:col-span-3' : ''} rounded-[10px] border border-[rgba(17,80,86,0.5)] overflow-hidden shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] shrink-0 h-full`}>
+        <div className="flex flex-col items-center justify-start w-full overflow-clip h-full">
+          <div className="p-4 sm:p-6 lg:p-[30px] flex flex-col sm:flex-row items-center lg:items-center sm:items-end justify-start w-full border-b border-b-[#A5DCDF] relative gap-4 sm:gap-6 lg:gap-[30px] xl:justify-center min-h-[120px] sm:min-h-[140px] lg:min-h-[160px]">
             <div className="bg-white flex items-center justify-center rounded-[10px] w-[100px] h-[100px] sm:w-[110px] sm:h-[110px] lg:w-[130px] lg:h-[130px] border border-[#115056] shrink-0">
               <Image 
                 src={card.icon} 
@@ -63,16 +63,23 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
               />
             </div>
             <div className="flex flex-row items-center sm:items-end justify-center sm:justify-start flex-1 text-center sm:text-left">
-              <div className="bg-white flex items-center justify-center sm:justify-start rounded-[10px] shrink-0">
+              <div className="bg-white flex items-center justify-center sm:justify-start rounded-[10px] flex-1 min-w-0">
                 <h3
-                  className="text-[24px] sm:text-[32px] md:text-[38px] lg:text-[45px] font-medium leading-[110%] text-black"
-                  style={{ fontFamily: '"Aeonik Pro", sans-serif' }}
+                  className="text-[40px] sm:text-[40px] md:text-[35px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] font-medium leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-black break-words hyphens-auto word-wrap overflow-wrap-anywhere mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
+                  style={{ 
+                    fontFamily: 'Inter, sans-serif',
+                    fontWeight: 500,
+                    color: 'var(--Paragraph-1, #000)',
+                    wordBreak: 'break-word',
+                    overflowWrap: 'break-word',
+                    hyphens: 'auto'
+                  }}
                   dangerouslySetInnerHTML={{ __html: card.label }}
                 />
               </div>
             </div>
           </div>
-          <div className="bg-gray-50 flex flex-col gap-3 sm:gap-4 lg:gap-5 items-center justify-start pb-4 sm:pb-6 lg:pb-[30px] pt-6 sm:pt-8 lg:pt-[50px] w-full">
+          <div className="bg-gray-50 flex flex-col gap-3 sm:gap-4 lg:gap-5 items-center justify-start pb-4 sm:pb-6 lg:pb-[30px] pt-6 sm:pt-8 lg:pt-[50px] w-full flex-1">
             <div className="flex items-start justify-start px-4 sm:px-6 lg:px-[30px] w-full">
               <p 
                 className={`${inter.className} text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-[120%] text-black/66 flex-1 min-h-[80px] sm:min-h-[90px] lg:min-h-[105px] text-center sm:text-left`}

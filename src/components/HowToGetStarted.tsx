@@ -64,10 +64,10 @@ const HowToGetStarted: React.FC<HowToGetStartedProps> = ({
         {steps.map((step, index) => (
           <div
             key={index}
-            className={`${getAnimationClass(index)} basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[280px] sm:min-w-[295px] overflow-clip relative rounded-[10px] shrink-0 transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105`}
+            className={`${getAnimationClass(index)} basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[280px] sm:min-w-[290px] overflow-clip relative rounded-[10px] shrink-0 transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105`}
             style={{ animationDelay: `${index * 0.2}s` }}
           >
-            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-[280px] sm:min-w-[295px] px-0 py-[30px] sm:py-[50px] relative shrink-0 w-full">
+            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-0 px-0 py-[30px] sm:py-[50px] relative shrink-0 w-full">
               <div className="bg-[rgba(86,205,69,0.05)] box-border content-stretch flex items-start justify-center px-6 sm:px-10 py-2.5 relative rounded-[50px] shrink-0 transition-all duration-300 ease-in-out hover:bg-[rgba(86,205,69,0.1)] hover:transform hover:scale-105">
                 <div aria-hidden="true" className="absolute border border-[#56cd45] border-solid inset-0 pointer-events-none rounded-[50px] transition-all duration-300 ease-in-out" />
                 <div className="font-['Inter'] font-medium leading-[0] not-italic relative shrink-0 text-[#56cd45] text-[20px] sm:text-[28px] text-center text-nowrap transition-all duration-300 ease-in-out">

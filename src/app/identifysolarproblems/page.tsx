@@ -1,101 +1,101 @@
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ScrollToTop from "@/components/ScrollToTop";
-
+import ScrollAnimations from "@/components/ScrollAnimations";
 
 export default function IdentifySolarProblems() {
   return (
     <>
-          <section className="w-full flex flex-col items-center justify-start pt-[100px] pb-[80px] px-4 sm:pt-[120px] sm:pb-[90px] sm:px-6 md:pt-[130px] md:pb-[90px] md:px-8 lg:pt-[150px] lg:pb-[100px] lg:px-24 xl:pt-[150px] xl:pb-[100px] xl:px-24 2xl:pt-[150px] 2xl:pb-[100px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start">
-                  <header className="w-full flex flex-col items-center justify-start gap-8 sm:gap-10 md:gap-12 lg:gap-[50px] xl:gap-[50px] 2xl:gap-[50px]">
-                      <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px] px-2.5">
-                          <h1 className="w-full text-center font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6
-              text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px]
-              font-['Aeonik_Pro'] text-[#141414]">
-                              <span className="text-[#115056]">Solar Can Last 50 Years</span>
-                              <br />
-                              <span className="text-[#141414]">But Not Without a Little Help</span>
+      <ScrollAnimations />
+      
+      {/* Section 1 - Hero */}
+      <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
+        <div className="text-center pt-[100px] sm:pt-[120px] lg:pt-[150px] xl:pt-[150px] pb-[80px] sm:pb-[90px] lg:pb-[100px] xl:pb-[100px]">
+          <h1
+            className="fade-up text-center mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6 text-[40px] sm:text-[40px] md:text-[40px] lg:text-[80px] xl:text-[80px] 2xl:text-[80px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
+            style={{
+              textAlign: "center",
+              fontFamily: '"Aeonik Pro", sans-serif',
+              fontStyle: "normal",
+              fontWeight: 500,
+            }}
+          >
+            <span style={{ color: "var(--Primary-Color, #115056)" }}>Solar Can Last 50 Years</span>{" "}<br />
+            <span style={{ color: "var(--Text-Title, #141414)" }}>But Not Without a Little Help</span>
                           </h1>
-
-                          <div className="w-full flex items-center justify-center px-2.5">
-                              <p className="text-center font-normal leading-[120%] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4
-                text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px]
-                font-['Inter'] text-[rgba(0,0,0,0.66)] max-w-4xl">
-                                  Many solar systems have issues that go unnoticed—until it's time to sell or transfer. Sprk Certified Pros
-                                  help uncover and resolve solar problems before they cost you time, money, or a buyer.
-                              </p>
-                          </div>
-                      </div>
-
-                      <div className="w-full flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-4 lg:gap-[15px] xl:gap-[15px] 2xl:gap-[15px]">
-                          <button className="bg-[#115056] flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3 md:px-8 md:py-3 lg:px-[30px] lg:py-3 xl:px-[30px] xl:py-3 2xl:px-[30px] 2xl:py-3 rounded-[30px] h-[44px] sm:h-[48px] md:h-[50px] lg:h-[52px] xl:h-[52px] 2xl:h-[52px] min-w-[44px]">
-                              <span className="font-medium leading-[110%] text-white text-nowrap
-                text-[16px] sm:text-[16px] md:text-[16px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px]
-                font-['Aeonik_Pro']">
+          <strong
+            className="fade-up max-w-4xl mx-auto opacity-80 px-4 sm:px-0 mb-6 sm:mb-6 md:mb-6 lg:mb-8 xl:mb-8 2xl:mb-8 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
+            style={{
+              fontFamily: 'Inter',
+              fontWeight: 400,
+              color: "rgba(0,0,0,0.66)",
+            }}
+          >
+            Many solar systems have issues that go unnoticed—until it's time to sell or transfer. Sprk Certified Pros help uncover and resolve solar problems before they cost you time, money, or a buyer.
+          </strong>
+          
+          <div className="slide-up-cards mt-6 sm:mt-8 md:mt-8 lg:mt-8 xl:mt-8 flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-4 lg:gap-[15px] xl:gap-[15px] 2xl:gap-[15px]">
+            <button className="group bg-[#115056] flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3 md:px-8 md:py-3 lg:px-[30px] lg:py-3 xl:px-[30px] xl:py-3 2xl:px-[30px] 2xl:py-3 rounded-[30px] h-[44px] sm:h-[48px] md:h-[50px] lg:h-[52px] xl:h-[52px] 2xl:h-[52px] min-w-[44px] hover:bg-[#0d3d42] hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+              <span className="font-medium leading-[110%] text-white text-nowrap text-[16px] sm:text-[16px] md:text-[16px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] font-['Aeonik_Pro'] group-hover:text-white transition-colors duration-300">
                                   Find a Certified Inspector
                               </span>
                           </button>
 
-                          <button className="border border-[#115056] border-solid flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3 md:px-8 md:py-3 lg:px-[30px] lg:py-3 xl:px-[30px] xl:py-3 2xl:px-[30px] 2xl:py-3 rounded-[30px] h-[44px] sm:h-[48px] md:h-[50px] lg:h-[52px] xl:h-[52px] 2xl:h-[52px] min-w-[44px] bg-transparent">
-                              <span className="font-medium leading-[110%] text-[#115056] text-nowrap
-                text-[16px] sm:text-[16px] md:text-[16px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px]
-                font-['Aeonik_Pro']">
+            <button className="group border border-[#115056] border-solid flex items-center justify-center px-6 py-3 sm:px-7 sm:py-3 md:px-8 md:py-3 lg:px-[30px] lg:py-3 xl:px-[30px] xl:py-3 2xl:px-[30px] 2xl:py-3 rounded-[30px] h-[44px] sm:h-[48px] md:h-[50px] lg:h-[52px] xl:h-[52px] 2xl:h-[52px] min-w-[44px] bg-transparent hover:bg-[#115056] hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out">
+              <span className="font-medium leading-[110%] text-[#115056] text-nowrap text-[16px] sm:text-[16px] md:text-[16px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] font-['Aeonik_Pro'] group-hover:text-white transition-colors duration-300">
                                   Find a Certified Solar Company
                               </span>
                           </button>
                       </div>
-                  </header>
               </div>
           </section>
-          <section className="w-full flex flex-col items-center justify-start py-[80px] px-4 sm:py-[90px] sm:px-6 md:py-[90px] md:px-8 lg:py-[100px] lg:px-24 xl:py-[100px] xl:px-24 2xl:py-[100px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-8 sm:gap-10 md:gap-12 lg:gap-[50px] xl:gap-[50px] 2xl:gap-[50px]">
-                  {/* Section Header */}
-                  <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px]">
-                      <div className="w-full flex items-center justify-center">
-                          <h2 className="text-center font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6
-              text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]
-              font-['Aeonik_Pro'] text-[#141414]">
+
+      {/* Section 2 - Solar Equipment Problems */}
+      <section className="section-2 box-border content-stretch flex flex-col gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
+        <div className="content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start relative shrink-0 w-full max-w-[1248px]">
+          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+              <h2
+                className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                               Solar Equipment Problems
                           </h2>
                       </div>
                   </div>
 
-                  {/* Content Card */}
-                  <div className="w-full flex flex-col items-start justify-start gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px]">
-                      <div className="w-full flex flex-wrap items-start justify-start gap-6">
-                          <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-              h-auto sm:h-auto md:h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
-                              <div className="w-full h-full flex flex-col lg:flex-row xl:flex-row 2xl:flex-row items-start justify-start">
-                                  {/* Image Section */}
-                                  <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 bg-gray-50 flex items-center justify-center
-                  h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] min-w-[350px]">
+          <div className="card-flip bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[500px] min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+            <div className="content-stretch flex flex-col lg:flex-row items-center justify-start min-w-inherit overflow-clip relative size-full">
+              <div className="image-slide-left bg-gray-50 box-border content-stretch flex h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] items-center justify-center overflow-clip relative shrink-0 w-full lg:w-1/2 min-w-[350px]">
                                       <img
                                           src="/indentify-solar-problems/section 1/image1.svg"
                                           alt="Solar equipment problems illustration"
                                           className="w-full h-full object-cover"
                                       />
                                   </div>
-
-                                  {/* Content Section */}
-                                  <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 bg-white flex flex-col items-start justify-start gap-6 sm:gap-7 md:gap-8 lg:gap-[35px] xl:gap-[35px] 2xl:gap-[35px]
-                  p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] min-w-[350px]
-                  h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
-
-                                      {/* Card Title */}
-                                      <div className="w-full flex items-start justify-start">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                      text-[25px] sm:text-[25px] md:text-[25px] lg:text-[30px] xl:text-[30px] 2xl:text-[30px]
-                      font-['Aeonik_Pro'] text-[#141414]">
+              <div className="testimonial-content bg-white box-border content-stretch flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[35px] xl:gap-[35px] 2xl:gap-[35px] items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full lg:w-1/2 min-w-[350px] h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h3
+                    className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[30px] xl:text-[30px] 2xl:text-[30px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
                                               Most solar systems are installed and then left unchecked, for decades.
                                           </h3>
                                       </div>
-
-                                      {/* Card Body */}
-                                      <div className="w-full flex flex-col items-center justify-center gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
-                                          <div className="w-full flex items-center justify-center gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
-                                              <p className="font-normal leading-[120%] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4
-                        text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                        font-['Inter'] text-[rgba(0,0,0,0.66)]">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <p
+                    className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                      color: "rgba(0,0,0,0.66)",
+                    }}
+                  >
                                                   Because solar has no moving parts and operates silently, it's not always obvious when something goes wrong. But hidden issues can quietly cost homeowners thousands in unnecessary utility bills and cause even bigger problems down the road.
                                                   <br /><br />
                                                   A solar inspection by a Sprk Certified inspector helps ensure your system is working the way it should. And if it's not, it brings clarity to best and lowest cost repairs to get your system performing optimally.
@@ -103,41 +103,46 @@ export default function IdentifySolarProblems() {
                                           </div>
                                       </div>
                                   </div>
-                              </div>
-                          </div>
-                      </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                   </div>
               </div>
           </section>
-          <section className="w-full bg-[#115056] flex flex-col items-center justify-start py-[100px] px-4 sm:py-[120px] sm:px-6 md:py-[130px] md:px-8 lg:py-[150px] lg:px-24 xl:py-[150px] xl:px-24 2xl:py-[150px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-12 sm:gap-14 md:gap-16 lg:gap-20 xl:gap-20 2xl:gap-20">
-                  {/* Section Header */}
-                  <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px]">
-                      <div className="w-full flex items-center justify-center">
-                          <h2 className="text-center font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6
-                               text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]
-                               font-['Aeonik_Pro'] text-white">
+
+      {/* Section 3 - Unresolved Issues */}
+      <section className="section-3 bg-[#115056] box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start pb-12 sm:pb-16 lg:pb-20 xl:pb-[100px] pt-12 sm:pt-16 lg:pt-20 xl:pt-[100px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[94px] relative size-full max-w-[1440px] mx-auto">
+        <div className="content-stretch flex flex-col items-center justify-start relative shrink-0 w-full">
+          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+              <h2
+                className="bounce-in basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-white text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                               Unresolved issues can lead to:
                           </h2>
                       </div>
                   </div>
-
-                  {/* Cards Grid */}
-                  <div className="w-full flex flex-wrap items-center justify-center gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-6 2xl:gap-6">
-                      {/* Card 1: Safety risks and roof damage - Large */}
-                      <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-                           w-full sm:w-full md:w-full lg:w-[712px] xl:w-[712px] 2xl:w-[712px]">
-                          <div className="w-full flex flex-col items-center justify-start">
-                              <div className="w-full bg-gray-50 flex flex-col items-center justify-start py-6 sm:py-7 md:py-8 lg:py-[30px] xl:py-[30px] 2xl:py-[30px] gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5">
-                                  <div className="w-full flex items-start justify-start px-4 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
-                                      <h3 className="font-normal leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                           text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                           font-['Inter'] text-[#141414] min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[124px] xl:min-h-[124px] 2xl:min-h-[124px]">
+        </div>
+        <div className="content-start grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-start justify-start relative shrink-0 w-full">
+          {/* Card 1: Safety risks and roof damage */}
+          <div className="report-card bg-white md:col-span-2 lg:col-span-2 min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h6
+                    className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%]"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                    }}
+                  >
                                           Safety risks and roof damage
-                                      </h3>
+                  </h6>
                                   </div>
                               </div>
-                              <div className="w-full flex items-center justify-start relative">
+              <div className="box-border content-stretch flex items-start justify-center relative shrink-0 w-full">
                                   <div className="absolute border-b border-[#a5dcdf] inset-x-0 top-0 pointer-events-none"></div>
                                   <img
                                       src="/indentify-solar-problems/section 2/safety-risk.svg"
@@ -146,22 +151,26 @@ export default function IdentifySolarProblems() {
                                   />
                               </div>
                           </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                       </div>
 
-                      {/* Card 2: Damaged equipment from lack of maintenance - Small */}
-                      <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-                           w-full sm:w-full md:w-full lg:w-[512px] xl:w-[512px] 2xl:w-[512px]">
-                          <div className="w-full flex flex-col items-center justify-start">
-                              <div className="w-full bg-gray-50 flex flex-col items-center justify-start py-6 sm:py-7 md:py-8 lg:py-[30px] xl:py-[30px] 2xl:py-[30px] gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 min-w-[300px] lg:min-w-[512px] xl:min-w-[512px] 2xl:min-w-[512px]">
-                                  <div className="w-full flex items-start justify-start px-4 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
-                                      <h3 className="font-normal leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                           text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                           font-['Inter'] text-[#141414] min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[124px] xl:min-h-[124px] 2xl:min-h-[124px]">
+          {/* Card 2: Damaged equipment */}
+          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h6
+                    className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%]"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                    }}
+                  >
                                           Damaged equipment from lack of maintenance
-                                      </h3>
+                  </h6>
                                   </div>
                               </div>
-                              <div className="w-full flex items-center justify-start relative min-w-[300px] lg:min-w-[512px] xl:min-w-[512px] 2xl:min-w-[512px]">
+              <div className="box-border content-stretch flex items-start justify-center relative shrink-0 w-full">
                                   <div className="absolute border-b border-[#a5dcdf] inset-x-0 top-0 pointer-events-none"></div>
                                   <img
                                       src="/indentify-solar-problems/section 2/damage.svg"
@@ -170,22 +179,26 @@ export default function IdentifySolarProblems() {
                                   />
                               </div>
                           </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                       </div>
 
-                      {/* Card 3: Paying unnecessary utility bills - Small */}
-                      <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-                           w-full sm:w-full md:w-full lg:w-[512px] xl:w-[512px] 2xl:w-[512px]">
-                          <div className="w-full flex flex-col items-center justify-start">
-                              <div className="w-full bg-gray-50 flex flex-col items-center justify-start py-6 sm:py-7 md:py-8 lg:py-[30px] xl:py-[30px] 2xl:py-[30px] gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 min-w-[300px] lg:min-w-[512px] xl:min-w-[512px] 2xl:min-w-[512px]">
-                                  <div className="w-full flex items-start justify-start px-4 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
-                                      <h3 className="font-normal leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                           text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                           font-['Inter'] text-[#141414] min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[124px] xl:min-h-[124px] 2xl:min-h-[124px]">
+          {/* Card 3: Paying unnecessary bills */}
+          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h6
+                    className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%]"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                    }}
+                  >
                                           Paying unnecessary utility bills
-                                      </h3>
+                  </h6>
                                   </div>
                               </div>
-                              <div className="w-full flex items-center justify-start relative min-w-[300px] lg:min-w-[512px] xl:min-w-[512px] 2xl:min-w-[512px]">
+              <div className="box-border content-stretch flex items-start justify-center relative shrink-0 w-full">
                                   <div className="absolute border-b border-[#a5dcdf] inset-x-0 top-0 pointer-events-none"></div>
                                   <img
                                       src="/indentify-solar-problems/section 2/paying.svg"
@@ -194,22 +207,26 @@ export default function IdentifySolarProblems() {
                                   />
                               </div>
                           </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                       </div>
 
-                      {/* Card 4: Buyer hesitation or lost equity - Large */}
-                      <div className="bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-                           w-full sm:w-full md:w-full lg:w-[712px] xl:w-[712px] 2xl:w-[712px]">
-                          <div className="w-full flex flex-col items-center justify-start">
-                              <div className="w-full bg-gray-50 flex flex-col items-center justify-start py-6 sm:py-7 md:py-8 lg:py-[30px] xl:py-[30px] 2xl:py-[30px] gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5">
-                                  <div className="w-full flex items-start justify-start px-4 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
-                                      <h3 className="font-normal leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                           text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                           font-['Inter'] text-[#141414] min-h-[100px] sm:min-h-[110px] md:min-h-[120px] lg:min-h-[124px] xl:min-h-[124px] 2xl:min-h-[124px]">
+          {/* Card 4: Buyer hesitation */}
+          <div className="report-card bg-white md:col-span-2 lg:col-span-2 min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+            <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
+              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start p-[30px] relative shrink-0 w-full">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h6
+                    className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%]"
+                    style={{
+                      fontFamily: 'Inter',
+                      fontWeight: 400,
+                    }}
+                  >
                                           Buyer hesitation or lost equity
-                                      </h3>
+                  </h6>
                                   </div>
                               </div>
-                              <div className="w-full flex items-center justify-start relative">
+              <div className="box-border content-stretch flex items-start justify-center relative shrink-0 w-full">
                                   <div className="absolute border-b border-[#a5dcdf] inset-x-0 top-0 pointer-events-none"></div>
                                   <img
                                       src="/indentify-solar-problems/section 2/buyer.svg"
@@ -218,355 +235,12 @@ export default function IdentifySolarProblems() {
                                   />
                               </div>
                           </div>
-                      </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                   </div>
               </div>
           </section>
-          <section className="w-full flex flex-col items-center justify-start py-[80px] px-4 sm:py-[90px] sm:px-6 md:py-[90px] md:px-8 lg:py-[100px] lg:px-24 xl:py-[100px] xl:px-24 2xl:py-[100px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-16 sm:gap-18 md:gap-20 lg:gap-[100px] xl:gap-[100px] 2xl:gap-[100px]">
-                  {/* Main Content */}
-                  <div className="w-full flex flex-col lg:flex-row xl:flex-row 2xl:flex-row items-start justify-center gap-6">
-                      {/* Left Sidebar - Sticky */}
-                      <div className="w-full lg:w-[612px] xl:w-[612px] 2xl:w-[612px] flex flex-col items-center justify-start gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px] 
-                           pt-0 sm:pt-0 md:pt-0 lg:pt-[150px] xl:pt-[150px] 2xl:pt-[150px] pb-0 px-0
-                           lg:sticky xl:sticky 2xl:sticky lg:top-0 xl:top-0 2xl:top-0 lg:min-w-[612px] xl:min-w-[612px] 2xl:min-w-[612px]">
-                          <h2 className="w-full font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6
-                               text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]
-                               font-['Aeonik_Pro'] text-[#141414]">
-                              11 Common Solar Problems
-                          </h2>
-                          <p className="w-full font-normal leading-[120%] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4
-                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px]
-                               font-['Inter'] text-[rgba(0,0,0,0.66)]">
-                              Sprk has identified the most frequent and disruptive issues found in real-world solar inspections:
-                          </p>
-                      </div>
 
-                      {/* Right Column - Scrollable Cards */}
-                      <div className="w-full flex-1 flex items-start justify-start">
-                          <div className="w-full lg:w-[612px] xl:w-[612px] 2xl:w-[612px] flex flex-col items-center justify-start gap-6 sm:gap-7 md:gap-8 lg:gap-[30px] xl:gap-[30px] 2xl:gap-[30px]
-                               pt-0 sm:pt-0 md:pt-0 lg:pt-[150px] xl:pt-[150px] 2xl:pt-[150px] pb-0 px-0">
-
-                              {/* Problem 1 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem1.svg"
-                                          alt="Solar Under Producing Energy"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              01
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Solar Under Producing Energy
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 2 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem2.svg"
-                                          alt="Solar Breakers Installed Incorrectly"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-start justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              02
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Solar Breakers Installed Incorrectly
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 3 - Split Image */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden flex gap-[3px]">
-                                      <div className="flex-1 h-full rounded-tl-[10px] overflow-hidden">
-                                          <img
-                                              src="/indentify-solar-problems/section 3/problem3.svg"
-                                              alt="Missing Labels on Solar Conduit"
-                                              className="w-full h-full object-cover"
-                                          />
-                                      </div>
-                                      <div className="flex-1 h-full rounded-tr-[10px] overflow-hidden">
-                                          <img
-                                              src="/indentify-solar-problems/section 3/problem4.svg"
-                                              alt="Missing Labels on Solar Breaker"
-                                              className="w-full h-full object-cover"
-                                          />
-                                      </div>
-                                  </div>
-                                  <div className="w-full flex items-start justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              03
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Missing Labels on Solar Conduit & Solar Breaker
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 4 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem5.svg"
-                                          alt="Rooftop Fire Code Violations"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              04
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Rooftop Fire Code Violations
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 5 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem6.svg"
-                                          alt="Trees Shading Solar Panels"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              05
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Trees Shading Solar Panels
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 6 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem7.svg"
-                                          alt="Loose Solar Panel Wires Under Panels"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-start justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              06
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Loose Solar Panel Wires Under Panels
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 7 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem8.svg"
-                                          alt="Improper Roof Penetrations"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              07
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Improper Roof Penetrations
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 8 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem9.svg"
-                                          alt="Debris Buildup on Solar Panels"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              08
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Debris Buildup on Solar Panels
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 9 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem10.svg"
-                                          alt="Pest Activity Under Panels"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-start justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              09
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Pest Activity (Birds, Rodents, Nesting) Under Panels
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 10 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem11.svg"
-                                          alt="Solar Panels Not Secured Properly"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-start justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              10
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Solar Panels Not Secured Properly
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                              {/* Problem 11 */}
-                              <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.2)] overflow-hidden">
-                                  <div className="w-full h-[200px] sm:h-[250px] md:h-[280px] lg:h-[300px] xl:h-[300px] 2xl:h-[300px] rounded-t-[10px] overflow-hidden">
-                                      <img
-                                          src="/indentify-solar-problems/section 3/problem1.svg"
-                                          alt="Broken or Damaged Solar Panels"
-                                          className="w-full h-full object-cover"
-                                      />
-                                  </div>
-                                  <div className="w-full flex items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 p-4 sm:p-5 md:p-6 lg:p-10 xl:p-10 2xl:p-10 rounded-b-[10px]">
-                                      <div className="flex items-center justify-center px-2 sm:px-2 md:px-2.5 lg:px-2.5 xl:px-2.5 2xl:px-2.5 py-1 sm:py-1 md:py-[5px] lg:py-[5px] xl:py-[5px] 2xl:py-[5px] rounded-[5px] border border-[rgba(0,0,0,0.2)] shrink-0">
-                                          <span className="font-medium leading-[110%] text-nowrap
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              11
-                                          </span>
-                                      </div>
-                                      <div className="flex-1 flex items-center justify-center">
-                                          <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[20px] sm:text-[22px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                                               font-['Aeonik_Pro'] text-[#141414]">
-                                              Broken or Damaged Solar Panels
-                                          </h3>
-                                      </div>
-                                  </div>
-                              </div>
-
-                          </div>
-                      </div>
-                  </div>
-
-                  {/* Bottom Text */}
-                  <div className="w-full flex items-start justify-center pt-6 sm:pt-7 md:pt-8 lg:pt-[30px] xl:pt-[30px] 2xl:pt-[30px] px-4 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px] pb-0">
-                      <p className="text-center font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4
-                           text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px]
-                           font-['Aeonik_Pro'] text-[rgba(0,0,0,0.66)] max-w-4xl">
-                          These problems may seem small, but together they can cost a homeowner thousands—or cause a buyer to walk away.
-                      </p>
-                  </div>
-              </div>
-          </section>
+      {/* HowItWorksSection */}
           <HowItWorksSection
               title="The Sprk Solution"
               subtitle="Sprk helps you identify, document, and resolve solar issues with clarity and confidence."
@@ -587,150 +261,110 @@ export default function IdentifySolarProblems() {
               }}
           />
 
-          <section className="w-full bg-[#115056] flex flex-col items-center justify-start py-[80px] px-4 sm:py-[90px] sm:px-6 md:py-[90px] md:px-8 lg:py-[100px] lg:px-24 xl:py-[100px] xl:px-24 2xl:py-[100px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-8 sm:gap-10 md:gap-12 lg:gap-[50px] xl:gap-[50px] 2xl:gap-[50px]">
-                  {/* Content Card */}
-                  <div className="w-full flex flex-wrap items-center justify-start gap-6">
-                      <div className="w-full bg-white rounded-[10px] border border-[rgba(0,0,0,0.15)] overflow-hidden
-                           h-auto sm:h-auto md:h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
-                          <div className="w-full h-full flex flex-col lg:flex-row xl:flex-row 2xl:flex-row items-start justify-start">
-                              {/* Image Section */}
-                              <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 bg-gray-50 flex items-center justify-center
-                                   h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] min-w-[350px]">
+      {/* Section 4 - Who Might Want Solar Inspection */}
+      <section className="section-4 bg-[#115056] box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start pb-12 sm:pb-16 lg:pb-20 xl:pb-[100px] pt-12 sm:pt-16 lg:pt-20 xl:pt-[100px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-[94px] relative size-full max-w-[1440px] mx-auto">
+        <div className="content-stretch flex flex-col items-center justify-start relative shrink-0 w-full">
+          <div className="card-flip bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[500px] min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg transition-all duration-300 ease-in-out">
+            <div className="content-stretch flex flex-col lg:flex-row items-center justify-start min-w-inherit overflow-clip relative size-full">
+              <div className="image-slide-left bg-gray-50 box-border content-stretch flex h-[250px] sm:h-[300px] md:h-[350px] lg:h-[500px] xl:h-[500px] 2xl:h-[500px] items-center justify-center overflow-clip relative shrink-0 w-full lg:w-1/2 min-w-[350px]">
                                   <img
                                       src="/indentify-solar-problems/section 5/whomight.svg"
                                       alt="Who might want a solar inspection"
                                       className="w-full h-full object-cover"
                                   />
                               </div>
-
-                              {/* Content Section */}
-                              <div className="w-full lg:w-1/2 xl:w-1/2 2xl:w-1/2 bg-white flex flex-col items-start justify-start gap-6 sm:gap-7 md:gap-8 lg:gap-[35px] xl:gap-[35px] 2xl:gap-[35px]
-                                   p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] min-w-[350px]
-                                   h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
-
-                                  {/* Card Title */}
-                                  <div className="w-full flex items-start justify-start">
-                                      <h3 className="font-medium leading-[110%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                           text-[35px] sm:text-[35px] md:text-[35px] lg:text-[45px] xl:text-[45px] 2xl:text-[45px]
-                                           font-['Aeonik_Pro'] text-[#141414]">
+              <div className="testimonial-content bg-white box-border content-stretch flex flex-col gap-6 sm:gap-7 md:gap-8 lg:gap-[35px] xl:gap-[35px] 2xl:gap-[35px] items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full lg:w-1/2 min-w-[350px] h-auto lg:h-[500px] xl:h-[500px] 2xl:h-[500px]">
+                <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
+                  <h3
+                    className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[45px] xl:text-[45px] 2xl:text-[45px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium"
+                    style={{
+                      fontFamily: '"Aeonik Pro", sans-serif',
+                      fontWeight: 500,
+                    }}
+                  >
                                           Who Might Want a<br />Solar Inspection?
                                       </h3>
                                   </div>
-
-                                  {/* Checklist Items */}
-                                  <div className="w-full flex flex-col items-start justify-start gap-3 sm:gap-3 md:gap-4 lg:gap-[15px] xl:gap-[15px] 2xl:gap-[15px]">
-                                      {/* Item 1 */}
+                <div className="content-stretch flex flex-col gap-3 sm:gap-3 md:gap-4 lg:gap-[15px] xl:gap-[15px] 2xl:gap-[15px] items-start justify-start relative shrink-0 w-full">
                                       <div className="w-full flex items-start justify-start gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
                                           <div className="shrink-0 w-6 h-6 flex items-center justify-center">
-                                              <img
-                                                  src="/indentify-solar-problems/section 5/icon.svg"
-                                                  alt="Check"
-                                                  className="w-full h-full"
-                                              />
+                      <img src="/indentify-solar-problems/section 5/icon.svg" alt="Check" className="w-full h-full" />
                                           </div>
-                                          <p className="flex-1 font-normal leading-[120%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                                               font-['Inter'] text-[#141414]">
+                    <p className="flex-1 font-normal leading-[120%] mb-2 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-['Inter'] text-[#141414]">
                                               <span className="font-semibold">Solar Homeowners</span> experiencing high utility bills, low energy output, or preparing to sell
                                           </p>
                                       </div>
-
-                                      {/* Item 2 */}
                                       <div className="w-full flex items-start justify-start gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
                                           <div className="shrink-0 w-6 h-6 flex items-center justify-center">
-                                              <img
-                                                  src="/indentify-solar-problems/section 5/icon.svg"
-                                                  alt="Check"
-                                                  className="w-full h-full"
-                                              />
+                      <img src="/indentify-solar-problems/section 5/icon.svg" alt="Check" className="w-full h-full" />
                                           </div>
-                                          <p className="flex-1 font-normal leading-[120%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                                               font-['Inter'] text-[#141414]">
+                    <p className="flex-1 font-normal leading-[120%] mb-2 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-['Inter'] text-[#141414]">
                                               <span className="font-semibold">Solar Home Buyers</span> who want to confirm system performance, longevity, and condition
                                           </p>
                                       </div>
-
-                                      {/* Item 3 */}
                                       <div className="w-full flex items-start justify-start gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
                                           <div className="shrink-0 w-6 h-6 flex items-center justify-center">
-                                              <img
-                                                  src="/indentify-solar-problems/section 5/icon.svg"
-                                                  alt="Check"
-                                                  className="w-full h-full"
-                                              />
+                      <img src="/indentify-solar-problems/section 5/icon.svg" alt="Check" className="w-full h-full" />
                                           </div>
-                                          <p className="flex-1 font-normal leading-[120%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                                               font-['Inter'] text-[#141414]">
+                    <p className="flex-1 font-normal leading-[120%] mb-2 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-['Inter'] text-[#141414]">
                                               <span className="font-semibold">Real Estate Agents</span> managing transactions involving solar-powered homes
                                           </p>
                                       </div>
-
-                                      {/* Item 4 */}
                                       <div className="w-full flex items-start justify-start gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
                                           <div className="shrink-0 w-6 h-6 flex items-center justify-center">
-                                              <img
-                                                  src="/indentify-solar-problems/section 5/icon.svg"
-                                                  alt="Check"
-                                                  className="w-full h-full"
-                                              />
+                      <img src="/indentify-solar-problems/section 5/icon.svg" alt="Check" className="w-full h-full" />
                                           </div>
-                                          <p className="flex-1 font-normal leading-[120%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                                               font-['Inter'] text-[#141414]">
+                    <p className="flex-1 font-normal leading-[120%] mb-2 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-['Inter'] text-[#141414]">
                                               <span className="font-semibold">Home Inspectors</span> looking to offer solar inspections as a value-add service
                                           </p>
                                       </div>
-
-                                      {/* Item 5 */}
                                       <div className="w-full flex items-start justify-start gap-1 sm:gap-1 md:gap-1 lg:gap-[5px] xl:gap-[5px] 2xl:gap-[5px]">
                                           <div className="shrink-0 w-6 h-6 flex items-center justify-center">
-                                              <img
-                                                  src="/indentify-solar-problems/section 5/icon.svg"
-                                                  alt="Check"
-                                                  className="w-full h-full"
-                                              />
+                      <img src="/indentify-solar-problems/section 5/icon.svg" alt="Check" className="w-full h-full" />
                                           </div>
-                                          <p className="flex-1 font-normal leading-[120%] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2
-                                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]
-                                               font-['Inter'] text-[#141414]">
+                    <p className="flex-1 font-normal leading-[120%] mb-2 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-['Inter'] text-[#141414]">
                                               <span className="font-semibold">Solar Companies</span> that want to validate installation quality or confirm repairs for customers
                                           </p>
                                       </div>
                                   </div>
                               </div>
                           </div>
-                      </div>
+            <div className="absolute border border-[rgba(0,0,0,0.15)] border-solid inset-0 pointer-events-none rounded-[10px]" />
                   </div>
               </div>
           </section>
-          <section className="w-full flex flex-col items-center justify-start py-[100px] px-4 sm:py-[120px] sm:px-6 md:py-[130px] md:px-8 lg:py-[150px] lg:px-24 xl:py-[150px] xl:px-24 2xl:py-[150px] 2xl:px-24">
-              <div className="w-full max-w-7xl flex flex-col items-center justify-start gap-8 sm:gap-10 md:gap-12 lg:gap-[50px] xl:gap-[50px] 2xl:gap-[50px]">
-                  {/* Section Header */}
-                  <div className="w-full flex flex-col items-center justify-start gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5">
-                      <div className="w-full flex items-center justify-center">
-                          <h2 className="text-center font-medium leading-[110%] mb-4 sm:mb-4 md:mb-4 lg:mb-6 xl:mb-6 2xl:mb-6
-                               text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]
-                               font-['Aeonik_Pro'] text-[#141414]">
+
+      {/* Section 5 - What to Do Next */}
+      <section className="section-5 box-border content-stretch flex flex-col gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
+        <div className="content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start relative shrink-0 w-full max-w-[1248px]">
+          <div className="content-stretch flex flex-col gap-[30px] items-center justify-start relative shrink-0 w-full">
+            <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+              <h2
+                className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 font-medium"
+                style={{
+                  fontFamily: '"Aeonik Pro", sans-serif',
+                  fontWeight: 500,
+                }}
+              >
                               What to Do Next
                           </h2>
                       </div>
-                      <div className="w-full flex items-center justify-center">
-                          <p className="text-center font-normal leading-[120%] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4
-                               text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px]
-                               font-['Inter'] text-[rgba(0,0,0,0.66)] max-w-4xl">
-                              If you have solar or are working with a solar-powered home, the best time to
-                              <br />find problems is before they disrupt your deal.
+            <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
+              <p
+                className="bounce-in basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center px-4 sm:px-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] max-w-4xl"
+                style={{
+                  fontFamily: 'Inter',
+                  fontWeight: 400,
+                  color: "rgba(0,0,0,0.66)",
+                }}
+              >
+                If you have solar or are working with a solar-powered home, the best time to<br />find problems is before they disrupt your deal.
                           </p>
                       </div>
                   </div>
 
-                  {/* Image Section */}
-                  <div className="w-full flex flex-col items-start justify-start">
-                      <div className="w-full rounded-[10px] overflow-hidden
-                           h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[600px] 2xl:h-[600px]">
+          <div className="map-zoom w-full flex flex-col items-start justify-start">
+            <div className="w-full rounded-[10px] overflow-hidden h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] xl:h-[600px] 2xl:h-[600px] hover:scale-105 transition-all duration-500 ease-in-out">
                           <img
                               src="/indentify-solar-problems/section 6/whattodo.svg"
                               alt="What to do next - couple meeting with real estate agent"
@@ -740,8 +374,8 @@ export default function IdentifySolarProblems() {
                   </div>
               </div>
           </section>
-         <ScrollToTop />
 
+         <ScrollToTop />
     </>
   );
 }

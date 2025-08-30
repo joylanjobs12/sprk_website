@@ -105,6 +105,17 @@ button, .button-big, .button-small {
   transform: translateY(0);
 }
 
+.section-1 .text-reveal {
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-1 .text-reveal.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
 .section-1 .slide-up-cards {
   opacity: 0;
   transform: translateY(50px) rotateX(15deg);

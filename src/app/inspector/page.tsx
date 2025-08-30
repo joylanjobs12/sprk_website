@@ -6,12 +6,13 @@ import HowToGetStarted from "@/components/HowToGetStarted";
 import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import TrustedBy from "@/components/TrustedBy";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function InspectorPage() {
   return (
-    <>
+    <div className="overflow-hidden">
       <ScrollAnimations />
       <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12 animate-in">
         <div className="flex flex-col items-center gap-20">
@@ -53,28 +54,17 @@ export default function InspectorPage() {
           </div>
 
           {/* Trusted By Section */}
-          <div className="text-reveal flex flex-col gap-[25px] items-center w-full">
-            <p className={`${inter.className} font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] text-center text-[#000] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 transition-all duration-300 ease-in-out`}>
-              Trusted by:
-            </p>
-            <div className="flex gap-[25px] items-center justify-center overflow-clip">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <div key={index} className={`slide-up-cards h-[82px] w-[150px] opacity-50 relative transition-all duration-300 ease-in-out hover:opacity-75 hover:transform hover:scale-105`} style={{ animationDelay: `${index * 0.1}s` }}>
-                  <div
-                    className="absolute inset-0 bg-center bg-contain bg-no-repeat transition-all duration-300 ease-in-out"
-                    style={{ backgroundImage: `url('/inspector-page/section1/trusted-by.svg')` }}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <TrustedBy 
+            logoSrc="/inspector-page/section1/trusted-by.svg"
+            logoAlt="Trusted inspector partner"
+          />
         </div>
       </section>
       {/* Section 2 */}
-      <section className="section-2 mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 py-[100px]">
+      <section className="section-2 mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-12 lg:px-24 py-[100px]">
         <div className="flex flex-col items-center gap-20">
           {/* Title */}
-          <div className="flex flex-col gap-[50px] items-center w-[1248px] max-w-full">
+          <div className="flex flex-col gap-[50px] items-center w-full max-w-[1248px]">
             <div className="flex flex-col gap-[30px] items-center w-full">
               <div className="flex items-start justify-center w-full">
                 <h2 className="text-reveal font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] flex-1 mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5 transition-all duration-300 ease-in-out hover:transform hover:scale-105">
@@ -163,7 +153,7 @@ export default function InspectorPage() {
             <div className="w-full">
               {/* Mobile Slider */}
               <div className="md:hidden overflow-x-auto">
-                <div className="flex gap-4 pb-4" style={{ width: 'max-content' }}>
+                <div className="flex gap-4 pb-4 w-max">
                   {/* Card 1 */}
                   <div className="card-slide-left bg-white h-[400px] w-[280px] rounded-[10px] border border-[rgba(17,80,86,0.5)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056] flex-shrink-0">
                     <div className="flex flex-col h-[400px] items-center overflow-clip w-full">
@@ -396,7 +386,7 @@ export default function InspectorPage() {
       />
 
       {/* Section 6 */}
-      <section className="section-6 mx-auto w-full max-w-[1440px] px-6 sm:px-12 lg:px-24 py-[100px]">
+      <section className="section-6 mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-12 lg:px-24 py-[100px]">
         <div className="flex flex-col gap-[30px] sm:gap-[40px] md:gap-[50px] items-center w-full max-w-[1248px] mx-auto">
           {/* Title Section */}
           <div className="flex flex-col gap-[50px] items-center w-full">
@@ -569,16 +559,16 @@ export default function InspectorPage() {
           </div>
 
           {/* Pricing Cards */}
-          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-6 items-center justify-center w-full">
+          <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-6 items-stretch justify-center w-full">
             {/* Homeowners Plan */}
-            <div className="card-slide-left flex flex-col gap-4 sm:gap-5 md:gap-6 items-center px-0 py-[20px] sm:py-[25px] md:py-[30px] rounded-[10px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[400px]">
+            <div className="card-slide-left flex flex-col gap-4 sm:gap-5 md:gap-6 items-center px-0 py-[20px] sm:py-[25px] md:py-[30px] rounded-[10px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[400px] lg:flex-1">
               <div className="flex items-center justify-center px-[15px] py-2.5 w-full">
                 <h2 className="bounce-in font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5 transition-all duration-300 ease-in-out hover:text-[#115056] hover:transform hover:scale-105">
                   Homeowners
                 </h2>
               </div>
               
-              <div className="bg-white flex flex-col h-auto lg:h-[1032px] items-start min-h-auto lg:min-h-[1032px] w-full rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
+              <div className="bg-white flex flex-col h-full items-start w-full rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 {/* Header */}
                 <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                   <div className="flex flex-col gap-[25px] items-start w-full">
@@ -597,8 +587,8 @@ export default function InspectorPage() {
                   </div>
                 </div>
 
-                {/* Features */}
-                <div className="flex flex-col gap-5 items-start pb-10 pt-[30px] px-10 flex-1 w-full">
+                                  {/* Features */}
+                  <div className="flex flex-col gap-5 items-start pt-[30px] px-10 flex-1 w-full">
                   {/* Sprk Reports */}
                   <div className="flex flex-col gap-2.5 items-start w-full">
                     <div className="flex items-center justify-center">
@@ -717,7 +707,7 @@ export default function InspectorPage() {
                 </div>
 
                 {/* Button */}
-                <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056]">
+                <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                   <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
                     <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
                       <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
@@ -730,16 +720,16 @@ export default function InspectorPage() {
             </div>
 
             {/* Home Inspectors Container */}
-            <div className="bg-[rgba(0,255,106,0.15)] flex flex-col gap-4 sm:gap-5 md:gap-6 items-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px] border border-[#17e817] w-full max-w-[900px] sm:max-w-[1000px] md:max-w-[1100px] lg:max-w-none">
+            <div className="bg-[rgba(0,255,106,0.15)] flex flex-col gap-4 sm:gap-5 md:gap-6 items-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px] border border-[#17e817] w-full lg:flex-1">
               <div className="flex items-center justify-center px-[15px] py-2.5 w-full">
                 <h2 className="font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5">
                   Home Inspectors
                 </h2>
               </div>
               
-              <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 items-center justify-center w-full">
+              <div className="flex flex-col lg:flex-row gap-4 sm:gap-5 md:gap-6 items-stretch justify-center w-full h-full">
                 {/* Launch Plan */}
-                <div className="bg-white flex flex-col h-auto lg:h-[1032px] items-start min-h-auto lg:min-h-[1032px] w-full lg:w-[416px] rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
+                <div className="bg-white flex flex-col h-full items-start w-full lg:flex-1 rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                   {/* Header */}
                   <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                     <div className="flex flex-col gap-[25px] items-start w-full">
@@ -769,7 +759,7 @@ export default function InspectorPage() {
                   </div>
 
                   {/* Features - Same structure as Free plan */}
-                  <div className="flex flex-col gap-5 items-start pb-10 pt-[30px] px-10 flex-1 w-full">
+                  <div className="flex flex-col gap-5 items-start pt-[30px] px-10 flex-1 w-full">
                     {/* Same feature sections as Free plan */}
                     <div className="flex flex-col gap-2.5 items-start w-full">
                       <div className="flex items-center justify-center">
@@ -885,7 +875,7 @@ export default function InspectorPage() {
                   </div>
 
                   {/* Button */}
-                  <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056]">
+                  <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                     <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
                       <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
                         <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
@@ -897,7 +887,7 @@ export default function InspectorPage() {
                 </div>
 
                 {/* Growth Plan */}
-                <div className="bg-white flex flex-col items-start h-auto lg:h-[1032px] min-h-auto lg:min-h-[1032px] w-full lg:w-[416px] rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)]">
+                <div className="bg-white flex flex-col items-start h-full w-full lg:flex-1 rounded-[10px] border border-[rgba(0,0,0,0.15)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                   {/* Header */}
                   <div className="bg-[#115056] flex flex-col gap-[25px] items-start pb-[30px] pt-10 px-10 rounded-tl-[10px] rounded-tr-[10px] w-full">
                     <div className="flex flex-col gap-[25px] items-start w-full">
@@ -927,7 +917,7 @@ export default function InspectorPage() {
                   </div>
 
                   {/* Features */}
-                  <div className="flex flex-col gap-5 items-start pb-10 pt-[30px] px-10 w-full">
+                  <div className="flex flex-col gap-5 items-start pt-[30px] px-10 flex-1 w-full">
                     <div className="flex flex-col gap-2.5 items-start w-full">
                       <div className="flex items-center justify-center">
                         <span className="font-['Aeonik_Pro'] font-medium text-[25px] sm:text-[25px] md:text-[25px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%] text-[#000]">
@@ -1042,7 +1032,7 @@ export default function InspectorPage() {
                   </div>
 
                   {/* Button */}
-                  <div className="flex flex-col gap-5 items-start pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056]">
+                  <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                     <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
                       <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
                         <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
@@ -1061,7 +1051,7 @@ export default function InspectorPage() {
       {/* Scroll to Top Button */}
       <ScrollToTop />
 
-      </>
+      </div>
      );
 }
 

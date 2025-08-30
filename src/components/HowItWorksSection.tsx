@@ -21,24 +21,38 @@ export default function HowItWorksSection({
   step2,
   step3
 }: HowItWorksSectionProps) {
-  // Ensure all steps are defined with fallback values
+  // Define default steps based on Figma design
+  const defaultSteps = [
+    {
+      icon: '/agents-page/section 4/learn-how.svg',
+      label: 'Learn How to Represent Solar Homes',
+      description: 'Take the on-demand Sprk Solar Certification course—designed specifically for real estate agents.'
+    },
+    {
+      icon: '/agents-page/section 4/help-clients.svg',
+      label: 'Help Clients Collect Solar Info',
+      description: 'Use the Sprk app to gather key solar system details and generate trusted reports that keep deals on track.'
+    },
+    {
+      icon: '/agents-page/section 4/sprk-reports.svg',
+      label: 'Win with Sprk Reports',
+      description: 'Use the Sprk Listing Report and Appraisal Report to maximize home value—and protect buyers with a Solar Inspection Report from a Sprk Certified Inspector.'
+    }
+  ];
+
+  // Use provided steps or fallback to defaults
   const steps = [
-    step1 || { icon: '', label: 'Step 1', description: '' },
-    step2 || { icon: '', label: 'Step 2', description: '' },
-    step3 || { icon: '', label: 'Step 3', description: '' }
-  ].filter(step => step.icon && step.label && step.description);
+    step1 || defaultSteps[0],
+    step2 || defaultSteps[1],
+    step3 || defaultSteps[2]
+  ].filter(step => step && step.icon && step.label && step.description);
 
   return (
     <section className="section-4 box-border content-stretch flex flex-col gap-8 sm:gap-10 lg:gap-12 xl:gap-[50px] items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">
       <div className="content-stretch flex flex-col gap-5 items-center justify-start relative shrink-0 w-full">
         <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
           <h2 
-            className="bounce-in basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 transition-all duration-300 ease-in-out"
-            style={{
-              fontFamily: '"Aeonik Pro", sans-serif',
-              fontWeight: 500,
-              color: "#141414",
-            }}
+            className="bounce-in basis-0 grow min-h-px min-w-px not-italic relative shrink-0 font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] text-center px-4 sm:px-0 transition-all duration-300 ease-in-out text-[#141414] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5"
           >
             {title}
           </h2>
@@ -46,12 +60,7 @@ export default function HowItWorksSection({
         {subtitle && (
           <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
             <h4 
-              className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center px-4 sm:px-0 transition-all duration-300 ease-in-out"
-              style={{
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontWeight: 500,
-                color: "#141414",
-              }}
+              className="text-reveal basis-0 grow min-h-px min-w-px not-italic relative shrink-0 font-['Aeonik_Pro'] font-medium text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] text-center px-4 sm:px-0 transition-all duration-300 ease-in-out text-[#141414] mb-2 sm:mb-2 md:mb-2 lg:mb-3 xl:mb-3"
             >
               {subtitle}
             </h4>
@@ -66,8 +75,8 @@ export default function HowItWorksSection({
           }
           
           return (
-          <div key={index} className="card-bounce-in basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[280px] sm:min-w-[320px] md:min-w-[400px] overflow-clip relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-[250px] sm:min-w-[280px] md:min-w-[295px] px-0 py-[30px] sm:py-[40px] md:py-[50px] relative shrink-0 w-full">
+          <div key={index} className="card-bounce-in basis-0 bg-white content-stretch flex flex-col grow items-center justify-start min-h-px min-w-[280px] sm:min-w-[300px] md:min-w-[350px] overflow-clip relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+            <div className="bg-white box-border content-stretch flex flex-col items-center justify-start min-w-0 px-0 py-[30px] sm:py-[40px] md:py-[50px] relative shrink-0 w-full">
               <div className="bg-[rgba(86,205,69,0.05)] box-border content-stretch flex items-start justify-center px-10 py-2.5 relative rounded-[50px] shrink-0">
                 <div className="absolute border border-[#56cd45] border-solid inset-0 pointer-events-none rounded-[50px]" />
                 <div 
@@ -93,23 +102,14 @@ export default function HowItWorksSection({
               <div className="content-stretch flex flex-col gap-2.5 items-start justify-start relative shrink-0 w-full">
                 <div className="box-border content-stretch flex items-start justify-start min-h-[60px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
                   <h5 
-                    className="basis-0 grow min-h-[90px] min-w-px not-italic relative shrink-0 text-[#141414] text-[20px] sm:text-[22px] md:text-[24px] lg:text-[27px] xl:text-[27px] 2xl:text-[27px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center transition-all duration-300 ease-in-out"
-                    style={{
-                      fontFamily: '"Aeonik Pro", sans-serif',
-                      fontWeight: 500,
-                    }}
+                    className="basis-0 grow min-h-[90px] min-w-px not-italic relative shrink-0 font-['Aeonik_Pro'] font-medium text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] text-center transition-all duration-300 ease-in-out text-[#141414] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2"
                   >
                     {step.label}
                   </h5>
                 </div>
                 <div className="box-border content-stretch flex items-center justify-start min-h-[110px] px-[20px] sm:px-[25px] md:px-[30px] py-0 relative shrink-0 w-full">
                   <p 
-                    className="basis-0 grow min-h-[154px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%] text-center transition-all duration-300 ease-in-out"
-                    style={{
-                      fontFamily: 'Inter',
-                      fontWeight: 400,
-                      color: "rgba(0,0,0,0.66)",
-                    }}
+                    className="basis-0 grow min-h-[154px] min-w-px not-italic relative shrink-0 font-['Inter'] font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] text-center transition-all duration-300 ease-in-out text-[rgba(0,0,0,0.66)] mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4"
                   >
                     {step.description}
                   </p>
