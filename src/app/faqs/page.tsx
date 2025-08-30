@@ -1,6 +1,41 @@
+'use client';
+
+import { useState } from 'react';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export default function FAQs() {
+  // FAQ data with questions and answers
+  const faqData = [
+    {
+      id: 1,
+      question: "What is Lorem Ipsum?",
+      answer: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    {
+      id: 2,
+      question: "Why do we use it?",
+      answer: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters."
+    },
+    {
+      id: 3,
+      question: "Where does it come from?",
+      answer: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."
+    },
+    {
+      id: 4,
+      question: "Where can I get some?",
+      answer: "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don&apos;t look even slightly believable."
+    }
+  ];
+
+  // State to track which FAQ item is expanded (only one can be expanded at a time)
+  const [expandedId, setExpandedId] = useState<number | null>(1); // Start with first item expanded
+
+  // Function to toggle FAQ item
+  const toggleFAQ = (id: number) => {
+    setExpandedId(expandedId === id ? null : id);
+  };
+
   return (
     <>
       <section className="w-full min-h-screen flex flex-col items-center justify-start pb-[50px] pt-[75px] px-4 sm:pb-[75px] sm:pt-[100px] sm:px-6 md:pb-[100px] md:pt-[125px] md:px-8 lg:pb-[100px] lg:pt-[150px] lg:px-24">
@@ -10,10 +45,9 @@ export default function FAQs() {
             <div className="w-full flex flex-col lg:flex-row gap-6 items-start justify-center px-2.5">
               {/* Title */}
               <div className="w-full lg:flex-1 flex items-center justify-center lg:justify-start">
-                <h1 
-                  className="text-center lg:text-left leading-[1.1] mb-4 lg:mb-0"
+                <h2 
+                  className="text-center lg:text-left leading-[1.1] mb-4 lg:mb-0 text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px]"
                   style={{
-                    fontSize: '40px',
                     fontWeight: 500,
                     fontFamily: '"Aeonik Pro", sans-serif',
                     color: '#000',
@@ -21,175 +55,99 @@ export default function FAQs() {
                   }}
                 >
                   Frequently Asked Questions
-                </h1>
+                </h2>
               </div>
               
               {/* Description */}
               <div className="w-full lg:flex-1 flex items-center justify-center p-[10px]">
-                <p 
-                  className="text-center lg:text-left leading-[1.2]"
+                <strong 
+                  className="text-center lg:text-left leading-[1.2] text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px]"
                   style={{
-                    fontSize: '16px',
                     fontWeight: 400,
                     fontFamily: 'Inter, sans-serif',
                     color: 'rgba(0,0,0,0.66)',
                     lineHeight: '120%'
                   }}
                 >
-                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                </p>
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s.
+                </strong>
               </div>
             </div>
             
             {/* FAQ Items Container */}
-            <div className="w-full flex flex-col gap-6 items-center justify-start">
-              {/* FAQ Item 1 - Expanded */}
-              <div className="w-full bg-[#115056] flex flex-col gap-6 items-center justify-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px]">
-                <div className="w-full flex items-center justify-between">
-                  <h3 
-                    className="flex-1 leading-[1.1] pr-4"
-                    style={{
-                      fontSize: '18px',
-                      fontWeight: 600,
-                      fontFamily: 'Inter, sans-serif',
-                      color: 'white',
-                      lineHeight: '120%'
-                    }}
+            <div className="w-full flex flex-col gap-5 sm:gap-6 items-center justify-start">
+              {faqData.map((faq) => {
+                const isExpanded = expandedId === faq.id;
+                
+                return (
+                  <div 
+                    key={faq.id}
+                    className={`w-full flex flex-col items-center justify-center p-4 sm:p-[25px] md:p-[30px] rounded-[10px] cursor-pointer transition-all duration-300 ${
+                      isExpanded 
+                        ? 'bg-[#115056] gap-5 sm:gap-6' 
+                        : 'border border-[rgba(0,0,0,0.2)] hover:border-[rgba(0,0,0,0.4)]'
+                    }`}
+                    onClick={() => toggleFAQ(faq.id)}
                   >
-                    What is Lorem Ipsum?
-                  </h3>
-                  <div className="flex-shrink-0 w-[35px] h-[35px] flex items-center justify-center">
-                    {/* Chevron Up Icon - Expanded State */}
-                    <svg
-                      className="w-4 h-4 text-white"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
+                    <div className="w-full flex items-center justify-between">
+                      <h6 
+                        className="flex-1 leading-[1.1] pr-4 text-[30px] sm:text-[30px] md:text-[30px] lg:text-[30px] xl:text-[30px] 2xl:text-[30px]"
+                        style={{
+                          fontWeight: 600,
+                          fontFamily: 'Inter, sans-serif',
+                          color: isExpanded ? 'white' : 'rgba(0,0,0,0.66)',
+                          lineHeight: '120%'
+                        }}
+                      >
+                        {faq.question}
+                      </h6>
+                      <div className="flex-shrink-0 w-[35px] h-[35px] flex items-center justify-center">
+                        <svg
+                          className={`w-4 h-4 transition-transform duration-300 ${
+                            isExpanded 
+                              ? 'text-white rotate-180' 
+                              : 'text-[rgba(0,0,0,0.66)] rotate-0'
+                          }`}
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M19 9l-7 7-7-7"
+                          />
+                        </svg>
+                      </div>
+                    </div>
+                    
+                    {/* Answer section with smooth animation */}
+                    <div 
+                      className={`w-full overflow-hidden transition-all duration-300 ${
+                        isExpanded 
+                          ? 'max-h-96 opacity-100' 
+                          : 'max-h-0 opacity-0'
+                      }`}
                     >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 15l7-7 7 7"
-                      />
-                    </svg>
+                      <div className="w-full flex items-start justify-start">
+                        <p 
+                          className="leading-[1.2] text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px]"
+                          style={{
+                            fontWeight: 400,
+                            fontFamily: 'Inter, sans-serif',
+                            color: 'rgba(255,255,255,0.8)',
+                            lineHeight: '120%'
+                          }}
+                        >
+                          {faq.answer}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="w-full flex items-start justify-start">
-                  <p 
-                    className="leading-[1.2]"
-                    style={{
-                      fontSize: '16px',
-                      fontWeight: 400,
-                      fontFamily: 'Inter, sans-serif',
-                      color: 'rgba(255,255,255,0.8)',
-                      lineHeight: '120%'
-                    }}
-                  >
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-                  </p>
-                </div>
-              </div>
-              
-              {/* FAQ Item 2 - Collapsed */}
-              <div className="w-full border border-[rgba(0,0,0,0.2)] flex items-center justify-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px]">
-                <h3 
-                  className="flex-1 leading-[1.1] pr-4"
-                  style={{
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    fontFamily: 'Inter, sans-serif',
-                    color: 'rgba(0,0,0,0.66)',
-                    lineHeight: '120%'
-                  }}
-                >
-                  What is Lorem Ipsum?
-                </h3>
-                <div className="flex-shrink-0 w-[35px] h-[35px] flex items-center justify-center">
-                  {/* Chevron Down Icon - Collapsed State */}
-                  <svg
-                    className="w-4 h-4 text-[rgba(0,0,0,0.66)]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* FAQ Item 3 - Collapsed */}
-              <div className="w-full border border-[rgba(0,0,0,0.2)] flex items-center justify-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px]">
-                <h3 
-                  className="flex-1 leading-[1.1] pr-4"
-                  style={{
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    fontFamily: 'Inter, sans-serif',
-                    color: 'rgba(0,0,0,0.66)',
-                    lineHeight: '120%'
-                  }}
-                >
-                  What is Lorem Ipsum?
-                </h3>
-                <div className="flex-shrink-0 w-[35px] h-[35px] flex items-center justify-center">
-                  {/* Chevron Down Icon - Collapsed State */}
-                  <svg
-                    className="w-4 h-4 text-[rgba(0,0,0,0.66)]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
-              
-              {/* FAQ Item 4 - Collapsed */}
-              <div className="w-full border border-[rgba(0,0,0,0.2)] flex items-center justify-center p-[20px] sm:p-[25px] md:p-[30px] rounded-[10px]">
-                <h3 
-                  className="flex-1 leading-[1.1] pr-4"
-                  style={{
-                    fontSize: '18px',
-                    fontWeight: 600,
-                    fontFamily: 'Inter, sans-serif',
-                    color: 'rgba(0,0,0,0.66)',
-                    lineHeight: '120%'
-                  }}
-                >
-                  What is Lorem Ipsum?
-                </h3>
-                <div className="flex-shrink-0 w-[35px] h-[35px] flex items-center justify-center">
-                  {/* Chevron Down Icon - Collapsed State */}
-                  <svg
-                    className="w-4 h-4 text-[rgba(0,0,0,0.66)]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </div>
-              </div>
+                );
+              })}
             </div>
           </header>
         </div>
@@ -226,7 +184,7 @@ export default function FAQs() {
                   }}
                 >
                   <p className="mb-2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                  <p className="mb-0">Lorem Ipsum has been the industry's standard.</p>
+                  <p className="mb-0">Lorem Ipsum has been the industry&apos;s standard.</p>
                 </div>
               </div>
               
