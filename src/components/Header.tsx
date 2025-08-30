@@ -19,15 +19,23 @@ const navItems: NavItem[] = [
 
 const inter = Inter({ subsets: ["latin"] });
 
+type DropdownItem = {
+  title: string;
+  description: string;
+  icon: string;
+  href: string;
+  isHighlighted?: boolean;
+};
+
 // Solutions dropdown data
-const solutionsData = {
+const solutionsData: { byRole: DropdownItem[]; byUseCase: DropdownItem[]; byProduct: DropdownItem[] } = {
   byRole: [
     {
       title: "Homeowners",
       description: "Empowering you to understand, protect, and showcase your solar investment.",
       icon: "/header/solutions/homeowners.svg",
       href: "/homeowner",
-      isHighlighted: true
+      // isHighlighted: true
     },
     {
       title: "Home Inspectors", 
@@ -102,6 +110,41 @@ const solutionsData = {
   ]
 };
 
+// Resources dropdown data (from Figma selection)
+const resourcesData: DropdownItem[] = [
+  {
+    title: "Blog",
+    description: "Empowering you to understand, protect, and showcase your solar investment.",
+    icon: "/header/solutions/homeowners.svg",
+    href: "/blog",
+    isHighlighted: true
+  },
+  {
+    title: "eBooks",
+    description: "Turn every inspection into an opportunity with solar and energy reports.",
+    icon: "/header/solutions/homeinspectors.svg",
+    href: "/ebook"
+  },
+  {
+    title: "Sprk Academy",
+    description: "Simplify solar in every transaction—listing or buying.",
+    icon: "/header/solutions/realstateagent.svg",
+    href: "/professionalsolartraining"
+  },
+  {
+    title: "Podcast",
+    description: "Help your solar customers keep their promises.",
+    icon: "/header/solutions/solar-professionals.svg",
+    href: "/blog"
+  },
+  {
+    title: "FAQ",
+    description: "Help your solar customers keep their promises.",
+    icon: "/header/solutions/solar-professionals.svg",
+    href: "/faqs"
+  }
+];
+
 // Dropdown arrow SVG component
 const DropdownArrow = () => (
   <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -113,6 +156,8 @@ export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [solutionsOpen, setSolutionsOpen] = useState(false);
   const [mobileSolutionsOpen, setMobileSolutionsOpen] = useState(false);
+  const [resourcesOpen, setResourcesOpen] = useState(false);
+  const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
 
   // Close dropdowns when clicking outside
@@ -120,8 +165,10 @@ export default function Header() {
     const handleClickOutside = (event: MouseEvent) => {
       if (headerRef.current && !headerRef.current.contains(event.target as Node)) {
         setSolutionsOpen(false);
+        setResourcesOpen(false);
         setMobileOpen(false);
         setMobileSolutionsOpen(false);
+        setMobileResourcesOpen(false);
       }
     };
 
@@ -158,8 +205,21 @@ export default function Header() {
               <div key={item.label} className="relative flex items-center px-3 lg:px-[15px] py-2.5">
                 {item.label === "Solutions" ? (
                   <button
-                    onClick={() => setSolutionsOpen(!solutionsOpen)}
-                    onMouseEnter={() => setSolutionsOpen(true)}
+                    onClick={() => { setSolutionsOpen(!solutionsOpen); setResourcesOpen(false); }}
+                    onMouseEnter={() => { setSolutionsOpen(true); setResourcesOpen(false); }}
+                    className="flex items-center gap-1 lg:gap-[5px] text-[12px] sm:text-[13px] lg:text-[14px] font-semibold leading-[1.1] text-[#141414] hover:opacity-80 transition-opacity"
+                  >
+                    <span>{item.label}</span>
+                    {item.hasDropdown && (
+                      <div className="w-2.5 h-1.5 flex items-center justify-center">
+                        <DropdownArrow />
+                      </div>
+                    )}
+                  </button>
+                ) : item.label === "Resources" ? (
+                  <button
+                    onClick={() => { setResourcesOpen(!resourcesOpen); setSolutionsOpen(false); }}
+                    onMouseEnter={() => { setResourcesOpen(true); setSolutionsOpen(false); }}
                     className="flex items-center gap-1 lg:gap-[5px] text-[12px] sm:text-[13px] lg:text-[14px] font-semibold leading-[1.1] text-[#141414] hover:opacity-80 transition-opacity"
                   >
                     <span>{item.label}</span>
@@ -231,7 +291,7 @@ export default function Header() {
                         <Link
                           key={index}
                           href={item.href}
-                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors hover:bg-gray-50 ${
+                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
                             item.isHighlighted ? 'bg-[#f1fafa] border border-[#a5dcdf]' : ''
                           }`}
                           onClick={() => setSolutionsOpen(false)}
@@ -270,7 +330,7 @@ export default function Header() {
                         <Link
                           key={index}
                           href={item.href}
-                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors hover:bg-gray-50"
+                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF]"
                           onClick={() => setSolutionsOpen(false)}
                         >
                           <div className="flex items-center justify-center w-6 h-6 shrink-0">
@@ -305,7 +365,7 @@ export default function Header() {
                         <Link
                           key={index}
                           href={item.href}
-                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors hover:bg-gray-50"
+                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF]"
                           onClick={() => setSolutionsOpen(false)}
                         >
                           <div className="flex items-center justify-center w-6 h-6 shrink-0">
@@ -335,6 +395,51 @@ export default function Header() {
           </div>
         )}
 
+        {/* Resources Dropdown */}
+        {resourcesOpen && (
+          <div 
+            className="absolute left-0 right-0 top-full mt-3 z-50 hidden lg:block"
+            onMouseLeave={() => setResourcesOpen(false)}
+          >
+            <div className="mx-auto max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24">
+              <div className="bg-white rounded-[10px] border-t-2 border-[#115056] p-4 lg:p-10 shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.15)]">
+                <div className="flex flex-col gap-2">
+                  {resourcesData.map((item, index) => (
+                    <Link
+                      key={index}
+                      href={item.href}
+                      className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
+                        item.isHighlighted ? 'bg-[#f1fafa] border border-[#a5dcdf]' : ''
+                      }`}
+                      onClick={() => setResourcesOpen(false)}
+                    >
+                      <div className="flex items-center justify-center w-6 h-6 shrink-0">
+                        <Image
+                          src={item.icon}
+                          alt={item.title}
+                          width={24}
+                          height={24}
+                          className="w-6 h-6"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-[5px] flex-1 min-w-0">
+                        <h4 className={`text-[14px] font-semibold leading-[1.1] ${
+                          item.isHighlighted ? 'text-[#115056]' : 'text-[rgba(0,0,0,0.66)]'
+                        }`}>
+                          {item.title}
+                        </h4>
+                        <p className="text-[11px] font-normal text-[rgba(0,0,0,0.5)] leading-[1.2] h-[26px]">
+                          {item.description}
+                        </p>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         {/* Mobile Menu */}
         {mobileOpen ? (
           <div className={`${inter.className} lg:hidden mt-3 rounded-2xl border border-black/10 bg-white p-4 shadow-lg`}> 
@@ -343,12 +448,24 @@ export default function Header() {
                 <div key={item.label}>
                   {item.label === "Solutions" ? (
                     <button
-                      onClick={() => setMobileSolutionsOpen(!mobileSolutionsOpen)}
+                      onClick={() => { setMobileSolutionsOpen(!mobileSolutionsOpen); setMobileResourcesOpen(false); }}
                       className="w-full flex items-center justify-between py-3 px-2 text-[14px] sm:text-[15px] font-semibold text-[#141414] hover:bg-gray-50 rounded-lg transition-colors"
                     >
                       <span>{item.label}</span>
                       {item.hasDropdown && (
                         <div className={`w-2.5 h-1.5 flex items-center justify-center transition-transform ${mobileSolutionsOpen ? 'rotate-180' : ''}`}>
+                          <DropdownArrow />
+                        </div>
+                      )}
+                    </button>
+                  ) : item.label === "Resources" ? (
+                    <button
+                      onClick={() => { setMobileResourcesOpen(!mobileResourcesOpen); setMobileSolutionsOpen(false); }}
+                      className="w-full flex items-center justify-between py-3 px-2 text-[14px] sm:text-[15px] font-semibold text-[#141414] hover:bg-gray-50 rounded-lg transition-colors"
+                    >
+                      <span>{item.label}</span>
+                      {item.hasDropdown && (
+                        <div className={`w-2.5 h-1.5 flex items-center justify-center transition-transform ${mobileResourcesOpen ? 'rotate-180' : ''}`}>
                           <DropdownArrow />
                         </div>
                       )}
@@ -455,6 +572,39 @@ export default function Header() {
                               <div>
                                 <div className="text-[13px] font-medium text-[#141414]">{productItem.title}</div>
                                 <div className="text-[11px] text-gray-600 leading-tight">{productItem.description}</div>
+                              </div>
+                            </Link>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Mobile Resources Dropdown */}
+                  {item.label === "Resources" && mobileResourcesOpen && (
+                    <div className="mt-2 ml-4 space-y-3">
+                      <div>
+                        <div className="space-y-2">
+                          {resourcesData.map((resItem, index) => (
+                            <Link
+                              key={index}
+                              href={resItem.href}
+                              className="flex items-start gap-2 p-2 rounded-md hover:bg-gray-50 transition-colors"
+                              onClick={() => {
+                                setMobileOpen(false);
+                                setMobileResourcesOpen(false);
+                              }}
+                            >
+                              <Image
+                                src={resItem.icon}
+                                alt={resItem.title}
+                                width={16}
+                                height={16}
+                                className="w-4 h-4 mt-0.5 shrink-0"
+                              />
+                              <div>
+                                <div className="text-[13px] font-medium text-[#141414]">{resItem.title}</div>
+                                <div className="text-[11px] text-gray-600 leading-tight">{resItem.description}</div>
                               </div>
                             </Link>
                           ))}

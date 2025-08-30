@@ -166,7 +166,7 @@ export default function SolarListingReport() {
                     highlightedWord="Sprk Solar Listing Report"
                     cards={[
                         {
-                            iconSrc: "/solar-listing-report-page/section 6/data-source.svg",
+                            iconSrc: "/solar-listing-report-page/section 6/image1.svg",
                             iconAlt: "Data Sources Icon",
                             title: "Data Sources Include:",
                             items: [
@@ -177,7 +177,7 @@ export default function SolarListingReport() {
                             ]
                         },
                         {
-                            iconSrc: "/solar-listing-report-page/section 6/calculations.svg",
+                            iconSrc: "/solar-listing-report-page/section 6/image2.svg",
                             iconAlt: "Calculations Icon",
                             title: "Calculations Include:",
                             items: [
@@ -194,32 +194,303 @@ export default function SolarListingReport() {
                     title="What's in the Report"
                     backgroundColor="#115056"
                     titleColor="white"
-                    content={{
-                        title: "A. Green Home Rating\n(Page 1)",
-                        imageSrc: "/solar-listing-report-page/section 7/image1.svg",
-                        imageAlt: "Green Home Rating Report Preview",
-                        sections: [
-                            {
-                                title: "What It Shows:",
-                                items: [
-                                    "Overall home energy efficiency rating (percentage)",
-                                    "Estimated monthly savings and 10-year projected savings",
-                                    "QR code linking to the online version of the report"
-                                ]
-                            },
-                            {
-                                title: "Why It Matters:",
-                                items: []
-                            }
-                        ],
-                        description: "Provides buyers with an immediate snapshot of the home's energy performance and potential cost savings, setting the tone for the value of the solar system and green features."
-                    }}
+                    slideContent={[
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 1/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full ">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                            A. Green Home Rating <br></br> (Page 1)
+                                        </h3>
+
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+
+                                        <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                            <li className="ml-[27px]">Overall home energy efficiency rating (percentage)</li>
+                                            <li className="ml-[27px]">Estimated monthly savings and 10-year projected savings</li>
+                                            <li className="ml-[27px]">QR code linking to the online version of the report</li>
+                                        </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">
+                                        Provides buyers with an immediate snapshot of the home’s energy performance and potential cost savings, setting the tone for the value of the solar system and green features.</p>
+                                    </div>
+                                </div>
+                            )
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 2/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                            B. Real Estate Summary <br></br>
+                                            (Page 2)
+                                        </h3>
+
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+
+                                        <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                            <li className="ml-[27px]">Total projected savings over 1, 10, and 25 years</li>
+                                            <li className="ml-[27px]">Estimated home price impact from solar and green feature</li>
+                                            <li className="ml-[27px]">Side-by-side comparison of home energy performance with and without upgrades</li>
+                                        </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Quantifies the financial benefit of the home’s solar and efficiency features in a way that supports pricing strategy, appraisals, and negotiations.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 3/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                            C. Home Energy Profile <br></br>
+                                            (Page 3)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                        <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                            <li className="ml-[27px]">
+                                            Estimated monthly utility bill without solar vs. with solar</li>
+                                            <li className="ml-[27px]">Breakdown of energy sources and consumption</li>
+                                            <li className="ml-[27px]">Major home systems impacting energy usage</li>
+                                        </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Connects the solar system’s impact directly to lower monthly utility costs — a tangible benefit buyers can understand immediately.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                      
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 4/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                            D. Save with Green Features <br></br>
+                                            (Page 4)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">List of installed green features beyond solar (e.g., smart thermostats, efficient windows, insulation)</li>
+                                                <li className="ml-[27px]">Estimated annual savings from each feature</li>
+                                                <li className="ml-[27px]">Efficiency ratings and descriptions</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Demonstrates the home’s additional energy-saving assets, increasing its appeal and potential market value beyond just the solar system.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 5/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                            E. Installed Solar System <br></br>
+                                            (Page 5)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">
+                                                Ownership type (owned, leased, or financed)</li>
+                                                <li className="ml-[27px]">System size, age, and estimated monthly production</li>
+                                                <li className="ml-[27px]">Estimated monthly and annual savings from solar</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Confirms core system details buyers and appraisers need to understand the scope and impact of the solar investment.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 6/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                        F. Installed Solar Details <br></br>
+                                         
+                                        (Page 6)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">
+                                                Manufacturer and model of panels and inverters</li>
+                                                <li className="ml-[27px]">Warranty information and installer details</li>
+                                                <li className="ml-[27px]">Monitoring access information</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Provides the documentation and contacts needed for ongoing system operation, warranty claims, or service needs.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 7/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                        G. Green Feature Details<br></br>
+                                        (Page 7)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">
+                                                Detailed specifications of installed green features</li>
+                                                <li className="ml-[27px]">Quantity, type, and efficiency ratings for each</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Helps appraisers and buyers see the cumulative energy and cost-saving value of the home’s efficiency features.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 8/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                        H. Projected Green Feature Savings<br></br>
+                                        (Page 8)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">
+                                                Year-by-year savings projections for green features</li>
+                                                <li className="ml-[27px]">Utility rate escalation factored in over a 50-year period</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">Demonstrates the long-term financial and environmental benefits of the home’s energy features.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 9/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                        I. Seller’s Checklist<br></br>
+                                        (Page 9)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">Steps for preparing the solar home for sale</li>
+                                                <li className="ml-[27px]">Guidance on gathering documentation and scheduling inspections</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">
+                                        Helps sellers avoid last-minute issues by preparing all solar-related information in advance.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+                        {
+                            leftSide: (
+                                <div className="bg-gray-50 w-full  h-[300px] lg:h-[500px] flex items-start justify-end overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-center bg-contain bg-no-repeat rounded-tl-[10px] lg:rounded-tr-none rounded-tr-[10px]"
+                                        style={{ backgroundImage: `url("/solar-listing-report-page/section 7/slide 10/image.svg")` }}
+                                    />
+                                </div>
+                            ),
+                            rightSide: (
+                                <div key="slide-a" className="w-full h-[300px] lg:h-[500px] flex items-start py-[30px] lg:py-[50px] justify-center overflow-hidden">
+                                    <div className="w-full">
+                                        <h3 className="mb-[30px] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center lg:text-left">
+                                        J. Buyer’s Checklist<br></br>
+                                        (Page 10)
+                                        </h3>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">What It Shows:</p>
+                                            <ul className="list-disc text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter'] space-y-2 mb-6">
+                                                <li className="ml-[27px]">Steps for understanding and transferring the solar system post-purchase</li>
+                                                <li className="ml-[27px]">Instructions for warranty and monitoring setup</li>
+                                            </ul>
+                                        <p className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] font-semibold font-['Inter'] mb-4">Why It Matters:</p>
+                                        <p className="text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal font-['Inter']">
+                                        Gives buyers confidence and a clear plan for solar ownership after closing.</p>
+                                    </div>
+                                </div>
+                            ),
+                        },
+
+
+                    ]}
                     onPrevious={() => {
-                        // Handle previous navigation
                         console.log('Previous report section');
                     }}
                     onNext={() => {
-                        // Handle next navigation
                         console.log('Next report section');
                     }}
                     showNavigation={true}

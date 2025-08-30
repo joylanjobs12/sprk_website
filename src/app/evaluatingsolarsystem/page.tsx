@@ -125,9 +125,9 @@ export default function EvaluatingSolarSystem() {
                     </div>
 
                     {/* Cards Grid */}
-                    <div className="w-full flex flex-wrap items-center justify-center gap-6 lg:gap-6">
+                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6">
                         {/* System Size & Capacity Card */}
-                        <div className="card-flip flex-1 min-w-[300px] max-w-[400px] bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
                             <div className="w-full flex flex-col items-center justify-start">
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
@@ -170,7 +170,7 @@ export default function EvaluatingSolarSystem() {
                         </div>
 
                         {/* Production & Performance Card */}
-                        <div className="card-flip flex-1 min-w-[300px] max-w-[400px] bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
                             <div className="w-full flex flex-col items-center justify-start">
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
@@ -213,7 +213,7 @@ export default function EvaluatingSolarSystem() {
                         </div>
 
                         {/* Energy Costs Avoided Card */}
-                        <div className="card-flip flex-1 min-w-[300px] max-w-[400px] bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
                             <div className="w-full flex flex-col items-center justify-start">
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
@@ -256,7 +256,7 @@ export default function EvaluatingSolarSystem() {
                         </div>
 
                         {/* Remaining Useful Life Card */}
-                        <div className="card-flip flex-1 min-w-[300px] max-w-[400px] bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                        <div className="card-flip w-full lg:col-start-1 bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
                             <div className="w-full flex flex-col items-center justify-start">
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
@@ -299,7 +299,7 @@ export default function EvaluatingSolarSystem() {
                         </div>
 
                         {/* Documentation Card */}
-                        <div className="card-flip flex-1 min-w-[300px] max-w-[400px] bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                        <div className="card-flip w-full lg:col-start-3 bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
                             <div className="w-full flex flex-col items-center justify-start">
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
@@ -431,79 +431,43 @@ export default function EvaluatingSolarSystem() {
 
                     {/* Cards Container - Will add content here */}
                     <div className="w-full relative rounded-[10px]">
-                        <div className="w-full flex flex-wrap items-start justify-start gap-0 overflow-hidden">
+                        <div className="w-full flex flex-col items-start justify-start gap-4 overflow-hidden sm:flex-col md:flex-row md:flex-wrap md:gap-4 lg:gap-6 xl:gap-8 2xl:gap-10 md:items-stretch">
                             {/* Step 1 - Measure Utility Savings */}
-                            <div className="card-slide-left flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg group">
-                                <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
-                                    <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0
-                                         text-[25px] leading-[110%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[110%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[110%] md:font-medium md:text-black
-                                         lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-black
-                                         xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-black
-                                         2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-black">Step 1</h5>
+                            <div className="card-slide-left w-full flex-1 min-w-full min-h-auto bg-white flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg group sm:min-w-full md:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-1rem)] xl:min-w-[calc(25%-1.5rem)] 2xl:min-w-[calc(25%-2rem)] md:min-h-[730px] lg:min-h-[730px] xl:min-h-[730px] 2xl:min-h-[730px]">
+                                <div className="w-full h-full bg-white flex flex-col items-center justify-start">
+                                    <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-4 lg:px-[30px] lg:py-5 xl:px-[30px] xl:py-5 2xl:px-[30px] 2xl:py-5">
+                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-black sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Step 1</h5>
                                     </div>
-                                    <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                        <img src="/evaluating-solar-system/section 6/step1.svg" alt="Piggy bank with energy savings icon" className="w-[120px] h-[120px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                                    <div className="w-full flex items-center justify-start min-h-[120px] px-4 py-0 rounded-[30px] sm:min-h-[140px] sm:px-5 md:min-h-[160px] md:px-6 lg:min-h-[180px] lg:px-[30px] lg:rounded-[50px] xl:min-h-[180px] xl:px-[30px] 2xl:min-h-[180px] 2xl:px-[30px]">
+                                        <img src="/evaluating-solar-system/section 6/step1.svg" alt="Piggy bank with energy savings icon" className="w-[80px] h-[80px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110 sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] lg:w-[120px] lg:h-[120px] xl:w-[120px] xl:h-[120px] 2xl:w-[120px] 2xl:h-[120px]" />
                                     </div>
-                                    <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                        <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0
-                                             text-[20px] leading-[110%] font-medium text-black
-                                             sm:text-[20px] sm:leading-[110%] sm:font-medium sm:text-black
-                                             md:text-[20px] md:leading-[110%] md:font-medium md:text-black
-                                             lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-black
-                                             xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-black
-                                             2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-black">Measure Utility Savings</h5>
+                                    <div className="w-full flex flex-col items-start justify-start gap-3 px-0 py-3 sm:gap-4 sm:py-4 md:gap-5 md:py-5 lg:gap-5 lg:py-[30px] xl:gap-5 xl:py-[30px] 2xl:gap-5 2xl:py-[30px]">
+                                        <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-0 sm:min-h-[50px] sm:px-5 md:min-h-[50px] md:px-6 lg:min-h-[60px] lg:px-[30px] xl:min-h-[60px] xl:px-[30px] 2xl:min-h-[60px] 2xl:px-[30px]">
+                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 text-[32px] leading-[110%] font-medium text-black sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Measure Utility Savings</h5>
                                         </div>
-                                        <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0
-                                             text-[16px] leading-[120%] font-normal text-black
-                                             sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                             md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                             lg:text-[18px] lg:leading-[120%] lg:font-normal lg:text-black
-                                             xl:text-[18px] xl:leading-[120%] xl:font-normal xl:text-black
-                                             2xl:text-[20px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">The foundation of solar value is the money saved from reduced utility bills. These savings, measured over time, form the basis for calculating a system&apos;s worth.</p>
+                                        <div className="w-full flex items-start justify-start px-4 py-0 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
+                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0 text-[16px] leading-[120%] font-normal text-black sm:text-[16px] sm:leading-[120%] md:text-[16px] md:leading-[120%] lg:text-[18px] lg:leading-[120%] xl:text-[18px] xl:leading-[120%] 2xl:text-[20px] 2xl:leading-[160%]">The foundation of solar value is the money saved from reduced utility bills. These savings, measured over time, form the basis for calculating a system&apos;s worth.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Step 2 - Calculate Solar Value */}
-                            <div className="card-bounce-in flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:bg-[#0d4449] group">
-                                <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
-                                    <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0
-                                         text-[25px] leading-[110%] font-medium text-white
-                                         sm:text-[25px] sm:leading-[110%] sm:font-medium sm:text-white
-                                         md:text-[25px] md:leading-[110%] md:font-medium md:text-white
-                                         lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-white
-                                         xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-white
-                                         2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-white">Step 2</h5>
+                            <div className="card-bounce-in w-full flex-1 min-w-full min-h-auto bg-[#115056] flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:bg-[#0d4449] group sm:min-w-full md:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-1rem)] xl:min-w-[calc(25%-1.5rem)] 2xl:min-w-[calc(25%-2rem)] md:min-h-[730px] lg:min-h-[730px] xl:min-h-[730px] 2xl:min-h-[730px]">
+                                <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start">
+                                    <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-4 lg:px-[30px] lg:py-5 xl:px-[30px] xl:py-5 2xl:px-[30px] 2xl:py-5">
+                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-white sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Step 2</h5>
                                     </div>
-                                    <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                        <img src="/evaluating-solar-system/section 6/step2.svg" alt="Calculator with energy assessment icon" className="w-[100px] h-[100px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110" />
+                                    <div className="w-full flex items-center justify-start min-h-[120px] px-4 py-0 rounded-[30px] sm:min-h-[140px] sm:px-5 md:min-h-[160px] md:px-6 lg:min-h-[180px] lg:px-[30px] lg:rounded-[50px] xl:min-h-[180px] xl:px-[30px] 2xl:min-h-[180px] 2xl:px-[30px]">
+                                        <img src="/evaluating-solar-system/section 6/step2.svg" alt="Calculator with energy assessment icon" className="w-[80px] h-[80px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110 sm:w-[90px] sm:h-[90px] md:w-[95px] md:h-[95px] lg:w-[100px] lg:h-[100px] xl:w-[100px] xl:h-[100px] 2xl:w-[100px] 2xl:h-[100px]" />
                                     </div>
-                                    <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                        <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out mb-0
-                                             text-[20px] leading-[110%] font-medium text-white
-                                             sm:text-[20px] sm:leading-[110%] sm:font-medium sm:text-white
-                                             md:text-[20px] md:leading-[110%] md:font-medium md:text-white
-                                             lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-white
-                                             xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-white
-                                             2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-white">Calculate Solar Value</h5>
+                                    <div className="w-full flex flex-col items-start justify-start gap-3 px-0 py-3 sm:gap-4 sm:py-4 md:gap-5 md:py-5 lg:gap-5 lg:py-[30px] xl:gap-5 xl:py-[30px] 2xl:gap-5 2xl:py-[30px]">
+                                        <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-0 sm:min-h-[50px] sm:px-5 md:min-h-[50px] md:px-6 lg:min-h-[60px] lg:px-[30px] xl:min-h-[60px] xl:px-[30px] 2xl:min-h-[60px] 2xl:px-[30px]">
+                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-white sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Calculate Solar Value</h5>
                                         </div>
-                                        <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                            <div className="font-['Inter'] transition-all duration-300 ease-in-out
-                                             text-[16px] leading-[120%] font-normal text-white
-                                             sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-white
-                                             md:text-[16px] md:leading-[120%] md:font-normal md:text-white
-                                             lg:text-[18px] lg:leading-[120%] lg:font-normal lg:text-white
-                                             xl:text-[18px] xl:leading-[120%] xl:font-normal xl:text-white
-                                             2xl:text-[20px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-white">
-                                                <p className="mb-4">Appraisers use three methods to determine a solar system's contributory value:</p>
+                                        <div className="w-full flex items-start justify-start px-4 py-0 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
+                                            <div className="font-['Inter'] transition-all duration-300 ease-in-out text-[16px] leading-[120%] font-normal text-white sm:text-[16px] sm:leading-[120%] md:text-[16px] md:leading-[120%] lg:text-[18px] lg:leading-[120%] xl:text-[18px] xl:leading-[120%] 2xl:text-[20px] 2xl:leading-[160%]">
+                                                <p className="mb-4">Appraisers use three methods to determine a solar system&apos;s contributory value:</p>
                                                 <ul className="list-disc ml-6 space-y-1">
                                                     <li><span className="font-semibold text-white">Income</span> – Present worth of future energy savings</li>
                                                     <li><span className="font-semibold text-white">Cost</span> – Replacement minus depreciation</li>
@@ -516,76 +480,40 @@ export default function EvaluatingSolarSystem() {
                             </div>
 
                             {/* Step 3 - Document Solar Value */}
-                            <div className="card-slide-right flex-1 min-w-[295px] h-[730px] bg-white flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg group">
-                                <div className="w-full h-full bg-white flex flex-col items-center justify-start min-w-[295px]">
-                                    <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0
-                                         text-[25px] leading-[110%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[110%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[110%] md:font-medium md:text-black
-                                         lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-black
-                                         xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-black
-                                         2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-black">Step 3</h5>
+                            <div className="card-slide-right w-full flex-1 min-w-full min-h-auto bg-white flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg group sm:min-w-full md:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-1rem)] xl:min-w-[calc(25%-1.5rem)] 2xl:min-w-[calc(25%-2rem)] md:min-h-[730px] lg:min-h-[730px] xl:min-h-[730px] 2xl:min-h-[730px]">
+                                <div className="w-full h-full bg-white flex flex-col items-center justify-start">
+                                    <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-4 lg:px-[30px] lg:py-5 xl:px-[30px] xl:py-5 2xl:px-[30px] 2xl:py-5">
+                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-black sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Step 3</h5>
                                     </div>
-                                    <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                        <img src="/evaluating-solar-system/section 6/step3.svg" alt="Green Home Appraisal Certificate document" className="w-[120px] h-[120px] object-contain" />
+                                    <div className="w-full flex items-center justify-start min-h-[120px] px-4 py-0 rounded-[30px] sm:min-h-[140px] sm:px-5 md:min-h-[160px] md:px-6 lg:min-h-[180px] lg:px-[30px] lg:rounded-[50px] xl:min-h-[180px] xl:px-[30px] 2xl:min-h-[180px] 2xl:px-[30px]">
+                                        <img src="/evaluating-solar-system/section 6/step3.svg" alt="Green Home Appraisal Certificate document" className="w-[80px] h-[80px] object-contain sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] lg:w-[120px] lg:h-[120px] xl:w-[120px] xl:h-[120px] 2xl:w-[120px] 2xl:h-[120px]" />
                                     </div>
-                                    <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                        <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0
-                                             text-[20px] leading-[110%] font-medium text-black
-                                             sm:text-[20px] sm:leading-[110%] sm:font-medium sm:text-black
-                                             md:text-[20px] md:leading-[110%] md:font-medium md:text-black
-                                             lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-black
-                                             xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-black
-                                             2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-black">Document Solar Value with Sprk Appraisal Report</h5>
+                                    <div className="w-full flex flex-col items-start justify-start gap-3 px-0 py-3 sm:gap-4 sm:py-4 md:gap-5 md:py-5 lg:gap-5 lg:py-[30px] xl:gap-5 xl:py-[30px] 2xl:gap-5 2xl:py-[30px]">
+                                        <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-0 sm:min-h-[50px] sm:px-5 md:min-h-[50px] md:px-6 lg:min-h-[60px] lg:px-[30px] xl:min-h-[60px] xl:px-[30px] 2xl:min-h-[60px] 2xl:px-[30px]">
+                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 text-[32px] leading-[110%] font-medium text-black sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Document Solar Value with Sprk Appraisal Report</h5>
                                         </div>
-                                        <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0
-                                             text-[16px] leading-[120%] font-normal text-black
-                                             sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                             md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                             lg:text-[18px] lg:leading-[120%] lg:font-normal lg:text-black
-                                             xl:text-[18px] xl:leading-[120%] xl:font-normal xl:text-black
-                                             2xl:text-[20px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">Sprk provides verified Income and Cost approach data in one clear report, helping appraisers apply recognized methods quickly and accurately.</p>
+                                        <div className="w-full flex items-start justify-start px-4 py-0 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
+                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0 text-[16px] leading-[120%] font-normal text-black sm:text-[16px] sm:leading-[120%] md:text-[16px] md:leading-[120%] lg:text-[18px] lg:leading-[120%] xl:text-[18px] xl:leading-[120%] 2xl:text-[20px] 2xl:leading-[160%]">Sprk provides verified Income and Cost approach data in one clear report, helping appraisers apply recognized methods quickly and accurately.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
 
                             {/* Step 4 - Appraiser Accurately Appraises */}
-                            <div className="card-zoom-in flex-1 min-w-[295px] h-[730px] bg-[#115056] flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:bg-[#0d4449] group">
-                                <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start min-w-[295px]">
-                                    <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-5">
-                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0
-                                         text-[25px] leading-[110%] font-medium text-white
-                                         sm:text-[25px] sm:leading-[110%] sm:font-medium sm:text-white
-                                         md:text-[25px] md:leading-[110%] md:font-medium md:text-white
-                                         lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-white
-                                         xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-white
-                                         2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-white">Step 4</h5>
+                            <div className="card-zoom-in w-full flex-1 min-w-full min-h-auto bg-[#115056] flex flex-col items-center justify-start overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:bg-[#0d4449] group sm:min-w-full md:min-w-[calc(50%-0.5rem)] lg:min-w-[calc(33.333%-1rem)] xl:min-w-[calc(25%-1.5rem)] 2xl:min-w-[calc(25%-2rem)] md:min-h-[730px] lg:min-h-[730px] xl:min-h-[730px] 2xl:min-h-[730px]">
+                                <div className="w-full h-full bg-[#115056] flex flex-col items-center justify-start">
+                                    <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-3 sm:px-5 sm:py-4 md:px-6 md:py-4 lg:px-[30px] lg:py-5 xl:px-[30px] xl:py-5 2xl:px-[30px] 2xl:py-5">
+                                        <h5 className="font-['Aeonik_Pro'] transition-all duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-white sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Step 4</h5>
                                     </div>
-                                    <div className="w-full flex items-center justify-start min-h-[180px] px-[30px] py-0 rounded-[50px]">
-                                        <img src="/evaluating-solar-system/section 6/step4.svg" alt="Solar inspection and appraisal icon" className="w-[120px] h-[120px] object-contain" />
+                                    <div className="w-full flex items-center justify-start min-h-[120px] px-4 py-0 rounded-[30px] sm:min-h-[140px] sm:px-5 md:min-h-[160px] md:px-6 lg:min-h-[180px] lg:px-[30px] lg:rounded-[50px] xl:min-h-[180px] xl:px-[30px] 2xl:min-h-[180px] 2xl:px-[30px]">
+                                        <img src="/evaluating-solar-system/section 6/step4.svg" alt="Solar inspection and appraisal icon" className="w-[80px] h-[80px] object-contain sm:w-[100px] sm:h-[100px] md:w-[110px] md:h-[110px] lg:w-[120px] lg:h-[120px] xl:w-[120px] xl:h-[120px] 2xl:w-[120px] 2xl:h-[120px]" />
                                     </div>
-                                    <div className="w-full flex flex-col items-start justify-start gap-5 px-0 py-[30px]">
-                                        <div className="w-full flex items-start justify-start min-h-[60px] px-[30px] py-0">
-                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out mb-0
-                                             text-[20px] leading-[110%] font-medium text-white
-                                             sm:text-[20px] sm:leading-[110%] sm:font-medium sm:text-white
-                                             md:text-[20px] md:leading-[110%] md:font-medium md:text-white
-                                             lg:text-[32px] lg:leading-[110%] lg:font-medium lg:text-white
-                                             xl:text-[32px] xl:leading-[110%] xl:font-medium xl:text-white
-                                             2xl:text-[32px] 2xl:leading-[110%] 2xl:font-medium 2xl:text-white">Appraiser Accurately Appraises Solar Home</h5>
+                                    <div className="w-full flex flex-col items-start justify-start gap-3 px-0 py-3 sm:gap-4 sm:py-4 md:gap-5 md:py-5 lg:gap-5 lg:py-[30px] xl:gap-5 xl:py-[30px] 2xl:gap-5 2xl:py-[30px]">
+                                        <div className="w-full flex items-start justify-start min-h-[40px] px-4 py-0 sm:min-h-[50px] sm:px-5 md:min-h-[50px] md:px-6 lg:min-h-[60px] lg:px-[30px] xl:min-h-[60px] xl:px-[30px] 2xl:min-h-[60px] 2xl:px-[30px]">
+                                            <h5 className="font-['Aeonik_Pro'] transition-colors duration-300 ease-in-out mb-0 text-[32px] leading-[110%] font-medium text-white sm:text-[32px] sm:leading-[110%] md:text-[32px] md:leading-[110%] lg:text-[32px] lg:leading-[110%] xl:text-[32px] xl:leading-[110%] 2xl:text-[32px] 2xl:leading-[110%]">Appraiser Accurately Appraises Solar Home</h5>
                                         </div>
-                                        <div className="w-full flex items-start justify-start px-[30px] py-0">
-                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0
-                                             text-[16px] leading-[120%] font-normal text-white
-                                             sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-white
-                                             md:text-[16px] md:leading-[120%] md:font-normal md:text-white
-                                             lg:text-[18px] lg:leading-[120%] lg:font-normal lg:text-white
-                                             xl:text-[18px] xl:leading-[120%] xl:font-normal xl:text-white
-                                             2xl:text-[20px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-white">Clear, interactive reports give appraisers the documentation they need to assign accurate value — turning solar into a reason to buy, not a mystery to avoid.</p>
+                                        <div className="w-full flex items-start justify-start px-4 py-0 sm:px-5 md:px-6 lg:px-[30px] xl:px-[30px] 2xl:px-[30px]">
+                                            <p className="font-['Inter'] transition-all duration-300 ease-in-out mb-0 text-[16px] leading-[120%] font-normal text-white sm:text-[16px] sm:leading-[120%] md:text-[16px] md:leading-[120%] lg:text-[18px] lg:leading-[120%] xl:text-[18px] xl:leading-[120%] 2xl:text-[20px] 2xl:leading-[160%]">Clear, interactive reports give appraisers the documentation they need to assign accurate value — turning solar into a reason to buy, not a mystery to avoid.</p>
                                         </div>
                                     </div>
                                 </div>

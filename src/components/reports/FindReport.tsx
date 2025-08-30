@@ -36,7 +36,6 @@ export default function FindReport({
                     className="w-full flex items-center justify-center p-[5px] rounded-[5px] group transition-colors"
                     style={{ 
                         backgroundColor: primaryColor,
-                        ':hover': { backgroundColor: secondaryColor }
                     }}
                     onMouseEnter={(e) => {
                         e.currentTarget.style.backgroundColor = secondaryColor;
@@ -96,9 +95,11 @@ export default function FindReport({
                             className="w-full lg:w-1/2 h-[300px] lg:h-[500px] flex items-start justify-start overflow-hidden min-w-[350px]"
                             style={{ backgroundColor: imageBackgroundColor }}
                         >
-                            <div 
-                                className="w-full h-full bg-[0%_3.57%] bg-no-repeat bg-[length:100%_130.58%]"
-                                style={{ backgroundImage: `url('${imageSrc}')` }}
+                            <img 
+                                src={imageSrc} 
+                                alt={imageAlt} 
+                                className="w-full h-full object-cover object-[0%_3.57%]"
+                                loading="lazy"
                             />
                         </div>
                         

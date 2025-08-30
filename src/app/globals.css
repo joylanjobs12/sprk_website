@@ -512,7 +512,7 @@ button:hover, .button-big:hover, .button-small:hover {
 button:not(.dark), .button-big:not(.dark), .button-small:not(.dark) {
   background: #fff;
   color: #000;
-  border: 1px solid #115056;
+  /* border: 1px solid #115056; */
 }
 
 button:not(.dark):hover, .button-big:not(.dark):hover, .button-small:not(.dark):hover {
