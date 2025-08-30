@@ -13,7 +13,7 @@ import SelectRole from "@/components/SelectRole";
 
 export default function Home() {
   return (
-    <>
+    <div className="overflow-hidden">
       <ScrollAnimations />
       <section className="section-1 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-12">
         <div className="text-center pt-[40px] sm:pt-[60px] lg:pt-[80px] xl:pt-[100px]">
@@ -710,6 +710,6 @@ export default function Home() {
       {/* Scroll to Top Button */}
       <ScrollToTop />
 
-    </>
+    </div>
   );
 }

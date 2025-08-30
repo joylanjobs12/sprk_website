@@ -2,11 +2,10 @@
 
 import { ReactNode, useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Autoplay, Navigation } from 'swiper/modules';
+import { Pagination, Autoplay } from 'swiper/modules';
 import type { Swiper as SwiperType } from 'swiper';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import 'swiper/css/navigation';
 
 interface AboutReportProps {
     title: string;
@@ -54,7 +53,7 @@ export default function AboutReport({
                 <div className="bg-white w-full rounded-[10px] border border-[rgba(0,0,0,0.15)] border-solid overflow-hidden min-w-[400px]">
                     <div className="w-full relative">
                         <Swiper
-                            modules={[Pagination, Autoplay, Navigation]}
+                            modules={[Pagination, Autoplay]}
                             spaceBetween={20}
                             slidesPerView={1}
                             loop={false}
@@ -69,29 +68,8 @@ export default function AboutReport({
                                 bulletActiveClass: 'swiper-pagination-bullet-active about-report-bullet-active',
                             }}
                             className="about-report-swiper"
-                            onBeforeInit={(swiper) => {
-                                if (swiper.params.navigation && typeof swiper.params.navigation !== 'boolean') {
-                                    swiper.params.navigation.prevEl = prevRef.current as unknown as HTMLElement;
-                                    swiper.params.navigation.nextEl = nextRef.current as unknown as HTMLElement;
-                                }
-                            }}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
-                                setTimeout(() => {
-                                    if (
-                                        prevRef.current &&
-                                        nextRef.current &&
-                                        swiper.params.navigation &&
-                                        typeof swiper.params.navigation !== 'boolean'
-                                    ) {
-                                        swiper.params.navigation.prevEl = prevRef.current as unknown as HTMLElement;
-                                        swiper.params.navigation.nextEl = nextRef.current as unknown as HTMLElement;
-                                        if (swiper.navigation && swiper.navigation.init && swiper.navigation.update) {
-                                            swiper.navigation.init();
-                                            swiper.navigation.update();
-                                        }
-                                    }
-                                });
                             }}
                             breakpoints={{
                                 768: { slidesPerView: 1, spaceBetween: 24 },

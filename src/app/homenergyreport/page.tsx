@@ -12,9 +12,8 @@ import ScrollAnimations from "@/components/ScrollAnimations";
 
 export default function HomeEnergyReport() {
     return (
-        <>
+        <div className='overflow-hidden'>
             <ScrollAnimations />
-
             <section className="w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
                 <div className="w-full flex flex-col items-start justify-start">
                     <header className="w-full flex flex-col gap-[25px] lg:gap-[50px] items-center justify-start">
@@ -393,6 +392,6 @@ export default function HomeEnergyReport() {
             </section>
 
             <ScrollToTop />
-        </>
+        </div>
     );
 }
