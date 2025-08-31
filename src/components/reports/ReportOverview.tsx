@@ -1,5 +1,7 @@
 'use client';
 
+import ButtonsType from "../ButtonsType";
+
 interface ReportOverviewProps {
   title: string;
   imageSrc: string;
@@ -98,9 +100,9 @@ export default function ReportOverview({
           {/* Content Section */}
           <div className="w-full p-4 sm:p-6 md:p-8 lg:p-[50px]">
             {/* Title */}
-            <div className="w-full flex items-center justify-center pb-6 lg:pb-[50px]">
+            <div className="w-full flex items-start justify-start pb-6 lg:pb-[50px]">
               <h2 
-                className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-center`}
+                className={`text-reveal text-[${titleSize.base}] sm:text-[${titleSize.sm}] md:text-[${titleSize.md}] lg:text-[${titleSize.lg}] xl:text-[${titleSize.xl}] 2xl:text-[${titleSize.xxl}] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#141414] text-start`}
               >
                 {title}
               </h2>
@@ -108,41 +110,9 @@ export default function ReportOverview({
             
             {/* Buttons */}
             <div className="w-full flex flex-col sm:flex-row gap-2.5 items-stretch">
-              <button 
-                onClick={onPrimaryClick}
-                className="slide-up-cards flex-1 bg-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#0d3d42] hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex-1 flex items-center justify-center px-[15px] py-[5px]">
-                  <span 
-                    className={`text-[${buttonTextSize.base}] sm:text-[${buttonTextSize.sm}] md:text-[${buttonTextSize.md}] lg:text-[${buttonTextSize.lg}] xl:text-[${buttonTextSize.xl}] 2xl:text-[${buttonTextSize.xxl}] leading-[120%] font-normal font-['Inter'] text-white text-center`}
-                  >
-                    {primaryButtonText}
-                  </span>
-                  <div className="ml-2 w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
-                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </button>
-              
-              <button 
-                onClick={onSecondaryClick}
-                className="slide-up-cards flex-1 bg-white border border-[#115056] flex items-center justify-center gap-2 p-[5px] rounded-[5px] min-h-[44px] group hover:bg-[#115056] hover:scale-105 transition-all duration-300"
-              >
-                <div className="flex-1 flex items-center justify-center px-[15px] py-[5px]">
-                  <span 
-                    className={`text-[${buttonTextSize.base}] sm:text-[${buttonTextSize.sm}] md:text-[${buttonTextSize.md}] lg:text-[${buttonTextSize.lg}] xl:text-[${buttonTextSize.xl}] 2xl:text-[${buttonTextSize.xxl}] leading-[120%] font-normal font-['Inter'] text-[#141414] group-hover:text-white text-center transition-colors`}
-                  >
-                    {secondaryButtonText}
-                  </span>
-                  <div className="ml-2 w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
-                    <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-                </div>
-              </button>
+              <ButtonsType type={2} label={primaryButtonText} isShowArrow={true} />
+              <ButtonsType type={6} label={secondaryButtonText} isShowArrow={true} />
+             
             </div>
           </div>
         </div>

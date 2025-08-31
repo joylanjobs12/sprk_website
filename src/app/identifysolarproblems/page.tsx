@@ -188,11 +188,11 @@ export default function IdentifySolarProblems() {
             </div>
           </div>
         </div>
-        <div className="content-start grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8 items-start justify-start relative shrink-0 w-full">
+        <div className="content-start flex flex-wrap gap-4 sm:gap-5 md:gap-6 lg:gap-6 xl:gap-8 items-start justify-start relative shrink-0 w-full">
           {/* Card 1: Safety risks and roof damage */}
-          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+          <div className="report-card bg-white min-h-[400px] w-full lg:w-[56%] relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
-              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
+              <div className="lg:h-[150px] bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
                 <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
                   <h5
                     className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#000] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
@@ -219,9 +219,9 @@ export default function IdentifySolarProblems() {
           </div>
 
           {/* Card 2: Damaged equipment */}
-          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+          <div className="report-card bg-white min-h-[400px] w-full lg:w-[40%]   relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
-              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
+              <div className="lg:h-[150px]  bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
                 <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
                   <h5
                     className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#000] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
@@ -248,9 +248,9 @@ export default function IdentifySolarProblems() {
           </div>
 
           {/* Card 3: Paying unnecessary bills */}
-          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+          <div className="report-card bg-white min-h-[400px] w-full  lg:w-[40%] relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
-              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
+              <div className="lg:h-[150px] bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
                 <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
                   <h5
                     className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#000] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
@@ -277,9 +277,9 @@ export default function IdentifySolarProblems() {
           </div>
 
           {/* Card 4: Buyer hesitation */}
-          <div className="report-card bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+          <div className="report-card bg-white min-h-[400px] w-full lg:w-[56%]  relative rounded-[10px] shrink-0 hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
             <div className="content-stretch flex flex-col items-center justify-start min-h-inherit min-w-inherit overflow-clip relative w-full">
-              <div className="bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
+              <div className=" lg:h-[150px] bg-gray-50 box-border content-stretch flex flex-col gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-start p-4 sm:p-5 md:p-6 lg:p-[30px] xl:p-[30px] 2xl:p-[30px] relative shrink-0 w-full">
                 <div className="content-stretch flex items-start justify-start relative shrink-0 w-full">
                   <h5
                     className="basis-0 grow min-h-[66px] min-w-px not-italic relative shrink-0 text-[#000] text-[32px] sm:text-[32px] md:text-[32px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"

@@ -42,10 +42,10 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
       // Second row: first card 40%, second card 60%
       if (rowIndex === 0) {
         // First row
-        return isFirstInRow ? 'w-full md:w-[60%]' : 'w-full md:w-[40%]';
+        return isFirstInRow ? 'w-full md:w-full lg:w-[48%] xl:w-[56%]' : 'w-full md:w-full lg:w-[48%] xl:w-[40%]';
       } else {
         // Second row - flip the widths
-        return isFirstInRow ? 'w-full md:w-[40%]' : 'w-full md:w-[60%]';
+        return isFirstInRow ? 'w-full md:w-full lg:w-[48%] xl:w-[40%]' : 'w-full md:w-full lg:w-[48%] xl:w-[56%]';
       }
     };
     
@@ -80,7 +80,7 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
             </div>
           </div>
           <div className="bg-gray-50 flex flex-col gap-3 sm:gap-4 lg:gap-5 items-center justify-start pb-4 sm:pb-6 lg:pb-[30px] pt-6 sm:pt-8 lg:pt-[50px] w-full flex-1">
-            <div className="flex items-start justify-start px-4 sm:px-6 lg:px-[30px] w-full">
+            <div className="flex items-start justify-start px-4 sm:px-6 lg:px-[30px] w-full lg:h-[300px] xl:h-[200px]">
               <p 
                 className={`${inter.className} text-[16px] sm:text-[18px] md:text-[20px] lg:text-[24px] font-normal leading-[120%] text-black/66 flex-1 min-h-[80px] sm:min-h-[90px] lg:min-h-[105px] text-center sm:text-left`}
               >
@@ -131,11 +131,11 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
           
           <div className="flex flex-col gap-4 sm:gap-6 w-full">
             {/* First Row */}
-            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full flex-wrap">
               {cards.slice(0, 2).map((card, index) => renderCard(card, index, 0))}
             </div>
             {/* Second Row */}
-            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full flex-wrap">
               {cards.slice(2, 4).map((card, index) => renderCard(card, index + 2, 1))}
             </div>
           </div>
