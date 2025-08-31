@@ -9,6 +9,7 @@ import HowToGetThisReport from '@/components/reports/HowToGetThisReport';
 import AnalyzeThisReport from '@/components/reports/AnalyzeThisReport';
 import AboutReport from '@/components/reports/AboutReport';
 import FindReport from '@/components/reports/FindReport';
+import ButtonsType from '@/components/ButtonsType';
 
 export default function SolarListingReport() {
     return (
@@ -36,21 +37,17 @@ export default function SolarListingReport() {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Buttons */}
-                        <div className="slide-up-cards w-full flex flex-col sm:flex-row gap-[15px] items-center justify-center">
-                            <button className="slide-up-cards button-ripple w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] hover:bg-[#0d3e42] transition-all duration-300 hover:scale-105 hover:shadow-lg transform-gpu">
-                                <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap relative z-10">
-                                    Get This Report
-                                </span>
-                            </button>
-
-                            <button className="slide-up-cards button-ripple w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px] hover:bg-[#115056] hover:text-white transition-all duration-300 hover:scale-105 hover:shadow-lg transform-gpu">
-                                <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] hover:text-white whitespace-nowrap transition-colors duration-300 relative z-10">
-                                    See a Sample Report
-                                </span>
-                            </button>
+                        <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+                        <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                            <div className="w-full ">
+                            <ButtonsType type={9} label="Get This Report" isShowArrow={false} />
+                            </div>
+                            <div className="w-full ">
+                            <ButtonsType type={10} label="See a Sample Report" isShowArrow={false} />
+                            </div>
                         </div>
+                        </div>
+
                     </header>
                 </div>
             </section>

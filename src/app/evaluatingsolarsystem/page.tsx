@@ -1,6 +1,7 @@
 import ScrollToTop from "@/components/ScrollToTop";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ButtonsType from "@/components/ButtonsType";
 
 export default function EvaluatingSolarSystem() {
     return (
@@ -124,97 +125,102 @@ export default function EvaluatingSolarSystem() {
                         </div>
                     </div>
 
-                    {/* Cards Grid */}
-                    <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-6">
+                    {/* Cards Flex */}
+                    <div className="w-full flex flex-wrap gap-6 justify-center lg:gap-6">
                         {/* System Size & Capacity Card */}
-                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
-                            <div className="w-full flex flex-col items-center justify-start">
-                                {/* Icon Section */}
-                                <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
-                                    <div className="flex items-center justify-start gap-[30px]">
-                                        <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
-                                            <img
-                                                src="/evaluating-solar-system/section 3/systemsize.svg"
-                                                alt="Solar panel system icon"
-                                                className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                            />
+                        <div className="w-full sm:w-[46%] md:w-[46%] lg:w-[46%] xl:w-[32%] 2xl:w-[32%]">
+                            <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                                <div className="w-full flex flex-col items-center justify-start">
+                                    {/* Icon Section */}
+                                    <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
+                                        <div className="flex items-center justify-start gap-[30px]">
+                                            <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
+                                                <img
+                                                    src="/evaluating-solar-system/section 3/systemsize.svg"
+                                                    alt="Solar panel system icon"
+                                                    className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Content Section */}
-                                <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
-                                    <div className="w-full flex items-start justify-start px-[30px]">
-                                        <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
-                                         text-[25px] leading-[120%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[120%] md:font-medium md:text-black
-                                         lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
-                                         xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
-                                         2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
-                                            System Size & Capacity
-                                        </h3>
-                                    </div>
-                                    <div className="w-full flex items-center justify-start px-[30px] py-2.5">
-                                        <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
-                                         text-[16px] leading-[120%] font-normal text-black
-                                         sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                         md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                         lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
-                                         xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
-                                         2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
-                                            How much energy the system can produce.
-                                        </p>
+                                    {/* Content Section */}
+                                    <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
+                                        <div className="w-full flex items-start justify-start px-[30px]">
+                                            <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
+                     text-[25px] leading-[120%] font-medium text-black
+                     sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
+                     md:text-[25px] md:leading-[120%] md:font-medium md:text-black
+                     lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
+                     xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
+                     2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
+                                                System Size & Capacity
+                                            </h3>
+                                        </div>
+                                        <div className="w-full flex items-center justify-start px-[30px] py-2.5">
+                                            <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
+                     text-[16px] leading-[120%] font-normal text-black
+                     sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
+                     md:text-[16px] md:leading-[120%] md:font-normal md:text-black
+                     lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
+                     xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
+                     2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
+                                                How much energy the system can produce.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Production & Performance Card */}
-                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
-                            <div className="w-full flex flex-col items-center justify-start">
-                                {/* Icon Section */}
-                                <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
-                                    <div className="flex items-center justify-start gap-[30px]">
-                                        <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
-                                            <img
-                                                src="/evaluating-solar-system/section 3/production.svg"
-                                                alt="Performance gauge icon"
-                                                className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                            />
+                        <div className="w-full sm:w-[46%] md:w-[46%]  lg:w-[46%] xl:w-[32%] 2xl:w-[32%]">
+                            <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                                <div className="w-full flex flex-col items-center justify-start">
+                                    {/* Icon Section */}
+                                    <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
+                                        <div className="flex items-center justify-start gap-[30px]">
+                                            <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
+                                                <img
+                                                    src="/evaluating-solar-system/section 3/production.svg"
+                                                    alt="Performance gauge icon"
+                                                    className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Content Section */}
-                                <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
-                                    <div className="w-full flex items-start justify-start px-[30px]">
-                                        <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
-                                         text-[25px] leading-[120%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[120%] md:font-medium md:text-black
-                                         lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
-                                         xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
-                                         2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
-                                            Production & Performance
-                                        </h3>
-                                    </div>
-                                    <div className="w-full flex items-center justify-start px-[30px] py-2.5">
-                                        <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
-                                         text-[16px] leading-[120%] font-normal text-black
-                                         sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                         md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                         lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
-                                         xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
-                                         2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
-                                            Actual vs. expected electricity generation.
-                                        </p>
+                                    {/* Content Section */}
+                                    <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
+                                        <div className="w-full flex items-start justify-start px-[30px]">
+                                            <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
+                     text-[25px] leading-[120%] font-medium text-black
+                     sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
+                     md:text-[25px] md:leading-[120%] md:font-medium md:text-black
+                     lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
+                     xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
+                     2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
+                                                Production & Performance
+                                            </h3>
+                                        </div>
+                                        <div className="w-full flex items-center justify-start px-[30px] py-2.5">
+                                            <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
+                     text-[16px] leading-[120%] font-normal text-black
+                     sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
+                     md:text-[16px] md:leading-[120%] md:font-normal md:text-black
+                     lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
+                     xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
+                     2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
+                                                Actual vs. expected electricity generation.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Energy Costs Avoided Card */}
-                        <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
-                            <div className="w-full flex flex-col items-center justify-start">
+                        <div className="w-full sm:w-[46%] md:w-[46%] lg:w-[46%] xl:w-[32%] 2xl:w-[32%]">
+                            <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+
                                 {/* Icon Section */}
                                 <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
                                     <div className="flex items-center justify-start gap-[30px]">
@@ -231,23 +237,23 @@ export default function EvaluatingSolarSystem() {
                                 <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
                                     <div className="w-full flex items-start justify-start px-[30px]">
                                         <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
-                                         text-[25px] leading-[120%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[120%] md:font-medium md:text-black
-                                         lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
-                                         xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
-                                         2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
+                     text-[25px] leading-[120%] font-medium text-black
+                     sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
+                     md:text-[25px] md:leading-[120%] md:font-medium md:text-black
+                     lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
+                     xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
+                     2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
                                             Energy Costs Avoided
                                         </h3>
                                     </div>
                                     <div className="w-full flex items-center justify-start px-[30px] py-2.5">
                                         <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
-                                         text-[16px] leading-[120%] font-normal text-black
-                                         sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                         md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                         lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
-                                         xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
-                                         2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
+                     text-[16px] leading-[120%] font-normal text-black
+                     sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
+                     md:text-[16px] md:leading-[120%] md:font-normal md:text-black
+                     lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
+                     xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
+                     2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
                                             What you would have paid to the utility without solar.
                                         </p>
                                     </div>
@@ -256,86 +262,90 @@ export default function EvaluatingSolarSystem() {
                         </div>
 
                         {/* Remaining Useful Life Card */}
-                        <div className="card-flip w-full lg:col-start-1 bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
-                            <div className="w-full flex flex-col items-center justify-start">
-                                {/* Icon Section */}
-                                <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
-                                    <div className="flex items-center justify-start gap-[30px]">
-                                        <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
-                                            <img
-                                                src="/evaluating-solar-system/section 3/remaining.svg"
-                                                alt="Calendar icon"
-                                                className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                            />
+                        <div className="w-full sm:w-[46%] md:w-[46%] lg:w-[46%] xl:w-[32%] 2xl:w-[32%]">
+                            <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                                <div className="w-full flex flex-col items-center justify-start">
+                                    {/* Icon Section */}
+                                    <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
+                                        <div className="flex items-center justify-start gap-[30px]">
+                                            <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
+                                                <img
+                                                    src="/evaluating-solar-system/section 3/remaining.svg"
+                                                    alt="Calendar icon"
+                                                    className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Content Section */}
-                                <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
-                                    <div className="w-full flex items-start justify-start px-[30px]">
-                                        <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
-                                         text-[25px] leading-[120%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[120%] md:font-medium md:text-black
-                                         lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
-                                         xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
-                                         2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
-                                            Remaining Useful Life
-                                        </h3>
-                                    </div>
-                                    <div className="w-full flex items-center justify-start px-[30px] py-2.5">
-                                        <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
-                                         text-[16px] leading-[120%] font-normal text-black
-                                         sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                         md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                         lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
-                                         xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
-                                         2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
-                                            How many years of benefit are left.
-                                        </p>
+                                    {/* Content Section */}
+                                    <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
+                                        <div className="w-full flex items-start justify-start px-[30px]">
+                                            <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
+                    text-[25px] leading-[120%] font-medium text-black
+                    sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
+                    md:text-[25px] md:leading-[120%] md:font-medium md:text-black
+                    lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
+                    xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
+                    2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
+                                                Remaining Useful Life
+                                            </h3>
+                                        </div>
+                                        <div className="w-full flex items-center justify-start px-[30px] py-2.5">
+                                            <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
+                    text-[16px] leading-[120%] font-normal text-black
+                    sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
+                    md:text-[16px] md:leading-[120%] md:font-normal md:text-black
+                    lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
+                    xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
+                    2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
+                                                How many years of benefit are left.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         {/* Documentation Card */}
-                        <div className="card-flip w-full lg:col-start-3 bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
-                            <div className="w-full flex flex-col items-center justify-start">
-                                {/* Icon Section */}
-                                <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
-                                    <div className="flex items-center justify-start gap-[30px]">
-                                        <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
-                                            <img
-                                                src="/evaluating-solar-system/section 3/documentation.svg"
-                                                alt="Documentation icon"
-                                                className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
-                                            />
+                        <div className="w-full sm:w-[46%] md:w-[46%] lg:w-[46%] xl:w-[32%] 2xl:w-[32%]">
+                            <div className="card-flip w-full bg-white rounded-[10px] border border-[rgba(17,80,86,0.5)] shadow-[0px_63px_25px_0px_rgba(38,142,151,0.02),0px_36px_21px_0px_rgba(38,142,151,0.08),0px_16px_16px_0px_rgba(38,142,151,0.13),0px_4px_9px_0px_rgba(38,142,151,0.1)] overflow-hidden transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 hover:border-[#115056] cursor-pointer group">
+                                <div className="w-full flex flex-col items-center justify-start">
+                                    {/* Icon Section */}
+                                    <div className="w-full flex items-center justify-start p-[30px] border-b border-[#a5dcdf] transition-colors duration-300 ease-in-out group-hover:border-[#115056]">
+                                        <div className="flex items-center justify-start gap-[30px]">
+                                            <div className="w-[130px] h-[130px] bg-white rounded-[10px] border border-[#115056] flex items-center justify-center transition-all duration-300 ease-in-out group-hover:bg-[#F1FAFA] group-hover:scale-110">
+                                                <img
+                                                    src="/evaluating-solar-system/section 3/documentation.svg"
+                                                    alt="Documentation icon"
+                                                    className="w-[90px] h-[94px] object-contain transition-transform duration-300 ease-in-out group-hover:scale-110"
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                {/* Content Section */}
-                                <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
-                                    <div className="w-full flex items-start justify-start px-[30px]">
-                                        <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
-                                         text-[25px] leading-[120%] font-medium text-black
-                                         sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
-                                         md:text-[25px] md:leading-[120%] md:font-medium md:text-black
-                                         lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
-                                         xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
-                                         2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
-                                            Documentation
-                                        </h3>
-                                    </div>
-                                    <div className="w-full flex items-center justify-start px-[30px] py-2.5">
-                                        <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
-                                         text-[16px] leading-[120%] font-normal text-black
-                                         sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
-                                         md:text-[16px] md:leading-[120%] md:font-normal md:text-black
-                                         lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
-                                         xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
-                                         2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
-                                            Ownership, warranties, and utility agreements.
-                                        </p>
+                                    {/* Content Section */}
+                                    <div className="w-full bg-gray-50 flex flex-col items-center justify-start gap-5 px-0 py-[30px] pt-[50px] transition-colors duration-300 ease-in-out group-hover:bg-[#F8FFFE]">
+                                        <div className="w-full flex items-start justify-start px-[30px]">
+                                            <h3 className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[#115056] mb-0 min-h-[70px] flex items-center
+                    text-[25px] leading-[120%] font-medium text-black
+                    sm:text-[25px] sm:leading-[120%] sm:font-medium sm:text-black
+                    md:text-[25px] md:leading-[120%] md:font-medium md:text-black
+                    lg:text-[24px] lg:leading-[150%] lg:font-medium lg:text-black
+                    xl:text-[24px] xl:leading-[150%] xl:font-medium xl:text-black
+                    2xl:text-[24px] 2xl:leading-[150%] 2xl:font-medium 2xl:text-black">
+                                                Documentation
+                                            </h3>
+                                        </div>
+                                        <div className="w-full flex items-center justify-start px-[30px] py-2.5">
+                                            <p className="font-['Inter'] transition-colors duration-300 ease-in-out group-hover:text-[rgba(0,0,0,0.8)] mb-0 min-h-11 flex items-center
+                    text-[16px] leading-[120%] font-normal text-black
+                    sm:text-[16px] sm:leading-[120%] sm:font-normal sm:text-black
+                    md:text-[16px] md:leading-[120%] md:font-normal md:text-black
+                    lg:text-[15px] lg:leading-[160%] lg:font-normal lg:text-black
+                    xl:text-[15px] xl:leading-[160%] xl:font-normal xl:text-black
+                    2xl:text-[15px] 2xl:leading-[160%] 2xl:font-normal 2xl:text-black">
+                                                Ownership, warranties, and utility agreements.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -343,25 +353,27 @@ export default function EvaluatingSolarSystem() {
                     </div>
                 </div>
             </section>
-            <HowItWorksSection
-                title="The 3 Appraisal Methods for Solar"
-                subtitle="Appraisers have three recognized approaches for determining the contributory value of solar to a home:"
-                step1={{
-                    icon: "/evaluating-solar-system/section 4/income.svg",
-                    label: "Income Approach",
-                    description: "Calculates value based on the present worth of future energy savings."
-                }}
-                step2={{
-                    icon: "/evaluating-solar-system/section 4/cost.svg",
-                    label: "Cost Approach",
-                    description: "Considers the cost to replace the system, minus depreciation for age and condition."
-                }}
-                step3={{
-                    icon: "/evaluating-solar-system/section 4/sales.svg",
-                    label: "Sales Comparison Approach",
-                    description: "Compares recent sales of similar homes with and without solar, adjusting for differences.\n\nWhen comparable sales data is not available or does not reliably reflect the solar system's value, industry guidance from the Appraisal Institute and others recommends using the Income Approach and/or Cost Approach as the best options for establishing contributory value."
-                }}
-            />
+            <section className="section-4">
+                <HowItWorksSection
+                    title="The 3 Appraisal Methods for Solar"
+                    subtitle="Appraisers have three recognized approaches for determining the contributory value of solar to a home:"
+                    step1={{
+                        icon: "/evaluating-solar-system/section 4/income.svg",
+                        label: "Income Approach",
+                        description: "Calculates value based on the present worth of future energy savings."
+                    }}
+                    step2={{
+                        icon: "/evaluating-solar-system/section 4/cost.svg",
+                        label: "Cost Approach",
+                        description: "Considers the cost to replace the system, minus depreciation for age and condition."
+                    }}
+                    step3={{
+                        icon: "/evaluating-solar-system/section 4/sales.svg",
+                        label: "Sales Comparison Approach",
+                        description: "Compares recent sales of similar homes with and without solar, adjusting for differences.\n\nWhen comparable sales data is not available or does not reliably reflect the solar system's value, industry guidance from the Appraisal Institute and others recommends using the Income Approach and/or Cost Approach as the best options for establishing contributory value."
+                    }}
+                />
+            </section>
 
             <section className="section-5 w-full bg-[#115056] flex flex-col items-center justify-start relative px-4 py-16 sm:px-6 sm:py-20 md:px-8 md:py-24 lg:px-24 lg:py-32 xl:py-36 2xl:py-40">
                 <div className="w-full max-w-7xl flex flex-col items-start justify-start gap-12 sm:gap-14 md:gap-16 lg:gap-20">
@@ -651,41 +663,9 @@ export default function EvaluatingSolarSystem() {
 
                     {/* CTA Buttons */}
                     <div className="cta-button w-full flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8">
-                        {/* Primary Button */}
-                        <div className="w-full sm:w-auto bg-[#115056] rounded-[5px] p-[5px] transition-all duration-200 ease-in-out hover:bg-white hover:shadow-lg cursor-pointer group hover:scale-105">
-                            <div className="w-full sm:w-[418px] flex items-center justify-center px-[15px] py-[5px]">
-                                <p className="flex-1 font-['Inter'] leading-[120%] text-center mb-0 transition-colors duration-200 group-hover:text-[#115056]
-                                 text-[18px] font-normal text-white
-                                 sm:text-[18px] sm:font-normal sm:text-white
-                                 md:text-[18px] md:font-normal md:text-white
-                                 lg:text-[18px] lg:font-normal lg:text-white
-                                 xl:text-[18px] xl:font-normal xl:text-white
-                                 2xl:text-[20px] 2xl:font-normal 2xl:text-white">Get a Solar Listing Report</p>
-                                <div className="w-[30px] h-[30px] flex items-center justify-center ml-2 transition-transform duration-200 group-hover:translate-x-1">
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                                        <path d="M13.75 21.25L20 15L13.75 8.75" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-[#115056] transition-colors duration-200" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-
-                        {/* Secondary Button */}
-                        <div className="w-full sm:w-auto bg-white border border-[#115056] rounded-[5px] p-[5px] transition-all duration-200 ease-in-out hover:bg-[#115056] hover:shadow-lg cursor-pointer group hover:scale-105">
-                            <div className="w-full sm:w-[418px] flex items-center justify-center px-[15px] py-[5px]">
-                                <p className="flex-1 font-['Inter'] leading-[120%] text-center mb-0 transition-colors duration-200 group-hover:text-white
-                                 text-[18px] font-normal text-black
-                                 sm:text-[18px] sm:font-normal sm:text-black
-                                 md:text-[18px] md:font-normal md:text-black
-                                 lg:text-[18px] lg:font-normal lg:text-black
-                                 xl:text-[18px] xl:font-normal xl:text-black
-                                 2xl:text-[20px] 2xl:font-normal 2xl:text-black">See a Sample Listing Report</p>
-                                <div className="w-[30px] h-[30px] flex items-center justify-center ml-2 transition-transform duration-200 group-hover:translate-x-1">
-                                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
-                                        <path d="M13.75 21.25L20 15L13.75 8.75" stroke="#115056" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="group-hover:stroke-white transition-colors duration-200" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
+                       
+                        <ButtonsType type={2} label="Get a Solar Listing Report" isShowArrow={true} />
+                        <ButtonsType type={6} label="See a Sample Listing Report" isShowArrow={true} />
                     </div>
                 </div>
             </section>

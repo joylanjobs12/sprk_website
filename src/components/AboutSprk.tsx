@@ -131,11 +131,11 @@ export default function AboutSprk({ title, subtitle, description, cards }: About
           
           <div className="flex flex-col gap-4 sm:gap-6 w-full">
             {/* First Row */}
-            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start justify-start w-full">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full">
               {cards.slice(0, 2).map((card, index) => renderCard(card, index, 0))}
             </div>
             {/* Second Row */}
-            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-start justify-start w-full">
+            <div className="flex flex-col md:flex-row gap-4 sm:gap-6 items-stretch justify-start w-full">
               {cards.slice(2, 4).map((card, index) => renderCard(card, index + 2, 1))}
             </div>
           </div>

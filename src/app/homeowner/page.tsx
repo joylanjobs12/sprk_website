@@ -285,7 +285,7 @@ export default function HomeownerPage() {
                       Thinking About Going Solar?
                     </h5>
                     <p
-                      className={`${inter.className} basis-0 grow min-h-[88px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
+                      className={`${inter.className} basis-0 grow min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -322,7 +322,7 @@ export default function HomeownerPage() {
                       Already Have Solar?
                     </h5>
                     <p
-                      className={`${inter.className} basis-0 grow min-h-[88px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
+                      className={`${inter.className} basis-0 grow min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -359,7 +359,7 @@ export default function HomeownerPage() {
                       Getting Ready to Sell?
                     </h5>
                     <p
-                      className={`${inter.className} basis-0 grow min-h-[88px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
+                      className={`${inter.className} basis-0 grow min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,
@@ -396,7 +396,7 @@ export default function HomeownerPage() {
                       Appraising or Refinancing?
                     </h5>
                     <p
-                      className={`${inter.className} basis-0 grow min-h-[88px] min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
+                      className={`${inter.className} basis-0 grow min-w-px not-italic relative shrink-0 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] font-normal px-0 py-2.5`}
                       style={{
                         fontFamily: 'Inter',
                         fontWeight: 400,

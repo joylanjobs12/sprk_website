@@ -1,10 +1,12 @@
 import Image from "next/image";
+import type { ReactNode } from "react";
 
 interface Step {
   icon: string;
   label: string;
   subtitle?: string;
   description: string;
+  button?: ReactNode;
 }
 
 interface HowItWorksSectionProps {
@@ -23,7 +25,7 @@ export default function HowItWorksSection({
   step3
 }: HowItWorksSectionProps) {
   // Define default steps based on Solar Calculator Lead Gen design
-  const defaultSteps = [
+  const defaultSteps: Step[] = [
     {
       icon: '/solar-pro-page/section 7/homeowner-fills.svg',
       label: 'Homeowner fills out',
@@ -127,6 +129,11 @@ export default function HowItWorksSection({
                     {step.description}
                   </p>
                 </div>
+                {step.button && (
+                  <div className="box-border content-stretch flex items-center justify-start min-h-[110px] p-0 relative shrink-0 w-full">
+                    {step.button}
+                  </div>
+                )}
               </div>
             </div>
           </div>
