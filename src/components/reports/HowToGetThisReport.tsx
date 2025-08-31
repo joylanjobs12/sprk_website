@@ -1,5 +1,7 @@
 'use client';
 
+import ButtonsType from "../ButtonsType";
+
 interface InfoCard {
   iconSrc: string;
   iconAlt: string;
@@ -199,23 +201,8 @@ export default function HowToGetThisReport({
       
       {/* CTA Button */}
       <div className="w-full flex flex-col items-center justify-start">
-        <button 
-          onClick={onCtaClick}
-          className="cta-button w-full max-w-md bg-[#115056] rounded-[5px] p-[5px] flex items-center justify-center min-h-[44px] group transition-all duration-300 ease-in-out hover:scale-105 active:scale-95"
-        >
-          <div className="flex-1 flex items-center justify-center px-[15px] py-[5px] gap-2">
-            <span 
-              className={`text-[${buttonTextSize.base}] sm:text-[${buttonTextSize.sm}] md:text-[${buttonTextSize.md}] lg:text-[${buttonTextSize.lg}] xl:text-[${buttonTextSize.xl}] 2xl:text-[${buttonTextSize.xxl}] leading-[110%] font-medium font-['Inter'] text-white text-center`}
-            >
-              {ctaButtonText}
-            </span>
-            <div className="w-[20px] h-[20px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
-              <svg className="w-full h-full" viewBox="0 0 24 24" fill="none">
-                <path d="M5 12h14m-7-7l7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-          </div>
-        </button>
+       
+        <ButtonsType type={2} label={ctaButtonText} isShowArrow={true} />
       </div>
     </section>
   );

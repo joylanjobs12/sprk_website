@@ -1,5 +1,7 @@
 'use client';
 
+import React, { ReactNode, isValidElement } from 'react';
+
 interface ButtonConfig {
     text: string;
     type: 'primary' | 'secondary';
@@ -12,7 +14,7 @@ interface FindReportProps {
     imageAlt: string;
     backgroundColor?: string;
     imageBackgroundColor?: string;
-    buttons: ButtonConfig[];
+    buttons: (ButtonConfig | ReactNode)[];
     primaryColor?: string;
     secondaryColor?: string;
 }
@@ -27,8 +29,25 @@ export default function FindReport({
     primaryColor = "#115056",
     secondaryColor = "#0d3d42"
 }: FindReportProps) {
-    const renderButton = (button: ButtonConfig, index: number) => {
-        if (button.type === 'primary') {
+    const isButtonConfig = (btn: unknown): btn is ButtonConfig => {
+        if (!btn || typeof btn !== 'object') return false;
+        const maybe = btn as Partial<ButtonConfig> & { type?: unknown };
+        const validType = maybe.type === 'primary' || maybe.type === 'secondary';
+        return !!maybe && validType && typeof maybe.text === 'string' && typeof maybe.onClick === 'function';
+    };
+
+    const renderButton = (button: ButtonConfig | ReactNode, index: number) => {
+        // If the consumer passed a React node (e.g., <ButtonsType ... />), render it as-is
+        if (isValidElement(button)) {
+            return (
+                <div key={index} className="w-full">
+                    {button}
+                </div>
+            );
+        }
+
+        // Otherwise, treat it as a ButtonConfig for backward compatibility
+        if (isButtonConfig(button) && button.type === 'primary') {
             return (
                 <button 
                     key={index}
@@ -56,7 +75,7 @@ export default function FindReport({
                     </div>
                 </button>
             );
-        } else {
+        } else if (isButtonConfig(button)) {
             return (
                 <button 
                     key={index}
@@ -79,6 +98,8 @@ export default function FindReport({
                     </div>
                 </button>
             );
+        } else {
+            return null;
         }
     };
 

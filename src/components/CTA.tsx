@@ -62,9 +62,11 @@ export default function CTA({ title, subtitle, description, buttons }: CTAProps)
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch justify-center w-full max-w-[1332px]">
+        <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch justify-center w-full max-w-[1332px] flex-wrap">
           {buttons.map((button, index) => (
-            <ButtonsType key={index} type={6} label={button.label} isShowArrow={true} />
+            <div key={index} className="w-full sm:w-auto">
+              <ButtonsType type={6} label={button.label} isShowArrow={true} />
+            </div>
           ))}
         </div>
       </div>

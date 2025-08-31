@@ -9,6 +9,7 @@ import AnalyzeThisReport from '@/components/reports/AnalyzeThisReport';
 import AboutReport from '@/components/reports/AboutReport';
 import FindReport from '@/components/reports/FindReport';
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ButtonsType from '@/components/ButtonsType';
 
 export default function HomeEnergyReport() {
     return (
@@ -37,13 +38,10 @@ export default function HomeEnergyReport() {
                             </div>
                         </div>
 
-                        {/* Button */}
-                        <div className="w-full flex items-center justify-center">
-                            <button className="w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                                <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap">
-                                    See a Sample Report
-                                </span>
-                            </button>
+                        <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                            <div className="w-full ">
+                            <ButtonsType type={9} label="See a Sample Report" isShowArrow={false} />
+                            </div>
                         </div>
                     </header>
                 </div>
@@ -370,23 +368,13 @@ export default function HomeEnergyReport() {
                     primaryColor="#115056"
                     secondaryColor="#0d3d42"
                     buttons={[
-                        {
-                            text: "Download Sample Report",
-                            type: "primary",
-                            onClick: () => {
-                                // Handle download sample report
-                                console.log('Download Sample Report clicked');
-                            }
-                        },
-                        {
-                            text: "Find a Sprk Certified Pro",
-                            type: "secondary",
-                            onClick: () => {
-                                // Handle find certified pro
-                                console.log('Find a Sprk Certified Pro clicked');
-                            }
-                        }
-                    ]}
+                        (
+                          <ButtonsType key="download-sample" type={2} label="Download Sample Report" isShowArrow={true} />
+                        ),
+                        (
+                          <ButtonsType key="find-certified-pro" type={6} label="Find a Sprk Certified Pro" isShowArrow={true} />
+                        )
+                      ]}
                 />
 
             </section>

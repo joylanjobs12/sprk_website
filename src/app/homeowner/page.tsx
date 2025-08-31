@@ -269,10 +269,10 @@ export default function HomeownerPage() {
               </div>
             </div>
 
-            {/* Cards Grid */}
-            <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-stretch justify-center relative shrink-0 w-full">
+            {/* Cards Flex */}
+            <div className="content-center flex flex-wrap gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-stretch justify-center relative shrink-0 w-full">
               {/* Card 1 - Thinking About Going Solar */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full xl:w-[56%] 2xl:w-[56%] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                 <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
                   <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
@@ -309,7 +309,7 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 2 - Already Have Solar */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full xl:w-[40%] 2xl:w-[40%] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                 <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
                   <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
@@ -346,7 +346,7 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 3 - Getting Ready to Sell */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full xl:w-[40%] 2xl:w-[40%] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                 <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
                   <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
@@ -383,7 +383,7 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 4 - Appraising or Refinancing */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full xl:w-[56%] 2xl:w-[56%] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
                 <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
                   <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5

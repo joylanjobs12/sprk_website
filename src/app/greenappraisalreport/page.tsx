@@ -9,10 +9,11 @@ import AnalyzeThisReport from '@/components/reports/AnalyzeThisReport';
 import AboutReport from '@/components/reports/AboutReport';
 import FindReport from '@/components/reports/FindReport';
 import ScrollAnimations from '@/components/ScrollAnimations';
+import ButtonsType from '@/components/ButtonsType';
 
 export default function GreenAppraisalReport() {
     return (
-        <>
+        <div className='overflow-hidden'>
             <ScrollAnimations />
 
             <section className="w-full flex flex-col gap-5 lg:gap-20 items-center justify-start pb-[50px] lg:pb-[100px] pt-[75px] lg:pt-[150px] px-4 lg:px-24">
@@ -38,19 +39,15 @@ export default function GreenAppraisalReport() {
                             </div>
                         </div>
 
-                        {/* Buttons */}
-                        <div className="w-full flex flex-col sm:flex-row gap-[15px] items-center justify-center">
-                            <button className="w-full sm:w-auto bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                                <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-white whitespace-nowrap">
-                                    Get This Report
-                                </span>
-                            </button>
-
-                            <button className="w-full sm:w-auto border border-[#115056] border-solid flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] min-w-[44px] min-h-[44px]">
-                                <span className="text-[20px] sm:text-[20px] md:text-[20px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium font-['Aeonik_Pro'] text-[#115056] whitespace-nowrap">
-                                    See a Sample Report
-                                </span>
-                            </button>
+                        <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+                        <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                            <div className="w-full ">
+                            <ButtonsType type={9} label="See a Sample Report" isShowArrow={false} />
+                            </div>
+                            <div className="w-full ">
+                            <ButtonsType type={10} label="Find a Certified Appraiser" isShowArrow={false} />
+                            </div>
+                        </div>
                         </div>
                     </header>
                 </div>
@@ -382,26 +379,16 @@ export default function GreenAppraisalReport() {
                     primaryColor="#115056"
                     secondaryColor="#0d3d42"
                     buttons={[
-                        {
-                            text: "Download Sample Report",
-                            type: "primary",
-                            onClick: () => {
-                                // Handle download sample report
-                                console.log('Download Sample Report clicked');
-                            }
-                        },
-                        {
-                            text: "Find a Sprk Certified Pro",
-                            type: "secondary",
-                            onClick: () => {
-                                // Handle find certified pro
-                                console.log('Find a Sprk Certified Pro clicked');
-                            }
-                        }
-                    ]}
+                        (
+                          <ButtonsType key="download-sample" type={2} label="Download Sample Report" isShowArrow={true} />
+                        ),
+                        (
+                          <ButtonsType key="find-certified-pro" type={6} label="Find a Sprk Certified Pro" isShowArrow={true} />
+                        )
+                      ]}
                 />
             </section>
             <ScrollToTop />
-        </>
+        </div>
     );
 }

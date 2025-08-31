@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import ScrollToTop from '@/components/ScrollToTop';
+import ButtonsType from '@/components/ButtonsType';
 
 export default function FAQs() {
   // FAQ data with questions and answers
@@ -190,35 +191,7 @@ export default function FAQs() {
               
               {/* CTA Button */}
               <div className="flex items-center justify-center">
-                <button className="border border-white rounded-[50px] px-[20px] py-[12px] sm:px-[25px] sm:py-[15px] md:px-[30px] md:py-[18px] lg:px-[35px] lg:py-[20px] flex items-center justify-center gap-3 hover:bg-white hover:text-[#115056] transition-all duration-300 min-w-[280px] sm:min-w-[320px] md:min-w-[360px] lg:min-w-[408px]">
-                  <span 
-                    className="leading-[1.1]"
-                    style={{
-                      fontSize: '18px',
-                      fontWeight: 500,
-                      fontFamily: 'Inter, sans-serif',
-                      color: 'inherit',
-                      lineHeight: '120%'
-                    }}
-                  >
-                    Enroll Now
-                  </span>
-                  {/* Arrow Right Icon */}
-                  <svg
-                    className="w-[20px] h-[20px] sm:w-[24px] sm:h-[24px] md:w-[28px] md:h-[28px] lg:w-[30px] lg:h-[30px]"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8l4 4m0 0l-4 4m4-4H3"
-                    />
-                  </svg>
-                </button>
+                  <ButtonsType type={10} label="Enroll Now" isShowArrow={false} />
               </div>
             </div>
           </div>

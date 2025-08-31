@@ -504,22 +504,12 @@ export default function SolarListingReport() {
                     primaryColor="#115056"
                     secondaryColor="#0d3d42"
                     buttons={[
-                        {
-                            text: "Download Sample Report",
-                            type: "primary",
-                            onClick: () => {
-                                // Handle download sample report
-                                console.log('Download Sample Report clicked');
-                            }
-                        },
-                        {
-                            text: "Find a Sprk Certified Pro",
-                            type: "secondary",
-                            onClick: () => {
-                                // Handle find certified pro
-                                console.log('Find a Sprk Certified Pro clicked');
-                            }
-                        }
+                      (
+                        <ButtonsType key="download-sample" type={2} label="Download Sample Report" isShowArrow={true} />
+                      ),
+                      (
+                        <ButtonsType key="find-certified-pro" type={6} label="Find a Sprk Certified Pro" isShowArrow={true} />
+                      )
                     ]}
                 />
             </section>
