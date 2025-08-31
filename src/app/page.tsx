@@ -8,6 +8,7 @@ import HowItWorksSection from "@/components/HowItWorksSection";
 import Testimonials from "@/components/Testimonials";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import SelectRole from "@/components/SelectRole";
+import ButtonsType from "@/components/ButtonsType";
 
 
 
@@ -598,7 +599,7 @@ export default function Home() {
                 style={{ backgroundImage: `url('/home-page/section 7/profile.svg')` }}
               />
             </div>
-            <div className="testimonial-content basis-0 box-border content-stretch flex flex-col grow h-auto lg:h-[500px] items-start justify-between min-h-[400px] min-w-full overflow-clip p-6 sm:p-8 lg:p-[50px] relative shrink-0">
+            <div className="testimonial-content basis-0 box-border content-stretch flex flex-col grow h-auto lg:h-[500px] items-start justify-between min-h-[400px]  overflow-clip p-6 sm:p-8 lg:p-[50px] relative shrink-0">
               <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
                 <strong
                   className="quote-fade basis-0 grow min-h-[156px] min-w-px not-italic relative shrink-0 text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6]"
@@ -637,26 +638,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="cta-button content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
-                <div className="bg-[#115056] box-border content-stretch flex items-start justify-center p-[5px] relative rounded-[5px] shrink-0 w-full">
-                  <div className="basis-0 box-border content-stretch flex grow items-center justify-center min-h-px min-w-px px-[15px] py-[5px] relative shrink-0">
-                    <div
-                      className="basis-0 grow leading-[1.2] min-h-px min-w-px not-italic relative shrink-0 text-[22px] text-center text-white"
-                      style={{
-                        fontFamily: 'Inter',
-                        fontWeight: 400,
-                      }}
-                    >
-                      Learn about the Sprk Referrals Network
-                    </div>
-                    <div className="relative shrink-0 size-[30px]">
-                      <div className="relative size-full">
-                        <div className="absolute inset-[30.21%_21.88%_30.21%_23.96%]">
-                          <Image src="/home-page/section 1/arrow-right.svg" alt="Arrow Right" width={30} height={30} className="block max-w-none size-full" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <ButtonsType type={2} label="Learn about the Sprk Referrals Network" />
               </div>
             </div>
           </div>

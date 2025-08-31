@@ -7,7 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import TrustedBy from "@/components/TrustedBy";
-
+import ButtonsType from "@/components/ButtonsType";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function InspectorPage() {
@@ -35,21 +35,17 @@ export default function InspectorPage() {
                   </strong>
                 </div>
               </div>
-
-              <div className="slide-up-cards flex flex-wrap gap-[15px] items-center justify-center w-full">
-                <Link
-                  href="#join"
-                  className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] text-white font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[1.125rem] xl:text-[1.125rem] 2xl:text-[1.25rem] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] transition-all duration-200 ease-in-out hover:bg-white hover:text-[#115056] hover:border hover:border-[#115056] hover:transform hover:scale-105 hover:shadow-lg"
-                >
-                  Join Sprk
-                </Link>
-                <Link
-                  href="#demo"
-                  className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] border border-[#115056] text-[#115056] font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[1.125rem] xl:text-[1.125rem] 2xl:text-[1.25rem] leading-[120%] sm:leading-[120%] md:leading-[1.6] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] transition-all duration-200 ease-in-out hover:bg-[#115056] hover:text-white hover:transform hover:scale-105 hover:shadow-lg"
-                >
-                  Watch a Demo
-                </Link>
+              <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+                <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                  <div className="w-full md:w-1/2">
+                    <ButtonsType type={9} label="Join Sprk" isShowArrow={false}/>
+                  </div>
+                  <div className="w-full md:w-1/2">
+                    <ButtonsType type={10} label="Watch a Demo" isShowArrow={false}/>
+                  </div>
+                </div>
               </div>
+
             </header>
           </div>
 
@@ -363,26 +359,28 @@ export default function InspectorPage() {
       <HowToGetStarted
         title="How to Get Started with Sprk"
         subtitle="It's Fast and Easy to Get Sprk Certified"
-        step1={{
-          icon: "/inspector-page/section 5/sign-up.svg",
-          label: "Sign Up for Free",
-          description: "Create your Sprk Pro account, no upfront cost, no obligation."
-        }}
-        step2={{
-          icon: "/inspector-page/section 5/get-sprk-certified.svg",
-          label: "Get Sprk Certified",
-          description: "Complete our on-demand training and start offering 15-minute solar and 5-minute energy inspections."
-        }}
-        step3={{
-          icon: "/inspector-page/section 5/add-sprk.svg",
-          label: "Add Sprk to Your Services",
-          description: "Include Energy Reports with every inspection and Solar Reports on homes with solar, boost value and your bottom line."
-        }}
-        step4={{
-          icon: "/inspector-page/section 5/your-business.svg",
-          label: "Grow Your Business",
-          description: "Use Sprk's marketing tools and agent education resources to become the preferred inspector in your market."
-        }}
+        steps={[
+          {
+            icon: "/inspector-page/section 5/sign-up.svg",
+            label: "Sign Up for Free",
+            description: "Create your Sprk Pro account, no upfront cost, no obligation."
+          },
+          {
+            icon: "/inspector-page/section 5/get-sprk-certified.svg",
+            label: "Get Sprk Certified",
+            description: "Complete our on-demand training and start offering 15-minute solar and 5-minute energy inspections."
+          },
+          {
+            icon: "/inspector-page/section 5/add-sprk.svg",
+            label: "Add Sprk to Your Services",
+            description: "Include Energy Reports with every inspection and Solar Reports on homes with solar, boost value and your bottom line."
+          },
+          {
+            icon: "/inspector-page/section 5/your-business.svg",
+            label: "Grow Your Business",
+            description: "Use Sprk's marketing tools and agent education resources to become the preferred inspector in your market."
+          }
+        ]}
       />
 
       {/* Section 6 */}
@@ -488,26 +486,12 @@ export default function InspectorPage() {
                   </div>
                   
                   {/* Buttons Section */}
-                  <div className="bg-white flex flex-col sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-start pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
-                    <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] flex-1 basis-0 transition-all duration-200 ease-in-out hover:bg-white hover:text-[#115056] hover:border hover:border-[#115056] hover:transform hover:scale-105 hover:shadow-lg">
-                      <div className="flex items-center justify-center px-[15px] py-[5px] flex-1">
-                        <span className={`${inter.className} font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1 transition-all duration-200 ease-in-out hover:text-[#115056]`}>
-                          View Sample
-                        </span>
-                        <div className="w-[30px] h-[30px] flex items-center justify-center">
-                          <span className="text-white transition-all duration-200 ease-in-out hover:text-[#115056]">→</span>
-                        </div>
-                      </div>
+                  <div className="bg-white flex flex-col sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+                    <div className="w-full md:w-1/2">
+                      <ButtonsType type={2} label="View Sample" isShowArrow={true}/>
                     </div>
-                    <div className="flex items-start justify-center p-[5px] rounded-[5px] border border-[#115056] flex-1 basis-0 transition-all duration-200 ease-in-out hover:bg-[#115056] hover:text-white hover:transform hover:scale-105 hover:shadow-lg">
-                      <div className="flex items-center justify-center px-[15px] py-[5px] flex-1">
-                        <span className={`${inter.className} font-normal text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-[#115056] flex-1 transition-all duration-200 ease-in-out hover:text-white`}>
-                          Learn More
-                        </span>
-                        <div className="w-[30px] h-[30px] flex items-center justify-center">
-                          <span className="text-[#115056] transition-all duration-200 ease-in-out hover:text-white">→</span>
-                        </div>
-                      </div>
+                    <div className="w-full md:w-1/2">
+                      <ButtonsType type={7} label="Learn More" isShowArrow={true}/>
                     </div>
                   </div>
                 </div>
@@ -709,11 +693,7 @@ export default function InspectorPage() {
                 {/* Button */}
                 <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                   <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
-                    <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
-                      <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
-                        Get Started
-                      </span>
-                    </div>
+                    <ButtonsType type={2} label="Get Started" isShowArrow={false}/>
                   </div>
                 </div>
               </div>
@@ -877,11 +857,7 @@ export default function InspectorPage() {
                   {/* Button */}
                   <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                     <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
-                      <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
-                        <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
-                          Get Started
-                        </span>
-                      </div>
+                      <ButtonsType type={2} label="Get Started" isShowArrow={false}/>
                     </div>
                   </div>
                 </div>
@@ -1034,11 +1010,7 @@ export default function InspectorPage() {
                   {/* Button */}
                   <div className="flex flex-col gap-5 items-center justify-end pb-10 pt-[30px] px-10 w-full border-t border-dashed border-[#115056] mt-auto">
                     <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] w-full">
-                      <div className="flex items-center justify-center px-[15px] py-2.5 flex-1">
-                        <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[20px] md:text-[20px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center text-white flex-1">
-                          Get Started
-                        </span>
-                      </div>
+                        <ButtonsType type={2} label="Get Started" isShowArrow={false}/>
                     </div>
                   </div>
                 </div>

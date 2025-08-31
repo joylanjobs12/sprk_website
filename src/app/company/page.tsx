@@ -1,5 +1,6 @@
 import ScrollToTop from "@/components/ScrollToTop";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ButtonsType from "@/components/ButtonsType";
 
 export default function Company() {
   return (
@@ -857,7 +858,7 @@ export default function Company() {
           <div className="absolute bottom-40 left-20 w-36 h-36 bg-white/6 rounded-full animate-pulse" style={{ animationDelay: '3s' }}></div>
           <div className="absolute bottom-24 right-32 w-28 h-28 bg-white/4 rounded-full animate-pulse" style={{ animationDelay: '0.8s' }}></div>
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a2c30] via-[#115056] to-[#115056] opacity-95"></div>
+       
         {/* Join the Movement Section */}
         <div className="relative z-10 box-border flex flex-col items-center justify-start px-0 py-16 sm:py-20 md:py-24 lg:py-[100px] xl:py-[100px] 2xl:py-[100px] w-full">
 
@@ -915,81 +916,9 @@ export default function Company() {
 
           {/* CTA Buttons Section */}
           <div className="box-border flex flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row gap-4 sm:gap-4 md:gap-5 lg:gap-5 xl:gap-5 2xl:gap-5 items-start justify-center px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 2xl:px-24 py-8 sm:py-10 md:py-12 lg:py-[50px] xl:py-[50px] 2xl:py-[50px] w-full">
-
-            {/* Button 1 - Become a Certified Pro */}
-            <div className="cta-button bg-white box-border flex items-start justify-center p-[5px] rounded-[5px] border border-[#115056] w-full sm:w-full md:w-[418px] lg:w-[418px] xl:w-[418px] 2xl:w-[418px] cursor-pointer transition-all duration-300 ease-out hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-xl group"
-              style={{
-                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.1)'
-              }}>
-              <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                <div className="flex-1 text-[#141414] group-hover:text-white text-center transition-colors duration-200"
-                  style={{
-                    fontSize: '18px',
-                    lineHeight: '120%',
-                    fontWeight: 400,
-                    fontFamily: 'Inter, sans-serif'
-                  }}>
-                  <span className="sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%]">
-                    Become a Certified Pro
-                  </span>
-                </div>
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-[30px] md:h-[30px] lg:w-[30px] lg:h-[30px] xl:w-[30px] xl:h-[30px] 2xl:w-[30px] 2xl:h-[30px] flex items-center justify-center">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 text-[#141414] group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Button 2 - Find a Certified Pro */}
-            <div className="cta-button bg-white box-border flex items-start justify-center p-[5px] rounded-[5px] border border-[#115056] w-full sm:w-full md:w-[418px] lg:w-[418px] xl:w-[418px] 2xl:w-[418px] cursor-pointer transition-all duration-300 ease-out hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-xl group"
-              style={{
-                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.1)'
-              }}>
-              <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                <div className="flex-1 text-[#141414] group-hover:text-white text-center transition-colors duration-200"
-                  style={{
-                    fontSize: '18px',
-                    lineHeight: '120%',
-                    fontWeight: 400,
-                    fontFamily: 'Inter, sans-serif'
-                  }}>
-                  <span className="sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%]">
-                    Find a Certified Pro
-                  </span>
-                </div>
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-[30px] md:h-[30px] lg:w-[30px] lg:h-[30px] xl:w-[30px] xl:h-[30px] 2xl:w-[30px] 2xl:h-[30px] flex items-center justify-center">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 text-[#141414] group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
-
-            {/* Button 3 - See Sprk Reports */}
-            <div className="cta-button bg-white box-border flex items-start justify-center p-[5px] rounded-[5px] border border-[#115056] w-full sm:w-full md:w-[418px] lg:w-[418px] xl:w-[418px] 2xl:w-[418px] cursor-pointer transition-all duration-300 ease-out hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-xl group"
-              style={{
-                boxShadow: '0 4px 15px rgba(255, 255, 255, 0.1)'
-              }}>
-              <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                <div className="flex-1 text-[#141414] group-hover:text-white text-center transition-colors duration-200"
-                  style={{
-                    fontSize: '18px',
-                    lineHeight: '120%',
-                    fontWeight: 400,
-                    fontFamily: 'Inter, sans-serif'
-                  }}>
-                  <span className="sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[22px] 2xl:text-[22px] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[120%]">
-                    See Sprk Reports
-                  </span>
-                </div>
-                <div className="w-6 h-6 sm:w-7 sm:h-7 md:w-[30px] md:h-[30px] lg:w-[30px] lg:h-[30px] xl:w-[30px] xl:h-[30px] 2xl:w-[30px] 2xl:h-[30px] flex items-center justify-center">
-                  <svg className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6 lg:w-6 lg:h-6 xl:w-6 xl:h-6 2xl:w-6 2xl:h-6 text-[#141414] group-hover:text-white transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8.59 16.59L13.17 12L8.59 7.41L10 6l6 6-6 6-1.41-1.41z" />
-                  </svg>
-                </div>
-              </div>
-            </div>
+            <ButtonsType type={6} label="Become a Certified Pro" isShowArrow={true} />
+            <ButtonsType type={6} label="Find a Certified Pro" isShowArrow={true} />
+            <ButtonsType type={6} label="See Sprk Reports" isShowArrow={true} />
 
           </div>
 

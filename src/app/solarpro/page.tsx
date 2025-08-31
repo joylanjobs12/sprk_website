@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import HowToGetStarted from "@/components/HowToGetStarted";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import ButtonsType from "@/components/ButtonsType";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -31,7 +32,7 @@ export default function SolarProPage() {
           </h1>
 
           <p
-            className="fade-up max-w-xl sm:max-w-2xl mx-auto opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-4 xl:mb-4 2xl:mb-4 text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] font-normal"
+            className="fade-up mx-auto mt-[30px] mb-[50px] opacity-80 px-4 sm:px-0 mb-4 sm:mb-4 md:mb-4 lg:mb-[50px] xl:mb-[50px] 2xl:mb-[50px]text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] font-normal"
             style={{
               fontFamily: 'Inter',
               fontWeight: 400,
@@ -41,31 +42,18 @@ export default function SolarProPage() {
             Sprk equips solar professionals with tools to sell smarter, support longer, and help homeowners understand their system now and years from now.
           </p>
 
-          <div className="slide-up-cards flex flex-wrap items-center justify-center gap-4 sm:gap-4 md:gap-4 lg:gap-6 xl:gap-6 w-full">
-            <Link
-              href="#certified"
-              className="group flex justify-center items-center gap-2 px-6 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 xl:px-8 xl:py-4 2xl:px-8 2xl:py-4 rounded-[30px] bg-[#115056] text-white min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[52px] 2xl:min-h-[52px] touch-manipulation hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-200 border border-[#115056] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal"
-              style={{
-                fontFamily: 'Inter',
-                fontStyle: "normal",
-                fontWeight: 400,
-                color: "var(--Paragraph-1, #000)",
-              }}
-            >
-              <span className="group-hover:text-[#115056] transition-colors duration-200">Get Sprk Certified</span>
-            </Link>
-            <Link
-              href="#estimator"
-              className="group flex justify-center items-center gap-2 px-6 py-3 sm:px-6 sm:py-3 md:px-8 md:py-4 xl:px-8 xl:py-4 2xl:px-8 2xl:py-4 rounded-[30px] bg-white border border-[#115056] text-[#115056] min-h-[44px] sm:min-h-[48px] md:min-h-[52px] xl:min-h-[52px] 2xl:min-h-[52px] touch-manipulation hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-md transition-all duration-200 text-[20px] sm:text-[20px] md:text-[25px] lg:text-[25px] xl:text-[25px] 2xl:text-[25px] leading-[110%] font-medium"
-              style={{
-                fontFamily: '"Aeonik Pro", sans-serif',
-                fontStyle: "normal",
-                fontWeight: 500,
-              }}
-            >
-              <span className="group-hover:text-white transition-colors duration-200">Use the Solar Estimator</span>
-            </Link>
-          </div>
+          <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+              <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                <div className="w-full ">
+                  <ButtonsType type={9} label="Get Solar Certified" isShowArrow={false} />
+                </div>
+                <div className="w-full ">
+                  <ButtonsType type={10} label="Use the Solar Estimator" isShowArrow={false} />
+                </div>
+              </div>
+            </div>
+
+          
         </div>
       </section>
       {/* Section 2 */}
@@ -742,21 +730,7 @@ export default function SolarProPage() {
 
                     {/* CTA Button */}
                     <div className="flex flex-col gap-[5px] items-start w-full">
-                      <button className="bg-[#115056] hover:bg-white hover:text-[#115056] border border-[#115056] transition-all duration-300 ease-in-out flex items-center justify-center gap-2 px-4 py-3 rounded-[5px] w-full group">
-                        <p
-                          className={`${inter.className} text-center text-white group-hover:text-[#115056] text-[16px] sm:text-[18px] md:text-[18px] lg:text-[18px] xl:text-[18px] 2xl:text-[20px] leading-[120%] font-normal transition-colors duration-300 ease-in-out`}
-                          style={{
-                            fontFamily: "Inter",
-                            fontStyle: "normal",
-                            fontWeight: 400,
-                          }}
-                        >
-                          Get Sprk Certified
-                        </p>
-                        <div className="flex items-center justify-center">
-                          <span className="text-white group-hover:text-[#115056] transition-colors duration-300 ease-in-out text-lg">→</span>
-                        </div>
-                      </button>
+                      <ButtonsType type={2} label="Get Solar Certified" isShowArrow={true} />
                     </div>
                   </div>
                 </div>
@@ -783,6 +757,10 @@ export default function SolarProPage() {
                 Solar Calculator Lead Gen Tool
               </h2>
             </div>
+            <div
+                className="bg-center bg-cover bg-no-repeat h-[300px] lg:h-[700px] min-w-[350px] shrink-0 w-full"
+                style={{ backgroundImage: `url('/solar-pro-page/section 7/solar-calculator.svg')` }}
+              />
           </div>
 
           {/* Calculator Showcase */}
@@ -951,49 +929,10 @@ export default function SolarProPage() {
 
                     {/* CTA Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 items-start justify-start w-full">
-                      {/* Get Sprk Certified Button */}
-                      <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] flex-1">
-                        <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                          <p
-                            className={`${inter.className} flex-1 text-center text-white mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal`}
-                            style={{
-                              fontFamily: "Inter",
-                              fontStyle: "normal",
-                              fontWeight: 400,
-                              color: "var(--Paragraph-1, #000)",
-                            }}
-                          >
-                            Get Sprk Certified
-                          </p>
-                          <div className="relative w-[30px] h-[30px] flex-shrink-0">
-                            <div className="w-[30px] h-[30px] flex items-center justify-center">
-                              <span className="text-white transition-all duration-200 ease-in-out hover:text-[#115056]">→</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ButtonsType type={2} label="Get Sprk Certified" isShowArrow={true} />
 
-                      {/* Try Solar Estimator Button */}
-                      <div className="bg-white border border-[#115056] flex items-start justify-center p-[5px] rounded-[5px] flex-1">
-                        <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                          <p
-                            className={`${inter.className} flex-1 text-center mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2 text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] leading-[120%] font-normal`}
-                            style={{
-                              fontFamily: "Inter",
-                              fontStyle: "normal",
-                              fontWeight: 400,
-                              color: "var(--Paragraph-1, #000)",
-                            }}
-                          >
-                            Try the Solar Estimator
-                          </p>
-                          <div className="relative w-[30px] h-[30px] flex-shrink-0">
-                            <div className="w-[30px] h-[30px] flex items-center justify-center">
-                              <span className="text-white transition-all duration-200 ease-in-out hover:text-[#115056]">→</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <ButtonsType type={6} label="Try the Solar Estimator" isShowArrow={true} />
+
                     </div>
                   </div>
                 </div>

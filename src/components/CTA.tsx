@@ -1,6 +1,7 @@
 "use client";
 
 import { Inter } from "next/font/google";
+import ButtonsType from "./ButtonsType";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,22 +64,7 @@ export default function CTA({ title, subtitle, description, buttons }: CTAProps)
 
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch justify-center w-full max-w-[1332px]">
           {buttons.map((button, index) => (
-            <button
-              key={index}
-              onClick={() => handleButtonClick(button)}
-              className={`${inter.className} slide-up-cards relative bg-white border border-[#115056] rounded-[5px] p-[5px] w-full sm:max-w-[418px] hover:bg-gray-50 transition-colors duration-200 min-h-[48px] touch-manipulation`}
-            >
-              <div className="flex items-center justify-center px-4 sm:px-6 lg:px-[25px] py-2 sm:py-[5px] gap-2">
-                <span className="flex-grow text-[#141414] text-[18px] sm:text-[20px] lg:text-[22px] font-normal leading-[120%] text-center">
-                  {button.label}
-                </span>
-                <div className="w-[24px] h-[24px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] flex items-center justify-center shrink-0">
-                  <svg className="w-full h-full" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.5 15H22.5M22.5 15L16.25 8.75M22.5 15L16.25 21.25" stroke="#141414" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  </svg>
-                </div>
-              </div>
-            </button>
+            <ButtonsType key={index} type={6} label={button.label} isShowArrow={true} />
           ))}
         </div>
       </div>

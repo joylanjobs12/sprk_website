@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import AboutSprk from "@/components/AboutSprk";
 import CTA from "@/components/CTA";
 import ScrollAnimations from "@/components/ScrollAnimations";
+import ButtonsType from "@/components/ButtonsType";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -40,31 +41,20 @@ export default function HomeownerPage() {
               </div>
             </div>
 
-            <div className="slide-up-cards flex flex-wrap gap-4 sm:gap-6 items-center justify-center w-full">
-              <Link
-                href="#find-solar-pro"
-                className="group bg-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-white text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out border border-[#115056] mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                Find a Certified Solar Pro
-              </Link>
-              
-              <Link
-                href="#find-agent"
-                className="group bg-[#F1FAFA] border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                Find a Certified Real Estate Agent
-              </Link>
-              
-              <Link
-                href="#find-inspector"
-                className="group border border-[#115056] flex gap-2 min-h-[44px] sm:min-h-[48px] md:min-h-[52px] items-center justify-center px-6 sm:px-8 py-3 rounded-[30px] text-[#115056] text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] 2xl:text-[18px] font-normal leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] whitespace-nowrap hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-lg transition-all duration-300 ease-in-out mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2"
-                style={{ fontFamily: 'Inter, sans-serif' }}
-              >
-                Find a Certified Home Inspector
-              </Link>
+            <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+              <div className="flex flex-col md:flex-row md:flex-wrap gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-full xl:w-full 2xl:w-full">
+                <div className="w-full md:w-[80%] lg:w-1/3">
+                  <ButtonsType type={9} label="Find a Certified Solar Pro" isShowArrow={false}/>
+                </div>
+                <div className="w-full md:w-[80%] lg:w-1/2">
+                  <ButtonsType type={10} label="Find a Certified Real Estate Agent" isShowArrow={false} />
+                </div>
+                <div className="w-full md:w-[80%] lg:w-1/2">
+                  <ButtonsType type={10} label="Find a Certified Home Inspector" isShowArrow={false} />
+                </div>
+              </div>
             </div>
+            
           </header>
         </div>
       </section>
@@ -101,104 +91,103 @@ export default function HomeownerPage() {
               </div>
             </div>
             
-            <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-center justify-start relative shrink-0 w-full">
-              {/* Card 1 */}
-              <div className="card-flip bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[500px] min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative size-full">
-                  <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-clip relative shrink-0 w-full">
-                    <Image
-                      src="/homeowners-page/section 2/investment.svg"
-                      alt="Your solar investment is documented and valued properly"
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
-                    />
-                  </div>
-                  <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
-                    <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                      <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
-                        style={{
-                          fontFamily: 'Inter',
-                          fontWeight: 500,
-                          color: "var(--Paragraph-1, #000)"
-                        }}
-                      >
-                        Your solar investment is documented and valued properly
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
-                  boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
-                }} />
-              </div>
+            <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-stretch justify-start relative shrink-0 w-full">
+  {/* Card 1 */}
+  <div className="card-flip bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+    <div className="content-stretch flex flex-col items-center justify-start min-w-inherit relative size-full">
+      <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-hidden relative shrink-0 w-full">
+        <Image
+          src="/homeowners-page/section 2/investment.svg"
+          alt="Your solar investment is documented and valued properly"
+          width={400}
+          height={300}
+          className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
+        />
+      </div>
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
+        <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+          <p
+            className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
+            style={{
+              fontFamily: 'Inter',
+              fontWeight: 500,
+              color: "var(--Paragraph-1, #000)"
+            }}
+          >
+            Your solar investment is documented and valued properly
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
+      boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
+    }} />
+  </div>
 
-              {/* Card 2 */}
-              <div className="card-flip bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[500px] min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative size-full">
-                  <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-clip relative shrink-0 w-full">
-                    <Image
-                      src="/homeowners-page/section 2/avoid-confusion.svg"
-                      alt="You avoid confusion during appraisals, refinancing, or home sales"
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
-                    />
-                  </div>
-                  <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
-                    <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                      <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
-                        style={{
-                          fontFamily: 'Inter',
-                          fontWeight: 500,
-                          color: "var(--Paragraph-1, #000)"
-                        }}
-                      >
-                        You avoid confusion during appraisals, refinancing, or home sales
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
-                  boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
-                }} />
-              </div>
+  {/* Card 2 */}
+  <div className="card-flip bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+    <div className="content-stretch flex flex-col items-center justify-start min-w-inherit relative size-full">
+      <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-hidden relative shrink-0 w-full">
+        <Image
+          src="/homeowners-page/section 2/avoid-confusion.svg"
+          alt="You avoid confusion during appraisals, refinancing, or home sales"
+          width={400}
+          height={300}
+          className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
+        />
+      </div>
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
+        <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+          <p
+            className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
+            style={{
+              fontFamily: 'Inter',
+              fontWeight: 500,
+              color: "var(--Paragraph-1, #000)"
+            }}
+          >
+            You avoid confusion during appraisals, refinancing, or home sales
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
+      boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
+    }} />
+  </div>
 
-              {/* Card 3 */}
-              <div className="card-flip bg-white h-auto md:h-[450px] lg:h-[480px] xl:h-[500px] min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative size-full">
-                  <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-clip relative shrink-0 w-full">
-                    <Image
-                      src="/homeowners-page/section 2/with-professionals.svg"
-                      alt="You work with professionals who understand how to represent your solar home"
-                      width={400}
-                      height={300}
-                      className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
-                    />
-                  </div>
-                  <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
-                    <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
-                      <p
-                        className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
-                        style={{
-                          fontFamily: 'Inter',
-                          fontWeight: 500,
-                          color: "var(--Paragraph-1, #000)"
-                        }}
-                      >
-                        You work with professionals who understand how to represent your<br />
-                        solar home
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
-                  boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
-                }} />
-              </div>
-            </div>
+  {/* Card 3 */}
+  <div className="card-flip bg-white min-h-[400px] w-full relative rounded-[10px] shrink-0 cursor-pointer hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out">
+    <div className="content-stretch flex flex-col items-center justify-start min-w-inherit relative size-full">
+      <div className="bg-gray-50 content-stretch flex h-[300px] items-center justify-center overflow-hidden relative shrink-0 w-full">
+        <Image
+          src="/homeowners-page/section 2/with-professionals.svg"
+          alt="You work with professionals who understand how to represent your solar home"
+          width={400}
+          height={300}
+          className="w-full h-full object-cover bg-center bg-cover bg-no-repeat"
+        />
+      </div>
+      <div className="bg-white box-border content-stretch flex flex-col gap-4 sm:gap-[22px] items-start justify-center pb-6 sm:pb-10 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full flex-1">
+        <div className="content-stretch flex items-center justify-center relative shrink-0 w-full">
+          <p
+            className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[25px] sm:text-[25px] md:text-[25px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[1.6] xl:leading-[1.6] 2xl:leading-[1.6] text-center font-medium mb-2 sm:mb-2 md:mb-2 lg:mb-2 xl:mb-2 2xl:mb-2`}
+            style={{
+              fontFamily: 'Inter',
+              fontWeight: 500,
+              color: "var(--Paragraph-1, #000)"
+            }}
+          >
+            You work with professionals who understand how to represent your<br className="hidden lg:inline" /> solar home
+          </p>
+        </div>
+      </div>
+    </div>
+    <div className="absolute border border-[rgba(17,80,86,0.20)] border-solid inset-0 pointer-events-none rounded-[10px]" style={{
+      boxShadow: "0 63px 25px 0 rgba(38, 142, 151, 0.02), 0 36px 21px 0 rgba(38, 142, 151, 0.08), 0 16px 16px 0 rgba(38, 142, 151, 0.13), 0 4px 9px 0 rgba(38, 142, 151, 0.10)"
+    }} />
+  </div>
+</div>
           </div>
 
           <div className="bounce-in content-stretch flex items-start justify-center pb-0 pt-4 sm:pt-[30px] px-4 sm:px-[30px] relative shrink-0 w-full">
@@ -260,7 +249,7 @@ export default function HomeownerPage() {
               <div className="content-stretch flex items-start justify-center relative shrink-0 w-full">
                 <h2
                   className="bounce-in basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-white text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium px-4 sm:px-0"
-                  style={{ 
+                  style={{
                     fontFamily: '"Aeonik Pro", sans-serif',
                     fontWeight: 500
                   }}
@@ -281,11 +270,11 @@ export default function HomeownerPage() {
             </div>
 
             {/* Cards Grid */}
-            <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-start justify-center relative shrink-0 w-full">
+            <div className="content-center grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-8 items-stretch justify-center relative shrink-0 w-full">
               {/* Card 1 - Thinking About Going Solar */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full max-w-[712px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full">
-                  <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start px-[30px] pt-[30px] pb-2.5 relative shrink-0 w-full">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
+                  <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
                       className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium mb-5"
                       style={{
@@ -306,7 +295,7 @@ export default function HomeownerPage() {
                       Use a Home Energy Report to understand your current bills, energy inefficiencies, and how solar might help along with other energy upgrades to consider.
                     </p>
                   </div>
-                  <div className="bg-gray-200 content-stretch flex h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
+                  <div className="bg-gray-200 content-stretch flex h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
                     <Image
                       src="/homeowners-page/section 4/thinking-about.svg"
                       alt="Home Energy Report example"
@@ -320,9 +309,9 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 2 - Already Have Solar */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full max-w-[512px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full">
-                  <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start px-[30px] pt-[30px] pb-2.5 relative shrink-0 w-full">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
+                  <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
                       className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium mb-5"
                       style={{
@@ -343,7 +332,7 @@ export default function HomeownerPage() {
                       A Solar Inspection Report confirms system health, performance, safety, and expected lifespan. It&apos;s like an annual check-up for your solar.
                     </p>
                   </div>
-                  <div className="bg-gray-200 content-stretch flex h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
+                  <div className="bg-gray-200 content-stretch flex h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
                     <Image
                       src="/homeowners-page/section 4/already-have.svg"
                       alt="Solar Inspection Report example"
@@ -357,9 +346,9 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 3 - Getting Ready to Sell */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full max-w-[512px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full">
-                  <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start px-[30px] pt-[30px] pb-2.5 relative shrink-0 w-full">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
+                  <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
                       className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium mb-5"
                       style={{
@@ -380,7 +369,7 @@ export default function HomeownerPage() {
                       The Solar Listing Report compiles everything a buyer, agent, or lender needs: ownership details, production data, warranty info, and savings estimates.
                     </p>
                   </div>
-                  <div className="bg-gray-200 content-stretch flex h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
+                  <div className="bg-gray-200 content-stretch flex h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
                     <Image
                       src="/homeowners-page/section 4/getting-ready.svg"
                       alt="Solar Listing Report example"
@@ -394,9 +383,9 @@ export default function HomeownerPage() {
               </div>
 
               {/* Card 4 - Appraising or Refinancing */}
-              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full max-w-[712px] hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
-                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full">
-                  <div className="bg-gray-50 box-border content-stretch flex flex-col gap-5 items-start justify-start px-[30px] pt-[30px] pb-2.5 relative shrink-0 w-full">
+              <div className="report-card bg-white rounded-[10px] border border-black/15 overflow-hidden w-full hover:shadow-lg hover:scale-105 transition-all duration-300 ease-in-out cursor-pointer">
+                <div className="content-stretch flex flex-col items-center justify-start min-w-inherit overflow-clip relative w-full h-full">
+                  <div className="bg-white box-border content-stretch flex flex-col gap-5 items-start justify-start px-4 sm:px-[30px] pt-4 sm:pt-[30px] pb-2.5 relative shrink-0 w-full">
                     <h5
                       className="basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-[#141414] text-[25px] sm:text-[25px] md:text-[25px] lg:text-[32px] xl:text-[32px] 2xl:text-[32px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] font-medium mb-5"
                       style={{
@@ -417,7 +406,7 @@ export default function HomeownerPage() {
                       The Green Home Appraisal Report gives appraisers the certified data needed to reflect your solar&apos;s value in the home price or loan.
                     </p>
                   </div>
-                  <div className="bg-gray-200 content-stretch flex h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
+                  <div className="bg-gray-200 content-stretch flex h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] items-center justify-center overflow-clip relative shrink-0 w-full">
                     <Image
                       src="/homeowners-page/section 4/appraising.svg"
                       alt="Green Home Appraisal Report example"
@@ -431,7 +420,6 @@ export default function HomeownerPage() {
               </div>
             </div>
 
-            {/* Bottom Text */}
             <div className="bounce-in content-stretch flex items-start justify-center relative shrink-0 w-full px-4 sm:px-[30px]">
               <p
                 className={`${inter.className} basis-0 grow min-h-px min-w-px not-italic relative shrink-0 text-center text-[18px] sm:text-[18px] md:text-[18px] lg:text-[20px] xl:text-[20px] 2xl:text-[20px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[1.6] font-medium`}
@@ -450,7 +438,7 @@ export default function HomeownerPage() {
             </div>
           </div>
         </div>
-            </section>
+      </section>
 
       {/* Section 5 */}
       <section className="section-5 box-border content-stretch flex flex-col gap-8 sm:gap-12 lg:gap-16 xl:gap-20 items-center justify-start px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 lg:py-20 xl:py-[100px] relative size-full max-w-[1440px] mx-auto">

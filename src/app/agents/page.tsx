@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Inter } from "next/font/google";
 import HowItWorksSection from "@/components/HowItWorksSection";
 import Testimonials from "@/components/Testimonials";
@@ -8,7 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import ScrollAnimations from "@/components/ScrollAnimations";
 import HowToGetStarted from "@/components/HowToGetStarted";
 import TrustedBy from "@/components/TrustedBy";
-
+import ButtonsType from "@/components/ButtonsType";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function AgentsPage() {
@@ -32,25 +31,18 @@ export default function AgentsPage() {
                 </p>
               </div>
             </div>
-
-            <div className="slide-up-cards flex flex-wrap gap-[15px] items-center justify-center w-full">
-              <Link
-                href="#join"
-                className="bg-[#115056] flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out border border-[#115056]"
-              >
-                <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-white whitespace-nowrap">
-                  Get Solar Certified
-                </span>
-              </Link>
-              <Link
-                href="#demo"
-                className="flex gap-2 h-[52px] items-center justify-center px-[30px] py-3 rounded-[30px] shrink-0 border border-[#115056] bg-white hover:bg-[#115056] hover:text-white hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out"
-              >
-                <span className="font-['Aeonik_Pro'] font-medium text-[20px] sm:text-[22px] lg:text-[25px] leading-[1.1] text-[#115056] whitespace-nowrap">
-                  Generate a Sprk Listing Report
-                </span>
-              </Link>
+            <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
+              <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
+                <div className="w-full ">
+                  <ButtonsType type={9} label="Get Solar Certified" isShowArrow={false} />
+                </div>
+                <div className="w-full ">
+                  <ButtonsType type={10} label="Generate a Sprk Listing Report" isShowArrow={false} />
+                </div>
+              </div>
             </div>
+
+    
           </header>
 
                     {/* Trusted By Section */}
@@ -295,18 +287,7 @@ export default function AgentsPage() {
 
                   {/* Button */}
                   <div className="cta-button flex flex-col gap-[5px] items-start justify-start w-full">
-                    <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:bg-[#0d3e42] hover:scale-105 hover:shadow-lg active:scale-95 transition-all duration-300 ease-in-out transform-gpu">
-                      <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                        <span className={`${inter.className} font-normal text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] leading-[120%] text-center text-white flex-1`}>
-                          Download the Free eBook
-                        </span>
-                        <div className="w-[30px] h-[30px] flex items-center justify-center shrink-0">
-                          <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white" />
-                          </svg>
-                        </div>
-                      </div>
-                    </button>
+                    <ButtonsType type={2} label="Download the Free eBook" isShowArrow={true}/>
                   </div>
                 </div>
               </div>
@@ -391,18 +372,7 @@ export default function AgentsPage() {
 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-4 sm:pt-6 lg:pt-[30px] pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
-                    <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                      <span className={`${inter.className} font-normal text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] leading-[120%] text-center text-white flex-1`}>
-                        View Sample
-                      </span>
-                      <div className="w-[30px] h-[30px] flex items-center justify-center shrink-0">
-                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white" />
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
+                  <ButtonsType type={2} label="View Sample" isShowArrow={true}/>
                 </div>
               </div>
             </div>
@@ -441,18 +411,7 @@ export default function AgentsPage() {
 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-4 sm:pt-6 lg:pt-[30px] pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
-                    <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                      <span className={`${inter.className} font-normal text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] leading-[120%] text-center text-white flex-1`}>
-                        Find an Inspector
-                      </span>
-                      <div className="w-[30px] h-[30px] flex items-center justify-center shrink-0">
-                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white" />
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
+                    <ButtonsType type={2} label="Find an Inspector" isShowArrow={true}/>
                 </div>
               </div>
             </div>
@@ -491,18 +450,7 @@ export default function AgentsPage() {
 
                 {/* Button Section */}
                 <div className="bg-white flex gap-[22px] items-start justify-start pt-4 sm:pt-6 lg:pt-[30px] pb-6 sm:pb-8 lg:pb-10 px-4 sm:px-6 lg:px-[30px] w-full">
-                  <button className="bg-[#115056] rounded-[5px] p-[5px] w-full hover:opacity-90 hover:scale-105 hover:shadow-md transition-all duration-200 ease-in-out flex-1 basis-0">
-                    <div className="flex items-center justify-center px-[15px] py-[5px] w-full">
-                      <span className={`${inter.className} font-normal text-[20px] sm:text-[20px] md:text-[20px] lg:text-[18px] xl:text-[18px] leading-[120%] text-center text-white flex-1`}>
-                        View Sample
-                      </span>
-                      <div className="w-[30px] h-[30px] flex items-center justify-center shrink-0">
-                        <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="white" />
-                        </svg>
-                      </div>
-                    </div>
-                  </button>
+                    <ButtonsType type={2} label="View Sample" isShowArrow={true}/>
                 </div>
               </div>
             </div>
@@ -516,6 +464,30 @@ export default function AgentsPage() {
       <HowToGetStarted
         title="How to Get Started with Sprk"
         subtitle="In Just Minutes, You Can Start Selling Solar Homes Smarter"
+        steps={[{
+          icon: "/agents-page/section 6/get-solar.svg",
+          label: "Get Solar Certified",
+          description:
+            "Take the Sprk CE course to understand how to represent solar homes with confidence.",
+        },
+        {
+          icon: "/agents-page/section 6/generate.svg",
+          label: "Generate a Sprk Listing Report",
+          description:
+            "Make solar features visible and easy to explain—before you go live on the MLS.",
+        },
+        {
+          icon: "/agents-page/section 6/inspector.svg",
+          label: "Use a Sprk Certified Inspector",
+          description:
+            "Partner with inspectors who understand solar systems and deliver fast, credible reports.",
+        },
+        {
+          icon: "/agents-page/section 6/your-clients.svg",
+          label: "Guide Your Clients the Right Way",
+          description:
+            "Use Sprk’s seller checklists and buyer handouts to help avoid contract confusion and delayed closings.",
+        },]}
       />
 
       {/* Section 7 - Testimonials */}
