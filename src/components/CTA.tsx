@@ -8,6 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 interface CTAButton {
   label: string;
   link?: string;
+  redirection?: "redirect" | "new-tab";
   function?: () => void;
 }
 
@@ -22,8 +23,6 @@ export default function CTA({ title, subtitle, description, buttons }: CTAProps)
   const handleButtonClick = (button: CTAButton) => {
     if (button.function) {
       button.function();
-    } else if (button.link) {
-      window.location.href = button.link;
     }
   };
 
@@ -65,7 +64,14 @@ export default function CTA({ title, subtitle, description, buttons }: CTAProps)
         <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 items-stretch justify-center w-full max-w-[1332px] flex-wrap">
           {buttons.map((button, index) => (
             <div key={index} className="w-full sm:w-auto">
-              <ButtonsType type={6} label={button.label} isShowArrow={true} />
+              <ButtonsType
+                type={6}
+                label={button.label}
+                isShowArrow={true}
+                link={button.link}
+                redirection={button.redirection}
+                onClick={button.function ? () => handleButtonClick(button) : undefined}
+              />
             </div>
           ))}
         </div>

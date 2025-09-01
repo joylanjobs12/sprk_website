@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,7 @@ export default function Footer() {
           <div className="flex flex-col gap-4 sm:gap-6">
             <Image src="/logo/logo.svg" alt="Sprk" width={96} height={28} className="w-[80px] sm:w-[96px] h-auto" />
             <h2
-              className="text-[24px] sm:text-[32px] md:text-[40px] lg:text-[56px] xl:text-[80px] leading-[1.1] font-medium px-4 sm:px-0"
+              className="text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[1.1] font-medium px-4 sm:px-0"
               style={{
                 color: "#141414",
                 fontFamily: '"Aeonik Pro", sans-serif',
@@ -20,11 +21,11 @@ export default function Footer() {
             >
               Still Have Questions?
             </h2>
-            <div className="flex items-center px-6 sm:px-8 lg:px-[50px] py-3 sm:py-4 rounded-[50px] border border-[rgba(0,0,0,0.66)] w-full">
+            <div className="flex items-center px-4 sm:px-6 lg:px-[50px] py-2.5 sm:py-3 rounded-[50px] border border-[rgba(0,0,0,0.66)] w-full">
               <input
                 type="email"
                 placeholder="Email Us"
-                className="w-full bg-transparent outline-none text-[16px] sm:text-[20px] lg:text-[32px] text-[rgba(0,0,0,0.66)] placeholder:text-[rgba(0,0,0,0.66)]"
+                className="w-full bg-transparent outline-none text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] xl:text-[18px] text-[rgba(0,0,0,0.66)] placeholder:text-[rgba(0,0,0,0.66)]"
                 style={{
                   fontFamily: '"Aeonik Pro", sans-serif',
                 }}
@@ -37,90 +38,112 @@ export default function Footer() {
         <div className="w-full grid grid-cols-1 md:grid-cols-3 gap-8 sm:gap-10 lg:gap-[53px]">
           {/* Resources */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
-            <h3
-              className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] leading-[1.1] font-medium"
+            <h2
+              className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[1.1] font-medium"
               style={{
                 color: "#141414",
                 fontFamily: '"Aeonik Pro", sans-serif',
               }}
             >
               RESOURCES
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-3 sm:gap-4 lg:gap-[15px]">
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                Sprk Blog
+              <li>
+                <Link
+                  href="/blog"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  Sprk Blog
+                </Link>
               </li>
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                Ebook - My Energy Efficient Home
+              <li>
+                <Link
+                  href="/ebook"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  Ebook - My Energy Efficient Home
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Who We Serve */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
-            <h3
-              className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] leading-[1.1] font-medium"
+            <h2
+              className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[1.1] font-medium"
               style={{
                 color: "#141414",
                 fontFamily: '"Aeonik Pro", sans-serif',
               }}
             >
               WHO WE SERVE
-            </h3>
+            </h2>
             <ul className="flex flex-col gap-3 sm:gap-4 lg:gap-[15px]">
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                Homeowners
+              <li>
+                <Link
+                  href="/homeowner"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  Homeowners
+                </Link>
               </li>
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                Pros
+              <li>
+                <Link
+                  href="/solarpro"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  Pros
+                </Link>
               </li>
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                About Sprk
+              <li>
+                <Link
+                  href="/company"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  About Sprk
+                </Link>
               </li>
-              <li
-                className={`${inter.className} text-[16px] sm:text-[17px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)]`}
-              >
-                Contact Us
+              <li>
+                <Link
+                  href="/faqs"
+                  className={`${inter.className} text-[16px] sm:text-[16px] md:text-[16px] lg:text-[18px] leading-[1.2] font-normal text-[rgba(0,0,0,0.66)] hover:text-[rgba(0,0,0,0.8)] transition-colors`}
+                >
+                  Contact Us
+                </Link>
               </li>
             </ul>
           </div>
 
           {/* Download App */}
           <div className="flex flex-col gap-6 sm:gap-8 lg:gap-[38px]">
-            <h3
-              className="text-[18px] sm:text-[24px] md:text-[28px] lg:text-[32px] leading-[1.1] font-medium"
+            <h2
+              className="text-[18px] sm:text-[18px] md:text-[18px] lg:text-[35px] xl:text-[35px] 2xl:text-[35px] leading-[1.1] font-medium"
               style={{
                 color: "#141414",
                 fontFamily: '"Aeonik Pro", sans-serif',
               }}
             >
               DOWNLOAD THE APP
-            </h3>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 items-start">
+            </h2>
+            <div className="flex flex-row gap-3 sm:gap-4 items-start justify-center">
+              <div>
               <Image 
                 src="/footer/app-store.png" 
                 alt="Download on the App Store" 
-                width={140} 
+                width={158} 
                 height={46} 
-                className="w-[120px] sm:w-[130px] lg:w-[140px] h-auto"
+                className=" w-fullh-auto"
               />
+              </div>
+              <div>
               <Image 
                 src="/footer/google-play.svg" 
                 alt="Get it on Google Play" 
-                width={140} 
+                width={158} 
                 height={46} 
-                className="w-[120px] sm:w-[130px] lg:w-[140px] h-auto"
+                className=" w-fullh-auto"
               />
+              </div>
             </div>
           </div>
         </div>

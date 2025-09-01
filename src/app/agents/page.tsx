@@ -34,7 +34,7 @@ export default function AgentsPage() {
             <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
               <div className="flex flex-col md:flex-row gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-2/3 xl:w-1/2 2xl:w-1/2">
                 <div className="w-full ">
-                  <ButtonsType type={9} label="Get Solar Certified" isShowArrow={false} />
+                  <ButtonsType type={9} label="Get Solar Certified" isShowArrow={false} link="/professionalsolartraining" />
                 </div>
                 <div className="w-full ">
                   <ButtonsType type={10} label="Generate a Sprk Listing Report" isShowArrow={false} />
@@ -297,6 +297,7 @@ export default function AgentsPage() {
       </section>
 
       {/* Section 4 - How It Works */}
+      <section className="section-4">
       <HowItWorksSection
         title="How It Works"
         subtitle="Sprk Helps Agents Simplify Solar"
@@ -316,6 +317,7 @@ export default function AgentsPage() {
           description: "Use the Sprk Listing Report and Appraisal Report to maximize home value—and protect buyers with a Solar Inspection Report from a Sprk Certified Inspector."
         }}
       />
+      </section>
       {/* Section 5 - Sprk Reports */}
       <section className="section-5 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[60px] sm:py-[80px] lg:py-[100px]">
         <div className="flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[50px] items-center justify-start w-full max-w-[1248px] mx-auto">
@@ -461,7 +463,8 @@ export default function AgentsPage() {
 
 
       {/* Section 3 */}
-      <HowToGetStarted
+     <section className="section-6">
+     <HowToGetStarted
         title="How to Get Started with Sprk"
         subtitle="In Just Minutes, You Can Start Selling Solar Homes Smarter"
         steps={[{
@@ -489,6 +492,7 @@ export default function AgentsPage() {
             "Use Sprk’s seller checklists and buyer handouts to help avoid contract confusion and delayed closings.",
         },]}
       />
+     </section>
 
       {/* Section 7 - Testimonials */}
       <div className="section-7">
@@ -523,9 +527,9 @@ export default function AgentsPage() {
           subtitle="Start Using Sprk on Your Next Deal"
           description="Whether you're listing a home with solar, supporting a buyer, or just want to stay ahead of the market—Sprk has the tools you need to lead with confidence."
           buttons={[
-            { label: "Get Solar Certified", link: "/get-certified" },
-            { label: "Generate a Listing Report", link: "/listing-report" },
-            { label: "Find a Certified Inspector", link: "/find-inspector" }
+            { label: "Get Solar Certified", link: "/professionalsolartraining" },
+            { label: "Generate a Listing Report", link: "/solarlistingreport" },
+            { label: "Find a Certified Inspector", link: "/inspector" }
           ]}
         />
       </div>

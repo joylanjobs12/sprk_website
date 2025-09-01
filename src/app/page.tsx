@@ -638,7 +638,7 @@ export default function Home() {
                 </div>
               </div>
               <div className="cta-button content-stretch flex flex-col gap-[5px] items-start justify-start relative shrink-0 w-full">
-                <ButtonsType type={2} label="Learn about the Sprk Referrals Network" />
+                <ButtonsType type={2} label="Learn about the Sprk Referrals Network" link="/agents" />
               </div>
             </div>
           </div>
@@ -683,9 +683,9 @@ export default function Home() {
         title="Bring clarity to solar homes."
         description="Whether you're listing, inspecting, financing, or buying—Sprk gives you the tools and data to move solar real estate with confidence."
         buttons={[
-          { label: "Learn About Solar", link: "/learn-solar" },
-          { label: "Find a Certified Pro", link: "/find-pro" },
-          { label: "Get Sprk Certified", link: "/get-certified" }
+          { label: "Learn About Solar", link: "/identifysolarproblems" },
+          { label: "Find a Certified Pro", link: "/findsolarpro" },
+          { label: "Get Sprk Certified", link: "/professionalsolartraining" }
         ]}
       />
 

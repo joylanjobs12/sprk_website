@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 interface RoleOption {
@@ -144,9 +145,22 @@ export default function SelectRole({
   onRoleSelect,
   className = ""
 }: SelectRoleProps) {
+  const router = useRouter();
   const handleRoleClick = (roleId: string) => {
     if (onRoleSelect) {
       onRoleSelect(roleId);
+    }
+
+    const roleRouteMap: Record<string, string> = {
+      inspector: "/inspector",
+      agent: "/agents",
+      "solar-pro": "/solarpro",
+      homeowner: "/homeowner",
+    };
+
+    const path = roleRouteMap[roleId];
+    if (path) {
+      router.push(path);
     }
   };
 

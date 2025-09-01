@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Inter } from "next/font/google";
 import ScrollToTop from "@/components/ScrollToTop";
 import AboutSprk from "@/components/AboutSprk";
@@ -44,13 +43,13 @@ export default function HomeownerPage() {
             <div className="slide-up-cards bg-white flex flex-col justify-center items-center sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
               <div className="flex flex-col md:flex-row md:flex-wrap gap-[15px] justify-center items-center w-full sm:w-full md:w-3/4 lg:w-full xl:w-full 2xl:w-full">
                 <div className="w-full md:w-[80%] lg:w-1/3">
-                  <ButtonsType type={9} label="Find a Certified Solar Pro" isShowArrow={false}/>
+                  <ButtonsType type={9} label="Find a Certified Solar Pro" isShowArrow={false} link="/findsolarpro"/>
                 </div>
                 <div className="w-full md:w-[80%] lg:w-1/2">
-                  <ButtonsType type={10} label="Find a Certified Real Estate Agent" isShowArrow={false} />
+                  <ButtonsType type={10} label="Find a Certified Real Estate Agent" isShowArrow={false} link="/agents" />
                 </div>
                 <div className="w-full md:w-[80%] lg:w-1/2">
-                  <ButtonsType type={10} label="Find a Certified Home Inspector" isShowArrow={false} />
+                  <ButtonsType type={10} label="Find a Certified Home Inspector" isShowArrow={false} link="/inspector" />
                 </div>
               </div>
             </div>
@@ -633,8 +632,8 @@ export default function HomeownerPage() {
         <CTA
           title="You Invested in the Future. Let&apos;s Help You Protect It."
           buttons={[
-            { label: "Find a Certified Agent", link: "/agents" },
-            { label: "Find a Certified Inspector", link: "/inspector" },
+            { label: "Find a Certified Agent", link: "/findsolarpro" },
+            { label: "Find a Certified Inspector", link: "/findsolarpro" },
             { label: "Explore the Sprk Blog", link: "/blog" }
           ]}
         />

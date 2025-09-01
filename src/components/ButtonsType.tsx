@@ -1,12 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type ButtonsTypeProps = {
   type: number; // 1..10
   label: string;
   isShowArrow?: boolean; // optional override for arrow visibility
+  link?: string; // internal path or external URL
+  redirection?: "redirect" | "new-tab"; // same tab redirect or open in new tab
+  onClick?: React.MouseEventHandler<HTMLButtonElement | HTMLAnchorElement>;
 };
 
 const ARROW_DARK = "/icons/arrow-dark.svg";
@@ -149,7 +153,7 @@ function getVariantClasses(variant: number) {
   }
 }
 
-export default function ButtonsType({ type: variant, label, isShowArrow }: ButtonsTypeProps) {
+export default function ButtonsType({ type: variant, label, isShowArrow, link, redirection = "redirect", onClick }: ButtonsTypeProps) {
   const { container, text, arrowDefault, arrowHover, isShowArrow: defaultShowArrow } = getVariantClasses(variant);
 
   // Allow consumer to override arrow visibility via prop while maintaining variant defaults
@@ -158,8 +162,8 @@ export default function ButtonsType({ type: variant, label, isShowArrow }: Butto
   const defaultIsWhite = arrowDefault === "white";
   const hoverIsWhite = arrowHover === "white";
 
-  return (
-    <button className={container} type="button" aria-label={label}>
+  const innerContent = (
+    <>
       <span
         className={[
           // font family per rules
@@ -216,6 +220,40 @@ export default function ButtonsType({ type: variant, label, isShowArrow }: Butto
           />
         </span>
       )}
+    </>
+  );
+
+  // If link provided, render as Link (internal) or anchor (external or new tab)
+  if (link && link.trim().length > 0) {
+    const openInNewTab = redirection === "new-tab";
+    const isInternal = link.startsWith("/");
+
+    if (isInternal && !openInNewTab) {
+      return (
+        <Link href={link} className={container} aria-label={label} onClick={onClick}>
+          {innerContent}
+        </Link>
+      );
+    }
+
+    return (
+      <a
+        href={link}
+        className={container}
+        aria-label={label}
+        target={openInNewTab ? "_blank" : undefined}
+        rel={openInNewTab ? "noopener noreferrer" : undefined}
+        onClick={onClick}
+      >
+        {innerContent}
+      </a>
+    );
+  }
+
+  // Default: plain button without navigation
+  return (
+    <button className={container} type="button" aria-label={label} onClick={onClick}>
+      {innerContent}
     </button>
   );
 }
