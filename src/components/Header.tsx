@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { Inter } from "next/font/google";
+import { usePathname } from "next/navigation";
 
 type NavItem = {
   label: string;
@@ -11,9 +12,9 @@ type NavItem = {
 };
 
 const navItems: NavItem[] = [
-  { label: "Company", href: "#company" },
+  { label: "Company", href: "company" },
   { label: "Solutions", href: "#solutions", hasDropdown: true },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Pricing", href: "/inspector#pricing" },
   { label: "Resources", href: "#resources", hasDropdown: true },
 ];
 
@@ -99,7 +100,7 @@ const solutionsData: { byRole: DropdownItem[]; byUseCase: DropdownItem[]; byProd
       title: "Solar Inspection Report",
       description: "What a home inspector can't see—now revealed.",
       icon: "/header/solutions/solar-inspection-report.svg",
-      href: "/inspector"
+      href: "/solarinspectionreport"
     },
     {
       title: "Green Appraisal Report",
@@ -159,6 +160,29 @@ export default function Header() {
   const [resourcesOpen, setResourcesOpen] = useState(false);
   const [mobileResourcesOpen, setMobileResourcesOpen] = useState(false);
   const headerRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+
+  // Function to check if current page matches solutions data links
+  const getHighlightedSolutionsData = () => {
+    const highlightedData = {
+      byRole: solutionsData.byRole.map(item => ({
+        ...item,
+        isHighlighted: pathname === item.href
+      })),
+      byUseCase: solutionsData.byUseCase.map(item => ({
+        ...item,
+        isHighlighted: pathname === item.href
+      })),
+      byProduct: solutionsData.byProduct.map(item => ({
+        ...item,
+        isHighlighted: pathname === item.href
+      }))
+    };
+    return highlightedData;
+  };
+
+  // Get highlighted solutions data
+  const highlightedSolutionsData = getHighlightedSolutionsData();
 
   // Close dropdowns when clicking outside
   useEffect(() => {
@@ -178,8 +202,8 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className="sticky top-0 z-40" ref={headerRef}>
-      <div className="mx-auto max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-3 sm:py-4 lg:py-[15px]">
+    <header className="sticky top-0 z-40 bg-[#fff]" ref={headerRef}>
+      <div className="mx-auto max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 xl:px-24 py-3 sm:py-4 lg:py-[15px] ">
         <div
           className="flex items-center justify-between bg-white rounded-[50px] px-3 sm:px-4 lg:px-[15px] py-2 sm:py-2.5"
           style={{
@@ -287,12 +311,12 @@ export default function Header() {
                       <h3 className="text-[14px] font-semibold text-[#115056] leading-[1.1]">By Role</h3>
                     </div>
                     <div className="flex flex-col gap-2">
-                      {solutionsData.byRole.map((item, index) => (
+                      {highlightedSolutionsData.byRole.map((item, index) => (
                         <Link
                           key={index}
                           href={item.href}
-                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
-                            item.isHighlighted ? 'bg-[#f1fafa] border border-[#a5dcdf]' : ''
+                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border  hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
+                            item.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'border-transparent'
                           }`}
                           onClick={() => setSolutionsOpen(false)}
                         >
@@ -326,11 +350,13 @@ export default function Header() {
                       <h3 className="text-[14px] font-semibold text-[#115056] leading-[1.1]">By Use Case</h3>
                     </div>
                     <div className="flex flex-col gap-2">
-                      {solutionsData.byUseCase.map((item, index) => (
+                      {highlightedSolutionsData.byUseCase.map((item, index) => (
                         <Link
                           key={index}
                           href={item.href}
-                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF]"
+                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border  hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
+                            item.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'border-transparent'
+                          }`}
                           onClick={() => setSolutionsOpen(false)}
                         >
                           <div className="flex items-center justify-center w-6 h-6 shrink-0">
@@ -343,7 +369,9 @@ export default function Header() {
                             />
                           </div>
                           <div className="flex flex-col gap-[5px] flex-1 min-w-0">
-                            <h4 className="text-[14px] font-semibold text-[rgba(0,0,0,0.66)] leading-[1.1]">
+                            <h4 className={`text-[14px] font-semibold leading-[1.1] ${
+                              item.isHighlighted ? 'text-[#115056]' : 'text-[rgba(0,0,0,0.66)]'
+                            }`}>
                               {item.title}
                             </h4>
                             <p className="text-[11px] font-normal text-[rgba(0,0,0,0.5)] leading-[1.2] h-[26px]">
@@ -361,11 +389,13 @@ export default function Header() {
                       <h3 className="text-[14px] font-semibold text-[#115056] leading-[1.1]">By Product</h3>
                     </div>
                     <div className="flex flex-col gap-2">
-                      {solutionsData.byProduct.map((item, index) => (
+                      {highlightedSolutionsData.byProduct.map((item, index) => (
                         <Link
                           key={index}
                           href={item.href}
-                          className="flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF]"
+                          className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border  hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
+                            item.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'border-transparent'
+                          }`}
                           onClick={() => setSolutionsOpen(false)}
                         >
                           <div className="flex items-center justify-center w-6 h-6 shrink-0">
@@ -378,7 +408,9 @@ export default function Header() {
                             />
                           </div>
                           <div className="flex flex-col gap-[5px] flex-1 min-w-0">
-                            <h4 className="text-[14px] font-semibold text-[rgba(0,0,0,0.66)] leading-[1.1]">
+                            <h4 className={`text-[14px] font-semibold leading-[1.1] ${
+                              item.isHighlighted ? 'text-[#115056]' : 'text-[rgba(0,0,0,0.66)]'
+                            }`}>
                               {item.title}
                             </h4>
                             <p className="text-[11px] font-normal text-[rgba(0,0,0,0.5)] leading-[1.2] h-[26px]">
@@ -408,8 +440,8 @@ export default function Header() {
                     <Link
                       key={index}
                       href={item.href}
-                      className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border border-transparent hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
-                        item.isHighlighted ? 'bg-[#f1fafa] border border-[#a5dcdf]' : ''
+                      className={`flex gap-2.5 items-start p-3 rounded-[5px] w-full lg:w-[300px] transition-colors border  hover:bg-[#F1FAFA] hover:border-[#A5DCDF] ${
+                        item.isHighlighted ? 'bg-[#f1fafa] border border-[#a5dcdf]' : 'border-transparent'
                       }`}
                       onClick={() => setResourcesOpen(false)}
                     >
@@ -492,11 +524,13 @@ export default function Header() {
                       <div>
                         <h4 className="text-[12px] font-semibold text-[#115056] mb-2">By Role</h4>
                         <div className="space-y-2">
-                          {solutionsData.byRole.map((roleItem, index) => (
+                          {highlightedSolutionsData.byRole.map((roleItem, index) => (
                             <Link
                               key={index}
                               href={roleItem.href}
-                              className="flex items-start gap-2 p-2 rounded-md hover:bg-gray-50 transition-colors"
+                                                             className={`flex items-start gap-2 p-2 rounded-md transition-colors ${
+                                 roleItem.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'hover:bg-gray-50'
+                               }`}
                               onClick={() => {
                                 setMobileOpen(false);
                                 setMobileSolutionsOpen(false);
@@ -510,7 +544,9 @@ export default function Header() {
                                 className="w-4 h-4 mt-0.5 shrink-0"
                               />
                               <div>
-                                <div className="text-[13px] font-medium text-[#141414]">{roleItem.title}</div>
+                                <div className={`text-[13px] font-medium ${
+                                  roleItem.isHighlighted ? 'text-[#115056]' : 'text-[#141414]'
+                                }`}>{roleItem.title}</div>
                                 <div className="text-[11px] text-gray-600 leading-tight">{roleItem.description}</div>
                               </div>
                             </Link>
@@ -522,11 +558,13 @@ export default function Header() {
                       <div>
                         <h4 className="text-[12px] font-semibold text-[#115056] mb-2">By Use Case</h4>
                         <div className="space-y-2">
-                          {solutionsData.byUseCase.map((useCaseItem, index) => (
+                          {highlightedSolutionsData.byUseCase.map((useCaseItem, index) => (
                             <Link
                               key={index}
                               href={useCaseItem.href}
-                              className="flex items-start gap-2 p-2 rounded-md hover:bg-gray-50 transition-colors"
+                                                             className={`flex items-start gap-2 p-2 rounded-md transition-colors ${
+                                 useCaseItem.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'hover:bg-gray-50'
+                               }`}
                               onClick={() => {
                                 setMobileOpen(false);
                                 setMobileSolutionsOpen(false);
@@ -540,7 +578,9 @@ export default function Header() {
                                 className="w-4 h-4 mt-0.5 shrink-0"
                               />
                               <div>
-                                <div className="text-[13px] font-medium text-[#141414]">{useCaseItem.title}</div>
+                                <div className={`text-[13px] font-medium ${
+                                  useCaseItem.isHighlighted ? 'text-[#115056]' : 'text-[#141414]'
+                                }`}>{useCaseItem.title}</div>
                                 <div className="text-[11px] text-gray-600 leading-tight">{useCaseItem.description}</div>
                               </div>
                             </Link>
@@ -552,11 +592,13 @@ export default function Header() {
                       <div>
                         <h4 className="text-[12px] font-semibold text-[#115056] mb-2">By Product</h4>
                         <div className="space-y-2">
-                          {solutionsData.byProduct.map((productItem, index) => (
+                          {highlightedSolutionsData.byProduct.map((productItem, index) => (
                             <Link
                               key={index}
                               href={productItem.href}
-                              className="flex items-start gap-2 p-2 rounded-md hover:bg-gray-50 transition-colors"
+                                                             className={`flex items-start gap-2 p-2 rounded-md transition-colors ${
+                                 productItem.isHighlighted ? 'bg-[#f1fafa] border border-[#115056]' : 'hover:bg-gray-50'
+                               }`}
                               onClick={() => {
                                 setMobileOpen(false);
                                 setMobileSolutionsOpen(false);
@@ -570,7 +612,9 @@ export default function Header() {
                                 className="w-4 h-4 mt-0.5 shrink-0"
                               />
                               <div>
-                                <div className="text-[13px] font-medium text-[#141414]">{productItem.title}</div>
+                                <div className={`text-[13px] font-medium ${
+                                  productItem.isHighlighted ? 'text-[#115056]' : 'text-[#141414]'
+                                }`}>{productItem.title}</div>
                                 <div className="text-[11px] text-gray-600 leading-tight">{productItem.description}</div>
                               </div>
                             </Link>

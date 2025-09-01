@@ -110,7 +110,7 @@ export default function IdentifySolarProblems() {
       </section>
 
       <section className="section-3 box-border content-stretch flex flex-col lg:flex-row items-start justify-center gap-4 sm:gap-6 lg:gap-10 xl:gap-[50px] px-4 sm:px-6 lg:px-8 xl:px-12 py-6 sm:py-10 md:py-16 lg:py-20 xl:py-[100px] max-w-[1440px] mx-auto">
-        <div className="content-stretch flex flex-col gap-[30px] items-center lg:items-start justify-start w-full lg:w-[612px] pt-[50px] sm:pt-[80px] lg:pt-[150px] sticky lg:top-0">
+        <div className="content-stretch flex flex-col gap-[30px] items-center lg:items-start justify-start w-full lg:w-[612px]   sticky lg:top-0">
           <h2
             className="text-reveal text-center lg:text-left text-[#141414] text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] font-medium mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5"
             style={{ fontFamily: '"Aeonik Pro", sans-serif', fontWeight: 500 }}
@@ -126,7 +126,7 @@ export default function IdentifySolarProblems() {
         </div>
 
         <div className="xl:basis-0 xl:content-stretch flex grow items-start justify-start min-h-px min-w-px w-full">
-          <div className="content-stretch flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] items-center justify-start w-full pt-[50px] sm:pt-[80px] lg:pt-[150px]">
+          <div className="content-stretch flex flex-col gap-4 sm:gap-5 md:gap-6 lg:gap-[30px] items-center justify-start w-full">
             {[
               { src: '/indentify-solar-problems/section 3/problem1.svg', num: '01', title: 'Solar Under Producing Energy' },
               { src: '/indentify-solar-problems/section 3/problem2.svg', num: '02', title: 'Solar Breakers Installed Incorrectly' },

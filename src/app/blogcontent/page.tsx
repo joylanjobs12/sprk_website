@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function BlogContentPage() {
   return (
     <>
-      <section aria-labelledby="blogcontent-hero" className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section aria-labelledby="blogcontent-hero" className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="flex items-center gap-2 text-[12px] md:text-[14px] text-black/66 mb-4">
             <button aria-label="Back to all posts" className="inline-flex items-center gap-2 font-semibold">
@@ -60,7 +60,7 @@ export default function BlogContentPage() {
           </div>
         </div>
       </section>
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10">
             {/* Left column */}
@@ -134,7 +134,7 @@ export default function BlogContentPage() {
           </div>
         </div>
       </section>
-      <section className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           {/* Top bar with back and share */}
           <div className="bg-[#f4f4f4] rounded-[10px] px-4 py-3 sm:px-6 md:px-8 lg:px-[30px] flex items-center justify-between">

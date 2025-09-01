@@ -404,20 +404,20 @@ export default function InspectorPage() {
             </div>
 
             {/* Cards Section */}
-            <div className="flex flex-col sm:flex-col md:flex-row gap-4 sm:gap-5 md:gap-6 items-center justify-center w-full">
+            <div className="flex flex-col sm:flex-col md:flex-col gap-4 sm:gap-5 md:gap-6 items-center justify-center w-full">
               {/* Home Energy Report Card */}
               <div className="report-card bg-white rounded-[10px] w-full sm:w-full md:flex-1 md:basis-0 md:min-w-[400px] max-w-[400px] sm:max-w-[500px] md:max-w-none border border-[rgba(0,0,0,0.15)] transition-all duration-300 ease-in-out hover:shadow-xl hover:transform hover:scale-105 hover:border-[#115056]">
                 <div className="flex flex-col items-center overflow-clip w-full">
                   {/* Image Section */}
                   <div className="bg-[#115056] flex items-start justify-end overflow-clip w-full">
                     <div className="flex flex-col h-[250px] sm:h-[300px] md:h-[355px] items-start flex-1">
-                      <div 
+                      <div
                         className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                         style={{ backgroundImage: `url('/inspector-page/section 6/home-energy.svg')` }}
                       />
                     </div>
                   </div>
-                  
+
                   {/* Content Section */}
                   <div className="bg-white flex flex-col items-start pb-6 sm:pb-8 md:pb-10 pt-[20px] sm:pt-[25px] md:pt-[30px] px-[20px] sm:px-[25px] md:px-[30px] w-full">
                     <div className="flex items-center justify-center w-full">
@@ -431,7 +431,7 @@ export default function InspectorPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Buttons Section */}
                   <div className="bg-white flex flex-col sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-start pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
                     <div className="bg-[#115056] flex items-start justify-center p-[5px] rounded-[5px] flex-1 basis-0 transition-all duration-200 ease-in-out hover:bg-white hover:text-[#115056] hover:border hover:border-[#115056] hover:transform hover:scale-105 hover:shadow-lg">
@@ -464,13 +464,13 @@ export default function InspectorPage() {
                   {/* Image Section */}
                   <div className="bg-[#115056] flex items-start justify-end overflow-clip w-full">
                     <div className="flex flex-col h-[250px] sm:h-[300px] md:h-[355px] items-start flex-1">
-                      <div 
+                      <div
                         className="bg-center bg-cover bg-no-repeat h-full w-full flex-1 transition-all duration-300 ease-in-out hover:transform hover:scale-110"
                         style={{ backgroundImage: `url('/inspector-page/section 6/solar-inspection.svg')` }}
                       />
                     </div>
                   </div>
-                  
+
                   {/* Content Section */}
                   <div className="bg-white flex flex-col items-start pb-6 sm:pb-8 md:pb-10 pt-[20px] sm:pt-[25px] md:pt-[30px] px-[20px] sm:px-[25px] md:px-[30px] w-full">
                     <div className="flex items-center justify-center w-full">
@@ -484,14 +484,14 @@ export default function InspectorPage() {
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Buttons Section */}
                   <div className="bg-white flex flex-col sm:flex-col md:flex-row gap-3 sm:gap-4 md:gap-[22px] items-stretch pb-6 sm:pb-8 md:pb-10 pt-0 px-[20px] sm:px-[25px] md:px-[30px] w-full">
                     <div className="w-full md:w-1/2">
-                      <ButtonsType type={2} label="View Sample" isShowArrow={true}/>
+                      <ButtonsType type={2} label="View Sample" isShowArrow={true} />
                     </div>
                     <div className="w-full md:w-1/2">
-                      <ButtonsType type={7} label="Learn More" isShowArrow={true}/>
+                      <ButtonsType type={7} label="Learn More" isShowArrow={true} />
                     </div>
                   </div>
                 </div>
@@ -526,7 +526,7 @@ export default function InspectorPage() {
       />
 
       {/* Section 8 - Pricing Plans */}
-      <section className="section-8 mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
+      <section id="pricing" className="section-8 mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24 py-12 sm:py-16 md:py-20 lg:py-24 xl:py-[100px]">
         <div className="flex flex-col gap-[50px] sm:gap-[60px] md:gap-[80px] lg:gap-20 items-center">
           {/* Title Section */}
           <div className="flex flex-col gap-[30px] items-center w-full">
@@ -545,7 +545,7 @@ export default function InspectorPage() {
           {/* Pricing Cards */}
           <div className="flex flex-col lg:flex-row gap-6 sm:gap-8 md:gap-10 lg:gap-6 items-stretch justify-center w-full">
             {/* Homeowners Plan */}
-            <div className="card-slide-left flex flex-col gap-4 sm:gap-5 md:gap-6 items-center px-0 py-[20px] sm:py-[25px] md:py-[30px] rounded-[10px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-[500px] lg:max-w-[400px] lg:flex-1">
+            <div className="card-slide-left flex flex-col gap-4 sm:gap-5 md:gap-6 items-center px-0 py-[20px] sm:py-[25px] md:py-[30px] rounded-[10px] w-full max-w-[400px] sm:max-w-[450px] md:max-w-full lg:max-w-[400px] lg:flex-1">
               <div className="flex items-center justify-center px-[15px] py-2.5 w-full">
                 <h2 className="bounce-in font-['Aeonik_Pro'] font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-center text-[#000] mb-3 sm:mb-3 md:mb-3 lg:mb-5 xl:mb-5 2xl:mb-5 transition-all duration-300 ease-in-out hover:text-[#115056] hover:transform hover:scale-105">
                   Homeowners

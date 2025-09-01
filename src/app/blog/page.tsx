@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function BlogPage() {
   return (
     <>
-      <section aria-labelledby="blog-hero-heading" className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section aria-labelledby="blog-hero-heading" className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl rounded-[10px]">
           <div className="relative rounded-[10px] overflow-hidden bg-[#115056]">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
@@ -44,7 +44,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="blog-most-viewed" className="w-full px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section aria-labelledby="blog-most-viewed" className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="flex flex-col lg:flex-row items-start gap-4 lg:gap-6 mb-8">
             <h2 id="blog-most-viewed" className="text-[#141414] font-['Aeonik Pro'] font-medium leading-[1.1] text-[35px] sm:text-[35px] md:text-[40px] lg:text-[56px]">
@@ -158,7 +158,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="blog-related" className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section aria-labelledby="blog-related" className="mx-auto w-full max-w-[1440px] bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="flex items-center justify-between gap-4 mb-8">
             <h2 id="blog-related" className="text-[#141414] font-['Aeonik Pro'] font-medium leading-[1.1] text-[35px] sm:text-[35px] md:text-[40px] lg:text-[56px]">
@@ -218,7 +218,7 @@ export default function BlogPage() {
           </div>
         </div>
       </section>
-      <section aria-labelledby="blog-watch-stories" className="w-full bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
+      <section aria-labelledby="blog-watch-stories" className="mx-auto w-full max-w-[1440px] bg-gray-50 px-4 sm:px-6 md:px-8 lg:px-10 xl:px-24 py-10 md:py-16 lg:py-20">
         <div className="mx-auto w-full max-w-screen-2xl">
           <div className="flex items-center justify-between gap-4 mb-8">
             <h2 id="blog-watch-stories" className="text-[#141414] font-['Aeonik Pro'] font-medium leading-[1.1] text-[35px] sm:text-[35px] md:text-[40px] lg:text-[56px]">

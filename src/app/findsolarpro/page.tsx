@@ -12,6 +12,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function FindSolarProPage() {
   const [selectedProIdx, setSelectedProIdx] = useState<number | null>(null);
+  const [showHelpForm, setShowHelpForm] = useState<boolean>(false);
   const professionals = Array.from({ length: 3 }).map(() => ({
     name: "Cory Vanderpool",
     professionType: "Profession type",
@@ -405,12 +406,12 @@ export default function FindSolarProPage() {
       </section>
 
       <section className="section-3 bg-gray-50 mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8 xl:px-24 py-[50px] sm:py-[70px] lg:py-[100px]">
-        <div className="flex flex-col gap-[30px] sm:gap-[40px] lg:gap-[50px] items-center justify-start w-full">
+        <div className="flex flex-col gap-[20px] sm:gap-[35px] lg:gap-[50px] items-start justify-start w-full">
           {/* Header Content */}
-          <div className="bounce-in flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+          <div className="bounce-in flex flex-col gap-[15px] sm:gap-[20px] lg:gap-[30px] items-start justify-start w-full">
             <div className="flex items-start justify-start w-full">
               <h2 
-                className="font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-[#141414] text-center w-full"
+                className="font-medium text-[35px] sm:text-[35px] md:text-[35px] lg:text-[56px] xl:text-[56px] 2xl:text-[56px] leading-[110%] sm:leading-[110%] md:leading-[110%] lg:leading-[110%] xl:leading-[110%] 2xl:leading-[110%] text-[#141414] text-start w-full"
                 style={{
                   fontFamily: '"Aeonik Pro", sans-serif',
                   fontWeight: 500,
@@ -420,7 +421,7 @@ export default function FindSolarProPage() {
               </h2>
             </div>
             <div className="text-reveal flex items-start justify-start w-full">
-              <div className="text-center w-full">
+              <div className="text-start w-full">
                 <strong 
                   className="font-normal text-[18px] sm:text-[18px] md:text-[18px] lg:text-[22px] xl:text-[22px] 2xl:text-[20px] leading-[120%] sm:leading-[120%] md:leading-[120%] lg:leading-[120%] xl:leading-[120%] 2xl:leading-[1.6] mb-0 block"
                   style={{
@@ -446,27 +447,27 @@ export default function FindSolarProPage() {
           </div>
 
           {/* CTA Button */}
-          <div className="slide-up-cards flex flex-col gap-[20px] sm:gap-[25px] lg:gap-[30px] items-start justify-start w-full">
+          <div className="slide-up-cards flex flex-col gap-[15px] sm:gap-[20px] lg:gap-[30px] items-start justify-start w-full">
             <div className="flex items-center justify-center w-full">
-              <button className="group bg-[#115056] flex items-center justify-center gap-2 px-[20px] sm:px-[25px] py-[10px] sm:py-[12px] lg:py-[15px] rounded-[5px] w-full max-w-[500px] hover:bg-white hover:text-[#115056] hover:scale-105 hover:shadow-md transition-all duration-300 ease-in-out border border-[#115056]">
-                <span 
-                  className="font-normal text-[18px] sm:text-[20px] lg:text-[22px] leading-[1.2] text-center text-white group-hover:text-[#115056] flex-1 transition-colors duration-300"
-                  style={{ fontFamily: 'Inter' }}
-                >
-                  Request Help Finding a Certified Pro
-                </span>
-                <div className="w-[25px] h-[25px] sm:w-[28px] sm:h-[28px] lg:w-[30px] lg:h-[30px] flex items-center justify-center">
-                  <svg width="17" height="12" viewBox="0 0 17 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.83709 1.66291C9.47097 1.2968 9.47097 0.703204 9.83709 0.337087C10.2032 -0.0290291 10.7968 -0.0290291 11.1629 0.337087L16.1629 5.33709C16.529 5.7032 16.529 6.2968 16.1629 6.66291L11.1629 11.6629C10.7968 12.029 10.2032 12.029 9.83709 11.6629C9.47097 11.2968 9.47097 10.7032 9.83709 10.3371L13.2367 6.9375H1.125C0.607234 6.9375 0.1875 6.51777 0.1875 6C0.1875 5.48223 0.607234 5.0625 1.125 5.0625H13.2367L9.83709 1.66291Z" fill="currentColor"/>
-                  </svg>
-                </div>
-              </button>
+                <ButtonsType 
+                  type={2} 
+                  label="Request Help Finding a Sprk Certified Pro" 
+                  isShowArrow={true}
+                  onClick={() => {
+                    setShowHelpForm(true);
+                    const el = document.getElementById('help-form-section');
+                    if (el) {
+                      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }
+                  }}
+                />
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-4 mx-auto w-full max-w-[1440px] flex items-center justify-center">
+      {showHelpForm && (
+      <section id="help-form-section" className="section-4 mx-auto w-full max-w-[1440px] flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-stretch w-full">
           {/* Left Sidebar - Teal Background */}
           <div className="image-slide-left bg-[#115056] flex flex-col gap-6 items-start justify-start px-4 sm:px-6 lg:px-24 py-[50px] sm:py-[70px] lg:py-[100px] w-full lg:w-[550px] lg:flex-shrink-0">
@@ -750,6 +751,7 @@ export default function FindSolarProPage() {
           </div>
         </div>
       </section>
+      )}
 
       {/* Section 5 - AboutSprk */}
       <section className="section-5">
